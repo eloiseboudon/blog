@@ -1,48 +1,38 @@
 <!DOCTYPE html>
+<?php include('sql/connexion.php'); ?>
 <html>
-<head>
-    <meta charset="utf-8" />
+<head lang="fr">
+    <meta charset="utf-8"/>
     <title>L'étiquette - Blog</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet"/>
 </head>
 
 <body>
-<h1>L'étiquette</h1>
-
-<?php
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', '');
-}
-catch(Exception $e){
-    die('Erreur : '.$e->getMessage());
-}
-
-
-$req=$bdd->query('SELECT * FROM articles');
-
-while ($donnees = $req->fetch())
-{
-?>
+    <div id="contenu">
+        <?php
+        if (isset($_GET['page'])) {
+            switch ($_GET['page']) {
+                case 1:
+                    include('partials/accueil.php');
+                    break;
+                case 2:
+                    include('partials/article.php');
+                    break;
 
 
-    <div class="accueil">
-        <h3>
-            <?php echo htmlspecialchars($donnees['titre']); ?>
-            <em>le <?php echo $donnees['date']; ?></em>
-        </h3>
-
-        <p>
-            <?php
-            // On affiche le contenu du billet
-//            echo nl2br(htmlspecialchars($donnees['contenu']));
-//            ?>
-            <br />
-            <a href="article.php?id=<?php echo $donnees['id_article'];?>&nom=<?php echo $donnees['titre'];?>">Article</a>
-        </p>
+            }
+        } else {
+            include('partials/accueil.php');
+        }
+        ?>
     </div>
-    <?php
-} // Fin de la boucle des billets
-$req->closeCursor();
-?>
+
+    <div id="footer">
+
+       L'étiquette - blablabla
+    </div>
+
+
+
 </body>
 </html>
