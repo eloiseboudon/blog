@@ -24,7 +24,7 @@ function afficher_liste_articles()
             <?php
             if (($nbLigne % 2) == 0) { ?>
                 <div class="accueil_articles_droite">
-                    <div class="etiquette_content">
+                    <div class="etiquette_content etiquette_content_right right">
                         <a href="index.php?page=2&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
 
                             <div class="article_details">
@@ -52,7 +52,7 @@ function afficher_liste_articles()
 
             <?php } else { ?>
                 <div class="accueil_articles_gauche">
-                    <div class="etiquette_content">
+                    <div class="etiquette_content  etiquette_content_left left">
                         <a href="index.php?page=2&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
 
                             <div class="article_image">
