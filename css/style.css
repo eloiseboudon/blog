@@ -33,7 +33,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 h2{
     font-family: 'Dosis', sans-serif;
-    font-size:40px;
+    font-size:36px;
 }
 
 h1{
@@ -47,7 +47,7 @@ h3{
 .global_width{
     max-width: 1760px;
     margin: auto;
-    padding: 0 230px;
+    padding: 0 50px;
     height: 100%;
 }
 
@@ -76,8 +76,6 @@ h3{
     top:60px;
     z-index: 999;
 }
-
-
 
 .menu .menu-item {
     text-align:left;
@@ -169,11 +167,80 @@ h3{
 
 
 
-.accueil_articles{
+.accueil_articles_gauche{
     background: #fff;
-    margin-bottom:16px;
-    padding-top:16px;
-    Overflow:hidden;
+    margin-bottom:8px;
+    padding-top:8px;
+    overflow:hidden;
+    width:600px;
+    position:relative;
+    height:300px;
+}
+
+.etiquette_gauche_haut{
+    background-color: #F4ECDE;
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:-170px;
+    right:-180px;
+    -webkit-transform: rotate(40deg);
+}
+
+.etiquette_gauche_bas{
+    background-color: #F4ECDE;
+    width:300px;
+    height:300px;
+    position: absolute;
+    bottom:-170px;
+    right:-180px;
+    -webkit-transform: rotate(-40deg);
+}
+
+.accueil_articles_droite{
+    text-align:right;
+    left:700px;
+    background: #fff;
+    margin-bottom:8px;
+    padding-top:8px;
+    overflow:hidden;
+    width:600px;
+    height:300px;
+    position:relative;
+}
+
+.accueil_articles_droite .article_details .goto_article{
+    font-family: 'Quicksand', sans-serif;
+    font-size:24px;
+    bottom:20px;
+    position:absolute;
+    right:8px;
+}
+
+
+.etiquette_droite_haut{
+    background-color: #F4ECDE;
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:-170px;
+    left:-180px;
+    -webkit-transform: rotate(50deg);
+}
+
+.etiquette_droite_bas{
+    background-color: #F4ECDE;
+    width:300px;
+    height:300px;
+    position: absolute;
+    bottom:-170px;
+    left:-180px;
+    -webkit-transform: rotate(-50deg);
+}
+
+.accueil_articles{
+    padding-left:160px;
+    padding-right:160px;
 }
 
 
@@ -194,24 +261,41 @@ h3{
 .acceuil_titre h1{
     color: #880015;
 }
-.accueil_articles .article_image{
-    margin-bottom:16px;
-    margin-left:16px;
-    margin-right: 16px;
-
+.accueil_articles_gauche .article_image{
+    margin-bottom:8px;
+    margin-right:8px;
+    margin-left:8px;
+    float:left;
 }
+
+.accueil_articles_droite .article_image{
+    margin-right:8px;
+    float:right;
+    top:8px;
+    left:420px;
+    position:absolute;
+}
+
 
 .accueil_articles .article_image img{
-    width: 300px;
-
-}
-.accueil_articles .article_details{
-    /*float:left;*/
+    width: 172px;
+    height: 200px;
 }
 
+.accueil_articles_gauche .article_details{
+    padding-top:30px;
+    width:500px;
+}
+
+.accueil_articles_droite .article_details{
+    padding-top:30px;
+    width:350px;
+    margin-left:60px;
+}
 
 .accueil_articles .article_details .description_article{
-    margin:16px;
+
+    margin-top:10px;
     font-size:22px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -233,7 +317,8 @@ h3{
 }
 
 
-.accueil_articles .article_details .goto_article{
+.accueil_articles_gauche .article_details .goto_article{
+    margin-left:8px;
     font-family: 'Quicksand', sans-serif;
     font-size:24px;
     position: absolute;
