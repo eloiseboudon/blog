@@ -1,0 +1,153 @@
+.timeline{
+    height:100%;
+}
+
+.accueil_articles:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: white;
+    z-index: 1
+}
+
+.timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+}
+
+.timeline-block-right {
+    float: right;
+    /*margin-left: 20px;*/
+}
+
+.timeline-block-left {
+    float: left;
+    direction: rtl;
+}
+
+.timeline-block-right h3{
+    text-align: left;
+}
+
+.timeline-block-left h3{
+    text-align: right;
+}
+
+.timeline-block-right .marker{
+    margin-left:3px;
+}
+
+.timeline-block-left .marker{
+    margin-right:3px;
+}
+
+.marker {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #A6947D;
+    background: white;
+    margin-top: 10px;
+
+    z-index: 100;
+}
+
+.timeline-content {
+    width: 90%;
+    padding: 30px;
+    color: #515151;
+
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    cursor: default;
+
+    transition: all 0.5s;
+}
+
+.timeline-content:hover{
+    background-color: rgba(255,255,255,1);
+}
+
+
+.timeline-content span {
+    font-size: 15px;
+    color: #A6947D;
+}
+
+.timeline-content ul {
+    font-size: 15px;
+    list-style-type: circle;
+    line-height: normal;
+
+    margin-left:20px;
+    padding-top: 10px;
+
+    direction: ltr;
+}
+
+.timeline-content span .date {
+    font-size: 10px;
+    color: #A6947D;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    line-height: 1.5em;
+    word-spacing: 1px;
+    color: #515151;
+    padding-top: 10px;
+
+    direction: ltr;
+
+}
+
+.clickable, .clickable p, .clickable .timeline-content
+{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenu:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .timeline-block-right {
+        float: none;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+
+    .timeline-block-left .marker
+    {
+        margin-right:0px;
+        margin-left:3px;
+    }
+
+    .timeline-block-left h3{
+        text-align: left;
+    }
+}
