@@ -8,7 +8,7 @@
     top: 0;
     left: 50%;
     margin-left: -1px;
-    width: 2px;
+    width: 4px;
     height: 100%;
     background: white;
     z-index: 1
@@ -31,7 +31,6 @@
 
 .timeline-block-right {
     float: right;
-    /*margin-left: 20px;*/
 }
 
 .timeline-block-left {
@@ -47,22 +46,15 @@
     text-align: right;
 }
 
-.timeline-block-right .marker{
-    margin-left:3px;
-}
 
-.timeline-block-left .marker{
-    margin-right:3px;
-}
 
 .marker {
-    width: 7px;
-    height: 7px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    border: 2px solid #A6947D;
+    border: 2px solid #880015;
     background: white;
     margin-top: 10px;
-
     z-index: 100;
 }
 
@@ -84,8 +76,7 @@
 
 
 .timeline-content span {
-    font-size: 15px;
-    color: #A6947D;
+    font-size: 20px;
 }
 
 .timeline-content ul {
@@ -143,7 +134,7 @@
 
     .timeline-block-left .marker
     {
-        margin-right:0px;
+        margin-right:0;
         margin-left:3px;
     }
 

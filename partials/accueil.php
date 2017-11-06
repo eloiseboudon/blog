@@ -28,7 +28,9 @@ function afficher_liste_articles()
                 <div class="marker"></div>
                 <div class="scroll timeline-content">
                     <a href="index.php?page=2&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
-
+                        <div class="article_image">
+                            <img src="<?php echo $donnees['img_article']; ?>">
+                        </div>
                         <div class="article_details">
                             <h2><?php echo htmlspecialchars($donnees['titre']); ?></h2>
                             <em> <?php echo $donnees['date_article']; ?></em>
@@ -42,9 +44,7 @@ function afficher_liste_articles()
                             </div>
                         </div>
 
-                        <div class="article_image">
-                            <img src="<?php echo $donnees['img_article']; ?>">
-                        </div>
+
 
                     </a>
                 </div>
@@ -71,7 +71,7 @@ function afficher_liste_articles()
                             </div>
 
                             <div class="goto_article">
-                                        <span><i class="fa fa-hand-o-right"
+                                        <span><i class="fa fa-hand-o-left"
                                                  aria-hidden="true"></i> Voir l'article</span>
                             </div>
                         </div>
