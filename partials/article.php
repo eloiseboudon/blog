@@ -42,7 +42,7 @@ function afficher_article($id_article) {
         <input type="text" name="auteur"/><br/><br/>
 
         <label for="contenu">Votre commentaire:</label><br/>
-        <textarea name="contenu"></textarea>
+        <textarea name="contenu"></textarea><br/>
 
         <input type="submit" name="submit"/>
 

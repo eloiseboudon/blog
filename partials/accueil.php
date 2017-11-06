@@ -1,9 +1,15 @@
-<?php
+<div class="acceuil_titre">
+    <h1>Tous les articles</h1>
+</div>
 
+
+<?php
 afficher_liste_articles();
 
 
-function afficher_liste_articles(){
+function afficher_liste_articles()
+{
+
     $bdd = connexion_sql();
 
     $sql = 'SELECT * FROM articles';
@@ -13,30 +19,43 @@ function afficher_liste_articles(){
 
     while ($donnees = mysqli_fetch_array($req)) {
 
-            ?>
-            <div class="accueil">
-                <h3>
-                    <?php echo htmlspecialchars($donnees['titre']); ?>
-                    <em>le <?php echo $donnees['date_article']; ?></em>
-                </h3>
-                <p>
-                    <?php
+        ?>
+        <div class="accueil_articles">
 
-                    // description de l'article
-                    ?>
-                    <br/>
-                    <a href="index.php?page=2&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">Article</a>
-                </p>
-            </div>
-            <?php
-        } // Fin de la boucle des billets
+            <a href="index.php?page=2&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="article_image">
+                            <img src="<?php echo $donnees['img_article']; ?>">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="article_details">
+                            <h2><?php echo htmlspecialchars($donnees['titre']); ?></h2>
+                            <em> <?php echo $donnees['date_article']; ?></em>
 
 
-        mysqli_close($bdd);
+                            <div class="description_article">
+                                <?php echo $donnees['description']; ?>
+                            </div>
+
+                            <div class="goto_article">
+                                <span><i class="fa fa-hand-o-right" aria-hidden="true"></i> Voir l'article</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <?php
+    } // Fin de la boucle des billets
+
+
+    mysqli_close($bdd);
 
 }
-
-
 
 
 ?>

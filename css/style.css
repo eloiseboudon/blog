@@ -1,0 +1,245 @@
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #F4ECDE !important;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+h1, h3 {
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2{
+    font-family: 'Dosis', sans-serif;
+    font-size:40px;
+}
+
+h1{
+    font-size:46px;
+}
+
+h3{
+    font-size:34px;
+}
+
+.global_width{
+    max-width: 1760px;
+    margin: auto;
+    padding: 0 230px;
+    height: 100%;
+}
+
+#body-position{
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -20px;
+}
+
+
+.contenu{
+    height:100%;
+}
+
+.menu{
+    height:60px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 20px;
+    border:0;
+    width:100%;
+    background-color: #FBFFFE;
+    border-bottom: 2px solid #880015;
+    position: static;
+    top:60px;
+    z-index: 999;
+}
+
+
+
+.menu .menu-item {
+    text-align:left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:2.5em;
+    color:#000000;
+    display:inline-block;
+    width:19%;
+}
+
+.menu .logo{
+    width:200px;
+}
+
+.menu img{
+    margin-top:0;
+    height:50px;
+}
+
+.menu a{
+    color:#000000;
+}
+
+.menu  a:hover, .menu a:focus {
+    color:#880015;
+    text-decoration:none;
+}
+
+
+/*#bottom-page {*/
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+    /*width:100%;*/
+/*}*/
+
+#bottom-page a{
+    text-decoration:none;
+    color:#000000;
+}
+
+
+#bottom-page a > li {
+    list-style-type: none;
+
+}
+
+#bottom-page h1{
+    padding-left:40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #880015;
+}
+
+.bottom-bar{
+    margin-top:30px;
+    padding-top:10px;
+    background-color: #FBFFFE;
+    border-top: 1.5px solid #880015;
+}
+
+.bottom-bar .icon_social{
+    padding-left:40px;
+}
+
+
+.bottom-bar i{
+    padding:10px;
+}
+
+.bottom-bar .icon_social img{
+    width: 50px;
+    margin: 10px;
+}
+
+
+.bottom-copyright{
+    background-color: #880015;
+    color:#FBFFFE;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:20px;
+    bottom:0;
+}
+
+.global_width_bottom{
+    max-width: 1580px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+
+
+.accueil_articles{
+    background: #fff;
+    margin-bottom:16px;
+    padding-top:16px;
+    Overflow:hidden;
+}
+
+
+.accueil_articles a{
+    text-decoration: none;
+    color:#000000;
+}
+
+.accueil_articles  a:hover, .accueil_articles a:focus {
+    text-decoration:none;
+}
+
+
+.accueil_articles  a:hover h2, .accueil_articles a:focus h2{
+    color:#880015;
+}
+
+.acceuil_titre h1{
+    color: #880015;
+}
+.accueil_articles .article_image{
+    margin-bottom:16px;
+    margin-left:16px;
+    margin-right: 16px;
+
+}
+
+.accueil_articles .article_image img{
+    width:400px;
+    height: 300px;
+
+}
+.accueil_articles .article_details{
+    /*float:left;*/
+}
+
+
+.accueil_articles .article_details .description_article{
+    margin:16px;
+    font-size:22px;
+    /*white-space: normal;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height:130px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+
+.accueil_articles .article_details .goto_article .fa{
+    font-size:36px;
+    color: #880015;
+}
+
+
+.accueil_articles .article_details .goto_article span:hover{
+    font-size: 36px;
+}
+
+
+.accueil_articles .article_details .goto_article{
+    font-family: 'Quicksand', sans-serif;
+    font-size:24px;
+    position: absolute;
+    bottom: 20px;
+
+}
+
