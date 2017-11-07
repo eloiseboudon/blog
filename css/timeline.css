@@ -29,6 +29,35 @@
     clear: both;
 }
 
+
+.timeline-block-left:before{
+    border-left-width: 15px;
+    border-left-style: solid;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    color: #880015;
+    left:45.5%;
+    margin-top:130px;
+ }
+
+.timeline-block-right:before{
+    border-right-width: 15px;
+    border-right-style: solid;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    color: #880015;
+    right:45.5%;
+    margin-top:130px;
+}
+
 .timeline-block-right {
     float: right;
 }
@@ -72,17 +101,18 @@
     background: white;
     margin-top: 135px;
     z-index: 100;
-
 }
 
 .timeline-content {
     width: 90%;
-    padding: 16px;
+    padding: 12px;
     color: #515151;
     background-color: rgba(255,255,255,0.6);
     border-radius: 10px;
     cursor: default;
     transition: all 0.5s;
+    border: 2px dashed #880015;
+    margin:2px;
 }
 
 .timeline-content:hover{
@@ -155,5 +185,12 @@
 
     .timeline-block-left h3{
         text-align: left;
+    }
+
+    .timeline-block-left:before{
+        display: none;
+    }
+    .timeline-block-right:before{
+        display: none;
     }
 }
