@@ -16,9 +16,9 @@
 </head>
 
 <body>
-
-<div class="page">
+    <div class="menu">
         <?php include('partials/menu.php'); ?>
+    </div>
 
     <div class="contenu">
         <div class="global_width">
@@ -41,7 +41,6 @@
         </div>
     </div>
 
-</div>
 <div id="footer">
     <?php include('partials/footer.php'); ?>
 </div>
