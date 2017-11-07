@@ -31,6 +31,9 @@
                     case 2:
                         include('partials/article.php');
                         break;
+                    case 3:
+                        include('partials/connexion.php');
+                        break;
 
 
                 }

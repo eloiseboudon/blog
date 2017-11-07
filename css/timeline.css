@@ -11,13 +11,13 @@
     width: 4px;
     height: 100%;
     background: white;
-    z-index: 1
+    /*z-index: 1*/
 }
 
 .timeline-block {
-    width: -webkit-calc(50% + 8px);
-    width: -moz-calc(50% + 8px);
-    width: calc(50% + 8px);
+    width: -webkit-calc(40% + 8px);
+    width: -moz-calc(40% + 8px);
+    width: calc(40% + 8px);
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -29,55 +29,20 @@
     clear: both;
 }
 
-/*.timeline-block:before {*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*margin-top: 138px;*/
-    /*!*left: 50%;*!*/
-    /*margin-left: -1px;*/
-    /*width: 5%;*/
-    /*height: 6px;*/
-    /*background: white;*/
-    /*z-index: 1;*/
-    /*border: solid*/
-/*}*/
-
-
-/*.timeline-block-left:before{*/
-    /*border-left-width: 15px;*/
-    /*border-left-style: solid;*/
-    /*position: absolute;*/
-    /*content: "";*/
-    /*width: 0;*/
-    /*height: 0;*/
-    /*border-top: 15px solid transparent;*/
-    /*border-bottom: 15px solid transparent;*/
-    /*color: #880015;*/
-    /*left:45.5%;*/
-    /*margin-top:130px;*/
- /*}*/
-
-/*.timeline-block-right:before{*/
-    /*border-right-width: 15px;*/
-    /*border-right-style: solid;*/
-    /*position: absolute;*/
-    /*content: "";*/
-    /*width: 0;*/
-    /*height: 0;*/
-    /*border-top: 15px solid transparent;*/
-    /*border-bottom: 15px solid transparent;*/
-    /*color: #880015;*/
-    /*right:45.5%;*/
-    /*margin-top:130px;*/
-/*}*/
 
 .timeline-block-right {
     float: right;
+    margin-right: 170px;
+    margin-bottom: 35px;
+    transform: rotate(-7deg);
 }
 
 .timeline-block-left {
     float: left;
     direction: rtl;
+    margin-top: 45px;
+    margin-left: 170px;
+    transform: rotate(7deg);
 }
 
 .timeline-block-right h3{
@@ -89,11 +54,11 @@
 }
 
 
-.timeline-block-left .article_titre, .timeline-block-left .article_details{
+ .timeline-block-left .article_details{
     text-align:left;
 }
 
-.timeline-block-right .article_titre, .timeline-block-right .article_details{
+.timeline-block-right .article_details{
     text-align:right;
 }
 
@@ -105,15 +70,12 @@
     float: right;
 }
 
+.timeline-block-right .timeline-content{
+    box-shadow: 12px 8px 8px #aaa;
+}
 
-.marker {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 2px solid #880015;
-    background: #880015;
-    margin-top: 135px;
-    z-index: 100;
+.timeline-block-left .timeline-content{
+    box-shadow: -12px 8px 8px #aaa;
 }
 
 .timeline-content {
@@ -126,6 +88,8 @@
     transition: all 0.5s;
     border: 2px dashed #880015;
     margin:2px;
+    overflow: visible;
+
 }
 
 .timeline-content:hover{
