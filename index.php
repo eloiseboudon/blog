@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <?php include('sql/connexion.php'); ?>
-<html>
-<head lang="fr">
-    <meta charset="utf-8"/>
+<html lang="fr">
+<head>
+
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>-->
+
     <title>L'étiquette - Blog</title>
+
+    <meta name="author" content="Eloïse Boudon" />
+    <meta name="keywords" content="L'étiquette, blog, éthique" />
+    <meta name="description" content="" />
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -17,7 +25,11 @@
 
 <body>
     <div class="menu">
-        <?php include('partials/menu.php'); ?>
+
+        <?php
+            include('partials/menu.php');
+            header('Content-Type: text/html; charset=UTF-8', true);
+        ?>
     </div>
 
     <div class="contenu">

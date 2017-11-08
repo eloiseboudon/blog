@@ -34,14 +34,15 @@ function afficher_liste_articles()
                                 </div>
                                 <div class="article_details">
                                     <div class="article_titre">
-                                        <h2><?php echo htmlspecialchars($donnees['titre']); ?></h2>
+                                        <h2><?php echo $donnees['titre']; ?></h2>
                                     </div>
 
                                     <div class="article_auteur">
                                         <?php echo $donnees['auteur']; ?>
                                     </div>
-
-                                    <em> <?php echo $donnees['date_article']; ?></em>
+                                    <div class="article_date">
+                                        <em> <?php echo date_format(new DateTime($donnees['date_article']),'j-M-Y');?></em>
+                                    </div>
 
                                     <div class="description_article">
                                         <?php echo $donnees['description']; ?>
@@ -69,16 +70,16 @@ function afficher_liste_articles()
                                 <div class="article_details">
 
                                     <div class="article_titre">
-                                        <h2><?php echo htmlspecialchars($donnees['titre']); ?></h2>
+                                        <h2><?php echo $donnees['titre']; ?></h2>
                                     </div>
 
                                     <div class="article_auteur">
                                         <?php echo $donnees['auteur']; ?>
                                     </div>
 
-
-                                    <em> <?php echo $donnees['date_article']; ?></em>
-
+                                    <div class="article_date" dir="auto">
+                                        <em> <?php echo date_format(new DateTime($donnees['date_article']),'j-M-Y');?></em>
+                                    </div>
                                     <div class="description_article">
                                         <?php echo $donnees['description']; ?>
                                     </div>
