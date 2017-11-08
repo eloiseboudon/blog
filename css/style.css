@@ -259,13 +259,14 @@ h3 {
     color: #880015;
 }
 
-
 .article .article_contenu {
     margin: 40px;
     margin-left: 100px;
     margin-right: 100px;
     padding: 20px;
     background-color: #fff;
+    border-radius: 10px;
+
 }
 
 .article .article_contenu h3 {
@@ -292,17 +293,69 @@ h3 {
     font-style: italic;
 }
 
-.article{
+
+.article_commentaire {
+    margin-top: 10px;
+
+}
+
+
+.article_commentaire h3{
     border-bottom: 1px solid #880015;
 }
 
-.article_commentaire{
-    margin-top:10px;
+.article_commentaire .ajouter_commentaire form{
+    margin:20px;
 }
 
-
-.article_commentaire h2 {
+.article_commentaire .ajouter_commentaire .connexion, .article_commentaire .ajouter_commentaire .form_contenu{
+    margin: 20px;
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size:40px;
 }
+
+.article_commentaire .ajouter_commentaire .form_contenu textarea{
+    width:70%;
+    height:150px;
+}
+.article_commentaire .ajouter_commentaire .connexion p,.article_commentaire .ajouter_commentaire .form_contenu label{
+    font-size:22px;
+}
+
+
+.article_commentaire .ajouter_commentaire .connexion a{
+    text-decoration: none;
+}
+
+.article_commentaire .ajouter_commentaire .connexion span{
+    padding: 6px;
+    background-color: white;
+    color: #880015;
+    border-radius: 5px;
+    font-size:22px;
+}
+
+.article_commentaire .ajouter_commentaire .form_contenu{
+    margin: 20px;
+}
+
+.article_commentaire .ajouter_commentaire .btn-form{
+    background-color: #880015;
+    color:white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:30px;
+    display: block;
+    margin : auto;
+}
+
+
+.article_commentaire .voir_commentaires .commentaire_contenu{
+    width:30%;
+    margin : auto;
+    background-color: white;
+    padding:10px;
+    border-radius:10px;
+    border: 1px dashed #880015;
+}
+
+
+

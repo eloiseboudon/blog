@@ -3,13 +3,13 @@
 <html lang="fr">
 <head>
 
-<!--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>-->
+    <!--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>-->
 
     <title>L'étiquette - Blog</title>
 
-    <meta name="author" content="Eloïse Boudon" />
-    <meta name="keywords" content="L'étiquette, blog, éthique" />
-    <meta name="description" content="" />
+    <meta name="author" content="Eloïse Boudon"/>
+    <meta name="keywords" content="L'étiquette, blog, éthique"/>
+    <meta name="description" content=""/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -24,37 +24,40 @@
 </head>
 
 <body>
-    <div class="menu">
+<div class="menu">
 
+    <?php
+    include('partials/menu.php');
+    header('Content-Type: text/html; charset=UTF-8', true);
+    ?>
+</div>
+
+<div class="contenu">
+    <div class="global_width">
         <?php
-            include('partials/menu.php');
-            header('Content-Type: text/html; charset=UTF-8', true);
+        if (isset($_GET['page'])) {
+            switch ($_GET['page']) {
+                case 1:
+                    include('partials/accueil.php');
+                    break;
+                case 2:
+                    include('partials/article.php');
+                    break;
+                case 3:
+                    include('partials/connexion.php');
+                    break;
+                case 4:
+                    include('partials/inscription.php');
+                    break;
+
+
+            }
+        } else {
+            include('partials/accueil.php');
+        }
         ?>
     </div>
-
-    <div class="contenu">
-        <div class="global_width">
-            <?php
-            if (isset($_GET['page'])) {
-                switch ($_GET['page']) {
-                    case 1:
-                        include('partials/accueil.php');
-                        break;
-                    case 2:
-                        include('partials/article.php');
-                        break;
-                    case 3:
-                        include('partials/connexion.php');
-                        break;
-
-
-                }
-            } else {
-                include('partials/accueil.php');
-            }
-            ?>
-        </div>
-    </div>
+</div>
 
 <div id="footer">
     <?php include('partials/footer.php'); ?>
