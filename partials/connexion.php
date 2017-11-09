@@ -2,7 +2,9 @@
     <form method="get">
         <fieldset><legend>Pseudo </legend><input type="text" name="pseudo"/></fieldset>
         <fieldset><legend>Mot de passe </legend><input type="password" name="password"/></fieldset>
-        <input type="submit" name="submit" value="Se connecter"/>
+        <button type="submit" name="submit" class="btn btn-form">
+            <i class="fa fa-check" aria-hidden="true"></i> Se connecter
+        </button>
     </form>
 
     <a href="index.php?page=4">Pas encore inscrit ?</a>
