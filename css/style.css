@@ -42,8 +42,8 @@ h3 {
     /*position: relative;*/
     /*min-height: 100%;*/
 
-    /*min-height: -webkit-calc(100vh - 300px);*/
-    /*height: -moz-calc(40% + 8px);*/
+    min-height: -webkit-calc(100vh - 346px);
+    height: -moz-calc(100vh - 346px);
     min-height: calc(100vh - 346px);
 }
 
@@ -263,7 +263,7 @@ h3 {
 }
 
 .accueil_articles .ficelle {
-    background-image: url("../img/ficelle_rond_2.png");
+    background-image: url("../img/ficelle_rond_avec_trou.png");
     position: absolute;
     width: 92px;
     height: 42px;
@@ -371,45 +371,159 @@ h3 {
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    border: 1px dashed #880015;
+    border: 2px dashed #880015;
 }
 
 .article_commentaire .voir_commentaires .commentaire_informations {
     margin-left: 20%;
 }
 
-.authentification_compte {
+.authentification_compte{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+    padding-top: 100px;
+}
+
+.authentification_form{
     padding: 10px;
     background-color: #fff;
     width: 30%;
     display: block;
     margin: auto;
     text-align: center;
-
+    border-radius:10px;
+    border: 2px dashed #880015;
 }
 
-.authentification_compte legend {
+.authentification_compte .cercle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #F4ECDE;
+    z-index: 100;
+    border: 5px solid #880015;
+    margin-top: 8px;
+    position: relative;
+    left:63%;
+}
+
+.authentification_compte .ficelle{
+    background-image: url("../img/ficelle_rond_authentification.png");
+    position: absolute;
+    width: 92px;
+    height: 42px;
+    z-index: 200;
+    left:62%;
+    transform: rotate(-40deg);
+}
+
+.authentification_compte .authentification_form legend {
     text-align: left;
 }
 
-.authentification_compte a {
+.authentification_compte .authentification_form a {
     text-decoration: none;
     color: black;
 }
 
-.authentification_compte input {
+
+.authentification_compte .authentification_form a:hover {
+    /*text-decoration: none;*/
+    color: #880015;
+}
+
+
+.authentification_compte .authentification_form input {
     width: 80%;
 }
 
-.authentification_compte .btn-form {
+.authentification_compte .authentification_form .btn-form {
     margin-top: 20px;
     margin-bottom: 10px;
     background-color: #880015;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 26px;
+}
 
+.inscription_compte{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+    /*padding-top: 100px;*/
+}
+
+.inscription_form{
+    padding: 10px;
+    background-color: #fff;
+    width: 30%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-radius:10px;
+    border: 2px dashed #880015;
+}
+
+.inscription_compte .cercle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #F4ECDE;
+    z-index: 100;
+    border: 5px solid #880015;
+    margin-top: 8px;
+    position: relative;
+    left:63%;
+}
+
+.inscription_compte .ficelle{
+    background-image: url("../img/ficelle_rond_authentification.png");
+    position: absolute;
+    width: 92px;
+    height: 42px;
+    z-index: 200;
+    left:62%;
+    transform: rotate(-40deg);
+}
+
+.inscription_compte .inscription_form legend {
+    text-align: left;
+}
+
+.inscriptionn_compte .inscription_form a {
+    text-decoration: none;
+    color: black;
 }
 
 
+.inscription_compte .inscription_form a:hover {
+    /*text-decoration: none;*/
+    color: #880015;
+}
 
+
+.inscription_compte .inscription_form input {
+    width: 80%;
+}
+
+.inscription_compte .inscription_form .btn-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #880015;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 26px;
+}

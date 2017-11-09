@@ -1,16 +1,25 @@
 <div class="authentification_compte">
-    <form method="get">
-        <fieldset><legend>Pseudo </legend><input type="text" name="pseudo"/></fieldset>
-        <fieldset><legend>Mot de passe </legend><input type="password" name="password"/></fieldset>
-        <button type="submit" name="submit" class="btn btn-form">
-            <i class="fa fa-check" aria-hidden="true"></i> Se connecter
-        </button>
-    </form>
+    <div class="cercle"></div>
+    <div class="ficelle"></div>
+    <div class="authentification_form">
 
-    <a href="index.php?page=4">Pas encore inscrit ?</a>
 
+        <form method="get">
+            <fieldset>
+                <legend>Mail</legend>
+                <input type="text" name="pseudo"/></fieldset>
+            <fieldset>
+                <legend>Mot de passe</legend>
+                <input type="password" name="password"/></fieldset>
+            <button type="submit" name="submit" class="btn btn-form">
+                <i class="fa fa-check" aria-hidden="true"></i> Se connecter
+            </button>
+        </form>
+
+        <a href="index.php?page=4">Pas encore inscrit ?</a><br/>
+        <a href="#">Mot de passe oublié</a>
+    </div>
 </div>
-
 
 
 <?php
@@ -24,12 +33,9 @@ if (isset($_GET['submit'])) {
 
     $resultat = mysqli_fetch_array($req);
 
-    if (!$resultat)
-    {
+    if (!$resultat) {
         echo 'Mauvais identifiant ou mot de passe !';
-    }
-    else
-    {
+    } else {
 //        session_start();
 //        $_SESSION['id'] = $resultat['id'];
 //        $_SESSION['pseudo'] = $pseudo;

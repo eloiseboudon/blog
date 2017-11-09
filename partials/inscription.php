@@ -1,14 +1,23 @@
-<div class="inscription">
+<div class="inscription_compte">
+    <div class="cercle"></div>
+    <div class="ficelle"></div>
+    <div class="inscription_form">
+
+
     <form method="post">
-        <fieldset><legend>Nom</legend><input type="text" name="nom"/></fieldset>
-        <fieldset><legend>Prénom</legend><input type="text" name="prenom"/></fieldset>
+<!--        <div class="fieldselt_1">-->
+            <fieldset><legend>Nom</legend><input type="text" name="nom"/></fieldset>
+            <fieldset><legend>Prénom</legend><input type="text" name="prenom"/></fieldset>
+<!--        </div>-->
         <fieldset><legend>Pseudo</legend><input type="text" name="pseudo"/></fieldset>
         <fieldset><legend>Mot de passe</legend><input type="password" name="password"/></fieldset>
         <fieldset><legend>Adresse email</legend><input type="email" name="email"/></fieldset>
-        <input type="submit" name="submit" value="Créer"/>
+        <button type="submit" name="submit" class="btn btn-form">
+            <i class="fa fa-check" aria-hidden="true"></i> Se connecter
+        </button>
 
     </form>
-
+    </div>
 </div>
 
 <?php
