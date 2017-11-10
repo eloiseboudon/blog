@@ -40,7 +40,7 @@
                 case 1:
                     include('partials/accueil.php');
                     break;
-                case 2:
+                case "article":
                     include('partials/article.php');
                     break;
                 case 3:
@@ -49,6 +49,13 @@
                 case 4:
                     include('partials/inscription.php');
                     break;
+                case "nos_valeurs":
+                    include('partials/footer/nos_valeurs.php');
+                    break;
+                case "mentions_legales":
+                    include('partials/footer/mentions_legales.php');
+                    break;
+
 
 
             }

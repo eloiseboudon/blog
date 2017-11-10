@@ -79,7 +79,7 @@
                         <a href="#">
                             <li>L'équipe</li>
                         </a>
-                        <a href="#">
+                        <a href="index.php?page=nos_valeurs">
                             <li>Nos valeurs</li>
                         </a>
                     </ul>
@@ -88,7 +88,7 @@
                 <div class="col-md-3">
                     <h1>Mentions</h1>
                     <ul>
-                        <a href="#">
+                        <a href="index.php?page=mentions_legales">
                             <li>Mentions légales</li>
                         </a>
                         <a href="#">

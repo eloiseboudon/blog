@@ -11,7 +11,21 @@
     width: 4px;
     height: 100%;
     background: white;
-    /*z-index: 1*/
+}
+
+.nos_valeurs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 4px;
+    height: 100%;
+    background: white;
+}
+
+.valeur_init .timeline-block{
+    padding-top:20px;
 }
 
 .timeline-block {
@@ -29,12 +43,15 @@
     clear: both;
 }
 
-
 .timeline-block-right {
     float: right;
     margin-right: 170px;
     margin-bottom: 35px;
     transform: rotate(-7deg);
+}
+
+.timeline-block-left-first{
+    margin-top: 60px;
 }
 
 .timeline-block-left {
@@ -45,6 +62,15 @@
     transform: rotate(7deg);
 }
 
+.timeline-popup{
+    margin-right: 100px;
+    position: absolute;
+    margin-top: 2300px;
+}
+
+.timeline-popup .timeline-block-left{
+    transform: none;
+}
 
 .timeline-block-right h3{
     text-align: left;
@@ -54,20 +80,19 @@
     text-align: right;
 }
 
-
- .timeline-block-left .article_details{
+.timeline-block-left .article_details,  .timeline-block-left .valeur_contenu{
     text-align:left;
 }
 
-.timeline-block-right .article_details{
+.timeline-block-right .article_details, .timeline-block-right .valeur_contenu{
     text-align:right;
 }
 
-.timeline-block-left .article_image{
+.timeline-block-left .article_image, .timeline-block-left .valeur_image{
     float: left;
 }
 
-.timeline-block-right .article_image {
+.timeline-block-right .article_image, .timeline-block-right .valeur_image{
     float: right;
 }
 
@@ -78,6 +103,7 @@
 .timeline-block-left .timeline-content{
     box-shadow: -12px 8px 8px #aaa;
 }
+
 
 .timeline-content {
     width: 90%;
@@ -90,9 +116,21 @@
     border: 2px dashed #880015;
     margin:2px;
     overflow: visible;
-
 }
 
+.valeur_init .timeline-block{
+    width:100%;
+}
+
+.valeur_init .timeline-content{
+    background-color: white;
+    width:50%;
+    margin: 0 auto;
+}
+
+.nos_valeurs_global .timeline-content:hover{
+    background-color: rgba(255,255,255,1);
+}
 .timeline-content:hover{
     background-color: rgba(255,255,255,1);
 }
@@ -106,10 +144,8 @@
     font-size: 15px;
     list-style-type: circle;
     line-height: normal;
-
     margin-left:20px;
     padding-top: 10px;
-
     direction: ltr;
 }
 
@@ -124,13 +160,10 @@
     word-spacing: 1px;
     color: #515151;
     padding-top: 10px;
-
     direction: ltr;
-
 }
 
-.clickable, .clickable p, .clickable .timeline-content
-{
+.clickable, .clickable p, .clickable .timeline-content{
     cursor: pointer;
 }
 
