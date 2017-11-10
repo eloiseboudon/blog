@@ -52,6 +52,9 @@
                 case "nos_valeurs":
                     include('partials/footer/nos_valeurs.php');
                     break;
+                case "mentions_legales":
+                    include('partials/footer/mentions_legales.php');
+                    break;
 
 
 
