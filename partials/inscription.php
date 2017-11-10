@@ -13,7 +13,7 @@
         <fieldset><legend>Mot de passe</legend><input type="password" name="password"/></fieldset>
         <fieldset><legend>Adresse email</legend><input type="email" name="email"/></fieldset>
         <button type="submit" name="submit" class="btn btn-form">
-            <i class="fa fa-check" aria-hidden="true"></i> Se connecter
+            <i class="fa fa-check" aria-hidden="true"></i> S'inscrire
         </button>
 
     </form>

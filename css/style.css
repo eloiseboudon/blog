@@ -37,14 +37,10 @@ h3 {
 }
 
 .contenu {
-    /*height: 100%;*/
     flex: 1;
-    /*position: relative;*/
-    /*min-height: 100%;*/
-
-    min-height: -webkit-calc(100vh - 346px);
-    height: -moz-calc(100vh - 346px);
-    min-height: calc(100vh - 346px);
+    min-height: -webkit-calc(100vh - 304px);
+    height: -moz-calc(100vh - 304px);
+    min-height: calc(100vh - 304px);
 }
 
 .global_width {
@@ -56,8 +52,6 @@ h3 {
 
 .menu {
     height: 60px;
-    padding-left: 120px;
-    padding-right: 120px;
     margin-bottom: 20px;
     border: 0;
     width: 100%;
@@ -71,15 +65,17 @@ h3 {
 .menu .menu-item {
     text-align: left;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: #000000;
     display: inline-block;
-    width: 19%;
+    width: 25%;
 }
 
-.menu .menu-item-right {
-    float: right;
-    font-size: 36px;
+.menu .menu-right {
+    text-align:right;
+    width:40%;
+    float:right;
+    display: inline-block;
 }
 
 .menu .fa {
@@ -91,8 +87,9 @@ h3 {
 }
 
 .menu img {
-    margin-top: 0;
+    margin-bottom: 4px;
     height: 50px;
+    padding-left: 15px;
 }
 
 .menu a {
@@ -103,12 +100,6 @@ h3 {
     color: #880015;
     text-decoration: none;
 }
-
-/*#bottom-page {*/
-    /*!*position: absolute;*!*/
-    /*bottom: 0;*/
-    /*width: 100%;*/
-/*}*/
 
 #bottom-page a {
     text-decoration: none;

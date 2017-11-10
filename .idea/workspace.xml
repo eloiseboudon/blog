@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/footer.php" afterPath="$PROJECT_DIR$/partials/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/menu.php" afterPath="$PROJECT_DIR$/partials/menu.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +29,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.4978678">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/partials/connexion.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="374">
-                  <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding>
                     <marker date="1510235432384" expanded="true" signature="866:913" ph="SELECT id fr... membres" />
                     <marker date="1510235432384" expanded="true" signature="866:942" ph="SELECT id fr... membres" />
@@ -43,7 +46,7 @@
             <entry file="file://$PROJECT_DIR$/partials/accueil.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="204">
-                  <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="50" />
+                  <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="50" />
                   <folding>
                     <marker date="1510135933105" expanded="true" signature="189:211" ph="SELECT * FRO... articles" />
                   </folding>
@@ -84,8 +87,18 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6460">
-                  <caret line="380" column="25" lean-forward="false" selection-start-line="380" selection-start-column="25" selection-end-line="380" selection-end-column="25" />
+                <state relative-caret-position="6307">
+                  <caret line="371" column="25" lean-forward="false" selection-start-line="371" selection-start-column="25" selection-end-line="371" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/partials/menu.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -95,21 +108,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7321">
-                  <caret line="490" column="0" lean-forward="false" selection-start-line="489" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/partials/menu.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="69" lean-forward="false" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+                <state relative-caret-position="638">
+                  <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -169,7 +172,6 @@
         <option value="$PROJECT_DIR$/article.php" />
         <option value="$PROJECT_DIR$/article_function.php" />
         <option value="$PROJECT_DIR$/sql/connexion.sql" />
-        <option value="$PROJECT_DIR$/partials/footer.php" />
         <option value="$PROJECT_DIR$/sql/connexion.php" />
         <option value="$PROJECT_DIR$/css/timeline.css" />
         <option value="$PROJECT_DIR$/partials/accueil.php" />
@@ -178,9 +180,10 @@
         <option value="$PROJECT_DIR$/partials/article.php" />
         <option value="$PROJECT_DIR$/template.html" />
         <option value="$PROJECT_DIR$/partials/connexion.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/partials/inscription.php" />
+        <option value="$PROJECT_DIR$/partials/footer.php" />
         <option value="$PROJECT_DIR$/partials/menu.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -191,9 +194,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="475" />
-    <option name="y" value="-12" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -281,18 +283,18 @@
       <workItem from="1509952069899" duration="46615000" />
       <workItem from="1510123581995" duration="2403000" />
       <workItem from="1510126193883" duration="21693000" />
-      <workItem from="1510221267576" duration="12130000" />
+      <workItem from="1510221267576" duration="15694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94025000" />
+    <option name="totallyTimeSpent" value="97589000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23614073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07782516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -353,12 +355,12 @@
         <state relative-caret-position="442">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="75" />
           <folding>
-            <marker date="1510239940234" expanded="true" signature="1130:1215" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1217" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1220" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1266" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1272" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1313" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1213" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1215" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1218" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1264" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1270" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1311" ph="INSERT INTO membres... " />
           </folding>
         </state>
       </provider>
@@ -582,14 +584,6 @@
     <entry file="file://$PROJECT_DIR$/sql/connexion.sql" />
     <entry file="file://$PROJECT_DIR$/partials/article_function.php" />
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/partials/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/Perso/Developpement/Eloise et Ben les BG_projet Regis/partials/afficher_panier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -711,7 +705,7 @@
     <entry file="file://$PROJECT_DIR$/partials/accueil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="50" />
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="50" />
           <folding>
             <marker date="1510135933105" expanded="true" signature="189:211" ph="SELECT * FRO... articles" />
           </folding>
@@ -729,7 +723,7 @@
     <entry file="file://$PROJECT_DIR$/partials/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <marker date="1510235432384" expanded="true" signature="866:913" ph="SELECT id fr... membres" />
             <marker date="1510235432384" expanded="true" signature="866:942" ph="SELECT id fr... membres" />
@@ -737,33 +731,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
+    <entry file="file://$PROJECT_DIR$/partials/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <marker date="1510239940234" expanded="true" signature="1130:1215" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1217" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1220" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1266" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1272" ph="INSERT INTO membres... " />
-            <marker date="1510239940234" expanded="true" signature="1130:1313" ph="INSERT INTO membres... " />
-          </folding>
+        <state relative-caret-position="447">
+          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7321">
-          <caret line="490" column="0" lean-forward="false" selection-start-line="489" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding>
+            <marker date="1510246175306" expanded="true" signature="1128:1213" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1215" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1218" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1264" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1270" ph="INSERT INTO membres... " />
+            <marker date="1510246175306" expanded="true" signature="1128:1311" ph="INSERT INTO membres... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="69" lean-forward="false" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
           <folding />
         </state>
       </provider>
