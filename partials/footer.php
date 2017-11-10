@@ -79,7 +79,7 @@
                         <a href="#">
                             <li>L'équipe</li>
                         </a>
-                        <a href="#">
+                        <a href="index.php?page=nos_valeurs">
                             <li>Nos valeurs</li>
                         </a>
                     </ul>

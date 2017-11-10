@@ -1,22 +1,15 @@
-/*html {*/
-    /*height: 100%;*/
-/*}*/
 
 body {
     background-color: #F4ECDE !important;
-    /*position: relative;*/
-    /*min-height: 100%;*/
-    /*height: 100%;*/
+
 }
 
 section {
-    /*max-width: 800px;*/
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
     margin: auto;
     position: relative;
-    /*min-height: 100%;*/
 }
 
 h1, h3 {
@@ -72,9 +65,9 @@ h3 {
 }
 
 .menu .menu-right {
-    text-align:right;
-    width:40%;
-    float:right;
+    text-align: right;
+    width: 40%;
+    float: right;
     display: inline-block;
 }
 
@@ -152,11 +145,10 @@ h3 {
     padding: 0 10px;
 }
 
-.accueil_articles {
+.accueil_articles, .nos_valeurs {
     margin: auto;
     position: relative;
     overflow: hidden;
-
 }
 
 .accueil_articles a {
@@ -185,17 +177,32 @@ h3 {
     height: 250px;
 }
 
-.accueil_articles .timeline-block-left .article_image {
+.nos_valeurs .valeur_image img {
+    width: 300px;
+    height: 200px;
+}
+
+.accueil_articles .timeline-block-left .article_image, .nos_valeurs .timeline-block-left .valeur_image {
     padding-right: 16px;
 }
 
-.accueil_articles .timeline-block-right .article_image {
+.accueil_articles .timeline-block-right .article_image, .nos_valeurs .timeline-block-right .valeur_image {
     padding-left: 16px;
 }
 
-.accueil_articles .article_details .article_auteur {
+.accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre {
     font-size: 22px;
     color: #880015;
+}
+
+.nos_valeurs .timeline-block-left .valeur_titre {
+    text-align: left;
+    margin-right: 35px;
+}
+
+.nos_valeurs .timeline-block-right .valeur_titre {
+    text-align: right;
+    margin-left: 35px;
 }
 
 .accueil_articles .article_details .description_article {
@@ -207,6 +214,10 @@ h3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.nos_valeurs .valeur_contenu {
+    font-size: 20px;
 }
 
 .accueil_articles .article_details .goto_article span:hover {
@@ -226,22 +237,36 @@ h3 {
     border-radius: 10px;
 }
 
-.accueil_articles .cercle {
+.accueil_articles .cercle, .nos_valeurs .cercle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     background-color: #F4ECDE;
     z-index: 100;
     border: 5px solid #880015;
-    margin-top: 115px;
+
     position: relative;
 }
 
-.accueil_articles .timeline-block-right .cercle {
+.accueil_articles .cercle {
+    margin-top: 115px;
+}
+
+.nos_valeurs .cercle {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.nos_valeurs .timeline-block-right .cercle {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.accueil_articles .timeline-block-right .cercle, .nos_valeurs .timeline-block-right .cercle {
     left: 10%;
 }
 
-.accueil_articles .timeline-block-left .cercle {
+.accueil_articles .timeline-block-left .cercle, .nos_valeurs .timeline-block-left .cercle {
     right: 10%;
 }
 
@@ -253,13 +278,23 @@ h3 {
     margin-left: 10%;
 }
 
-.accueil_articles .ficelle {
+.accueil_articles .ficelle, .nos_valeurs .ficelle {
     background-image: url("../img/ficelle_rond_avec_trou.png");
     position: absolute;
     width: 92px;
     height: 42px;
     z-index: 200;
     margin-top: 130px;
+}
+
+.nos_valeurs .ficelle {
+    transform: rotate(-40deg);
+    margin-top: 2px;
+    background-image: url("../img/ficelle_valeurs.png");
+}
+
+.nos_valeurs .timeline-block-right .ficelle {
+    transform: rotate(40deg) scaleX(-1);
 }
 
 .accueil_articles .timeline-block-right .ficelle {
@@ -369,7 +404,7 @@ h3 {
     margin-left: 20%;
 }
 
-.authentification_compte{
+.authentification_compte {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -382,18 +417,18 @@ h3 {
     padding-top: 100px;
 }
 
-.authentification_form{
+.authentification_form {
     padding: 10px;
     background-color: #fff;
     width: 30%;
     display: block;
     margin: auto;
     text-align: center;
-    border-radius:10px;
+    border-radius: 10px;
     border: 2px dashed #880015;
 }
 
-.authentification_compte .cercle{
+.authentification_compte .cercle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -402,16 +437,16 @@ h3 {
     border: 5px solid #880015;
     margin-top: 8px;
     position: relative;
-    left:63%;
+    left: 63%;
 }
 
-.authentification_compte .ficelle{
+.authentification_compte .ficelle {
     background-image: url("../img/ficelle_rond_authentification.png");
     position: absolute;
     width: 92px;
     height: 42px;
     z-index: 200;
-    left:62%;
+    left: 62%;
     transform: rotate(-40deg);
 }
 
@@ -424,12 +459,10 @@ h3 {
     color: black;
 }
 
-
 .authentification_compte .authentification_form a:hover {
     /*text-decoration: none;*/
     color: #880015;
 }
-
 
 .authentification_compte .authentification_form input {
     width: 80%;
@@ -444,7 +477,7 @@ h3 {
     font-size: 26px;
 }
 
-.inscription_compte{
+.inscription_compte {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -457,18 +490,18 @@ h3 {
     /*padding-top: 100px;*/
 }
 
-.inscription_form{
+.inscription_form {
     padding: 10px;
     background-color: #fff;
     width: 30%;
     display: block;
     margin: auto;
     text-align: center;
-    border-radius:10px;
+    border-radius: 10px;
     border: 2px dashed #880015;
 }
 
-.inscription_compte .cercle{
+.inscription_compte .cercle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -477,16 +510,16 @@ h3 {
     border: 5px solid #880015;
     margin-top: 8px;
     position: relative;
-    left:63%;
+    left: 63%;
 }
 
-.inscription_compte .ficelle{
+.inscription_compte .ficelle {
     background-image: url("../img/ficelle_rond_authentification.png");
     position: absolute;
     width: 92px;
     height: 42px;
     z-index: 200;
-    left:62%;
+    left: 62%;
     transform: rotate(-40deg);
 }
 
@@ -499,12 +532,10 @@ h3 {
     color: black;
 }
 
-
 .inscription_compte .inscription_form a:hover {
     /*text-decoration: none;*/
     color: #880015;
 }
-
 
 .inscription_compte .inscription_form input {
     width: 80%;

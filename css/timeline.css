@@ -11,8 +11,22 @@
     width: 4px;
     height: 100%;
     background: white;
-    /*z-index: 1*/
 }
+
+.nos_valeurs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 4px;
+    height: 100%;
+    background: white;
+}
+
+
+
+
 
 .timeline-block {
     width: -webkit-calc(40% + 8px);
@@ -55,19 +69,19 @@
 }
 
 
- .timeline-block-left .article_details{
+.timeline-block-left .article_details,  .timeline-block-left .valeur_contenu{
     text-align:left;
 }
 
-.timeline-block-right .article_details{
+.timeline-block-right .article_details, .timeline-block-right .valeur_contenu{
     text-align:right;
 }
 
-.timeline-block-left .article_image{
+.timeline-block-left .article_image, .timeline-block-left .valeur_image{
     float: left;
 }
 
-.timeline-block-right .article_image {
+.timeline-block-right .article_image, .timeline-block-right .valeur_image{
     float: right;
 }
 
