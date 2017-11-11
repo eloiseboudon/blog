@@ -151,13 +151,12 @@ h3 {
     overflow: hidden;
 }
 
-
 .mentions_legales_global{
     margin: auto;
     position: relative;
 }
 
-.accueil_articles a {
+.accueil_articles a{
     text-decoration: none;
     color: #000000;
 }
@@ -244,42 +243,6 @@ h3 {
     border-radius: 10px;
 }
 
-.accueil_articles .cercle, .nos_valeurs .cercle , .mentions_legales_global .cercle{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #F4ECDE;
-    z-index: 100;
-    border: 5px solid #880015;
-    position: relative;
-}
-
-.accueil_articles .cercle {
-    margin-top: 115px;
-}
-
-.nos_valeurs .cercle {
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
-.mentions_legales .cercle{
-    margin-top: 348px;
-    left: 73.5%;
-}
-
-.nos_valeurs .timeline-block-right .cercle {
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.accueil_articles .timeline-block-right .cercle, .nos_valeurs .timeline-block-right .cercle {
-    left: 10%;
-}
-
-.accueil_articles .timeline-block-left .cercle, .nos_valeurs .timeline-block-left .cercle {
-    right: 10%;
-}
 
 .accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre {
     margin-right: 10%;
@@ -289,41 +252,6 @@ h3 {
     margin-left: 10%;
 }
 
-.accueil_articles .ficelle, .nos_valeurs .ficelle {
-    background-image: url("../img/ficelle_rond_avec_trou.png");
-    position: absolute;
-    width: 92px;
-    height: 42px;
-    z-index: 200;
-    margin-top: 130px;
-}
-
-.nos_valeurs .ficelle {
-    /*width: 92px;*/
-    /*height: 42px;*/
-    z-index: 200;
-    transform: rotate(-40deg);
-    margin-top: 2px;
-    background-image: url("../img/ficelle_valeurs.png");
-}
-
-.mentions_legales .ficelle{
-    position: absolute;
-    width: 75px;
-    height: 42px;
-    margin-top: 360px;
-    left: 74%;
-    z-index: 200;
-    background-image: url("../img/ficelle_courte_mentions-legales.png");
-}
-
-.nos_valeurs .timeline-block-right .ficelle {
-    transform: rotate(40deg) scaleX(-1);
-}
-
-.accueil_articles .timeline-block-right .ficelle {
-    transform: scaleX(-1);
-}
 
 .article h1 , .nos_valeurs_global h1, .mentions_legales_global h1{
     color: #880015;
@@ -432,14 +360,7 @@ h3 {
     margin: auto;
 }
 
-.article_commentaire .voir_commentaires .commentaire_contenu {
-    width: 30%;
-    margin: auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-}
+
 
 .article_commentaire .voir_commentaires .commentaire_informations {
     margin-left: 20%;
@@ -458,38 +379,7 @@ h3 {
     padding-top: 100px;
 }
 
-.authentification_form {
-    padding: 10px;
-    background-color: #fff;
-    width: 30%;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-}
 
-.authentification_compte .cercle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #F4ECDE;
-    z-index: 100;
-    border: 5px solid #880015;
-    margin-top: 8px;
-    position: relative;
-    left: 63%;
-}
-
-.authentification_compte .ficelle {
-    background-image: url("../img/ficelle_rond_authentification.png");
-    position: absolute;
-    width: 92px;
-    height: 42px;
-    z-index: 200;
-    left: 62%;
-    transform: rotate(-40deg);
-}
 
 .authentification_compte .authentification_form legend {
     text-align: left;
@@ -531,38 +421,6 @@ h3 {
     /*padding-top: 100px;*/
 }
 
-.inscription_form {
-    padding: 10px;
-    background-color: #fff;
-    width: 30%;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-}
-
-.inscription_compte .cercle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #F4ECDE;
-    z-index: 100;
-    border: 5px solid #880015;
-    margin-top: 8px;
-    position: relative;
-    left: 63%;
-}
-
-.inscription_compte .ficelle {
-    background-image: url("../img/ficelle_rond_authentification.png");
-    position: absolute;
-    width: 92px;
-    height: 42px;
-    z-index: 200;
-    left: 62%;
-    transform: rotate(-40deg);
-}
 
 .inscription_compte .inscription_form legend {
     text-align: left;
@@ -601,16 +459,5 @@ h3 {
     -moz-box-pack: justify;
     justify-content: space-between;
     clear: both;
-}
-
-
-.mentions_legales_global .mentions_contenu{
-    margin-top:60px;
-    padding:10px;  background-color: white;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-    width: 50%;
-    display: block;
-    margin:auto;
 }
 
