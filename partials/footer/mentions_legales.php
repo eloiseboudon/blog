@@ -15,7 +15,7 @@
                 <b>Numéro de téléphone :</b> +33 (0) 6 58 35 27 18</p>
 
             <p> <b>Nom du directeur de la publication :</b> Justine Abécassis</p>
-            <p>
+            <p style="margin-bottom:0;">
                 <b>Hébergeur :</b></br>
                 1&1 (SARL)</br>
                 7 place de la Gare, 57200 Sarreguemines</br>

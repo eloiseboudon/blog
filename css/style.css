@@ -145,10 +145,16 @@ h3 {
     padding: 0 10px;
 }
 
-.accueil_articles, .nos_valeurs , .mentions_legales_global{
+.accueil_articles, .nos_valeurs {
     margin: auto;
     position: relative;
     overflow: hidden;
+}
+
+
+.mentions_legales_global{
+    margin: auto;
+    position: relative;
 }
 
 .accueil_articles a {
@@ -257,8 +263,8 @@ h3 {
     margin-right: 5px;
 }
 
-.mentions_legales_global .cercle{
-    margin-top: 358px;
+.mentions_legales .cercle{
+    margin-top: 348px;
     left: 73.5%;
 }
 
@@ -293,9 +299,22 @@ h3 {
 }
 
 .nos_valeurs .ficelle {
+    /*width: 92px;*/
+    /*height: 42px;*/
+    z-index: 200;
     transform: rotate(-40deg);
     margin-top: 2px;
     background-image: url("../img/ficelle_valeurs.png");
+}
+
+.mentions_legales .ficelle{
+    position: absolute;
+    width: 75px;
+    height: 42px;
+    margin-top: 360px;
+    left: 74%;
+    z-index: 200;
+    background-image: url("../img/ficelle_courte_mentions-legales.png");
 }
 
 .nos_valeurs .timeline-block-right .ficelle {
