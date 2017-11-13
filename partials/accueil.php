@@ -69,7 +69,7 @@ function afficher_liste_articles()
                                 </div>
                                 <div class="article_details">
 
-                                    <div class="article_titre">
+                                    <div class="article_titre" style="direction: ltr">
                                         <h2><?php echo $donnees['titre']; ?></h2>
                                     </div>
 

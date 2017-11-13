@@ -4,13 +4,6 @@ body {
 
 }
 
-section {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
-    position: relative;
-}
-
 
 h1, h3 {
     font-family: 'Open Sans Condensed', sans-serif;
@@ -167,10 +160,14 @@ h3 {
 
 .accueil_articles h2 {
     margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .accueil_articles a:hover h2, .accueil_articles a:focus h2 {
     color: #880015;
+
 }
 
 .acceuil_titre_global h1 {
@@ -181,6 +178,16 @@ h3 {
     width: 200px;
     height: 250px;
 }
+
+
+@media screen and (max-width: 1250px) {
+    .accueil_articles .article_image img {
+        width: 100px;
+        height: 125px;
+    }
+}
+
+
 
 .nos_valeurs .valeur_image img {
     width: 300px;

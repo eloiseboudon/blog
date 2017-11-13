@@ -63,7 +63,6 @@
 /* FICELLE */
 
 .accueil_articles .ficelle, .nos_valeurs .ficelle {
-    background-image: url("../img/ficelle_rond_avec_trou.png");
     position: absolute;
     width: 92px;
     height: 42px;
@@ -71,6 +70,42 @@
     margin-top: 130px;
 }
 
+.nos_valeurs .ficelle {
+    background-image: url("../img/ficelle_rond_avec_trou.png");
+}
+
+.accueil_articles .ficelle {
+    background-image: url("../img/ficelle_rond_avec_trou_2.png");
+
+}
+
+@media screen and (max-width: 1650px) {
+    .global_width {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    .accueil_articles .ficelle {
+        background-image: url("../img/ficelle_courte.png");
+
+    }
+
+    .accueil_articles  .timeline-block-left .ficelle{
+        margin-right: -10px;
+    }
+
+    .accueil_articles  .timeline-block-right .ficelle{
+        margin-left : -10px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+}
 .nos_valeurs .ficelle {
     /*width: 92px;*/
     /*height: 42px;*/
@@ -129,8 +164,6 @@
     border: 2px dashed #880015;
 }
 
-
-
 .authentification_form {
     padding: 10px;
     background-color: #fff;
@@ -141,8 +174,6 @@
     border-radius: 10px;
     border: 2px dashed #880015;
 }
-
-
 
 .inscription_form {
     padding: 10px;
@@ -155,15 +186,15 @@
     border: 2px dashed #880015;
 }
 
-
-.mentions_legales_global .mentions_contenu{
-    margin-top:60px;
-    padding:10px;  background-color: white;
+.mentions_legales_global .mentions_contenu {
+    margin-top: 60px;
+    padding: 10px;
+    background-color: white;
     border-radius: 10px;
     border: 2px dashed #880015;
     width: 50%;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 
 

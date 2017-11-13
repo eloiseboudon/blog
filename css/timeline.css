@@ -45,7 +45,8 @@
 
 .timeline-block-right {
     float: right;
-    margin-right: 170px;
+    /*margin-right: 170px;*/
+    margin-right: 11%;
     margin-bottom: 35px;
     transform: rotate(-7deg);
 }
@@ -58,7 +59,8 @@
     float: left;
     direction: rtl;
     margin-top: 45px;
-    margin-left: 170px;
+    /*margin-left: 170px;*/
+    margin-left: 11%;
     transform: rotate(7deg);
 }
 
@@ -166,6 +168,22 @@
 .clickable, .clickable p, .clickable .timeline-content{
     cursor: pointer;
 }
+
+
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 1400px){
+    section{
+        padding: 0;
+    }
+}
+/*@media screen and (max-width: 1400px){*/
 
 
 @media screen and (max-width: 768px) {
