@@ -180,15 +180,6 @@ h3 {
 }
 
 
-@media screen and (max-width: 1250px) {
-    .accueil_articles .article_image img {
-        width: 100px;
-        height: 125px;
-    }
-}
-
-
-
 .nos_valeurs .valeur_image img {
     width: 300px;
     height: 200px;
@@ -468,3 +459,14 @@ h3 {
     clear: both;
 }
 
+
+@media screen and (max-width: 1250px) {
+    .accueil_articles .article_image img {
+        width: 120px;
+        height: 150px;
+    }
+
+    .accueil_articles .article_details .description_article{
+        font-size:18px;
+    }
+}

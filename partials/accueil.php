@@ -59,7 +59,7 @@ function afficher_liste_articles()
 
                 <?php } else { ?>
 
-                    <div class="timeline-block timeline-block-left">
+                    <div id="timeline-id"   class="timeline-block timeline-block-left">
                         <div class="cercle"></div>
                         <div class="ficelle"></div>
                         <div class="scroll timeline-content">

@@ -79,33 +79,7 @@
 
 }
 
-@media screen and (max-width: 1650px) {
-    .global_width {
-        padding: 0;
-    }
-}
 
-@media screen and (max-width: 1500px) {
-
-    .accueil_articles .ficelle {
-        background-image: url("../img/ficelle_courte.png");
-
-    }
-
-    .accueil_articles  .timeline-block-left .ficelle{
-        margin-right: -10px;
-    }
-
-    .accueil_articles  .timeline-block-right .ficelle{
-        margin-left : -10px;
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-
-
-}
 .nos_valeurs .ficelle {
     /*width: 92px;*/
     /*height: 42px;*/
@@ -197,6 +171,60 @@
     margin: auto;
 }
 
+
+@media screen and (max-width: 1650px) {
+    .global_width {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    .accueil_articles .ficelle {
+        background-image: url("../img/ficelle_moyenne.png");
+    }
+
+    .accueil_articles  .timeline-block-left .ficelle{
+        margin-right: -10px;
+    }
+
+    .accueil_articles  .timeline-block-right .ficelle{
+        margin-left : -10px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .accueil_articles .cercle{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .accueil_articles  .timeline-block-left .ficelle{
+        margin-right: -20px;
+    }
+
+    .accueil_articles  .timeline-block-right .ficelle{
+        margin-left : -20px;
+    }
+
+    .accueil_articles .ficelle{
+        margin-top:125px;
+    }
+    .accueil_articles .ficelle {
+        background-image: url("../img/ficelle_moyenne_2.png");
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px){
+    .accueil_articles .timeline-block-left .ficelle {
+        transform: scaleX(-1);
+    }
+}
 
 
 
