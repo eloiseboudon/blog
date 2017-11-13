@@ -224,6 +224,14 @@
     .accueil_articles .timeline-block-left .ficelle {
         transform: scaleX(-1);
     }
+
+    .accueil_articles  .timeline-block-left .ficelle{
+        margin-right: 0
+    }
+
+    .accueil_articles  .timeline-block-right .ficelle{
+        margin-left : -10px;
+    }
 }
 
 

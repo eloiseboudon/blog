@@ -18,7 +18,7 @@ function afficher_liste_articles()
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd)); ?>
     <section class="timeline">
-        <div class="accueil_articles">
+        <div id="accueil_articles-id" class="accueil_articles">
             <?php while ($donnees = mysqli_fetch_array($req)) {
                 $nbLigne++;
                 ?>
@@ -59,7 +59,7 @@ function afficher_liste_articles()
 
                 <?php } else { ?>
 
-                    <div id="timeline-id"   class="timeline-block timeline-block-left">
+                    <div  class="timeline-block timeline-block-left">
                         <div class="cercle"></div>
                         <div class="ficelle"></div>
                         <div class="scroll timeline-content">

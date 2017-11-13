@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="timeline-block timeline-block-left" style="margin-left: 173px;">
+            <div class="timeline-block timeline-block-left">
                 <div class="cercle"></div>
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">
@@ -190,7 +190,7 @@
                 </div>
             </div>
 
-            <div class="timeline-block timeline-block-left" style="margin-left: 173px;">
+            <div class="timeline-block timeline-block-left">
                 <div class="cercle"></div>
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">
