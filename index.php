@@ -10,6 +10,7 @@
     <meta name="author" content="Eloïse Boudon"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -82,5 +83,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>

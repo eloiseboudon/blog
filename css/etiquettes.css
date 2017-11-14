@@ -175,6 +175,7 @@
 @media screen and (max-width: 1650px) {
     .global_width {
         padding: 0;
+        margin-left:10px;
     }
 }
 
@@ -224,6 +225,8 @@
     .accueil_articles .timeline-block-left .ficelle {
         transform: scaleX(-1);
     }
+
+
 
     .accueil_articles  .timeline-block-left .ficelle{
         margin-right: 0

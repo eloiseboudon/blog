@@ -4,7 +4,6 @@ body {
 
 }
 
-
 h1, h3 {
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -36,6 +35,10 @@ h3 {
     height: 100%;
 }
 
+.menu .menu-right #petit-ecran{
+    visibility: hidden;
+}
+
 .menu {
     height: 60px;
     margin-bottom: 20px;
@@ -54,7 +57,7 @@ h3 {
     font-size: 2.3em;
     color: #000000;
     display: inline-block;
-    width: 25%;
+    width: 30%;
 }
 
 .menu .menu-right {
@@ -62,6 +65,11 @@ h3 {
     width: 40%;
     float: right;
     display: inline-block;
+    padding-top:4px;
+}
+
+.menu .menu-right .menu-item {
+    font-size: 2em;
 }
 
 .menu .fa {
@@ -144,12 +152,12 @@ h3 {
     overflow: hidden;
 }
 
-.mentions_legales_global{
+.mentions_legales_global {
     margin: auto;
     position: relative;
 }
 
-.accueil_articles a{
+.accueil_articles a {
     text-decoration: none;
     color: #000000;
 }
@@ -179,12 +187,10 @@ h3 {
     height: 250px;
 }
 
-
 .nos_valeurs .valeur_image img {
     width: 300px;
     height: 200px;
 }
-
 
 .accueil_articles .timeline-block-left .article_image, .nos_valeurs .timeline-block-left .valeur_image {
     padding-right: 16px;
@@ -241,7 +247,6 @@ h3 {
     border-radius: 10px;
 }
 
-
 .accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre {
     margin-right: 10%;
 }
@@ -250,26 +255,24 @@ h3 {
     margin-left: 10%;
 }
 
-
-.article h1 , .nos_valeurs_global h1, .mentions_legales_global h1{
+.article h1, .nos_valeurs_global h1, .mentions_legales_global h1 {
     color: #880015;
 }
 
-.nos_valeurs_global .valeur_init .timeline-content{
+.nos_valeurs_global .valeur_init .timeline-content {
     z-index: 10;
 }
 
-.nos_valeurs_global .valeur_init p{
-    margin-left:10px;
-    margin-right:10px;
-    font-size:20px;
+.nos_valeurs_global .valeur_init p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
     text-align: justify;
 }
 
-
-.nos_valeurs_global p{
-    font-size:22px;
-    margin-left:20px;
+.nos_valeurs_global p {
+    font-size: 22px;
+    margin-left: 20px;
 }
 
 .article .article_contenu {
@@ -358,8 +361,6 @@ h3 {
     margin: auto;
 }
 
-
-
 .article_commentaire .voir_commentaires .commentaire_informations {
     margin-left: 20%;
 }
@@ -376,8 +377,6 @@ h3 {
     clear: both;
     padding-top: 100px;
 }
-
-
 
 .authentification_compte .authentification_form legend {
     text-align: left;
@@ -419,7 +418,6 @@ h3 {
     /*padding-top: 100px;*/
 }
 
-
 .inscription_compte .inscription_form legend {
     text-align: left;
 }
@@ -447,7 +445,7 @@ h3 {
     font-size: 26px;
 }
 
-.mentions_legales{
+.mentions_legales {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -466,7 +464,22 @@ h3 {
         height: 150px;
     }
 
-    .accueil_articles .article_details .description_article{
-        font-size:18px;
+    .accueil_articles .article_details .description_article {
+        font-size: 18px;
     }
+
 }
+
+@media screen and (max-width: 760px){
+    .menu #grand-ecran, .menu #acceuil{
+        display: none;
+    }
+
+    .menu #petit-ecran{
+        width:30%;
+    }
+
+}
+
+
+
