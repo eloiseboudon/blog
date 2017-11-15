@@ -10,15 +10,12 @@ h1, h3 {
 
 h2 {
     font-family: 'Dosis', sans-serif;
-    font-size: 36px;
 }
 
-h1 {
-    font-size: 46px;
-}
 
-h3 {
-    font-size: 34px;
+
+.row{
+    margin:0;
 }
 
 .contenu {
@@ -35,8 +32,8 @@ h3 {
     height: 100%;
 }
 
-.menu .menu-right #petit-ecran{
-    visibility: hidden;
+.menu #petit-ecran{
+    display: none;
 }
 
 .menu {
@@ -57,7 +54,7 @@ h3 {
     font-size: 2.3em;
     color: #000000;
     display: inline-block;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .menu .menu-right {
@@ -238,6 +235,7 @@ h3 {
     margin-left: 8px;
     font-family: 'Quicksand', sans-serif;
     font-size: 24px;
+    display: inline-block;
 }
 
 .accueil_articles .article_details .goto_article span {
@@ -467,8 +465,41 @@ h3 {
     .accueil_articles .article_details .description_article {
         font-size: 18px;
     }
+    #footer h1{
+        font-size: 40px;
+        padding:0;
+    }
 
+    #footer ul, .bottom-bar .icon_social{
+        padding:0;
+    }
+
+    .bottom-bar .icon_social img{
+        width: 40px;
+    }
 }
+
+@media screen and (max-width: 1100px){
+    #footer h1{
+        font-size: 36px;
+    }
+    .bottom-bar .icon_social img{
+        margin:5px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #footer .aide, #footer .etiquette, #footer .mentions{
+        display:none;
+    }
+
+    #footer .social{
+        text-align: center;
+    }
+}
+
+
+
 
 @media screen and (max-width: 760px){
     .menu #grand-ecran, .menu #acceuil{
@@ -476,8 +507,19 @@ h3 {
     }
 
     .menu #petit-ecran{
+        display: inline-block;
+    }
+
+    .menu #petit-ecran{
         width:30%;
     }
+    .menu #petit-ecran .menu-item{
+        width:30%;
+        text-align: center;
+    }
+
+
+
 
 }
 
