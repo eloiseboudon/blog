@@ -153,7 +153,7 @@
             </div>
 
 
-            <div class="timeline-block timeline-block-right" style="margin-right: 177px;">
+            <div class="timeline-block timeline-block-right" style="margin-right: 11.5%;">
                 <div class="cercle"></div>
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">
@@ -213,7 +213,7 @@
             </div>
 
 
-            <div class="timeline-block timeline-block-right" style="margin-right: 167px;">
+            <div class="timeline-block timeline-block-right">
                 <div class="cercle"></div>
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">

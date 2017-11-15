@@ -24,8 +24,5 @@ function connexion_sql()
 	mysqli_set_charset($db, 'UTF8');
 
 		return $db;
-
 }
-
-
 ?>

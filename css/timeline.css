@@ -180,6 +180,41 @@ section {
     }
 }
 
+@media screen and (max-width: 1120px){
+    .nos_valeurs .timeline-block{
+        transform: rotate(0deg);
+        float:none;
+        direction: ltr;
+    }
+
+    .nos_valeurs{
+        overflow:visible;
+    }
+    .nos_valeurs:before {
+        left: 20px;
+        width: 4px;
+    }
+
+    .nos_valeurs  .timeline-block .timeline-content{
+        margin: 0 auto;
+    }
+
+    .nos_valeurs .timeline-block{
+        width: 90%;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-block .timeline-content{
+        width: 90%;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+}
+
 
 @media screen and (max-width: 768px) {
     .accueil_articles{
