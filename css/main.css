@@ -423,12 +423,14 @@ h2 {
 .form-inscription label{
     display: block;
     margin: 0px 0px 15px 0px;
+    width:100%;
+    display: inline-block;
 }
 
 .form-inscription label > span{
-    width: 100px;
+    width: 150px;
     font-weight: bold;
-    /*float: left;*/
+    float: left;
     padding-top: 8px;
     padding-right: 5px;
 }
@@ -475,34 +477,6 @@ h2 {
     background: #880015;
     color: #fff;
 }
-
-
-    /*.inscription_compte .inscription_form legend {*/
-    /*text-align: left;*/
-/*}*/
-
-/*.inscriptionn_compte .inscription_form a {*/
-    /*text-decoration: none;*/
-    /*color: black;*/
-/*}*/
-
-/*.inscription_compte .inscription_form a:hover {*/
-    /*!*text-decoration: none;*!*/
-    /*color: #880015;*/
-/*}*/
-
-/*.inscription_compte .inscription_form input {*/
-    /*width: 80%;*/
-/*}*/
-
-/*.inscription_compte .inscription_form .btn-form {*/
-    /*margin-top: 20px;*/
-    /*margin-bottom: 10px;*/
-    /*background-color: #880015;*/
-    /*color: white;*/
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-size: 26px;*/
-/*}*/
 
 
 
