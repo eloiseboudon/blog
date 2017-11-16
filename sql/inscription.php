@@ -13,6 +13,8 @@ if (isset($_POST['nom'])){
     $password= $_POST['password'];
     $sexe= $_POST['sexe'];
     $date_anniversaire = $_POST['date_anniversaire'];
+    $date_anniversaire_format = DateTime::createFromFormat('d/m/Y', $date_anniversaire)->format('Y-m-d');
+
     $adresse = $_POST['adresse'];
     $code_postal = $_POST['code_postal'];
     $telephone = $_POST['telephone'];
@@ -31,15 +33,21 @@ if (isset($_POST['nom'])){
 
 
 
-//    $pass_hache = sha1($_POST['password']);
+    $pass_hache = sha1($_POST['password']);
 
-    $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription) 
-VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
+    $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription)
+VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversaire_format','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
 
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
+    ?>
+    Félicitations, vous êtes 
+<?php
 }
 else{echo "non";}
 
 ?>
+
+
+

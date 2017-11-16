@@ -56,7 +56,7 @@
 
             <div class="champs-obligatoires">
                 <span class="required">(*) : Champs obligatoires</span>
-            </div>
+<!--            </div>-->
 
             <input type="submit" value="Valider"/>
 
