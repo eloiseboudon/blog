@@ -42,7 +42,9 @@ VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversa
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
     ?>
-    Félicitations, vous êtes 
+    Félicitations, vous êtes inscrit.
+
+    Retour à <a href="../index.php">l'accueil</a>.
 <?php
 }
 else{echo "non";}

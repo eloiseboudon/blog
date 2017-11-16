@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/inscription.php" afterPath="$PROJECT_DIR$/sql/inscription.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,13 +27,33 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sql/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state relative-caret-position="770">
+              <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding>
-                <marker date="1510839638472" expanded="true" signature="820:879" ph="INSERT INTO membres... " />
-                <marker date="1510839638472" expanded="true" signature="820:882" ph="INSERT INTO membres... " />
-                <marker date="1510839638472" expanded="true" signature="820:1114" ph="INSERT INTO membres... " />
+                <marker date="1510840940952" expanded="true" signature="820:879" ph="INSERT INTO membres... " />
+                <marker date="1510840940952" expanded="true" signature="820:882" ph="INSERT INTO membres... " />
+                <marker date="1510840940952" expanded="true" signature="820:1114" ph="INSERT INTO membres... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="861">
+              <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -269,12 +288,12 @@
       <workItem from="1510581607985" duration="9783000" />
       <workItem from="1510668136012" duration="24920000" />
       <workItem from="1510814388080" duration="6258000" />
-      <workItem from="1510831933198" duration="5950000" />
+      <workItem from="1510831933198" duration="6182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171624000" />
+    <option name="totallyTimeSpent" value="171856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -567,14 +586,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js" />
-    <entry file="file://$PROJECT_DIR$/partials/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -587,14 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -661,10 +664,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/partials/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="442" column="10" lean-forward="false" selection-start-line="442" selection-start-column="10" selection-end-line="442" selection-end-column="10" />
+        <state relative-caret-position="51">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -677,14 +688,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="442" column="10" lean-forward="false" selection-start-line="442" selection-start-column="10" selection-end-line="442" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sql/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        <state relative-caret-position="770">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding>
-            <marker date="1510839638472" expanded="true" signature="820:879" ph="INSERT INTO membres... " />
-            <marker date="1510839638472" expanded="true" signature="820:882" ph="INSERT INTO membres... " />
-            <marker date="1510839638472" expanded="true" signature="820:1114" ph="INSERT INTO membres... " />
+            <marker date="1510840940952" expanded="true" signature="820:879" ph="INSERT INTO membres... " />
+            <marker date="1510840940952" expanded="true" signature="820:882" ph="INSERT INTO membres... " />
+            <marker date="1510840940952" expanded="true" signature="820:1114" ph="INSERT INTO membres... " />
           </folding>
         </state>
       </provider>
