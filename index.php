@@ -26,6 +26,8 @@
 </head>
 
 <body>
+
+<?php session_start();?>
 <div class="menu">
 
     <?php
@@ -33,6 +35,8 @@
     header('Content-Type: text/html; charset=UTF-8', true);
     ?>
 </div>
+
+
 
 <div class="contenu">
     <div class="global_width">
