@@ -28,10 +28,13 @@ if (isset($_GET['pseudo'])) {
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['pseudo'] = $pseudo;
 
-            header("location: ../index.php");
+
+            header('location: ../index.php');
         }
 
 }
 else{
     echo'<meta http-equiv="refresh" content="0;../index.php?page=3" />';
 }
+
+?>

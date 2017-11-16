@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Eloise
- * Date: 16/11/2017
- * Time: 20:08
- */
+session_start();
+session_destroy();
+header('location: ../index.php');
+exit;
+?>

@@ -37,7 +37,6 @@
 </div>
 
 
-
 <div class="contenu">
     <div class="global_width">
         <?php

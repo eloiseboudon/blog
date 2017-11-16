@@ -9,9 +9,9 @@ if (isset($_POST['nom'])){
     $prenom = $_POST['prenom'];
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
-//    $date = "12 sept";
     $password= $_POST['password'];
     $sexe= $_POST['sexe'];
+
     $date_anniversaire = $_POST['date_anniversaire'];
     $date_anniversaire_format = DateTime::createFromFormat('d/m/Y', $date_anniversaire)->format('Y-m-d');
 

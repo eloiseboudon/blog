@@ -1,5 +1,3 @@
-
-
 <div class="authentification_compte">
     <div class="cercle"></div>
     <div class="ficelle"></div>
@@ -9,10 +7,12 @@
 
             <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                           class="input-field"
-                                                                                          name="pseudo" required="required"/></label>
+                                                                                          name="pseudo"
+                                                                                          required="required"/></label>
             <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="text"
                                                                                                   class="input-field"
-                                                                                                  name="password" required="required"/></label>
+                                                                                                  name="password"
+                                                                                                  required="required"/></label>
             <input type="submit" value="Valider"/>
 
         </form>
@@ -21,3 +21,5 @@
         <a href="#">Mot de passe oublié</a>
     </div>
 </div>
+
+

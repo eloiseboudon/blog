@@ -35,51 +35,13 @@ function afficher_article($id_article)
         <h3>Ajouter un commentaire</h3>
         <div class="ajouter_commentaire">
 
-
-<?php
-        if (isset($_POST['submit'])) {
-    //                $auteur = htmlspecialchars(trim($_POST['auteur']));
-            $contenu = htmlspecialchars($_POST['contenu'],ENT_QUOTES);
+ <?php ajouter_commentaire($id_article);?>
 
 
-    //                if (empty($auteur) || empty($contenu)) {
-            if(empty($contenu)){
-                echo "Veuillez renseigner tous les champs.";
-            } else {
-                inserer_commentaire($id_article, $contenu);
-            }
-        }
 
-            ?>
-            <form method="post">
-                <div class="row">
-
-                    <div class="col-6">
-                        <div class="connexion">
-                            <p>Veuillez vous connecter pour laisser un commentaire: </p>
-                            <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span> </a>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="form_contenu">
-                            <label for="contenu">Votre commentaire:</label><br/>
-                            <textarea type="text" name="contenu"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" name="submit" class="btn btn-form">
-                    <i class="fa fa-check" aria-hidden="true"></i> Envoyer
-                </button>
-
-
-            </form>
-        </div>
         <h3>Les commentaires</h3>
         <div class="voir_commentaires">
-            <?php
-
-            afficher_commentaires($id_article); ?>
+            <?php afficher_commentaires($id_article); ?>
 
         </div>
 
@@ -88,19 +50,75 @@ function afficher_article($id_article)
     mysqli_close($bdd);
 }
 
+function ajouter_commentaire($id_article){?>
+
+    <form method="post">
+        <div class="row">
+            <?php
+            if (isset($_SESSION['id'])){?>
+                <div class="col-12">
+                    <div class="form_contenu">
+                        <label for="contenu">Votre commentaire:</label><br/>
+                        <textarea type="text" name="contenu"></textarea>
+                    </div>
+                </div>
+                <?php
+            }
+            else{
+                ?>
+                <div class="col-6">
+                    <div class="connexion">
+                        <p>Veuillez vous connecter pour laisser un commentaire: </p>
+                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span> </a>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form_contenu">
+                        <label for="contenu">Votre commentaire:</label><br/>
+                        <textarea type="text" name="contenu"></textarea>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <button type="submit" name="submit" class="btn btn-form">
+            <i class="fa fa-check" aria-hidden="true"></i> Envoyer
+        </button>
+
+
+    </form>
+    </div>
+
+<?php
+    if (isset($_POST['submit'])) {
+        $contenu = htmlspecialchars($_POST['contenu'],ENT_QUOTES);
+
+        if(!isset($_SESSION['id'])){
+            echo "Veuillez vous connecter.";
+        }elseif(empty($contenu)){
+            echo "Veuillez renseigner tous les champs.";
+        } else {
+            inserer_commentaire($id_article, $contenu);
+        }
+    }
+
+    }
 
 function inserer_commentaire($article, $contenu){
     $bdd = connexion_sql();
-    $nom = "Test";
-    $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$nom','$contenu', NOW() )";
+    $id_auteur = $_SESSION['id'];
+    $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$id_auteur','$contenu', NOW() )";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
+
+
+    echo "Merci pour votre commentaire, celui-ci sera bientot en ligne.";
+
 
 }
 
-function afficher_commentaires($id_article)
-{
+function afficher_commentaires($id_article){
     $bdd = connexion_sql();
-    $sql = 'SELECT auteur, contenu, date_commentaire FROM commentaires WHERE id_article =' . "$id_article" . ' ORDER BY date_commentaire desc';
+    $sql = 'SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article =' . "$id_article" . ' AND approuve=1 ORDER BY date_commentaire desc';
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 
@@ -109,7 +127,7 @@ function afficher_commentaires($id_article)
         ?>
 
         <div class="commentaire_informations">
-            <p><strong><?php echo $donnees['auteur']; ?></strong>
+            <p><strong><?php echo $donnees['pseudo']; ?></strong>
                 le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
         </div>
 
@@ -120,7 +138,6 @@ function afficher_commentaires($id_article)
         <?php
     }
 }
-
 ?>
 
 
