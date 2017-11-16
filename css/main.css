@@ -421,7 +421,7 @@ h2 {
 }
 
 .form-inscription label{
-    display: block;
+    text-align: left;
     margin: 0px 0px 15px 0px;
     width:100%;
     display: inline-block;
@@ -440,7 +440,7 @@ h2 {
 }
 
 .form-inscription input.input-field{
-    width: 48%;
+    width:60%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -479,6 +479,14 @@ h2 {
 }
 
 
+.form-inscription .input-sexe{
+    margin-top:10px;
+}
+
+.form-inscription .champs-obligatoires{
+    text-align: left;
+    padding-bottom: 10px;
+}
 
 
 .mentions_legales {
