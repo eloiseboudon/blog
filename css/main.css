@@ -403,7 +403,7 @@ h2 {
     font-size: 26px;
 }
 
-.inscription_compte {
+.form-inscription{
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -413,35 +413,99 @@ h2 {
     -moz-box-pack: justify;
     justify-content: space-between;
     clear: both;
-    /*padding-top: 100px;*/
 }
 
-.inscription_compte .inscription_form legend {
-    text-align: left;
+.form-inscription{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
 }
 
-.inscriptionn_compte .inscription_form a {
-    text-decoration: none;
-    color: black;
+.form-inscription label{
+    display: block;
+    margin: 0px 0px 15px 0px;
 }
 
-.inscription_compte .inscription_form a:hover {
+.form-inscription label > span{
+    width: 100px;
+    font-weight: bold;
+    /*float: left;*/
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.form-inscription span.required{
+    color:#880015;
+}
+
+.form-inscription input.input-field{
+    width: 48%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+
+.form-inscription .input-field:focus{
+    border: 1px solid #0C0;
+}
+
+.form-inscription input[type=submit],
+.form-inscription input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #880015;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.form-inscription input[type=submit]:hover,
+.form-inscription input[type=button]:hover{
+    background: #880015;
+    color: #fff;
+}
+
+
+    /*.inscription_compte .inscription_form legend {*/
+    /*text-align: left;*/
+/*}*/
+
+/*.inscriptionn_compte .inscription_form a {*/
     /*text-decoration: none;*/
-    color: #880015;
-}
+    /*color: black;*/
+/*}*/
 
-.inscription_compte .inscription_form input {
-    width: 80%;
-}
+/*.inscription_compte .inscription_form a:hover {*/
+    /*!*text-decoration: none;*!*/
+    /*color: #880015;*/
+/*}*/
 
-.inscription_compte .inscription_form .btn-form {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background-color: #880015;
-    color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 26px;
-}
+/*.inscription_compte .inscription_form input {*/
+    /*width: 80%;*/
+/*}*/
+
+/*.inscription_compte .inscription_form .btn-form {*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 10px;*/
+    /*background-color: #880015;*/
+    /*color: white;*/
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-size: 26px;*/
+/*}*/
+
+
+
 
 .mentions_legales {
     display: -webkit-box;
@@ -459,8 +523,8 @@ h2 {
         width: 225px;
         height: 150px;
     }
-
 }
+
 @media screen and (max-width: 1300px){
     .nos_valeurs .valeur_image img {
         width: 150px !important;
@@ -468,7 +532,6 @@ h2 {
     }
 
 }
-
 
 @media screen and (max-width: 1250px) {
     .accueil_articles .article_image img {

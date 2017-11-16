@@ -1,40 +1,51 @@
 <div class="inscription_compte">
+    <h2>Inscription</h2>
+    <div class="form-inscription">
     <div class="cercle"></div>
     <div class="ficelle"></div>
-    <div class="inscription_form">
 
 
-    <form method="post">
-<!--        <div class="fieldselt_1">-->
-            <fieldset><legend>Nom</legend><input type="text" name="nom"/></fieldset>
-            <fieldset><legend>Prénom</legend><input type="text" name="prenom"/></fieldset>
-<!--        </div>-->
-        <fieldset><legend>Pseudo</legend><input type="text" name="pseudo"/></fieldset>
-        <fieldset><legend>Mot de passe</legend><input type="password" name="password"/></fieldset>
-        <fieldset><legend>Adresse email</legend><input type="email" name="email"/></fieldset>
-        <button type="submit" name="submit" class="btn btn-form">
-            <i class="fa fa-check" aria-hidden="true"></i> S'inscrire
-        </button>
 
-    </form>
+        <form action="sql/inscription.php" method="post">
+
+            <label for="nom"><span>Nom <span class="required">*</span></span><input type="text" class="input-field"
+                                                                                    name="nom"</label>
+            <label for="prenom"><span>Prenom <span class="required">*</span></span><input type="text"
+                                                                                          class="input-field"
+                                                                                          name="prenom"</label>
+            <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
+                                                                                          class="input-field"
+                                                                                          name="pseudo"</label>
+            <label for="email"><span>Email <span class="required">*</span></span><input type="text" class="input-field"
+                                                                                        name="email"</label>
+            <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="text"
+                                                                                                  class="input-field"
+                                                                                                  name="password"</label>
+            <p>
+                <label for="sexe"><span>Sexe<span class="required">*</span></span></label>
+                <input type="radio" name="sexe" value="femme" id="femme"/> Femme <br/>
+                <input type="radio" name="sexe" value="homme" id="homme"/> Homme <br/>
+                <input type="radio" name="sexe" value="neutre" id="neutre"/> Neutre
+            </p>
+            <label for="date_anniversaire"><span>Date de naissance (jj/mm/yyyy)<span
+                            class="required">*</span></span><input type="text" class="input-field"
+                                                                   name="date_anniversaire"</label>
+
+
+            <label for="adresse"><span>Adresse <span class="required">*</span></span><input type="text"
+                                                                                                  class="input-field"
+                                                                                                  name="adresse"</label>
+            <label for="code_postal"><span>Code postal <span class="required">*</span></span><input type="text"
+                                                                                            class="input-field"
+                                                                                            name="code_postal"</label>
+
+            <label for="telephone"><span>Téléphone <span class="required">*</span></span><input type="text"
+                                                                                            class="input-field"
+                                                                                            name="telephone"</label>
+
+            <label><span>&nbsp;</span><input type="submit" value="Submit"/></label>
+
+        </form>
     </div>
 </div>
 
-<?php
-if (isset($_POST['submit'])){
-    $bdd = connexion_sql();
-
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $pseudo = $_POST['pseudo'];
-    $email = $_POST['email'];
-    $date = "12 sept";
-    $pass_hache = sha1($_POST['password']);
-
-    $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email, date_inscription) VALUES ('$nom','$prenom','$pseudo','$pass_hache','$email', NOW())";
-
-    $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
-
-}
-
-?>
