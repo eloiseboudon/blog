@@ -1,3 +1,10 @@
+<?php
+if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+{
+    echo 'Bonjour ' . $_SESSION['pseudo'];
+}
+?>
+
 <div class="acceuil_titre_global">
     <h1>Tous les articles</h1>
 </div>
@@ -5,6 +12,7 @@
 
 <?php
 afficher_liste_articles();
+
 
 
 function afficher_liste_articles()

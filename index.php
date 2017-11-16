@@ -36,12 +36,7 @@
     ?>
 </div>
 
-<?php
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
-{
-    echo 'Bonjour ' . $_SESSION['pseudo'];
-}
-?>
+
 
 <div class="contenu">
     <div class="global_width">

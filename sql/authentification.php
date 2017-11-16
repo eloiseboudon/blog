@@ -22,7 +22,7 @@ if (isset($_GET['pseudo'])) {
 
 
         if (!$resultat) {
-            echo'<meta http-equiv="refresh" content="0;index.php?page=4" />';
+            echo'<meta http-equiv="refresh" content="0;../index.php?page=3" />';
         } else {
             session_start();
             $_SESSION['id'] = $resultat['id'];
@@ -33,5 +33,5 @@ if (isset($_GET['pseudo'])) {
 
 }
 else{
-    echo'<meta http-equiv="refresh" content="0;index.php?page=4" />';
+    echo'<meta http-equiv="refresh" content="0;../index.php?page=3" />';
 }
