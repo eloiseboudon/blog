@@ -22,15 +22,16 @@ if (isset($_GET['pseudo'])) {
 
 
         if (!$resultat) {
-            echo 'Mauvais identifiant ou mot de passe !';
+            echo'<meta http-equiv="refresh" content="0;index.php?page=4" />';
         } else {
-        session_start();
-        $_SESSION['id'] = $resultat['id'];
-        $_SESSION['pseudo'] = $pseudo;
-            echo 'Vous êtes connecté !';
+            session_start();
+            $_SESSION['id'] = $resultat['id'];
+            $_SESSION['pseudo'] = $pseudo;
+
+            header("location: ../index.php");
         }
 
 }
 else{
-    echo "coucou";
+    echo'<meta http-equiv="refresh" content="0;index.php?page=4" />';
 }
