@@ -8,9 +8,10 @@
 include('connexion.php');
 
 if (isset($_GET['pseudo'])) {
-//    setcookie('pseudo',$_POST['pseudo'], time() + 365*24*3600, null, null, false, true);
+
     $pseudo = $_GET['pseudo'];
     $password = $_GET['password'];
+
 
 //        $pass_hache = sha1($_POST['password']);
 
@@ -28,6 +29,7 @@ if (isset($_GET['pseudo'])) {
             session_start();
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['pseudo'] = $pseudo;
+            $_SESSION['password'] = $password;
 
 
             header('location: '.$_SESSION['page_prec']);

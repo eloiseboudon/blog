@@ -1,8 +1,12 @@
 <?php
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
-{
-    echo 'Bonjour ' . $_SESSION['pseudo'];
-}
+//if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+//{
+//    echo 'Bonjour ' . $_SESSION['pseudo'];
+//}
+
+
+echo 'Bonjour ' . $_COOKIE['cookie_pseudo'];
+
 ?>
 
 <div class="acceuil_titre_global">
