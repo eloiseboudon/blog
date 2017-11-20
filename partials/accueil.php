@@ -4,8 +4,10 @@
 //    echo 'Bonjour ' . $_SESSION['pseudo'];
 //}
 
+if (isset($_COOKIE['cookie_pseudo'])){
+    echo 'Bonjour ' . $_COOKIE['pseudo'];
+}
 
-echo 'Bonjour ' . $_COOKIE['cookie_pseudo'];
 
 ?>
 
