@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<?php include('sql/connexion.php'); ?>
+<?php
+
+session_start();
+header('Content-Type: text/html; charset=UTF-8', true);
+include('sql/connexion.php');
+
+?>
 <html lang="fr">
 <head>
 
@@ -7,7 +13,7 @@
 
     <title>L'étiquette - Blog</title>
 
-    <meta name="author" content="Eloïse Boudon"/>
+    <meta name="author" content="L'étiquette"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width" />
@@ -27,12 +33,10 @@
 
 <body>
 
-<?php session_start();?>
 <div class="menu">
 
     <?php
     include('partials/menu.php');
-    header('Content-Type: text/html; charset=UTF-8', true);
     ?>
 </div>
 

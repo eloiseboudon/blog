@@ -70,6 +70,7 @@ function ajouter_commentaire($id_article){?>
                     <div class="connexion">
                         <p>Veuillez vous connecter pour laisser un commentaire: </p>
                         <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span> </a>
+                        <a href="index.php?page=4"><span><i class="fa fa-pencil" aria-hidden="true"></i> Inscription</span> </a>
                     </div>
                 </div>
 

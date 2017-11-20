@@ -1,3 +1,7 @@
+<?php
+    $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+?>
+
 <div class="authentification_compte">
     <div class="cercle"></div>
     <div class="ficelle"></div>

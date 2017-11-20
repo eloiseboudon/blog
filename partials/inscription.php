@@ -1,5 +1,4 @@
 <div class="inscription_compte">
-    <h2>Inscription</h2>
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
