@@ -1,7 +1,7 @@
 <?php
 
-if(isset($_COOKIE['nbArticle'])){
-    setcookie('nbArticles',$_COOKIE['nbArticle'] +1);
+if (isset($_COOKIE['nbArticle'])) {
+    setcookie('nbArticles', $_COOKIE['nbArticle'] + 1);
 }
 
 if (isset($_GET['id'])) {
@@ -11,15 +11,15 @@ if (isset($_GET['id'])) {
 
 function afficher_article($id_article)
 {
-    $bdd = connexion_sql();
+$bdd = connexion_sql();
 
-    $sql = 'SELECT * FROM articles WHERE id_article =' . "$id_article";
+$sql = 'SELECT * FROM articles WHERE id_article =' . "$id_article";
 
 
-    $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
+$req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
-    $donnees = mysqli_fetch_array($req);
-    ?>
+$donnees = mysqli_fetch_array($req);
+?>
     <div class="article">
 
 
@@ -31,19 +31,32 @@ function afficher_article($id_article)
         <div class="article_contenu">
             <?php echo $donnees['contenu']; ?>
         </div>
+        <div class="partage_reseaux_sociaux">
+
+            <h2>Partager sur les réseaux sociaux</h2>
+            <script>function fbs_click() {
+                    u = location.href;
+                    t = document.title;
+                    window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+                    return false;
+                }</script><a href="http://www.facebook.com/share.php?u=<url>" title="Partager sur facebook"
+                             onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook.png"></a>
+        </div>
+
 
     </div>
-    <div class="article_commentaire">
 
 
-        <h3>Ajouter un commentaire</h3>
-        <div class="ajouter_commentaire">
-
- <?php ajouter_commentaire($id_article);?>
+<div class="article_commentaire">
 
 
+    <h2>Ajouter un commentaire</h2>
+    <div class="ajouter_commentaire">
 
-        <h3>Les commentaires</h3>
+        <?php ajouter_commentaire($id_article); ?>
+
+
+        <h2>Les commentaires</h2>
         <div class="voir_commentaires">
             <?php afficher_commentaires($id_article); ?>
 
@@ -52,14 +65,16 @@ function afficher_article($id_article)
     </div>
     <?php
     mysqli_close($bdd);
-}
+    }
 
-function ajouter_commentaire($id_article){?>
+    function ajouter_commentaire($id_article){
+    ?>
 
     <form method="post">
         <div class="row">
             <?php
-            if (isset($_SESSION['id'])){?>
+            if (isset($_SESSION['id'])) {
+                ?>
                 <div class="col-12">
                     <div class="form_contenu">
                         <label for="contenu">Votre commentaire:</label><br/>
@@ -67,14 +82,15 @@ function ajouter_commentaire($id_article){?>
                     </div>
                 </div>
                 <?php
-            }
-            else{
+            } else {
                 ?>
                 <div class="col-6">
                     <div class="connexion">
                         <p>Veuillez vous connecter pour laisser un commentaire: </p>
-                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span> </a>
-                        <a href="index.php?page=4"><span><i class="fa fa-pencil" aria-hidden="true"></i> Inscription</span> </a>
+                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>
+                        </a>
+                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i> Inscription</span> </a>
                     </div>
                 </div>
 
@@ -92,24 +108,25 @@ function ajouter_commentaire($id_article){?>
 
 
     </form>
-    </div>
+</div>
 
 <?php
-    if (isset($_POST['submit'])) {
-        $contenu = htmlspecialchars($_POST['contenu'],ENT_QUOTES);
+if (isset($_POST['submit'])) {
+    $contenu = htmlspecialchars($_POST['contenu'], ENT_QUOTES);
 
-        if(!isset($_SESSION['id'])){
-            echo "Veuillez vous connecter.";
-        }elseif(empty($contenu)){
-            echo "Veuillez renseigner tous les champs.";
-        } else {
-            inserer_commentaire($id_article, $contenu);
-        }
+    if (!isset($_SESSION['id'])) {
+        echo "Veuillez vous connecter.";
+    } elseif (empty($contenu)) {
+        echo "Veuillez renseigner tous les champs.";
+    } else {
+        inserer_commentaire($id_article, $contenu);
     }
+}
 
-    }
+}
 
-function inserer_commentaire($article, $contenu){
+function inserer_commentaire($article, $contenu)
+{
     $bdd = connexion_sql();
     $id_auteur = $_SESSION['id'];
     $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$id_auteur','$contenu', NOW() )";
@@ -121,7 +138,8 @@ function inserer_commentaire($article, $contenu){
 
 }
 
-function afficher_commentaires($id_article){
+function afficher_commentaires($id_article)
+{
     $bdd = connexion_sql();
     $sql = 'SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article =' . "$id_article" . ' AND approuve=1 ORDER BY date_commentaire desc';
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
@@ -143,6 +161,7 @@ function afficher_commentaires($id_article){
         <?php
     }
 }
+
 ?>
 
 
