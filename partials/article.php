@@ -1,11 +1,11 @@
 <?php
 
+if(isset($_COOKIE['nbArticle'])){
+    setcookie('nbArticles',$_COOKIE['nbArticle'] +1);
+}
+
 if (isset($_GET['id'])) {
     afficher_article($_GET['id']);
-    setcookie('nbArticle',$_COOKIE['nbArticle'] +1,time() + 24*3600, null, null, false, true);
-
-
-    echo $_COOKIE['nbArticle'];
 }
 
 

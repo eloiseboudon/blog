@@ -6,7 +6,16 @@ session_start();
 if(isset($_SESSION['pseudo'])){
     setcookie('pseudo',$_SESSION['pseudo'], time() + 365*24*3600, null, null, false, true);
     setcookie('password',$_SESSION['password'], time() + 365*24*3600, null, null, false, true);
-    setcookie('nbArticle',0, time() + 365*24*3600, null, null, false, true);
+}
+
+if(isset($_COOKIE['nbPages'])){
+    setcookie('nbPages',$_COOKIE['nbPages']+1);
+}else{
+    setcookie('nbPages',0, time() + 365*24*3600, null, null, false, true);
+}
+
+if(!isset($_COOKIE['nbArticles'])){
+    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
 }
 
 header('Content-Type: text/html; charset=UTF-8', true);
