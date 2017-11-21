@@ -24,7 +24,6 @@ if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
         $_SESSION['pseudo'] = $pseudo;
         $_SESSION['password'] = $password;
 
-
         header('location:index.php');
     }
 

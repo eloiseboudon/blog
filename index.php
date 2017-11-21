@@ -3,14 +3,22 @@
 
 session_start();
 
-if(isset($_SESSION['pseudo'])) {
+if (isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0) {
+    include('sql/authentification_auto.php');
+}
+
+if (!isset($_COOKIE['isConnect'])) {
+    setcookie('isConnect', 0, time() + 3600, null, null, false, true);
+} else {
+    setcookie('isConnect', 1);
+}
+
+if (isset($_SESSION['pseudo'])) {
+    setcookie('isConnect', 1);
     setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if(isset($_COOKIE['pseudo']) && !isset($_SESSION['pseudo'])){
-    include('sql/authentification_auto.php');
-}
 
 //if(isset($_COOKIE['nbPages'])){
 //    setcookie('nbPages',$_COOKIE['nbPages']+1);
@@ -18,9 +26,9 @@ if(isset($_COOKIE['pseudo']) && !isset($_SESSION['pseudo'])){
 //    setcookie('nbPages',0, time() + 365*24*3600, null, null, false, true);
 //}
 
-if(!isset($_COOKIE['nbArticles'])){
-    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
-}
+//if(!isset($_COOKIE['nbArticles'])){
+//    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
+//}
 
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
@@ -37,7 +45,7 @@ include('sql/connexion.php');
     <meta name="author" content="L'étiquette"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -65,9 +73,6 @@ include('sql/connexion.php');
 <div class="contenu">
     <div class="global_width">
         <?php
-        echo $_SESSION['pseudo'];
-        echo "<br/>";
-        echo $_COOKIE['pseudo'];
 
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
@@ -91,7 +96,6 @@ include('sql/connexion.php');
                     break;
 
 
-
             }
         } else {
             include('partials/accueil.php');
@@ -103,7 +107,6 @@ include('sql/connexion.php');
 <div id="footer">
     <?php include('partials/footer.php'); ?>
 </div>
-
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

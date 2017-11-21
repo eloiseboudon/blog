@@ -1,8 +1,8 @@
 <?php
 
-if (isset($_COOKIE['nbArticle'])) {
-    setcookie('nbArticles', $_COOKIE['nbArticle'] + 1);
-}
+//if (isset($_COOKIE['nbArticle'])) {
+//    setcookie('nbArticles', $_COOKIE['nbArticle'] + 1);
+//}
 
 if (isset($_GET['id'])) {
     afficher_article($_GET['id']);

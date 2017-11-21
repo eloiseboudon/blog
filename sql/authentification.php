@@ -31,7 +31,6 @@ if (isset($_GET['pseudo']) && isset($_GET['password'])) {
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['password'] = $password;
 
-
             header('location: '.$_SESSION['page_prec']);
         }
 
