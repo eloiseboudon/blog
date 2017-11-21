@@ -16,7 +16,7 @@ if (isset($_GET['pseudo']) && isset($_GET['password'])) {
 //        $pass_hache = sha1($_POST['password']);
 
     $bdd = connexion_sql();
-    $sql = "SELECT id from membres WHERE pseudo = '$pseudo' AND password = '$password'";
+    $sql = "SELECT id,email  from membres WHERE pseudo = '$pseudo' AND password = '$password'";
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
@@ -30,7 +30,9 @@ if (isset($_GET['pseudo']) && isset($_GET['password'])) {
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['password'] = $password;
+            $_SESSION['email'] = $resultat['email'];
 
+            setcookie('isConnect', 1);
             header('location: '.$_SESSION['page_prec']);
         }
 

@@ -23,7 +23,9 @@ if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
         $_SESSION['id'] = $resultat['id'];
         $_SESSION['pseudo'] = $pseudo;
         $_SESSION['password'] = $password;
+        $_SESSION['email'] = $resultat['email'];
 
+        setcookie('isConnect', 3);
         header('location:index.php');
     }
 

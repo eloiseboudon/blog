@@ -3,20 +3,20 @@
 
 session_start();
 
-if (isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0) {
-    include('sql/authentification_auto.php');
-}
-
 if (!isset($_COOKIE['isConnect'])) {
-    setcookie('isConnect', 0, time() + 3600, null, null, false, true);
-} else {
-    setcookie('isConnect', 1);
+    setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
 }
 
 if (isset($_SESSION['pseudo'])) {
-    setcookie('isConnect', 1);
     setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
+    setcookie('email', $_SESSION['email'], time() + 365 * 24 * 3600, null, null, false, true);
+} else {
+    setcookie('isConnect', 2);
+}
+
+if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['pseudo']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
+    include('sql/authentification_auto.php');
 }
 
 
@@ -73,6 +73,10 @@ include('sql/connexion.php');
 <div class="contenu">
     <div class="global_width">
         <?php
+
+        echo $_SESSION['pseudo'];
+        echo '<br />';
+        echo $_COOKIE['pseudo'];
 
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
