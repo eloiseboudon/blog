@@ -69,6 +69,10 @@ h2 {
     font-size: 2em;
 }
 
+.menu .menu-right .menu-pseudo{
+    margin-right:10px;
+}
+
 .menu .fa {
     color: #880015;
 }

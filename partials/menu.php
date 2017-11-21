@@ -5,7 +5,9 @@
     <div id="grand-ecran" class="menu-right">
         <?php
         if (isset($_SESSION['id'])){
-            ?>
+            ?><div class="menu-item menu-item-right menu-pseudo">
+                <?php echo $_SESSION['pseudo'] ?>
+            </div>
             <div class="menu-item menu-item-right"><a href="sql/deconnexion.php"><i class="fa fa-user-times  "
                                                                   aria-hidden="true"></i>
                     Déconnexion</a></div>

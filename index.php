@@ -74,9 +74,6 @@ include('sql/connexion.php');
     <div class="global_width">
         <?php
 
-        echo $_SESSION['pseudo'];
-        echo '<br />';
-        echo $_COOKIE['pseudo'];
 
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
