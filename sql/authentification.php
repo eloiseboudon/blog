@@ -7,11 +7,11 @@
  */
 include('connexion.php');
 
-if (isset($_GET['pseudo'])) {
+
+if (isset($_GET['pseudo']) && isset($_GET['password'])) {
 
     $pseudo = $_GET['pseudo'];
     $password = $_GET['password'];
-
 
 //        $pass_hache = sha1($_POST['password']);
 

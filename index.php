@@ -3,16 +3,20 @@
 
 session_start();
 
-if(isset($_SESSION['pseudo'])){
-    setcookie('pseudo',$_SESSION['pseudo'], time() + 365*24*3600, null, null, false, true);
-    setcookie('password',$_SESSION['password'], time() + 365*24*3600, null, null, false, true);
+if(isset($_SESSION['pseudo'])) {
+    setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
+    setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if(isset($_COOKIE['nbPages'])){
-    setcookie('nbPages',$_COOKIE['nbPages']+1);
-}else{
-    setcookie('nbPages',0, time() + 365*24*3600, null, null, false, true);
+if(isset($_COOKIE['pseudo']) && !isset($_SESSION['pseudo'])){
+    include('sql/authentification_auto.php');
 }
+
+//if(isset($_COOKIE['nbPages'])){
+//    setcookie('nbPages',$_COOKIE['nbPages']+1);
+//}else{
+//    setcookie('nbPages',0, time() + 365*24*3600, null, null, false, true);
+//}
 
 if(!isset($_COOKIE['nbArticles'])){
     setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
@@ -20,6 +24,7 @@ if(!isset($_COOKIE['nbArticles'])){
 
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
+
 
 ?>
 <html lang="fr">
@@ -60,6 +65,10 @@ include('sql/connexion.php');
 <div class="contenu">
     <div class="global_width">
         <?php
+        echo $_SESSION['pseudo'];
+        echo "<br/>";
+        echo $_COOKIE['pseudo'];
+
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
                 case 1:
