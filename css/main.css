@@ -503,6 +503,22 @@ h2 {
 }
 
 
+.form-inscription #output{
+    clear: both;
+    padding: 5px 15px;
+}
+
+.form-inscription #output a {
+    display: block;
+    text-decoration: none;
+    color: #880015;
+    padding: 2px;
+}
+
+.form-inscription #output a:hover {
+    background: #DEB9BF;
+}
+
 .mentions_legales {
     display: -webkit-box;
     display: -webkit-flex;

@@ -11,6 +11,7 @@ if (isset($_POST['nom'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $sexe = $_POST['sexe'];
+    $ville = $_POST['ville'];
 
     $date_anniversaire = $_POST['date_anniversaire'];
     $date_anniversaire_format = DateTime::createFromFormat('d/m/Y', $date_anniversaire)->format('Y-m-d');
@@ -51,6 +52,7 @@ if (isset($_POST['nom'])) {
         $_SESSION['date']=$date_anniversaire;
         $_SESSION['adresse']=$adresse;
         $_SESSION['code_postal']=$code_postal;
+        $_SESSION['ville']=$ville;
         $_SESSION['telephone']=$telephone;
         $_SESSION['pseudo']=$pseudo;
         ?>
@@ -71,6 +73,7 @@ if (isset($_POST['nom'])) {
         $_SESSION['date']=$date_anniversaire;
         $_SESSION['adresse']=$adresse;
         $_SESSION['code_postal']=$code_postal;
+        $_SESSION['ville']=$ville;
         $_SESSION['telephone']=$telephone;
         $_SESSION['pseudo']=$pseudo;
         ?>
