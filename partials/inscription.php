@@ -3,9 +3,12 @@
         <div class="cercle"></div>
         <div class="ficelle"></div>
 
+<?php if(isset($GLOBALS['erreur_inscription'])){
+    echo $GLOBALS['erreur_inscription'];
+}?>
+
 
         <form action="sql/inscription.php" method="post">
-
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text" class="input-field"
                                                                                     name="nom" required="required"/></label>
             <label for="prenom"><span>Prenom <span class="required">*</span></span><input type="text"
