@@ -9,6 +9,7 @@ if (isset($_POST['nom'])) {
     $prenom = $_POST['prenom'];
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
+//    $password = sha1($_POST['password']);
     $password = $_POST['password'];
     $sexe = $_POST['sexe'];
     $ville = $_POST['ville'];
@@ -20,11 +21,10 @@ if (isset($_POST['nom'])) {
     $code_postal = $_POST['code_postal'];
     $telephone = $_POST['telephone'];
 
-    $pass_hache = sha1($_POST['password']);
+
 
     $checkbox = array();
     $checkbox = $_POST['validate'];
-//    $cgu = $checkbox[0];
 
     if (count($checkbox) != 1) {
         $courrier = 1;
@@ -79,17 +79,11 @@ if (isset($_POST['nom'])) {
 
 
         $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription)
-VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversaire_format','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
+VALUES ('$nom','$prenom','$pseudo',' $passsword','$email','$sexe','$date_anniversaire_format','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
 
-        ?>
-
-        Félicitaions vous êtes inscrit,
-        <a href="../index.php">retour à la page d'accueil</a>.
-
-        <?php
-
+        header('location:../index.php');
     }
 }
 ?>

@@ -1,4 +1,4 @@
-<div class="inscription_compte">
+<div class="contenu">
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
@@ -27,17 +27,19 @@
                                                                                           value="<?php if (isset($_SESSION['pseudo'])) {
                                                                                               echo $_SESSION['pseudo'];
                                                                                           } ?>"
-                                                                                          required="required"/></label>
+                                                                                          required="required"/>
+                <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" data-content="Le nom qui apparaîtra sur le site quand vous laissez des commentaires."></i></label>
             <label for="email"><span>Email <span class="required">*</span></span><input type="text" class="input-field"
                                                                                         name="email"
                                                                                         value="<?php if (isset($_SESSION['email'])) {
                                                                                             echo $_SESSION['email'];
                                                                                         } ?>"
                                                                                         required="required"/></label>
-            <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="text"
+            <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="password"
                                                                                                   class="input-field"
                                                                                                   name="password"
-                                                                                                  required="required"/></label>
+                                                                                                  required="required"/>
+                <i class="fa fa-eye unmask" aria-hidden="true"></i></label>
 
             <label for="sexe"><span>Sexe<span class="required">*</span></span>
                 <div class="input-sexe">
@@ -47,8 +49,8 @@
                 </div>
             </label>
 
-            <label for="date_anniversaire"><span>Date de naissance (jj/mm/yyyy)<span
-                            class="required">*</span></span><input type="text" class="input-field"
+            <label for="date_anniversaire"><span>Date de naissance<span
+                            class="required">*</span></span><input type="date" class="input-field"
                                                                    name="date_anniversaire"
                                                                    value="<?php if (isset($_SESSION['date'])) {
                                                                        echo $_SESSION['date'];
@@ -95,12 +97,12 @@
                                                                                                 required="required"/></label>
 
             <label for="cgu">
-                <input type="checkbox" value="cgu" name="validate[]" required="required"/>J'ai lu et j'accepte les
-                conditions générales d'utilisation<br/>
+                <input type="checkbox" value="cgu" name="validate[]" required="required"/> J'ai lu et j'accepte les
+                conditions générales d'utilisation <span class="required" style="float:none;">*</span>
             </label>
 
             <label for="courrier">
-                <input type="checkbox" value="courrier" name="validate[]"/>J'accepte de recevoir des informations de
+                <input type="checkbox" value="courrier" name="validate[]"/> J'accepte de recevoir des informations de
                 la
                 part de L'étiquette via courrier
                 électronique<br/>
@@ -116,6 +118,7 @@
         </form>
     </div>
 </div>
+
 
 
 

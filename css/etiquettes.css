@@ -36,19 +36,19 @@
     right: 10%;
 }
 
-.authentification_compte .cercle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #F4ECDE;
-    z-index: 100;
-    border: 5px solid #880015;
-    margin-top: 8px;
-    position: relative;
-    left: 63%;
-}
+/*.form-authentification .cercle {*/
+    /*border-radius: 50%;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*background-color: #F4ECDE;*/
+    /*z-index: 100;*/
+    /*border: 5px solid #880015;*/
+    /*margin-top: 8px;*/
+    /*position: relative;*/
+    /*left: 63%;*/
+/*}*/
 
-.form-inscription  .cercle {
+.form-inscription .cercle, .form-authentification .cercle  {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -108,17 +108,17 @@
     transform: scaleX(-1);
 }
 
-.authentification_compte .ficelle {
-    background-image: url("../img/ficelle_rond_authentification.png");
-    position: absolute;
-    width: 92px;
-    height: 42px;
-    z-index: 200;
-    left: 62%;
-    transform: rotate(-40deg);
-}
+/*.form-authentification .ficelle {*/
+    /*background-image: url("../img/ficelle_rond_authentification.png");*/
+    /*position: absolute;*/
+    /*width: 92px;*/
+    /*height: 42px;*/
+    /*z-index: 200;*/
+    /*left: 62%;*/
+    /*transform: rotate(-40deg);*/
+/*}*/
 
-.form-inscription  .ficelle {
+.form-inscription .ficelle, .form-authentification .ficelle  {
     background-image: url("../img/ficelle_rond_authentification.png");
     position: absolute;
     width: 92px;
@@ -140,7 +140,7 @@
     border: 2px dashed #880015;
 }
 
-.authentification_form {
+.form-authentification {
     padding: 10px;
     background-color: #fff;
     width: 30%;

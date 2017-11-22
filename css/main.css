@@ -12,17 +12,15 @@ h2 {
     font-family: 'Dosis', sans-serif;
 }
 
-
-
 .row{
     margin:0;
 }
 
 .contenu {
     flex: 1;
-    min-height: -webkit-calc(100vh - 304px);
-    height: -moz-calc(100vh - 304px);
-    min-height: calc(100vh - 304px);
+    min-height: -webkit-calc(100vh - 295px);
+    height: -moz-calc(100vh - 295px);
+    min-height: calc(100vh - 295px);
 }
 
 .global_width {
@@ -377,51 +375,47 @@ h2 {
     margin-left: 20%;
 }
 
-.authentification_compte {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    justify-content: space-between;
-    clear: both;
-    padding-top: 100px;
-}
+/*.authentification_compte {*/
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -moz-box;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: justify;*/
+    /*-webkit-justify-content: space-between;*/
+    /*-moz-box-pack: justify;*/
+    /*justify-content: space-between;*/
+    /*clear: both;*/
+    /*padding-top: 100px;*/
+/*}*/
 
-.authentification_compte .authentification_form legend {
-    text-align: left;
-}
+/*.authentification_compte .authentification_form legend {*/
+    /*text-align: left;*/
+/*}*/
 
-.authentification_compte .authentification_form a {
-    text-decoration: none;
-    color: black;
-}
-
-.authentification_compte .authentification_form a:hover {
+/*.authentification_compte .authentification_form a {*/
     /*text-decoration: none;*/
-    color: #880015;
-}
+    /*color: black;*/
+/*}*/
 
-.authentification_compte .authentification_form input {
-    width: 80%;
-}
+/*.authentification_compte .authentification_form a:hover {*/
+    /*!*text-decoration: none;*!*/
+    /*color: #880015;*/
+/*}*/
 
-.authentification_compte .authentification_form .btn-form {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background-color: #880015;
-    color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 26px;
-}
+/*.authentification_compte .authentification_form input {*/
+    /*width: 80%;*/
+/*}*/
 
-.authentification_erreur{
-    background-color: #F4ECDE;
-}
+/*.authentification_compte .authentification_form .btn-form {*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 10px;*/
+    /*background-color: #880015;*/
+    /*color: white;*/
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-size: 26px;*/
+/*}*/
 
-.form-inscription{
+.form-inscription, .form-authentification{
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -431,21 +425,18 @@ h2 {
     -moz-box-pack: justify;
     justify-content: space-between;
     clear: both;
-}
-
-.form-inscription{
     max-width: 500px;
     padding: 20px 12px 10px 20px;
 }
 
-.form-inscription label{
+.form-inscription label, .form-authentification label{
     text-align: left;
     margin: 0px 0px 15px 0px;
     width:100%;
     display: inline-block;
 }
 
-.form-inscription label > span{
+.form-inscription label > span, .form-authentification label > span{
     width: 150px;
     font-weight: bold;
     float: left;
@@ -453,11 +444,11 @@ h2 {
     padding-right: 5px;
 }
 
-.form-inscription span.required{
+.form-inscription span.required, .form-authentification span.required{
     color:#880015;
 }
 
-.form-inscription input.input-field{
+.form-inscription input.input-field, .form-authentification input.input-field{
     width:60%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -473,12 +464,14 @@ h2 {
     outline: none;
 }
 
-.form-inscription .input-field:focus{
+.form-inscription .input-field:focus, .form-authentification .input-field:focus{
     border: 1px solid #0C0;
 }
 
 .form-inscription input[type=submit],
-.form-inscription input[type=button]{
+.form-inscription input[type=button],
+.form-authentification input[type=submit],
+.form-authentification input[type=button]{
     border: none;
     padding: 8px 15px 8px 15px;
     background: #880015;
@@ -491,7 +484,10 @@ h2 {
     -moz-border-radius: 3px;
 }
 .form-inscription input[type=submit]:hover,
-.form-inscription input[type=button]:hover{
+.form-inscription input[type=button]:hover,
+.form-authentification input[type=submit]:hover,
+.form-authentification input[type=button]:hover
+{
     background: #880015;
     color: #fff;
 }
@@ -517,6 +513,7 @@ h2 {
     text-decoration: none;
     color: #880015;
     padding: 2px;
+    text-align: left;
 }
 
 .form-inscription #output a:hover {

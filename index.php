@@ -122,6 +122,11 @@ include('sql/connexion.php');
 
 <script src="js/vicopo.api.js"></script>
 <script src="js/villes_codepostal.js"></script>
-
+<script src="js/unmask.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
 </body>
 </html>
