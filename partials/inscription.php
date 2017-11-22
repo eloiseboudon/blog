@@ -3,25 +3,41 @@
         <div class="cercle"></div>
         <div class="ficelle"></div>
 
-<?php if(isset($GLOBALS['erreur_inscription'])){
-    echo $GLOBALS['erreur_inscription'];
-}?>
+        <?php if (isset($_SESSION['erreur_inscription'])) {
+            echo $_SESSION['erreur_inscription'];
+        } ?>
 
 
         <form action="sql/inscription.php" method="post">
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text" class="input-field"
-                                                                                    name="nom" required="required"/></label>
+                                                                                    name="nom"
+                                                                                    value="<?php if (isset($_SESSION['nom'])) {
+                                                                                        echo $_SESSION['nom'];
+                                                                                    } ?> " required="required"/></label>
             <label for="prenom"><span>Prenom <span class="required">*</span></span><input type="text"
                                                                                           class="input-field"
-                                                                                          name="prenom" required="required"/></label>
+                                                                                          name="prenom"
+                                                                                          value="<?php if (isset($_SESSION['prenom'])) {
+                                                                                              echo $_SESSION['prenom'];
+                                                                                          } ?>"
+                                                                                          required="required"/></label>
             <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                           class="input-field"
-                                                                                          name="pseudo" required="required"/></label>
+                                                                                          name="pseudo"
+                                                                                          value="<?php if (isset($_SESSION['pseudo'])) {
+                                                                                              echo $_SESSION['pseudo'];
+                                                                                          } ?>"
+                                                                                          required="required"/></label>
             <label for="email"><span>Email <span class="required">*</span></span><input type="text" class="input-field"
-                                                                                        name="email" required="required"/></label>
+                                                                                        name="email"
+                                                                                        value="<?php if (isset($_SESSION['email'])) {
+                                                                                            echo $_SESSION['email'];
+                                                                                        } ?>"
+                                                                                        required="required"/></label>
             <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="text"
                                                                                                   class="input-field"
-                                                                                                  name="password" required="required"/></label>
+                                                                                                  name="password"
+                                                                                                  required="required"/></label>
 
             <label for="sexe"><span>Sexe<span class="required">*</span></span>
                 <div class="input-sexe">
@@ -33,32 +49,57 @@
 
             <label for="date_anniversaire"><span>Date de naissance (jj/mm/yyyy)<span
                             class="required">*</span></span><input type="text" class="input-field"
-                                                                   name="date_anniversaire" required="required"/></label>
+                                                                   name="date_anniversaire"
+                                                                   value="<?php if (isset($_SESSION['date'])) {
+                                                                       echo $_SESSION['date'];
+                                                                   } ?>" required="required"/></label>
 
 
             <label for="adresse"><span>Adresse <span class="required">*</span></span><input type="text"
                                                                                             class="input-field"
-                                                                                            name="adresse" required="required"/></label>
+                                                                                            name="adresse"
+                                                                                            value="<?php if (isset($_SESSION['adresse'])) {
+                                                                                                echo $_SESSION['adresse'];
+                                                                                            } ?>" required="required"/></label>
             <label for="code_postal"><span>Code postal <span class="required">*</span></span><input type="text"
                                                                                                     class="input-field"
-                                                                                                    name="code_postal"/></label>
+                                                                                                    name="code_postal"
+                                                                                                    value="<?php if (isset($_SESSION['code_postal'])) {
+                                                                                                        echo $_SESSION['code_postal'];
+                                                                                                    } ?>"
+                                                                                                    required="required"/></label>
 
+            <section id="input">
+                <div class="half">
+                    <input id="code" placeholder="Code postal" autocomplete="off" autofocus="">
+                </div>
+                <div class="half">
+                    <input id="city" placeholder="Ville" autocomplete="off">
+                </div>
+            </section>
+            <section id="output"></section>
             <label for="telephone"><span>Téléphone <span class="required">*</span></span><input type="text"
                                                                                                 class="input-field"
-                                                                                                name="telephone" required="required"/></label>
+                                                                                                name="telephone"
+                                                                                                value="<?php if (isset($_SESSION['telephone'])) {
+                                                                                                    echo $_SESSION['telephone'];
+                                                                                                } ?>"
+                                                                                                required="required"/></label>
 
             <label for="cgu">
-                <input type="checkbox" value="cgu" name="validate[]" required="required"/>J'ai lu et j'accepte les conditions générales d'utilisation<br/>
+                <input type="checkbox" value="cgu" name="validate[]" required="required"/>J'ai lu et j'accepte les
+                conditions générales d'utilisation<br/>
             </label>
 
             <label for="courrier">
-                <input type="checkbox" value="courrier" name="validate[]"/>J'accepte de recevoir des informations de la part de L'étiquette via courrier
+                <input type="checkbox" value="courrier" name="validate[]"/>J'accepte de recevoir des informations de la
+                part de L'étiquette via courrier
                 électronique<br/>
             </label>
 
             <div class="champs-obligatoires">
                 <span class="required">(*) : Champs obligatoires</span>
-<!--            </div>-->
+            </div>
 
             <input type="submit" value="Valider"/>
 
@@ -66,4 +107,6 @@
         </form>
     </div>
 </div>
+
+
 

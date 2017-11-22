@@ -31,60 +31,71 @@ if (isset($_POST['nom'])) {
         $courrier = 0;
     }
 
-    $sql_check_mail = "SELECT * FROM membres WHERE email='$email'";
-    $check_mail = $bdd->query($sql_check_mail);
-    $sql_check_pseudo = "SELECT * FROM membres WHERE pseudo='$pseudo'";
-    $check_pseudo = $bdd->query($sql_check_pseudo);
+
+    $membre_pseudo = $bdd->query("SELECT COUNT(*) AS count FROM membres WHERE pseudo = '$pseudo'");
+    $count_membre_pseudo = mysqli_fetch_array($membre_pseudo);
+    $count_pseudo = $count_membre_pseudo['count'];
 
 
-    if (mysqli_num_rows($check_mail) > 0) {
-        $GLOBALS['erreur_inscription']="Cet email est deja utilisé";
+    $membre_mail = $bdd->query("SELECT COUNT(*) AS count FROM membres WHERE email = '$email'");
+    $count_membre_mail = mysqli_fetch_array($membre_mail);
+    $count_mail = $count_membre_mail['count'];
+
+    if ($count_pseudo != 0) {
+        session_start();
+
+        $_SESSION['erreur_inscription'] = "Ce pseudo est déjà utilisé";
+        $_SESSION['nom']=$nom;
+        $_SESSION['prenom']=$prenom;
+        $_SESSION['email']=$email;
+        $_SESSION['date']=$date_anniversaire;
+        $_SESSION['adresse']=$adresse;
+        $_SESSION['code_postal']=$code_postal;
+        $_SESSION['telephone']=$telephone;
+        $_SESSION['pseudo']=$pseudo;
         ?>
 
-        Cet email est déjà utilisé,
-        <a href="../index.php?page=4">Se réinscrire </a>
-<!--        Veuillez en saisir un nouveau :-->
-<!--        <form action="inscription.php" method="post">-->
-<!--            <label for="email"><span>Email</span><input type="text" class="input-field"-->
-<!--                                                        name="email"-->
-<!--                                                        required="required"/></label>-->
-<!--            <input type="submit" value="Valider"/>-->
-<!---->
-<!--        </form>-->
-<!--        --><?php
-//        $email = $_POST['email'];
-//        $sql_check_mail = "SELECT * FROM membres WHERE email='$email'";
-//        $check_mail = $bdd->query($sql_check_mail);
+        Ce pseudo est déja utilisé
+        Veuillez vous <a href="../index.php?page=4">réinscrire</a>.
 
 
+        <?php
 
-    } elseif (mysqli_num_rows($check_pseudo) > 0) {
+    } elseif ($count_mail != 0) {
+        session_start();
 
-        $GLOBALS['erreur_inscription']="Ce pseudo est deja utilisé";
+        $_SESSION['erreur_inscription'] = "Cet email est déjà utilisé";
+        $_SESSION['nom']=$nom;
+        $_SESSION['prenom']=$prenom;
+        $_SESSION['email']=$email;
+        $_SESSION['date']=$date_anniversaire;
+        $_SESSION['adresse']=$adresse;
+        $_SESSION['code_postal']=$code_postal;
+        $_SESSION['telephone']=$telephone;
+        $_SESSION['pseudo']=$pseudo;
         ?>
-        Ce pseudo est déjà utilisé,
-        <a href="../index.php?page=4">Se réinscrire </a>
-<!--        Veuillez en saisir un nouveau :-->
-<!--        <form action="inscription.php" method="post">-->
-<!--            <label for="pseudo"><span>Pseudo </span><input type="text" class="input-field"-->
-<!--                                                           name="pseudo"-->
-<!--                                                           required="required"/></label>-->
-<!--            <input type="submit" value="Valider"/>-->
-<!---->
-<!--        </form>-->
-<!--        --><?php
-//        $pseudo = $_POST['pseudo'];
-//        $sql_check_pseudo = "SELECT * FROM membres WHERE pseudo='$pseudo'";
-//        $check_pseudo = $bdd->query($sql_check_pseudo);
-    } elseif (mysqli_num_rows($check_mail) > 0 && mysqli_num_rows($check_pseudo) > 0) {
-        echo "Cet email et ce psuedo sont déjà utilisés.";
-    } elseif (mysqli_num_rows($check_mail) == 0 && mysqli_num_rows($check_pseudo) == 0) {
+
+        Cet email est déja utilisé
+        Veuillez vous <a href="../index.php?page=4">réinscrire</a>.
+
+
+        <?php
+    } else {
+
+
         $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription)
 VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversaire_format','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
-    } else {
-        echo "erreur";
+
+
+
+        ?>
+
+        Félicitaions vous êtes inscrit,
+        <a href="../index.php">retour à la page d'accueil</a>.
+
+<?php
+
     }
 }
-
 ?>
