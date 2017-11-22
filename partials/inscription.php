@@ -63,28 +63,27 @@
                                                                                             } ?>" required="required"/></label>
 
 
-<!--            <section id="input">-->
-<!--                <div class="half">-->
-                    <label for="code_postal"><span>Code postal <span class="required">*</span></span><input id="code" type="text"
-                           class="input-field"
-                           name="code_postal"
-                           value="<?php if (isset($_SESSION['code_postal'])) {
-                               echo $_SESSION['code_postal'];
-                           } ?>"
-                           required="required" autocomplete="off" autofocus=""/></label>
-<!--                </div>-->
-<!--                <div class="half">-->
-                    <label for="ville"><span>Ville <span class="required">*</span></span><input id="city"  type="text"
-                                                                                                class="input-field"
-                                                                                                name="ville"
-                                                                                                value="<?php if (isset($_SESSION['ville'])) {
-                                                                                                    echo $_SESSION['ville'];
-                                                                                                } ?>"
-                                                                                                required="required" autocomplete="off">
-<!--                </div>-->
-<!--            </section>-->
-            <section id="output"></section>
+            <label for="code_postal"><span>Code postal <span class="required">*</span></span><input id="code"
+                                                                                                    type="text"
+                                                                                                    class="input-field"
+                                                                                                    name="code_postal"
+                                                                                                    value="<?php if (isset($_SESSION['code_postal'])) {
+                                                                                                        echo $_SESSION['code_postal'];
+                                                                                                    } ?>"
+                                                                                                    required="required"
+                                                                                                    autocomplete="off"
+                                                                                                    autofocus=""/></label>
 
+            <label for="ville"><span>Ville <span class="required">*</span></span><input id="city" type="text"
+                                                                                        class="input-field"
+                                                                                        name="ville"
+                                                                                        value="<?php if (isset($_SESSION['ville'])) {
+                                                                                            echo $_SESSION['ville'];
+                                                                                        } ?>"
+                                                                                        required="required"
+                                                                                        autocomplete="off"></label>
+
+            <section id="output"></section>
 
 
             <label for="telephone"><span>Téléphone <span class="required">*</span></span><input type="text"
@@ -101,7 +100,8 @@
             </label>
 
             <label for="courrier">
-                <input type="checkbox" value="courrier" name="validate[]"/>J'accepte de recevoir des informations de la
+                <input type="checkbox" value="courrier" name="validate[]"/>J'accepte de recevoir des informations de
+                la
                 part de L'étiquette via courrier
                 électronique<br/>
             </label>

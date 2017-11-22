@@ -46,43 +46,35 @@ if (isset($_POST['nom'])) {
         session_start();
 
         $_SESSION['erreur_inscription'] = "Ce pseudo est déjà utilisé";
-        $_SESSION['nom']=$nom;
-        $_SESSION['prenom']=$prenom;
-        $_SESSION['email']=$email;
-        $_SESSION['date']=$date_anniversaire;
-        $_SESSION['adresse']=$adresse;
-        $_SESSION['code_postal']=$code_postal;
-        $_SESSION['ville']=$ville;
-        $_SESSION['telephone']=$telephone;
-        $_SESSION['pseudo']=$pseudo;
-        ?>
+        $_SESSION['nom'] = $nom;
+        $_SESSION['prenom'] = $prenom;
+        $_SESSION['email'] = $email;
+        $_SESSION['date'] = $date_anniversaire;
+        $_SESSION['adresse'] = $adresse;
+        $_SESSION['code_postal'] = $code_postal;
+        $_SESSION['ville'] = $ville;
+        $_SESSION['telephone'] = $telephone;
+        $_SESSION['pseudo'] = $pseudo;
 
-        Ce pseudo est déja utilisé
-        Veuillez vous <a href="../index.php?page=4">réinscrire</a>.
+        header('location:../index.php?page=4');
 
-
-        <?php
 
     } elseif ($count_mail != 0) {
         session_start();
 
         $_SESSION['erreur_inscription'] = "Cet email est déjà utilisé";
-        $_SESSION['nom']=$nom;
-        $_SESSION['prenom']=$prenom;
-        $_SESSION['email']=$email;
-        $_SESSION['date']=$date_anniversaire;
-        $_SESSION['adresse']=$adresse;
-        $_SESSION['code_postal']=$code_postal;
-        $_SESSION['ville']=$ville;
-        $_SESSION['telephone']=$telephone;
-        $_SESSION['pseudo']=$pseudo;
-        ?>
+        $_SESSION['nom'] = $nom;
+        $_SESSION['prenom'] = $prenom;
+        $_SESSION['email'] = $email;
+        $_SESSION['date'] = $date_anniversaire;
+        $_SESSION['adresse'] = $adresse;
+        $_SESSION['code_postal'] = $code_postal;
+        $_SESSION['ville'] = $ville;
+        $_SESSION['telephone'] = $telephone;
+        $_SESSION['pseudo'] = $pseudo;
 
-        Cet email est déja utilisé
-        Veuillez vous <a href="../index.php?page=4">réinscrire</a>.
+        header('location:../index.php?page=4');
 
-
-        <?php
     } else {
 
 
@@ -91,13 +83,12 @@ VALUES ('$nom','$prenom','$pseudo','$password','$email','$sexe','$date_anniversa
         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
 
-
         ?>
 
         Félicitaions vous êtes inscrit,
         <a href="../index.php">retour à la page d'accueil</a>.
 
-<?php
+        <?php
 
     }
 }

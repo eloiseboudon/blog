@@ -7,7 +7,7 @@ if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if (isset($_SESSION['pseudo'])) {
+if (isset($_SESSION['pseudo']) && isset($_SESSION['password']) &&  isset($_SESSION['email'])) {
     setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('email', $_SESSION['email'], time() + 365 * 24 * 3600, null, null, false, true);

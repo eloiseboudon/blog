@@ -417,6 +417,10 @@ h2 {
     font-size: 26px;
 }
 
+.authentification_erreur{
+    background-color: #F4ECDE;
+}
+
 .form-inscription{
     display: -webkit-box;
     display: -webkit-flex;

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/inscription.php" afterPath="$PROJECT_DIR$/sql/inscription.php" />
     </list>
@@ -29,40 +30,42 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="1258">
+              <caret line="80" column="116" lean-forward="true" selection-start-line="80" selection-start-column="116" selection-end-line="80" selection-end-column="116" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vicopo.api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vicopo.api.js">
+      <file leaf-file-name="inscription.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sql/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="villes_codepostal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/villes_codepostal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="685">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
-                <marker date="1511343752385" expanded="true" signature="774:780" ph=" " />
+                <marker date="1511345777775" expanded="true" signature="850:912" ph="SELECT COUNT... " />
+                <marker date="1511345777775" expanded="true" signature="1064:1124" ph="SELECT COUNT... " />
+                <marker date="1511345777775" expanded="true" signature="2363:2657" ph="INSERT INTO membres... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="518" column="23" lean-forward="false" selection-start-line="518" selection-start-column="23" selection-end-line="518" selection-end-column="23" />
+            <state relative-caret-position="553">
+              <caret line="428" column="30" lean-forward="true" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -81,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>valeur_i</find>
       <find>nos_v</find>
       <find>cerc</find>
       <find>nos_valeurs</find>
@@ -111,6 +113,7 @@
       <find>h2</find>
       <find>menu</find>
       <find>inscr</find>
+      <find>authen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,10 +144,10 @@
         <option value="$PROJECT_DIR$/partials/authentification.php" />
         <option value="$PROJECT_DIR$/partials/connexion.php" />
         <option value="$PROJECT_DIR$/js/villes_odepostal.js" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/sql/inscription.php" />
         <option value="$PROJECT_DIR$/partials/inscription.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/sql/inscription.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -279,12 +282,12 @@
       <workItem from="1510814388080" duration="6258000" />
       <workItem from="1510831933198" duration="15106000" />
       <workItem from="1511162440166" duration="13583000" />
-      <workItem from="1511246835554" duration="27956000" />
+      <workItem from="1511246835554" duration="28978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222319000" />
+    <option name="totallyTimeSpent" value="223341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -595,16 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/authentification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="54" />
-          <folding>
-            <marker date="1511260162279" expanded="true" signature="334:415" ph="SELECT id fr... membres" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/accueil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
@@ -668,26 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <marker date="1511344433216" expanded="true" signature="850:912" ph="SELECT COUNT... " />
-            <marker date="1511344433216" expanded="true" signature="1064:1124" ph="SELECT COUNT... " />
-            <marker date="1511344433216" expanded="true" signature="2489:2783" ph="INSERT INTO membres... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="87" column="26" lean-forward="true" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vicopo.api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
@@ -696,19 +669,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
+    <entry file="file://$PROJECT_DIR$/sql/authentification.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="595">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <marker date="1511260162279" expanded="true" signature="334:415" ph="SELECT id fr... membres" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="518" column="23" lean-forward="false" selection-start-line="518" selection-start-column="23" selection-end-line="518" selection-end-column="23" />
+        <state relative-caret-position="553">
+          <caret line="428" column="30" lean-forward="true" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="80" column="116" lean-forward="true" selection-start-line="80" selection-start-column="116" selection-end-line="80" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <marker date="1511345777775" expanded="true" signature="850:912" ph="SELECT COUNT... " />
+            <marker date="1511345777775" expanded="true" signature="1064:1124" ph="SELECT COUNT... " />
+            <marker date="1511345777775" expanded="true" signature="2363:2657" ph="INSERT INTO membres... " />
+          </folding>
         </state>
       </provider>
     </entry>
