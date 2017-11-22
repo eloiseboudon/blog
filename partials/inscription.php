@@ -38,9 +38,11 @@
             <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="password"
                                                                                                   class="input-field"
                                                                                                   name="password"
-                                                                                                  required="required"/>
-                <i class="fa fa-eye unmask" aria-hidden="true"></i></label>
+                                                                                                  required="required" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{12,}$"/>
 
+
+                <i class="fa fa-eye unmask" aria-hidden="true"></i></label>
+            12 carac, 1 minu, 1 maj, 1 chif, 1 carac spec
             <label for="sexe"><span>Sexe<span class="required">*</span></span>
                 <div class="input-sexe">
                     <input type="radio" name="sexe" value="F" id="femme" required="required"/> Femme

@@ -9,13 +9,12 @@ if (isset($_POST['nom'])) {
     $prenom = $_POST['prenom'];
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
-//    $password = sha1($_POST['password']);
-    $password = $_POST['password'];
+    $password = sha1($_POST['password']);
+//    $password = $_POST['password'];
     $sexe = $_POST['sexe'];
     $ville = $_POST['ville'];
 
     $date_anniversaire = $_POST['date_anniversaire'];
-    $date_anniversaire_format = DateTime::createFromFormat('d/m/Y', $date_anniversaire)->format('Y-m-d');
 
     $adresse = $_POST['adresse'];
     $code_postal = $_POST['code_postal'];
@@ -79,7 +78,7 @@ if (isset($_POST['nom'])) {
 
 
         $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription)
-VALUES ('$nom','$prenom','$pseudo',' $passsword','$email','$sexe','$date_anniversaire_format','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
+VALUES ('$nom','$prenom','$pseudo',' $password','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$telephone','$courrier' ,NOW())";
         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
 
