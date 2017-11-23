@@ -7,7 +7,7 @@ if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if (isset($_SESSION['pseudo']) && isset($_SESSION['password']) &&  isset($_SESSION['email'])) {
+if (isset($_SESSION['pseudo']) && isset($_SESSION['password']) && isset($_SESSION['email'])) {
     setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('email', $_SESSION['email'], time() + 365 * 24 * 3600, null, null, false, true);
@@ -15,11 +15,11 @@ if (isset($_SESSION['pseudo']) && isset($_SESSION['password']) &&  isset($_SESSI
     setcookie('isConnect', 2);
 }
 
-if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['pseudo']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
-    include('sql/authentification_auto.php');
+if (isset($_COOKIE['isConnect'])) {
+    if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['pseudo']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
+        include('sql/authentification_auto.php');
+    }
 }
-
-
 //if(isset($_COOKIE['nbPages'])){
 //    setcookie('nbPages',$_COOKIE['nbPages']+1);
 //}else{
@@ -124,7 +124,7 @@ include('sql/connexion.php');
 <script src="js/villes_codepostal.js"></script>
 <script src="js/unmask.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('[data-toggle="popover"]').popover();
     });
 </script>

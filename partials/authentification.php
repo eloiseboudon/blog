@@ -19,7 +19,9 @@ if (isset($_SESSION['erreur_authentification'])) {
 
                 <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                               class="input-field"
-                                                                                              name="pseudo"
+                                                                                              name="pseudo" value="<?php if (isset($_SESSION['pseudo'])) {
+                        echo $_SESSION['pseudo'];
+                    } ?>"
                                                                                               required="required"/></label>
                 <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="password"
                                                                                                       class="input-field"
