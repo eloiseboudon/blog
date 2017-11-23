@@ -15,7 +15,7 @@ if (isset($_SESSION['erreur_authentification'])) {
         <div class="ficelle"></div>
         <div class="authentification_form">
 
-            <form action="sql/authentification.php" method="get">
+            <form action="sql/authentification.php" method="post">
 
                 <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                               class="input-field"

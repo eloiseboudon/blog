@@ -18,12 +18,12 @@ if($user && $user['token'] == $token ){
     $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 
-$_SESSION['flash']['success'] = 'Votre compte a bien été validé';
+$_SESSION['erreur_authentification']='Votre compte a bien été validé';
 $_SESSION['auth'] = $user;
 header('Location: ../index.php?page=3');
     exit();
 }else{
-$_SESSION['flash']['danger'] = "Ce token n'est plus valide";
+    $_SESSION['erreur_authentification']= "Ce token n'est plus valide";
 header('Location: ../index.php?page=4.php');
     exit();
 }
