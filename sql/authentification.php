@@ -35,12 +35,14 @@ if (isset($_GET['pseudo']) && isset($_GET['password'])) {
         $_SESSION['erreur_authentification'] = "Vous êtes connecté.";
 
         setcookie('isConnect', 1);
-        header('location: ' . $_SESSION['page_prec']);
+        header('location: ../index.php');
+        exit();
     }
 
 
 } else {
     header('location: ../index.php?page=3');
+    exit();
 }
 
 ?>

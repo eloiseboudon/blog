@@ -21,7 +21,9 @@ if($user && $user['token'] == $token ){
 $_SESSION['flash']['success'] = 'Votre compte a bien été validé';
 $_SESSION['auth'] = $user;
 header('Location: ../index.php?page=3');
+    exit();
 }else{
 $_SESSION['flash']['danger'] = "Ce token n'est plus valide";
 header('Location: ../index.php?page=4.php');
+    exit();
 }

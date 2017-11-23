@@ -448,6 +448,13 @@ h2 {
     color:#880015;
 }
 
+
+.form-inscription span.password{
+    font-size: 12px;
+    text-align:left;
+    float:left;
+}
+
 .form-inscription input.input-field, .form-authentification input.input-field{
     width:60%;
     box-sizing: border-box;
