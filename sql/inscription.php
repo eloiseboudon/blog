@@ -94,19 +94,17 @@ if ($count_pseudo != 0) {
 } else {
 
 
-    var_dump(password_verify($password, $password_hash));
-
-//    $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription, token, confirmation_token)
-//VALUES ('$nom','$prenom','$pseudo',' $password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$telephone','$courrier' ,NOW(),'$token', null)";
-//    $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
+    $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription, token, confirmation_token)
+VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$telephone','$courrier' ,NOW(),'$token', null)";
+    $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 //
 //    $user_id = mysqli_insert_id($bdd);
 //
 //    mail($email, 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://letiquette-shop.com/blog/sql/confirm.php?id=$user_id&token=$token");
 //
 //    $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte';
-//    header('location:../index.php');
-//    exit();
+    header('location:../index.php');
+    exit();
 
 //    }
 }
