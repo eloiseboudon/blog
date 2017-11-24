@@ -1,18 +1,27 @@
-<?php
-
-
-if (isset($_SESSION['erreur_authentification'])) {
-    echo $_SESSION['erreur_authentification'];
-} else {
-    $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
-}
-
-?>
-
 <div class="contenu">
     <div class="form-authentification">
         <div class="cercle"></div>
         <div class="ficelle"></div>
+        <?php
+
+
+        if(isset($_SESSION['flash']['success-connexion'])){?>
+            <div class="alert alert-success" role="alert">
+            <?php
+            echo $_SESSION['flash']['success-connexion'];
+            ?></div><?php
+        }elseif(isset($_SESSION['flash']['error-connexion'])){?>
+            <div class="alert alert-danger" role="alert">
+            <?php
+            echo $_SESSION['flash']['error-connexion'];
+            ?></div><?php
+            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+        }
+        else {
+            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+        }
+
+        ?>
         <div class="authentification_form">
 
             <form action="sql/authentification.php" method="post">

@@ -30,6 +30,7 @@ if (isset($_COOKIE['isConnect'])) {
 //    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
 //}
 
+
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
 
@@ -37,9 +38,6 @@ include('sql/connexion.php');
 ?>
 <html lang="fr">
 <head>
-
-    <!--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>-->
-
     <title>L'étiquette - Blog</title>
 
     <meta name="author" content="L'étiquette"/>
@@ -72,7 +70,26 @@ include('sql/connexion.php');
 
 <div class="contenu">
     <div class="global_width">
+
+
         <?php
+
+        if(isset($_SESSION['flash']['success-inscription'])){?>
+            <div class="alert alert-success" role="alert">
+        <?php
+            echo $_SESSION['flash']['success-inscription'];
+            ?></div>
+        <?php
+            unset($_SESSION['flash']['success-inscription']);
+        }
+        if(isset($_SESSION['flash']['error-confirmation'])){?>
+            <div class="alert alert-danger" role="alert">
+                <?php
+                echo $_SESSION['flash']['error-confirmation'];
+                ?></div>
+            <?php
+            unset($_SESSION['flash']['error-confirmation']);
+        }
 
 
         if (isset($_GET['page'])) {
@@ -110,9 +127,6 @@ include('sql/connexion.php');
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 
-<!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"-->
-<!--        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"-->
-<!--        crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
         integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>

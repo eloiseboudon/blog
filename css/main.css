@@ -375,45 +375,6 @@ h2 {
     margin-left: 20%;
 }
 
-/*.authentification_compte {*/
-    /*display: -webkit-box;*/
-    /*display: -webkit-flex;*/
-    /*display: -moz-box;*/
-    /*display: flex;*/
-    /*-webkit-box-pack: justify;*/
-    /*-webkit-justify-content: space-between;*/
-    /*-moz-box-pack: justify;*/
-    /*justify-content: space-between;*/
-    /*clear: both;*/
-    /*padding-top: 100px;*/
-/*}*/
-
-/*.authentification_compte .authentification_form legend {*/
-    /*text-align: left;*/
-/*}*/
-
-/*.authentification_compte .authentification_form a {*/
-    /*text-decoration: none;*/
-    /*color: black;*/
-/*}*/
-
-/*.authentification_compte .authentification_form a:hover {*/
-    /*!*text-decoration: none;*!*/
-    /*color: #880015;*/
-/*}*/
-
-/*.authentification_compte .authentification_form input {*/
-    /*width: 80%;*/
-/*}*/
-
-/*.authentification_compte .authentification_form .btn-form {*/
-    /*margin-top: 20px;*/
-    /*margin-bottom: 10px;*/
-    /*background-color: #880015;*/
-    /*color: white;*/
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-size: 26px;*/
-/*}*/
 
 .form-inscription, .form-authentification{
     display: -webkit-box;

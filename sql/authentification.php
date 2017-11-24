@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Eloise
- * Date: 16/11/2017
- * Time: 15:07
- */
+
 include('connexion.php');
 
 
@@ -28,17 +23,17 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['password'] = $password;
             $_SESSION['email'] = $user['email'];
-            $_SESSION['erreur_authentification'] = "Vous êtes connecté.";
+            $_SESSION['flash']['success-connexion'] = "Vous êtes connecté.";
             header('location: ../index.php');
             setcookie('isConnect', 1);
         }else{
-            $_SESSION['erreur_authentification'] = "Token non validé.";
+            $_SESSION['flash']['error-connexion'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail.";
             header('location: ../index.php?page=3');
         }
         exit();
     } else {
         session_start();
-        $_SESSION['erreur_authentification'] = "Pseudo ou mot de passe erroné.";
+        $_SESSION['flash']['error-connexion'] = "Pseudo ou mot de passe erroné.";
         header('location: ../index.php?page=3');
     }
 
