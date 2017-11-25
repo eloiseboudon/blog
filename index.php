@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-if(session_status() == PHP_SESSION_NONE){
+if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
@@ -10,16 +10,17 @@ if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if (isset($_SESSION['pseudo']) && isset($_SESSION['password']) && isset($_SESSION['email'])) {
-    setcookie('pseudo', $_SESSION['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('password', $_SESSION['password'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('email', $_SESSION['email'], time() + 365 * 24 * 3600, null, null, false, true);
+if (isset($_SESSION['user'])) {
+    setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
+    setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, null, null, false, true);
+    setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, null, null, false, true);
+
 } else {
     setcookie('isConnect', 2);
 }
 
 if (isset($_COOKIE['isConnect'])) {
-    if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['pseudo']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
+    if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['user']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
         include('sql/authentification_auto.php');
     }
 }
@@ -74,27 +75,31 @@ include('sql/connexion.php');
 <div class="contenu">
     <div class="global_width">
 
-
-        <?php
-
-        if(isset($_SESSION['flash']['success-inscription'])){?>
-            <div class="alert alert-success" role="alert">
-        <?php
-            echo $_SESSION['flash']['success-inscription'];
-            ?></div>
-        <?php
-            unset($_SESSION['flash']['success-inscription']);
-        }
-        if(isset($_SESSION['flash']['error-confirmation'])){?>
-            <div class="alert alert-danger" role="alert">
-                <?php
-                echo $_SESSION['flash']['error-confirmation'];
-                ?></div>
+        <div class="pop-up">
             <?php
-            unset($_SESSION['flash']['error-confirmation']);
-        }
 
+            if (isset($_SESSION['flash']['success'])) {
+                ?>
+                <div class="alert alert-success" role="alert">
+                    <?php
+                    echo $_SESSION['flash']['success'];
+                    ?></div>
+                <?php
+                unset($_SESSION['flash']['success']);
+            }
+            if (isset($_SESSION['flash']['error'])) {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php
+                    echo $_SESSION['flash']['error'];
+                    ?></div>
+                <?php
+                unset($_SESSION['flash']['error']);
+            }
 
+            ?>
+        </div>
+        <?php
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
                 case 1:

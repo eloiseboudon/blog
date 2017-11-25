@@ -5,15 +5,15 @@
         <?php
 
 
-        if(isset($_SESSION['flash']['success-connexion'])){?>
+        if(isset($_SESSION['flash']['success'])){?>
             <div class="alert alert-success" role="alert">
             <?php
-            echo $_SESSION['flash']['success-connexion'];
+            echo $_SESSION['flash']['success'];
             ?></div><?php
-        }elseif(isset($_SESSION['flash']['error-connexion'])){?>
+        }elseif(isset($_SESSION['flash']['error'])){?>
             <div class="alert alert-danger" role="alert">
             <?php
-            echo $_SESSION['flash']['error-connexion'];
+            echo $_SESSION['flash']['error'];
             ?></div><?php
             $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
         }

@@ -19,21 +19,18 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
     if(password_verify($password, $user['password'])){
         session_start();
         if($user['confirmation_token']==1) {
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['pseudo'] = $pseudo;
-            $_SESSION['password'] = $password;
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['flash']['success-connexion'] = "Vous êtes connecté.";
+            $_SESSION['user'] = $user;
+            $_SESSION['flash']['success'] = "Vous êtes connecté.";
             header('location: ../index.php');
             setcookie('isConnect', 1);
         }else{
-            $_SESSION['flash']['error-connexion'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail.";
+            $_SESSION['flash']['error'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail.";
             header('location: ../index.php?page=3');
         }
         exit();
     } else {
         session_start();
-        $_SESSION['flash']['error-connexion'] = "Pseudo ou mot de passe erroné.";
+        $_SESSION['flash']['error'] = "Pseudo ou mot de passe erroné.";
         header('location: ../index.php?page=3');
     }
 

@@ -11,7 +11,7 @@ require 'connexion.php';
 
 if(!empty($_POST) && !empty($_POST['email'])){
 
-    $email=$_POST['email'];
+    $email = $_POST['email'];
 
     $bdd = connexion_sql();
     $sql = "SELECT * FROM membres WHERE email='$email'";
@@ -23,14 +23,14 @@ if(!empty($_POST) && !empty($_POST['email'])){
         session_start();
         $reset_token = str_random(60);
 
-        $sql2 = "UPDATE membres SET token='$reset_token', confirmation_token=null, confirmed_at=null WHERE id='$user_id'";
+        $sql2 = "UPDATE membres SET token='$reset_token', confirmation_token=null, confirmed_at=NOW() WHERE id='$user_id'";
         $req2 = $bdd->query($sql2) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
-        $_SESSION['flash']['success-connexion'] = 'Les instructions du rappel de mot de passe vous ont été envoyées par emails';
+        $_SESSION['flash']['success'] = 'Les instructions de réinitisalisation de mot de passe vous ont été envoyées par emails';
         mail($_POST['email'], 'Réinitiatilisation de votre mot de passe', "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttp://letiquette-shop.com/blog/sql/reset.php?id={$user_id}&token=$reset_token");
-        header('Location: ../index.php?page=3');
+        header('Location: ../index.php');
         exit();
     }else{
-        $_SESSION['flash']['error-user'] = 'Aucun compte ne correspond à cet adresse';
+        $_SESSION['flash']['error'] = 'Aucun compte ne correspond à cet adresse';
         header('Location: ../index.php?page=5');
         exit();
     }

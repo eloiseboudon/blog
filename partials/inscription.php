@@ -2,12 +2,6 @@
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
-
-        <?php if (isset($_SESSION['erreur_inscription'])) {
-            echo $_SESSION['erreur_inscription'];
-        } ?>
-
-
         <form action="sql/inscription.php" method="post">
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
                                                                                     class="input-field"
@@ -40,7 +34,7 @@
                    data-content="Le nom qui apparaîtra sur le site quand vous laissez des commentaires."></i>
             </label>
 
-            <label for="email"><span>Email <span class="required">*</span></span><input type="text" class="input-field"
+            <label for="email"><span>Email <span class="required">*</span></span><input type="email" class="input-field"
                                                                                         name="email"
                                                                                         value="<?php if (isset($_SESSION['email'])) {
                                                                                             echo $_SESSION['email'];

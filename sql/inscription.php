@@ -47,7 +47,7 @@ $count_mail = $count_membre_mail['count'];
 if ($count_pseudo != 0) {
     session_start();
 
-    $_SESSION['erreur_inscription'] = "Ce pseudo est déjà utilisé";
+    $_SESSION['flash']['error'] = "Ce pseudo est déjà utilisé";
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
     $_SESSION['email'] = $email;
@@ -65,7 +65,7 @@ if ($count_pseudo != 0) {
 } elseif ($count_mail != 0) {
     session_start();
 
-    $_SESSION['erreur_inscription'] = "Cet email est déjà utilisé";
+    $_SESSION['flash']['error'] = "Cet email est déjà utilisé";
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
     $_SESSION['email'] = $email;
@@ -92,7 +92,7 @@ VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anni
 
     session_start();
 
-    $_SESSION['flash']['success-inscription'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
+    $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
     header('location:../index.php');
     exit();
 
