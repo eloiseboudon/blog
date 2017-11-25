@@ -19,7 +19,10 @@ if($user && $user['token'] == $token ){
 
 
 $_SESSION['success-connexion']='Votre compte a bien été validé';
-$_SESSION['auth'] = $user;
+    $_SESSION['id'] = $user['id'];
+    $_SESSION['pseudo'] = $user['pseudo'];
+    $_SESSION['password'] = $user['password'];
+    $_SESSION['email'] = $user['email'];
 header('Location: ../index.php?page=3');
     exit();
 }else{

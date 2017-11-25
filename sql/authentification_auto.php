@@ -1,6 +1,6 @@
 <?php
 
-include('sql/connexion.php');
+require 'connexion.php';
 if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
 
     $pseudo = $_COOKIE['pseudo'];

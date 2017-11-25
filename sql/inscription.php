@@ -1,5 +1,5 @@
 <?php
-include('connexion.php');
+require 'connexion.php';
 
 if (isset($_POST['nom'])) {
 
@@ -30,18 +30,6 @@ if (isset($_POST['nom'])) {
 //    $options=['salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)];
 
 
-//$nom = "test";
-//$prenom = "test";
-//$pseudo = "test";
-//$password = "test";
-//$email = "boudon.eloise@gmail.com";
-//$sexe = "F";
-//$ville = "test";
-//$date_anniversaire = "2012/12/12";
-//$adresse = "test";
-//$code_postal = "232";
-//$telephone = "232";
-//$courrier = 1;
 
 $password_hash = password_hash($password, PASSWORD_BCRYPT);
     $token = str_random(60);
@@ -109,13 +97,6 @@ VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anni
     exit();
 
     }
-}
-
-
-function str_random($length)
-{
-    $alphabet = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
-    return substr(str_shuffle(str_repeat($alphabet, $length)), 0, $length);
 }
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-include('connexion.php');
+require'connexion.php';
 
 
 if (isset($_POST['pseudo']) && isset($_POST['password'])) {

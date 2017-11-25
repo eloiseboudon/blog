@@ -43,7 +43,8 @@
             </form>
 
             <a href="index.php?page=4">Pas encore inscrit ?</a><br/>
-            <a href="#">Mot de passe oublié</a>
+            <a href="index.php?page=5">Mot de passe oublié</a>
         </div>
     </div>
+</div>
 

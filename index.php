@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <?php
 
-session_start();
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
+
 
 if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
@@ -105,6 +108,9 @@ include('sql/connexion.php');
                     break;
                 case 4:
                     include('partials/inscription.php');
+                    break;
+                case 5:
+                    include('partials/forget_password.php');
                     break;
                 case "nos_valeurs":
                     include('partials/footer/nos_valeurs.php');
