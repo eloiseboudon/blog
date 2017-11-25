@@ -1,3 +1,16 @@
+<?php
+//if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+//{
+//    echo 'Bonjour ' . $_SESSION['pseudo'];
+//}
+
+if (isset($_COOKIE['cookie_pseudo'])){
+    echo 'Bonjour ' . $_COOKIE['pseudo'];
+}
+
+
+?>
+
 <div class="acceuil_titre_global">
     <h1>Tous les articles</h1>
 </div>
@@ -5,6 +18,7 @@
 
 <?php
 afficher_liste_articles();
+
 
 
 function afficher_liste_articles()
@@ -18,7 +32,7 @@ function afficher_liste_articles()
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd)); ?>
     <section class="timeline">
-        <div class="accueil_articles">
+        <div id="accueil_articles-id" class="accueil_articles">
             <?php while ($donnees = mysqli_fetch_array($req)) {
                 $nbLigne++;
                 ?>
@@ -59,7 +73,7 @@ function afficher_liste_articles()
 
                 <?php } else { ?>
 
-                    <div class="timeline-block timeline-block-left">
+                    <div  class="timeline-block timeline-block-left">
                         <div class="cercle"></div>
                         <div class="ficelle"></div>
                         <div class="scroll timeline-content">
@@ -69,7 +83,7 @@ function afficher_liste_articles()
                                 </div>
                                 <div class="article_details">
 
-                                    <div class="article_titre">
+                                    <div class="article_titre" style="direction: ltr">
                                         <h2><?php echo $donnees['titre']; ?></h2>
                                     </div>
 

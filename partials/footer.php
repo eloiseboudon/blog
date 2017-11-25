@@ -61,7 +61,7 @@
 
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 aide">
                     <h1>Besoin d'aide ?</h1>
                     <ul>
                         <a href="#">
@@ -73,7 +73,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 etiquette ">
                     <h1>L'étiquette</h1>
                     <ul>
                         <a href="#">
@@ -85,7 +85,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mentions ">
                     <h1>Mentions</h1>
                     <ul>
                         <a href="index.php?page=mentions_legales">
@@ -98,7 +98,7 @@
                 </div>
 
 
-                <div class="col-md-3">
+                <div class="col-md-3 social">
                     <h1>Suivez-nous</h1>
                     <div class="icon_social">
                         <a href="#"><img src="assets/icones/facebook.png"></a>
