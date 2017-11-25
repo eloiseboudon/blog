@@ -503,6 +503,8 @@ h2 {
     justify-content: space-between;
     clear: both;
 }
+
+
 @media screen and (max-width: 1600px){
     .nos_valeurs .valeur_image img {
         width: 225px;

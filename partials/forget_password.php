@@ -1,5 +1,5 @@
 <div class="contenu">
-    <div class="form-mdp_oublie">
+    <div class="form-authentification">
         <div class="cercle"></div>
         <div class="ficelle"></div>
 
@@ -7,7 +7,7 @@
 
             <form action="sql/forget_password.php" method="post">
 
-                <label for="email"><span>Email <span class="required">*</span></span><input type="email" class="input-field"
+                <label for="email"><span>Email </span><input type="email" class="input-field"
                                                                                             name="email"
                                                                                             value="<?php if (isset($_SESSION['email'])) {
                                                                                                 echo $_SESSION['email'];

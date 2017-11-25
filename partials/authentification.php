@@ -28,8 +28,8 @@
 
                 <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                               class="input-field"
-                                                                                              name="pseudo" value="<?php if (isset($_SESSION['pseudo'])) {
-                        echo $_SESSION['pseudo'];
+                                                                                              name="pseudo" value="<?php if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['pseudo'];
                     } ?>"
                                                                                               required="required"/></label>
                 <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="password"

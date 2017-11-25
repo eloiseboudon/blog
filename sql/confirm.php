@@ -18,13 +18,13 @@ if ($user && $user['token'] == $token) {
     $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 
-    $_SESSION['success-connexion'] = 'Votre compte a bien été validé';
+    $_SESSION['flash']['success'] = 'Votre compte a bien été validé';
     $_SESSION['user'] = $user;
 
     header('Location: ../index.php?page=3');
     exit();
 } else {
-    $_SESSION['error-confirmation'] = "La validation n'a pas fonctionné, veuillez nous contacter";
+    $_SESSION['flash']['error'] = "La validation n'a pas fonctionné, veuillez nous contacter";
     header('Location: ../index.php');
     exit();
 }
