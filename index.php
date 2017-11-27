@@ -10,7 +10,7 @@ if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
 }
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['password']) && isset($_SESSION['user']['email'])) {
     setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, null, null, false, true);
     setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, null, null, false, true);
@@ -20,7 +20,7 @@ if (isset($_SESSION['user'])) {
     setcookie('isConnect', 2);
 }
 
-echo $_COOKIE['pseudo'];
+//echo $_COOKIE['pseudo'];
 
 if (isset($_COOKIE['isConnect'])) {
     if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['user']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {

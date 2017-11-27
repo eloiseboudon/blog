@@ -22,7 +22,6 @@
             </label>
 
 
-
             <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
                                                                                           class="input-field"
                                                                                           name="pseudo"
@@ -111,6 +110,12 @@
                                                                                                 required/>
             </label>
 
+<!---->
+<!--            <label for="captcha">Recopiez le mot : <img src="captcha.php"/></label>-->
+<!--            <input type="text" name="captcha" id="captcha" required/>-->
+<!--            <label></label>-->
+
+
             <label for="cgu">
                 <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les
                 conditions générales d'utilisation <span class="required" style="float:none;">*</span>
@@ -133,6 +138,10 @@
         </form>
     </div>
 </div>
+
+
+
+
 
 
 

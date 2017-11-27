@@ -39,8 +39,20 @@ $donnees = mysqli_fetch_array($req);
                     t = document.title;
                     window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
                     return false;
-                }</script><a href="http://www.facebook.com/share.php?u=<url>" title="Partager sur facebook"
-                             onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook.png"></a>
+
+                }</script>
+
+
+            <a href="http://www.facebook.com/share.php?u=<url>" title="Partager sur facebook"
+               onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook.png"></a>
+
+
+
+            <a rel="nofollow"
+            href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: ");?>&url&via=letiquette"
+            title="Partagez cet article avec vos followers"  target="_blank">Tweet this!</a>
+
+
         </div>
 
 
@@ -53,7 +65,9 @@ $donnees = mysqli_fetch_array($req);
     <h2>Ajouter un commentaire</h2>
     <div class="ajouter_commentaire">
 
-        <?php ajouter_commentaire($id_article); ?>
+        <?php
+        ajouter_commentaire($id_article);
+        ?>
 
 
         <h2>Les commentaires</h2>
@@ -73,7 +87,7 @@ $donnees = mysqli_fetch_array($req);
     <form method="post">
         <div class="row">
             <?php
-            if (isset($_SESSION['id'])) {
+            if (isset($_SESSION['user'])) {
                 ?>
                 <div class="col-12">
                     <div class="form_contenu">
@@ -114,10 +128,24 @@ $donnees = mysqli_fetch_array($req);
 if (isset($_POST['submit'])) {
     $contenu = htmlspecialchars($_POST['contenu'], ENT_QUOTES);
 
-    if (!isset($_SESSION['id'])) {
-        echo "Veuillez vous connecter.";
+    if (!isset($_SESSION['user'])) {
+
+        ?>
+        <div class="pop-up">
+            <div class="alert alert-danger" role="alert">
+                <?php
+                echo 'Veuillez vous connecter.';
+                ?></div>
+        </div>
+        <?php
     } elseif (empty($contenu)) {
-        echo "Veuillez renseigner tous les champs.";
+        ?>
+        <div class="pop-up">
+        <div class="alert alert-danger" role="alert">
+            <?php
+            echo 'Veuillez remplir le contenu du commentaire.';
+            ?></div>
+        </div><?php
     } else {
         inserer_commentaire($id_article, $contenu);
     }
@@ -128,14 +156,18 @@ if (isset($_POST['submit'])) {
 function inserer_commentaire($article, $contenu)
 {
     $bdd = connexion_sql();
-    $id_auteur = $_SESSION['id'];
+    $id_auteur = $_SESSION['user']['id'];
     $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$id_auteur','$contenu', NOW() )";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 
-    echo "Merci pour votre commentaire, celui-ci sera bientot en ligne.";
-
-
+    ?>
+    <div class="pop-up">
+    <div class="alert alert-success" role="alert">
+        <?php
+        echo 'Merci pour votre commentaire, celui-ci sera bientot en ligne.';
+        ?></div>
+    </div><?php
 }
 
 function afficher_commentaires($id_article)

@@ -18,7 +18,7 @@ if ($user && $user['token'] == $token) {
     $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 
-    $_SESSION['flash']['success'] = 'Votre compte a bien été validé';
+    $_SESSION['flash']['success'] = 'Merci d\'avoir validé votre compte, vous pouvez maintenant commentez les articles.';
     $_SESSION['user'] = $user;
 
     header('Location: ../index.php?page=3');
