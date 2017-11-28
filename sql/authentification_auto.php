@@ -7,7 +7,7 @@ if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
     $password = $_COOKIE['password'];
 
     $bdd = connexion_sql();
-    $sql = "SELECT id from membres WHERE pseudo = '$pseudo' AND password = '$password'";
+    $sql = "SELECT * from membres WHERE pseudo = '$pseudo' AND password = '$password'";
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
@@ -18,6 +18,7 @@ if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
     } else {
         session_start();
         $_SESSION['user'] = $user;
+        $_SESSION['auto_log'] = "oui";
         setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
         header('location:../index.php');
         exit();

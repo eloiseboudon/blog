@@ -110,10 +110,8 @@
                                                                                                 required/>
             </label>
 
-<!---->
-<!--            <label for="captcha">Recopiez le mot : <img src="captcha.php"/></label>-->
-<!--            <input type="text" name="captcha" id="captcha" required/>-->
-<!--            <label></label>-->
+            
+            <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo"></div>
 
 
             <label for="cgu">

@@ -1,10 +1,10 @@
 <nav class="menu" id="menu" xmlns="http://www.w3.org/1999/html">
-    <div class="menu-item logo"><a href="/blog"><img src="assets/logo.png"></a></div>
+    <div class="menu-item logo"><a href="/"><img src="assets/logo.png"></a></div>
 
-    <div id="acceuil" class="menu-item"><a href="/blog">Accueil</a></div>
+    <div id="acceuil" class="menu-item"><a href="/">Accueil</a></div>
     <div id="grand-ecran" class="menu-right">
         <?php
-        if (isset($_SESSION['user'])){
+        if (isset($_SESSION['user']['pseudo'])){
             ?><div class="menu-item menu-item-right menu-pseudo">
                 <?php echo $_SESSION['user']['pseudo'] ?>
             </div>

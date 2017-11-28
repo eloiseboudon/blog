@@ -20,10 +20,11 @@ if (!isset($_COOKIE['isConnect'])) {
     }
 }
 
-
 if (isset($_COOKIE['isConnect'])) {
-    if (($_COOKIE['isConnect'] != 1 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password']) && $_COOKIE['isConnect'] != 3) || ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password']))) {
-        include_once('sql/authentification_auto.php');
+    if ($_COOKIE['isConnect'] != 1 && $_COOKIE['isConnect'] != 3) {
+        if ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
+            include('sql/authentification_auto.php');
+        }
     }
 }
 
@@ -37,8 +38,6 @@ if (isset($_COOKIE['isConnect'])) {
 //    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
 //}
 
-
-echo $_SESSION['user']['pseudo'];
 
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
@@ -55,6 +54,7 @@ include('sql/connexion.php');
     <meta name="viewport" content="width=device-width"/>
 
     <link rel="icon" href="assets/icone-rouge.png">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -66,6 +66,8 @@ include('sql/connexion.php');
     <link href="css/main.css" rel="stylesheet"/>
     <link href="css/etiquettes.css" rel="stylesheet"/>
     <link href="css/timeline.css" rel="stylesheet"/>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -76,6 +78,11 @@ include('sql/connexion.php');
     include('partials/menu.php');
     ?>
 </div>
+
+<?php
+var_dump($_SESSION['user']);
+var_dump($_SESSION['auto_log']);
+?>
 
 
 <div class="contenu">
@@ -159,5 +166,12 @@ include('sql/connexion.php');
         $('[data-toggle="popover"]').popover();
     });
 </script>
+
+
+<script src="http://www.letiquette-blog.com//cookiechoices.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function (event) {
+        cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.letiquette-blog.com/index.php?page=mentions_legales');
+    });</script>
+
 </body>
 </html>
