@@ -5,27 +5,28 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-
 if (!isset($_COOKIE['isConnect'])) {
-    setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
-}
-
-if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['password']) && isset($_SESSION['user']['email'])) {
-    setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, null, null, false, true);
-
+    setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
-    setcookie('isConnect', 2);
-}
-
-//echo $_COOKIE['pseudo'];
-
-if (isset($_COOKIE['isConnect'])) {
-    if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['user']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3 && isset($_SESSION['user']['password']) ) {
-        include('sql/authentification_auto.php');
+    if ($_COOKIE['isConnect'] = !3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1) {
+        if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['password']) && isset($_SESSION['user']['email'])) {
+            setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
+            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
+            setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, "/", null, false, true);
+            setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
+        } else {
+            setcookie('isConnect', 2, time() + 365 * 24 * 3600, "/");
+        }
     }
 }
+
+
+if (isset($_COOKIE['isConnect'])) {
+    if (($_COOKIE['isConnect'] != 1 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password']) && $_COOKIE['isConnect'] != 3) || ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password']))) {
+        include_once('sql/authentification_auto.php');
+    }
+}
+
 //if(isset($_COOKIE['nbPages'])){
 //    setcookie('nbPages',$_COOKIE['nbPages']+1);
 //}else{
@@ -36,6 +37,8 @@ if (isset($_COOKIE['isConnect'])) {
 //    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
 //}
 
+
+echo $_SESSION['user']['pseudo'];
 
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
@@ -51,6 +54,7 @@ include('sql/connexion.php');
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
 
+    <link rel="icon" href="assets/icone-rouge.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

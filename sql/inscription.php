@@ -20,7 +20,8 @@ if (isset($_POST['nom'])) {
 
     $checkbox = array();
     $checkbox = $_POST['validate'];
-    $headers = 'From: letiquette@letiquette-blog.com';
+    $headers = 'From: L\'etiquette <ne-pas-repondre@letiquette-blog.com>';
+
 
 //    $captcha = $_POST['captcha'];
 //    session_start();
