@@ -12,10 +12,10 @@ function connexion_sql(){
 
 //	SERVEUR
 
-//    $servername = 'db700408713.db.1and1.com';
-//    $database = 'db700408713';
-//    $username = 'dbo700408713';
-//    $password = "L3ttiqu3tt3%";
+//    $servername = 'letiqueteheloise.mysql.db';
+//    $database = 'letiqueteheloise';
+//    $username = 'letiqueteheloise';
+//    $password = "L3tiqu3tt3";
 
 	$db = mysqli_connect($servername, $username, $password, $database)
 		or die("Impossible de se connecter : " . mysqli_error($db));

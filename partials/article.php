@@ -47,16 +47,15 @@ $donnees = mysqli_fetch_array($req);
                onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
 
 <?php
-function get_url($donnees, $id_article){
-    $titre = $donnees['titre'];
-    $url = "http://letiquette-blog.com/index.php?page=article&id=$id_article&nom=$titre";
-    return $url;
+
+function get_img(){
+    $image = "";
+    return $image;
 }
 
 
-function get_img(){
-    $image = "https://www.google.fr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjh75CHoN_XAhXDvBoKHexSAoUQjRwIBw&url=https%3A%2F%2Fwww.wwf.fr%2Fespeces-prioritaires%2Ftigre&psig=AOvVaw3dyvHOJNeMNzIxt9ZYyx1s&ust=1511889105295114";
-    return $image;
+function get_url(){
+    return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 }
 
 ?>
@@ -65,12 +64,19 @@ function get_img(){
             href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: ");?>&url&via=letiquette"
             title="Partagez cet article avec vos followers"  target="_blank"><img src="assets/icones/twitter-carre.png"></a>
 
-            <a href="https://plus.google.com/share?url=<?php echo get_url($donnees, $id_article); ?>"
+            <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
                title="Partagez cet article avec votre communauté Google"  target="_blank"><img src="assets/icones/google-plus-carre.png"></a>
 
 
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo get_url($donnees, $id_article); ?>&media=<?php echo get_img(); ?>"
+            <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
                title="Partagez sur Pinterest"  target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+
+
+            <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
+             title="Partagez par mail"  target="_blank"><img src="assets/icones/email-carre.png"></a>
+
+
+
 
 
         </div>
