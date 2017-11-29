@@ -22,17 +22,17 @@ if (isset($_POST['nom'])) {
     $checkbox = $_POST['validate'];
     $headers = 'From: L\'etiquette <ne-pas-repondre@letiquette-blog.com>';
 
-
+//CAPTCHA GOOGLE
     $secret = "6LcdyjoUAAAAAHQI39yEUGcGbvoZXbBJB-08tCEi";
-    // Paramètre renvoyé par le recaptcha
     $response = $_POST['g-recaptcha-response'];
-    // On récupère l'IP de l'utilisateur
     $remoteip = $_SERVER['REMOTE_ADDR'];
 
     $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
         . $secret
         . "&response=" . $response
         . "&remoteip=" . $remoteip ;
+
+
 
 
     if (count($checkbox) != 1) {
@@ -135,5 +135,34 @@ VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anni
 
 
 }
+
+
+
+
+function checkUser($user){
+
+    $email = $user['email'];
+    $bdd = connexion_sql();
+    $sql = "SELECT * FROM membres WHERE email ='$email'";
+    $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
+
+
+    if(empty($req)){
+        $nom = $user['last_name'];
+        $prenom = $user['first_name'];
+        $sexe = $user['gender'];
+        $date_anniversaire = $user['birthday'];
+
+
+        $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription, token, confirmation_token)
+VALUES ('$nom','$prenom','$prenom','','$email','$sexe','$date_anniversaire','','','','',NOW(),'google_account', 'google_acount')";
+        $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
+    }
+
+
+    return $req;
+
+}
+
 
 ?>

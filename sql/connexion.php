@@ -38,8 +38,5 @@ function str_random($length){
 
 
 
-function checkUser($user){
-
-}
 
 ?>
