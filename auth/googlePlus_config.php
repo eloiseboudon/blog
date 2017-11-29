@@ -3,7 +3,7 @@ include_once 'vendor/autoload.php';
 
 const CLIENT_ID = '121564257068-dsfqbu2qnc0m38rmg7mc0lbadbnk4ogf.apps.googleusercontent.com';
 const CLIENT_SECRET = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';
-const REDIRECT_URL = 'http://www.letiquette-blog.com/';
+const REDIRECT_URL = 'http://www.letiquette-blog.com/index.php?page=3';
 
 
 $client = new Google_Client();
