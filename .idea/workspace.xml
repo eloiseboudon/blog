@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/googlePlus_config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/login_with_google.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/captcha.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/smartie.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/login_with_google.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/googlePlus_config.php" afterPath="$PROJECT_DIR$/sql/googlePlus_config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1049">
-              <caret line="69" column="67" lean-forward="false" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+            <state relative-caret-position="515">
+              <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -66,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googlePlus_config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="googlePlus_config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sql/googlePlus_config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -157,10 +155,10 @@
         <option value="$PROJECT_DIR$/partials/authentification.php" />
         <option value="$PROJECT_DIR$/sql/authentification_auto.php" />
         <option value="$PROJECT_DIR$/partials/menu.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/sql/inscription.php" />
         <option value="$PROJECT_DIR$/partials/inscription.php" />
         <option value="$PROJECT_DIR$/sql/googlePlus_config.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -243,81 +241,6 @@
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sql" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Google" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apiclient-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="google" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -375,12 +298,12 @@
       <workItem from="1511513466988" duration="17941000" />
       <workItem from="1511619011133" duration="8753000" />
       <workItem from="1511765805489" duration="18907000" />
-      <workItem from="1511856591059" duration="24352000" />
+      <workItem from="1511856591059" duration="25477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319639000" />
+    <option name="totallyTimeSpent" value="320764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -716,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1049">
-          <caret line="69" column="67" lean-forward="false" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/google/auth/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -809,7 +724,15 @@
     <entry file="file://$PROJECT_DIR$/sql/googlePlus_config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
           <folding />
         </state>
       </provider>

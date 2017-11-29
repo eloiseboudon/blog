@@ -80,7 +80,10 @@ include('sql/connexion.php');
 </div>
 
 <?php
+if(isset($_SESSION['user']))
 var_dump($_SESSION['user']);
+
+if(isset($_SESSION['auto_log']))
 var_dump($_SESSION['auto_log']);
 ?>
 

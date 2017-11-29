@@ -14,7 +14,7 @@ include_once '../vendor/google/apiclient-services/src/Google/Service/Oauth2.php'
  */
 $clientId = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';
 $clientSecret = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';
-$redirectURL = 'http://localhost/blog/sql/login_with_google.php';
+$redirectURL = 'http://localhost/blog/';
 
 //Call Google API
 $gClient = new Google_Client();
