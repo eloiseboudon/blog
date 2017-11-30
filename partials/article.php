@@ -46,37 +46,38 @@ $donnees = mysqli_fetch_array($req);
             <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
                onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
 
-<?php
+            <?php
 
-function get_img(){
-    $image = "";
-    return $image;
-}
+            function get_img()
+            {
+                $image = "";
+                return $image;
+            }
 
 
-function get_url(){
-    return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-}
+            function get_url()
+            {
+                return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            }
 
-?>
+            ?>
 
             <a rel="nofollow"
-            href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: ");?>&url&via=letiquette"
-            title="Partagez cet article avec vos followers"  target="_blank"><img src="assets/icones/twitter-carre.png"></a>
+               href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
+               title="Partagez cet article avec vos followers" target="_blank"><img
+                        src="assets/icones/twitter-carre.png"></a>
 
             <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
-               title="Partagez cet article avec votre communauté Google"  target="_blank"><img src="assets/icones/google-plus-carre.png"></a>
+               title="Partagez cet article avec votre communauté Google" target="_blank"><img
+                        src="assets/icones/google-plus-carre.png"></a>
 
 
             <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
-               title="Partagez sur Pinterest"  target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+               title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
 
 
             <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
-             title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
-
-
-
+               title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
 
 
         </div>
@@ -198,27 +199,77 @@ function inserer_commentaire($article, $contenu)
 function afficher_commentaires($id_article)
 {
     $bdd = connexion_sql();
-    $sql = 'SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article =' . "$id_article" . ' AND approuve=1 ORDER BY date_commentaire desc';
+
+    $nb_com = $bdd->query("SELECT COUNT(*) AS count FROM commentaires JOIN membres ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1");
+    $count_nb_com = mysqli_fetch_array($nb_com);
+    $count_com = $count_nb_com['count'];
+
+    $sql = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc LIMIT 5";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
-
+    ?>
+    <div id="commentaires-view-5">
+    <?php
     while ($donnees = mysqli_fetch_array($req)) {
 
         ?>
+        <div class="commentaires">
+            <div class="commentaire_informations">
+                <p><strong><?php echo $donnees['pseudo'];
+                        echo $donnees['id_commentaire']; ?></strong>
+                    le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+            </div>
 
-        <div class="commentaire_informations">
-            <p><strong><?php echo $donnees['pseudo']; ?></strong>
-                le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+            <div class="commentaire_contenu">
+                <?php echo $donnees['contenu']; ?>
+            </div>
         </div>
+        <?php
+    }
+    ?>
+    <div class="voir_plus">
+        <a>
+            <i class="fa fa-chevron-circle-down mask" aria-hidden="true"></i> Voir plus
+        </a>
+    </div>
+    </div><?php
+    if ($count_com > 5) {
+        ?>
 
-        <div class="commentaire_contenu">
-            <?php echo $donnees['contenu']; ?>
-        </div>
 
         <?php
+        $sql2 = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc ";
+        $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
+
+        ?>
+        <div id="commentaires-view-all">
+
+        <?php
+        while ($donnees = mysqli_fetch_array($req2)) {
+
+            ?>
+            <div class="commentaires">
+                <div class="commentaire_informations">
+                    <p><strong><?php echo $donnees['pseudo'];
+                            echo $donnees['id_commentaire']; ?></strong>
+                        le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+                </div>
+
+                <div class="commentaire_contenu">
+                    <?php echo $donnees['contenu']; ?>
+                </div>
+            </div>
+            <?php
+        } ?>
+        <div class="voir_moins">
+            <a>
+                <i class="fa fa-chevron-circle-up demask" aria-hidden="true"></i> Voir moins
+            </a>
+        </div>
+        </div><?php
+
     }
 }
 
 ?>
-
 

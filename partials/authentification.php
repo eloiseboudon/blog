@@ -86,23 +86,30 @@
                     $count_user = mysqli_fetch_array($sql);
                     $count_user_exist = $count_user['count'];
 
+
                     if ($count_user_exist == 0) {
                         $nom = $gpUserData['last_name'];
                         $prenom = $gpUserData['first_name'];
+                        $pseudo = explode('@', $email)[0];
                         $sexe = $gpUserData['gender'];
                         $date_anniversaire = $gpUserData['birthday'];
 
                         $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription, token, confirmation_token)
-VALUES ('$nom','$prenom','$prenom','','$email','$sexe','$date_anniversaire','','','','',NOW(),'google_account', 'google_account')";
+VALUES ('$nom','$prenom','$pseudo','','$email','$sexe','$date_anniversaire','','','','',NOW(),'google_account', 'google_account')";
                         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
+                        $user_id = mysqli_insert_id($bdd);
+                        $gpUserData['id'] = $user_id;
                     }
-
+                    else{
+                        $sql = "SELECT * from membres WHERE pseudo = '$pseudo'";
+                        $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
+                        $user_id = mysqli_fetch_array($req);
+                        $gpUserData['id'] = $user_id['id'];
+                    }
                     $_SESSION['connexion'] = "google";
                     $_SESSION['user'] = $gpUserData;
 
-                    $_SESSION['flash']['success'] = "Vous êtes connecté avec votre compte google.";
-//                    setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
-
+                    $_SESSION['flash']['success'] = "Vous êtes connecté grâce à votre compte Google.";
                     $output .= "";
 
                     echo "<script type='text/javascript'>document.location.replace('index.php');</script>";

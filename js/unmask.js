@@ -45,3 +45,17 @@ function changeType(x, type) {
         return tmp;
     }
 }
+
+
+$('.mask').on('click', function () {
+    document.getElementById("commentaires-view-all").style.display = "block";
+    document.getElementById("commentaires-view-5").style.display = "none";
+
+});
+
+
+$('.demask').on('click', function () {
+    document.getElementById("commentaires-view-all").style.display = "none";
+    document.getElementById("commentaires-view-5").style.display = "block";
+
+});
