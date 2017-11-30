@@ -149,6 +149,10 @@ h2 {
     text-align: center;
 }
 
+.google-signin img {
+    width: 200px;
+}
+
 .accueil_articles, .nos_valeurs {
     margin: auto;
     position: relative;

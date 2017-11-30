@@ -1,7 +1,5 @@
 <?php
 
-
-
 function connexion_sql(){
 
 //    LOCAL
@@ -24,8 +22,6 @@ function connexion_sql(){
 
 		return $db;
 }
-
-
 
 
 function str_random($length){

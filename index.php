@@ -8,10 +8,10 @@ if (session_status() == PHP_SESSION_NONE) {
 if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
-    if ($_COOKIE['isConnect'] = !3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1) {
-        if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['password']) && isset($_SESSION['user']['email'])) {
+    if ($_COOKIE['isConnect'] = !3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 ||(isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
+        if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['email'])) {
             setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
-            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
+//            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
             setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, "/", null, false, true);
             setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
         } else {
@@ -46,6 +46,17 @@ include('sql/connexion.php');
 ?>
 <html lang="fr">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110425305-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110425305-1');
+    </script>
+
     <title>L'étiquette - Blog</title>
 
     <meta name="author" content="L'étiquette"/>
@@ -73,16 +84,19 @@ include('sql/connexion.php');
 <body>
 
 <div class="menu">
-
     <?php
     include('partials/menu.php');
     ?>
 </div>
 
+
 <?php
-var_dump($_SESSION['user']);
-var_dump($_SESSION['auto_log']);
-?>
+//if(isset($_SESSION['user']))
+//var_dump($_SESSION['user']);
+//
+//if(isset($_SESSION['auto_log']))
+//var_dump($_SESSION['auto_log']);
+//?>
 
 
 <div class="contenu">

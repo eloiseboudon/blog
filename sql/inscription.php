@@ -22,18 +22,15 @@ if (isset($_POST['nom'])) {
     $checkbox = $_POST['validate'];
     $headers = 'From: L\'etiquette <ne-pas-repondre@letiquette-blog.com>';
 
-
+//CAPTCHA GOOGLE
     $secret = "6LcdyjoUAAAAAHQI39yEUGcGbvoZXbBJB-08tCEi";
-    // Paramètre renvoyé par le recaptcha
     $response = $_POST['g-recaptcha-response'];
-    // On récupère l'IP de l'utilisateur
     $remoteip = $_SERVER['REMOTE_ADDR'];
 
     $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
         . $secret
         . "&response=" . $response
         . "&remoteip=" . $remoteip ;
-
 
     if (count($checkbox) != 1) {
         $courrier = 1;
@@ -62,9 +59,7 @@ if (isset($_POST['nom'])) {
 
         if ($count_pseudo != 0) {
             session_start();
-
             $_SESSION['flash']['error'] = "Ce pseudo est déjà utilisé.";
-
             $_SESSION['user'] = [
                 'nom' => $nom,
                 'prenom' => $prenom,
@@ -77,11 +72,8 @@ if (isset($_POST['nom'])) {
                 'telephone' => $telephone,
             ];
 
-
             header('location:../index.php?page=4');
             exit();
-
-
         } elseif ($count_mail != 0) {
             session_start();
 
@@ -135,5 +127,7 @@ VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anni
 
 
 }
+
+
 
 ?>

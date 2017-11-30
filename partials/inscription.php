@@ -1,4 +1,10 @@
 <div class="contenu">
+
+    <?php
+    include_once 'auth/googlePlus_config.php';
+    ?>
+
+
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
