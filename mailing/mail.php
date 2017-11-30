@@ -5,10 +5,10 @@ envoi_mail();
 
 function connexion_sql()
 {
-    $servername = 'db700408713.db.1and1.com';
-    $database = 'db700408713';
-    $username = 'dbo700408713';
-    $password = "L3ttiqu3tt3%";
+    $servername = 'letiqueteheloise.mysql.db';
+    $database = 'letiqueteheloise';
+    $username = 'letiqueteheloise';
+    $password = "L3tiqu3tt3";
 
     $db = mysqli_connect($servername, $username, $password, $database)
     or die("Impossible de se connecter : " . mysqli_error($db));
@@ -33,7 +33,7 @@ function envoi_mail()
     None je déconne j'en sais rien je suis qu'une quichasse qui fait des mails.
     Justine love U <4 ";
 
-    $headers = 'From: ne-pas-repondre@letiquette-shop.com';
+    $headers = 'From: ne-pas-repondre@letiquette-blog.com';
     $headers .= "Content-Type: text/html; charset=utf-8 ";
 
     while ($donnees = mysqli_fetch_array($req)) {

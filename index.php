@@ -5,28 +5,29 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-
 if (!isset($_COOKIE['isConnect'])) {
-    setcookie('isConnect', 0, time() + 365 * 24 * 3600, null, null, false, true);
-}
-
-if (isset($_SESSION['user'])) {
-    setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, null, null, false, true);
-    setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, null, null, false, true);
-//    $_COOKIE['pseudo']=$_SESSION['user']['pseudo'];
-
+    setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
-    setcookie('isConnect', 2);
-}
-
-echo $_COOKIE['pseudo'];
-
-if (isset($_COOKIE['isConnect'])) {
-    if (((isset($_COOKIE['pseudo']) && $_COOKIE['isConnect'] == 0 && $_COOKIE['isConnect'] != 2) || ($_COOKIE['isConnect'] == 1 && !isset($_SESSION['user']) && $_COOKIE['isConnect'] != 2)) && $_COOKIE['isConnect'] != 3) {
-        include('sql/authentification_auto.php');
+    if ($_COOKIE['isConnect'] = !3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 ||(isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
+        if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['email'])) {
+            setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
+//            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
+            setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, "/", null, false, true);
+            setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
+        } else {
+            setcookie('isConnect', 2, time() + 365 * 24 * 3600, "/");
+        }
     }
 }
+
+if (isset($_COOKIE['isConnect'])) {
+    if ($_COOKIE['isConnect'] != 1 && $_COOKIE['isConnect'] != 3) {
+        if ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
+            include('sql/authentification_auto.php');
+        }
+    }
+}
+
 //if(isset($_COOKIE['nbPages'])){
 //    setcookie('nbPages',$_COOKIE['nbPages']+1);
 //}else{
@@ -45,12 +46,25 @@ include('sql/connexion.php');
 ?>
 <html lang="fr">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110425305-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110425305-1');
+    </script>
+
     <title>L'étiquette - Blog</title>
 
     <meta name="author" content="L'étiquette"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
+
+    <link rel="icon" href="assets/icone-rouge.png">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -63,16 +77,26 @@ include('sql/connexion.php');
     <link href="css/main.css" rel="stylesheet"/>
     <link href="css/etiquettes.css" rel="stylesheet"/>
     <link href="css/timeline.css" rel="stylesheet"/>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
 
 <div class="menu">
-
     <?php
     include('partials/menu.php');
     ?>
 </div>
+
+
+<?php
+//if(isset($_SESSION['user']))
+//var_dump($_SESSION['user']);
+//
+//if(isset($_SESSION['auto_log']))
+//var_dump($_SESSION['auto_log']);
+//?>
 
 
 <div class="contenu">
@@ -156,5 +180,12 @@ include('sql/connexion.php');
         $('[data-toggle="popover"]').popover();
     });
 </script>
+
+
+<script src="http://www.letiquette-blog.com//cookiechoices.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function (event) {
+        cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.letiquette-blog.com/index.php?page=mentions_legales');
+    });</script>
+
 </body>
 </html>

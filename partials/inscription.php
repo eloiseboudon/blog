@@ -1,4 +1,10 @@
 <div class="contenu">
+
+    <?php
+    include_once 'auth/googlePlus_config.php';
+    ?>
+
+
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
@@ -20,7 +26,6 @@
                                                                                           } ?>"
                                                                                           required/>
             </label>
-
 
 
             <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
@@ -111,6 +116,10 @@
                                                                                                 required/>
             </label>
 
+
+            <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo"></div>
+
+
             <label for="cgu">
                 <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les
                 conditions générales d'utilisation <span class="required" style="float:none;">*</span>
@@ -133,6 +142,10 @@
         </form>
     </div>
 </div>
+
+
+
+
 
 
 

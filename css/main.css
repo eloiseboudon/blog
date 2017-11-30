@@ -149,6 +149,10 @@ h2 {
     text-align: center;
 }
 
+.google-signin img {
+    width: 200px;
+}
+
 .accueil_articles, .nos_valeurs {
     margin: auto;
     position: relative;
@@ -228,15 +232,22 @@ h2 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
+.article .partage_reseaux_sociaux h2{
+    display: inline-block;
+    margin-right:4%;
+}
 
 .article .partage_reseaux_sociaux img{
-    width:50px;
-    background-color: white;
+    width:55px;
+    border : 2px solid transparent;
+    margin: 5px;
+
 }
 
 .article .partage_reseaux_sociaux img:hover{
     border-radius:50%;
+    background-color: white;
+
 }
 
 
