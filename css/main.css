@@ -343,6 +343,26 @@ h2 {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
+.article_sociaux {
+    display: flex;
+}
+
+
+.article_sociaux .partage_reseaux_sociaux{
+    width: 50%;
+}
+
+.article_sociaux .prochain_article{
+    width: 50%;
+    text-align: center;
+}
+
+.article_sociaux .prochain_article label{
+    margin-top: 15px;
+}
+
+
 .article_commentaire .ajouter_commentaire form {
     margin: 20px;
 }

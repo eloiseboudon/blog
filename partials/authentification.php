@@ -68,15 +68,12 @@
                     'oauth_provider' => 'google',
                     'oauth_uid' => $gpUserProfile['id'],
                     'first_name' => htmlspecialchars($gpUserProfile['given_name']),
-                    'pseudo' => htmlspecialchars($gpUserProfile['given_name']),
                     'last_name' => htmlspecialchars($gpUserProfile['family_name']),
                     'email' => htmlspecialchars($gpUserProfile['email']),
                     'gender' => $gpUserProfile['gender'],
-                    'locale' => $gpUserProfile['locale'],
-                    'picture' => $gpUserProfile['picture'],
-                    'link' => $gpUserProfile['link'],
                     'birthday' => $gpUserProfile['birthday']
                 );
+                $gpUserData['pseudo'] = explode('@', htmlspecialchars($gpUserProfile['email']))[0];
 
                 if (!empty($gpUserData)) {
                     $email = $gpUserData['email'];

@@ -20,17 +20,18 @@ $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 $donnees = mysqli_fetch_array($req);
 ?>
-    <div class="article">
+<div class="article">
 
 
-        <h1><?php echo $donnees['titre']; ?></h1>
+    <h1><?php echo $donnees['titre']; ?></h1>
 
-        <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
-            le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
+    <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
+        le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
 
-        <div class="article_contenu">
-            <?php echo $donnees['contenu']; ?>
-        </div>
+    <div class="article_contenu">
+        <?php echo $donnees['contenu']; ?>
+    </div>
+    <div class="article_sociaux">
         <div class="partage_reseaux_sociaux">
 
             <h2>Partager sur les réseaux sociaux</h2>
@@ -76,13 +77,24 @@ $donnees = mysqli_fetch_array($req);
                title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
 
 
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
+               title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
+
+
             <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
                title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
 
 
         </div>
 
+        <div class="prochain_article">
+            <label>
+                <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informer de la sortie
+                du prochain article.
+            </label>
+        </div>
     </div>
+</div>
 
 
 <div class="article_commentaire">
@@ -273,3 +285,47 @@ function afficher_commentaires($id_article)
 
 ?>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--                <h4 class="modal-title">Modal Header</h4>-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <?php
+                if (isset($_SESSION['user']['pseudo'])) {
+                    ?><p>Vous recevrez un mail à l'adresse suivante <?php echo $_SESSION['user']['email'] ?> lors de la
+                    sortie du prochain article.
+                    </p>
+                    <?php
+                } else {
+                    ?>
+                    <div class="connexion">
+                        <p>Veuillez vous connecter afin de recevoir le mail: </p>
+                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>
+                        </a>
+                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i> Inscription</span> </a>
+                    </div>
+                    <?php
+                } ?>
+
+            </div>
+            <div class="modal-footer">
+                <?php if (isset($_SESSION['user']['pseudo'])) {
+                   ?>
+                    <form action="mailing/mail_prochain_article.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>" />
+                        <input type="submit" value="J'accepte"/>
+                    </form>
+                    <?php
+                }?>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+
+            </div>
+        </div>
+    </div>
+</div>

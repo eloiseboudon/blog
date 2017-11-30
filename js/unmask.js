@@ -1,6 +1,6 @@
-$('.unmask').on('click', function(){
+$('.unmask').on('click', function () {
 
-    if($(this).prev('input').attr('type') == 'password')
+    if ($(this).prev('input').attr('type') == 'password')
         changeType($(this).prev('input'), 'text');
 
     else
@@ -11,13 +11,13 @@ $('.unmask').on('click', function(){
 
 
 function changeType(x, type) {
-    if(x.prop('type') == type)
+    if (x.prop('type') == type)
         return x; // ça serait facile.
     try {
         // Une sécurité d'IE empêche ceci
         return x.prop('type', type);
     }
-    catch(e) {
+    catch (e) {
         // On tente de recréer l'élément
         // En créant d'abord une div
         var html = $("<div>").append(x.clone()).html();
@@ -26,17 +26,17 @@ function changeType(x, type) {
         // si on ne trouve rien, on ajoute le type à la fin, sinon on le remplace
         var tmp = $(html.match(regex) == null ?
             html.replace(">", ' type="' + type + '">') :
-            html.replace(regex, 'type="' + type + '"') );
+            html.replace(regex, 'type="' + type + '"'));
 
         // on rajoute les vieilles données de l'élément
-        tmp.data('type', x.data('type') );
+        tmp.data('type', x.data('type'));
         var events = x.data('events');
-        var cb = function(events) {
-            return function() {
+        var cb = function (events) {
+            return function () {
                 //Bind all prior events
-                for(i in events) {
+                for (i in events) {
                     var y = events[i];
-                    for(j in y) tmp.bind(i, y[j].handler);
+                    for (j in y) tmp.bind(i, y[j].handler);
                 }
             }
         }(events);
@@ -50,12 +50,14 @@ function changeType(x, type) {
 $('.mask').on('click', function () {
     document.getElementById("commentaires-view-all").style.display = "block";
     document.getElementById("commentaires-view-5").style.display = "none";
-
 });
-
 
 $('.demask').on('click', function () {
     document.getElementById("commentaires-view-all").style.display = "none";
     document.getElementById("commentaires-view-5").style.display = "block";
+});
 
+$("#modal-pro-article").on('click',function () {
+    $('#myModal').modal('show');
+    document.getElementById("modal-pro-article").checked = false;
 });
