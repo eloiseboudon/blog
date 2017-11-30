@@ -32,9 +32,6 @@ if (isset($_POST['nom'])) {
         . "&response=" . $response
         . "&remoteip=" . $remoteip ;
 
-
-
-
     if (count($checkbox) != 1) {
         $courrier = 1;
     } else {
@@ -62,9 +59,7 @@ if (isset($_POST['nom'])) {
 
         if ($count_pseudo != 0) {
             session_start();
-
             $_SESSION['flash']['error'] = "Ce pseudo est déjà utilisé.";
-
             $_SESSION['user'] = [
                 'nom' => $nom,
                 'prenom' => $prenom,
@@ -77,11 +72,8 @@ if (isset($_POST['nom'])) {
                 'telephone' => $telephone,
             ];
 
-
             header('location:../index.php?page=4');
             exit();
-
-
         } elseif ($count_mail != 0) {
             session_start();
 

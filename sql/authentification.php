@@ -20,6 +20,7 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
         session_start();
         if ($user['confirmation_token'] == 1) {
             $_SESSION['user'] = $user;
+            $_SESSION['connexion'] = "site";
             $_SESSION['flash']['success'] = "Vous êtes connecté.";
             setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
             header('location: ../index.php');

@@ -1,7 +1,24 @@
 <?php
-
+require_once '../vendor/autoload.php';
 session_start();
-$_SESSION = array();
+
+if($_SESSION['connexion'] == "site"){
+    $_SESSION = array();
+}elseif($_SESSION['connexion'] == "google"){
+
+    $accesstoken = $_SESSION['token-google'];
+
+    unset($_SESSION['token-google']);
+    unset($_SESSION['user']);
+
+    $client = new Google_Client();
+    $client->setClientId(CLIENT_ID);
+    $client->setClientSecret(CLIENT_SECRET);
+    $client->setRedirectUri(REDIRECT_URL);
+    $client->revokeToken($accesstoken);
+}
+
+
 session_destroy();
 session_start();
 $_SESSION['flash']['success'] = "Vous êtes déconnecté.";

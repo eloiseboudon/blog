@@ -73,7 +73,7 @@ function get_url(){
 
 
             <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
-             title="Partagez par mail"  target="_blank"><img src="assets/icones/email-carre.png"></a>
+             title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
 
 
 

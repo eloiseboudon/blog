@@ -53,21 +53,15 @@
 
             if (isset($_GET['code'])) {
                 $client->authenticate($_GET['code']);
-                $_SESSION['token'] = $client->getAccessToken();
-                echo "<script>alert('code')</script>";
+                $_SESSION['token-google'] = $client->getAccessToken();
                 header('Location: ' . filter_var(REDIRECT_URL, FILTER_SANITIZE_URL));
             }
 
             if (isset($_SESSION['token'])) {
-                $client->setAccessToken($_SESSION['token']);
-
-                echo "<script>alert('token')</script>";
+                $client->setAccessToken($_SESSION['token-google']);
             }
 
             if ($client->getAccessToken()) {
-
-                echo "<script>alert('token access')</script>";
-
                 $gpUserProfile = $google_oauthV2->userinfo->get();
 
                 $gpUserData = array(
@@ -88,11 +82,9 @@
                     $email = $gpUserData['email'];
                     $bdd = connexion_sql();
 
-
                     $sql = $bdd->query("SELECT COUNT(*) AS count FROM membres WHERE email ='$email'");
                     $count_user = mysqli_fetch_array($sql);
                     $count_user_exist = $count_user['count'];
-
 
                     if ($count_user_exist == 0) {
                         $nom = $gpUserData['last_name'];
@@ -105,10 +97,17 @@ VALUES ('$nom','$prenom','$prenom','','$email','$sexe','$date_anniversaire','','
                         $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
                     }
 
-                    echo "<script>alert('user')</script>";
+                    $_SESSION['connexion'] = "google";
                     $_SESSION['user'] = $gpUserData;
 
-                    $output .= '<br/>Logout from <a href="logout.php">Google</a>';
+                    $_SESSION['flash']['success'] = "Vous êtes connecté avec votre compte google.";
+//                    setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
+
+                    $output .= "";
+
+                    echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
+
+                    exit();
                 } else {
                     $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
                 }
