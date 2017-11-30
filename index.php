@@ -91,12 +91,12 @@ include('sql/connexion.php');
 
 
 <?php
-//if(isset($_SESSION['user']))
-//var_dump($_SESSION['user']);
-//
-//if(isset($_SESSION['auto_log']))
-//var_dump($_SESSION['auto_log']);
-//?>
+if(isset($_SESSION['user']))
+var_dump($_SESSION['user']);
+
+if(isset($_SESSION['auto_log']))
+var_dump($_SESSION['auto_log']);
+?>
 
 
 <div class="contenu">
