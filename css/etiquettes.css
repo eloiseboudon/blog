@@ -15,7 +15,6 @@
 
 .nos_valeurs .cercle {
     margin-top: 10px;
-    margin-right: 5px;
 }
 
 .mentions_legales .cercle {
@@ -28,14 +27,21 @@
     margin-left: 5px;
 }
 
-.accueil_articles .timeline-block-right .cercle, .nos_valeurs .timeline-block-right .cercle {
+.accueil_articles .timeline-block-right .cercle {
     left: 10%;
 }
 
-.accueil_articles .timeline-block-left .cercle, .nos_valeurs .timeline-block-left .cercle {
+.accueil_articles .timeline-block-left .cercle{
     right: 10%;
 }
 
+.nos_valeurs .timeline-block-left .cercle{
+    right: 11%;
+}
+
+.nos_valeurs .timeline-block-right .cercle{
+    left: 11%;
+}
 
 .form-etiquette .cercle {
     border-radius: 50%;
@@ -70,8 +76,7 @@
 }
 
 .nos_valeurs .ficelle {
-    /*width: 92px;*/
-    /*height: 42px;*/
+    position: absolute;
     z-index: 200;
     transform: rotate(-40deg);
     margin-top: 2px;
@@ -173,6 +178,12 @@
     }
 }
 
+@media screen and (max-width: 1440px){
+    .nos_valeurs .ficelle{
+        margin-top:-2%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .accueil_articles .cercle {
         width: 30px;
@@ -199,6 +210,20 @@
 
 }
 
+@media screen and (max-width: 1120px){
+    .nos_valeurs .timeline-block .ficelle{
+        background-image: url("../img/ficelle_rond_avec_trou.png");
+    }
+
+    .nos_valeurs .timeline-block-left .ficelle {
+        transform: scaleX(-1);
+    }
+    .nos_valeurs .timeline-block-right .ficelle {
+        transform: scaleX(-1);
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .accueil_articles .timeline-block-left .ficelle {
         transform: scaleX(-1);
@@ -219,7 +244,11 @@
     .form-etiquette{
         width:70%;
     }
+    .nos_valeurs .timeline-block .ficelle{
+        background-image: url("../img/ficelle_moyenne_2.png");
+    }
 }
+
 @media screen and (max-width: 425px) {
     .form-etiquette{
         width:90%;
@@ -228,9 +257,7 @@
     .form-etiquette .ficelle, .form-etiquette .cercle{
         display: none;
     }
-    /*.form-etiquette{*/
-        /*padding-right:0;*/
-    /*}*/
+
 
 }
 

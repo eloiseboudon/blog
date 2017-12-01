@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
             <div class="valeur_init">
                 <div class="timeline-block">
                     <div class="scroll timeline-content">
@@ -189,7 +189,7 @@
                     </div>
                 </div>
             </div>
-
+        <div class="nos_valeurs">
             <div class="timeline-block timeline-block-left">
                 <div class="cercle"></div>
                 <div class="ficelle"></div>
