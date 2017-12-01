@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/etiquettes.css" afterPath="$PROJECT_DIR$/css/etiquettes.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/timeline.css" afterPath="$PROJECT_DIR$/css/timeline.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/footer/nos_valeurs.php" afterPath="$PROJECT_DIR$/partials/footer/nos_valeurs.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +27,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
+            <state relative-caret-position="11689">
               <caret line="712" column="30" lean-forward="true" selection-start-line="712" selection-start-column="30" selection-end-line="712" selection-end-column="30" />
               <folding />
             </state>
@@ -46,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="etiquettes.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="etiquettes.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="250" column="0" lean-forward="false" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+            <state relative-caret-position="588">
+              <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="timeline.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/timeline.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="702">
@@ -172,9 +170,9 @@
         <option value="$PROJECT_DIR$/partials/footer/contactez_nous.php" />
         <option value="$PROJECT_DIR$/sql/devenir_vendeur.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/css/etiquettes.css" />
         <option value="$PROJECT_DIR$/partials/footer/nos_valeurs.php" />
         <option value="$PROJECT_DIR$/css/timeline.css" />
+        <option value="$PROJECT_DIR$/css/etiquettes.css" />
       </list>
     </option>
   </component>
@@ -328,12 +326,12 @@
       <workItem from="1511856591059" duration="41388000" />
       <workItem from="1512026337506" duration="28877000" />
       <workItem from="1512111941489" duration="4197000" />
-      <workItem from="1512116286280" duration="25116000" />
+      <workItem from="1512116286280" duration="26667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394865000" />
+    <option name="totallyTimeSpent" value="396416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -715,14 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="712" column="30" lean-forward="true" selection-start-line="712" selection-start-column="30" selection-end-line="712" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -753,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="250" column="0" lean-forward="false" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/footer/nos_valeurs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -773,6 +755,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="354" column="122" lean-forward="false" selection-start-line="354" selection-start-column="122" selection-end-line="354" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11689">
+          <caret line="712" column="30" lean-forward="true" selection-start-line="712" selection-start-column="30" selection-end-line="712" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
           <folding />
         </state>
       </provider>

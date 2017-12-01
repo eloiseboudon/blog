@@ -19,7 +19,7 @@
 
 .mentions_legales .cercle {
     margin-top: 348px;
-    left: 73.5%;
+    left: 78%;
 }
 
 .nos_valeurs .timeline-block-right .cercle {
@@ -88,7 +88,7 @@
     width: 75px;
     height: 42px;
     margin-top: 360px;
-    left: 74%;
+    left: 79%;
     z-index: 200;
     background-image: url("../img/ficelle_courte_mentions-legales.png");
 }
@@ -145,7 +145,7 @@
     background-color: white;
     border-radius: 10px;
     border: 2px dashed #880015;
-    width: 50%;
+    width: 60%;
     display: block;
     margin: auto;
 }
@@ -207,8 +207,14 @@
     .accueil_articles .ficelle {
         background-image: url("../img/ficelle_moyenne_2.png");
     }
-
 }
+
+@media screen and (max-width: 1150px){
+    .mentions_legales .ficelle{
+        margin-top: 390px;
+    }
+}
+
 
 @media screen and (max-width: 1120px){
     .nos_valeurs .timeline-block .ficelle{
