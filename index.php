@@ -150,6 +150,10 @@ var_dump($_SESSION['auto_log']);
                 case "mentions_legales":
                     include('partials/footer/mentions_legales.php');
                     break;
+                case "lequipe":
+                    include('partials/footer/lequipe.php.php');
+                    break;
+
 
 
             }

@@ -1,7 +1,7 @@
 <div class="contenu">
 
 
-    <div class="form-authentification">
+    <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
         <?php

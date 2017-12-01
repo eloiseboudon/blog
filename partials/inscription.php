@@ -8,7 +8,7 @@
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
-        <div><?php google_api();?></div>
+        <!--        <div>--><?php //google_api();?><!--</div>-->
 
         <form action="sql/inscription.php" method="post">
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
@@ -58,10 +58,10 @@
             </label>
 
             <span class="required password">8 caractères minimum comportant au moins une minuscule, une majuscule, un chiffre et un caractère spécial (@,!,?, ...)</span>
-            <label for="sexe"><span>Sexe<span class="required">*</span></span>
+            <label for="sexe"><span>Sexe<span class="required">*</span></span> <br>
                 <div class="input-sexe">
-                    <input type="radio" name="sexe" value="F" id="femme" required/> Femme
-                    <input type="radio" name="sexe" value="H" id="homme" required/> Homme
+                    <input type="radio" name="sexe" value="F" id="femme" required/> Femme <br>
+                    <input type="radio" name="sexe" value="H" id="homme" required/> Homme <br>
                     <input type="radio" name="sexe" value="N" id="neutre" required/> Neutre
                 </div>
             </label>
@@ -118,8 +118,9 @@
                                                                                                 required/>
             </label>
 
-
-            <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo"></div>
+            <div class="captcha" >
+                <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo" ></div>
+            </div>
 
 
             <label for="cgu">
@@ -140,7 +141,7 @@
 
             <input type="submit" value="Valider"/>
 
-            
+
         </form>
     </div>
 </div>

@@ -119,12 +119,12 @@
 
 .form-inscription .ficelle, .form-authentification .ficelle {
     background-image: url("../img/ficelle_rond_authentification.png");
-    position: absolute;
+    position: relative;
     width: 92px;
     height: 42px;
     z-index: 200;
     margin-top: -63px;
-    left: 61%;
+    left: 93%;
     transform: rotate(-40deg);
 }
 
@@ -142,7 +142,7 @@
     border: 2px dashed #880015;
 }
 
-.form-authentification {
+.form-authentification, .form-inscription {
     padding: 10px;
     background-color: #fff;
     width: 30%;
@@ -153,16 +153,6 @@
     border: 2px dashed #880015;
 }
 
-.form-inscription {
-    padding: 10px;
-    background-color: #fff;
-    width: 30%;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-}
 
 .mentions_legales_global .mentions_contenu {
     margin-top: 60px;
@@ -182,6 +172,9 @@
 
     .acceuil_titre_global, .article_titre, .article_details {
         margin-left: 10px;
+    }
+    .form-inscription {
+        width:50%;
     }
 }
 
@@ -242,8 +235,24 @@
     .article_commentaire .voir_commentaires .commentaires {
         width: 80%;
     }
-}
 
+    .form-inscription{
+        width:70%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .form-inscription{
+        width:90%;
+    }
+
+    .form-inscription .ficelle, .form-inscription .cercle{
+        display: none;
+    }
+    .form-inscription{
+        padding-right:0;
+    }
+
+}
 
 
 

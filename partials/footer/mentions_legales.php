@@ -17,9 +17,9 @@
             <p> <b>Nom du directeur de la publication :</b> Justine Abécassis</p>
             <p style="margin-bottom:0;">
                 <b>Hébergeur :</b></br>
-                1&1 (SARL)</br>
-                7 place de la Gare, 57200 Sarreguemines</br>
-                Numéro de téléphone : +33 (0) 970 808 911
+                OVH (SAS) </br>
+                2 rue Kellermann - 59100 Roubaix - France</br>
+                Numéro de téléphone : +33 9 72 10 10 07
 
             </p>
 
