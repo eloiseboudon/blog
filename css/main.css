@@ -99,6 +99,10 @@ h2 {
     color: #000000;
 }
 
+#bottom-page ul {
+    list-style:none;
+}
+
 #bottom-page a > li {
     list-style-type: none;
 
@@ -246,7 +250,7 @@ h2 {
 
 }
 
-.article .partage_reseaux_sociaux img:hover {
+.article .icon_res_soc img:hover {
     border-radius: 50%;
     background-color: white;
 
@@ -346,26 +350,26 @@ h2 {
 
 .article_sociaux {
     display: flex;
-    width:60%;
+    width: 60%;
 }
 
 .article_sociaux .partage_reseaux_sociaux {
     width: 40%;
+    margin-left: 10px;
 }
 
 .article .prochain_article {
     text-align: center;
+    margin-top: 10px;
 }
 
-.article .sous_article{
+.article .sous_article {
     display: flex;
 }
 
-.article_sociaux .icon_res_soc{
+.article_sociaux .icon_res_soc {
     text-align: center;
 }
-
-
 
 .article.prochain_article label {
     margin-top: 15px;
@@ -379,6 +383,7 @@ h2 {
     margin: 20px;
     text-align: center;
 }
+
 
 .article_commentaire .ajouter_commentaire .form_contenu textarea {
     width: 70%;
@@ -562,6 +567,7 @@ h2 {
 @media screen and (max-width: 1450px) {
 
 }
+
 @media screen and (max-width: 1300px) {
     .nos_valeurs .valeur_image img {
         width: 150px !important;
@@ -593,9 +599,8 @@ h2 {
         width: 40px;
     }
 
-
     /*.article_sociaux .icon_res_soc{*/
-        /*display: flex;*/
+    /*display: flex;*/
     /*}*/
 }
 
@@ -606,19 +611,29 @@ h2 {
 
     .bottom-bar .icon_social img {
         margin: 5px;
+        width:30px;
+    }
+
+    .article .sous_article {
+        display: block;
+    }
+
+    .article .article_sociaux {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 850px) {
-    #footer .aide, #footer .etiquette, #footer .mentions {
-        display: none;
+    #footer h1 {
+        font-size: 30px;
     }
 
-    #footer .social {
-        text-align: center;
-    }
-    .article_sociaux{
+    .article_sociaux {
         display: block;
+    }
+
+    .article_sociaux .partage_reseaux_sociaux {
+        width: 90%;
     }
 }
 
@@ -645,6 +660,34 @@ h2 {
         margin-right: 10px;
     }
 
+    .article .icon_res_soc img {
+        width: 40px;
+        margin: 2px;
+    }
+
+    .article_commentaire .ajouter_commentaire .form_contenu textarea {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .article_commentaire .ajouter_commentaire .connexion a {
+        margin: 20px;
+        display: block;
+    }
+
+    .article_commentaire .ajouter_commentaire form {
+        margin: 0;
+    }
+
+    .article_commentaire .ajouter_commentaire .connexion, .article_commentaire .ajouter_commentaire .form_contenu {
+        margin: 0;
+    }
+
+    .bottom-bar .icon_social img {
+        width: 25px;
+    }
 }
 
 
