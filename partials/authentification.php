@@ -50,8 +50,7 @@
             <a href="index.php?page=5">Mot de passe oublié</a>
 
 
-            <div><?php
-                google_api();?></div>
+            <div><?php google_api();?></div>
         </div>
     </div>
 </div>
