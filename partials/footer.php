@@ -22,7 +22,7 @@
                     <h1>L'étiquette</h1>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="index.php?page=lequipe">
                                 L'équipe
                             </a>
                         </li>
