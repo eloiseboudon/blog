@@ -6,12 +6,12 @@
                     <h1>Besoin d'aide</h1>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="index.php?page=contact">
                                 Contactez-nous
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="index.php?page=devenir_vendeur">
                                 Devenir vendeur
                             </a>
                         </li>
