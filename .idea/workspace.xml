@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/authentification.php" afterPath="$PROJECT_DIR$/partials/authentification.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/connexion.php" afterPath="$PROJECT_DIR$/sql/connexion.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sql/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
@@ -57,17 +54,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="140" column="44" lean-forward="false" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
+            <state relative-caret-position="578">
+              <caret line="142" column="12" lean-forward="false" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
               <folding>
-                <marker date="1512125475752" expanded="true" signature="9527:9605" ph="..." />
-                <marker date="1512125475752" expanded="true" signature="11235:11294" ph="SELECT COUNT... " />
-                <marker date="1512125475752" expanded="true" signature="11735:12035" ph="INSERT INTO membres... " />
-                <marker date="1512125475752" expanded="true" signature="12279:12325" ph="SELECT * fro... membres" />
-                <marker date="1512125475752" expanded="true" signature="12923:12932" ph="..." />
+                <marker date="1512125566082" expanded="true" signature="9569:9647" ph="..." />
+                <marker date="1512125566082" expanded="true" signature="11244:11303" ph="SELECT COUNT... " />
+                <marker date="1512125566082" expanded="true" signature="11744:12044" ph="INSERT INTO membres... " />
+                <marker date="1512125566082" expanded="true" signature="12288:12334" ph="SELECT * fro... membres" />
+                <marker date="1512125566082" expanded="true" signature="12932:12941" ph="..." />
               </folding>
             </state>
           </provider>
@@ -171,8 +168,8 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/partials/footer.php" />
         <option value="$PROJECT_DIR$/partials/authentification.php" />
-        <option value="$PROJECT_DIR$/partials/inscription.php" />
         <option value="$PROJECT_DIR$/sql/connexion.php" />
+        <option value="$PROJECT_DIR$/partials/inscription.php" />
       </list>
     </option>
   </component>
@@ -320,12 +317,12 @@
       <workItem from="1511856591059" duration="41388000" />
       <workItem from="1512026337506" duration="28877000" />
       <workItem from="1512111941489" duration="4197000" />
-      <workItem from="1512116286280" duration="7438000" />
+      <workItem from="1512116286280" duration="7511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377187000" />
+    <option name="totallyTimeSpent" value="377260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -726,25 +723,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="140" column="44" lean-forward="false" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
-          <folding>
-            <marker date="1512125475752" expanded="true" signature="9527:9605" ph="..." />
-            <marker date="1512125475752" expanded="true" signature="11235:11294" ph="SELECT COUNT... " />
-            <marker date="1512125475752" expanded="true" signature="11735:12035" ph="INSERT INTO membres... " />
-            <marker date="1512125475752" expanded="true" signature="12279:12325" ph="SELECT * fro... membres" />
-            <marker date="1512125475752" expanded="true" signature="12923:12932" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="142" column="12" lean-forward="false" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
+          <folding>
+            <marker date="1512125566082" expanded="true" signature="9569:9647" ph="..." />
+            <marker date="1512125566082" expanded="true" signature="11244:11303" ph="SELECT COUNT... " />
+            <marker date="1512125566082" expanded="true" signature="11744:12044" ph="INSERT INTO membres... " />
+            <marker date="1512125566082" expanded="true" signature="12288:12334" ph="SELECT * fro... membres" />
+            <marker date="1512125566082" expanded="true" signature="12932:12941" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,6 +8,8 @@
     <div class="form-inscription">
         <div class="cercle"></div>
         <div class="ficelle"></div>
+        <div><?php google_api();?></div>
+
         <form action="sql/inscription.php" method="post">
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
                                                                                     class="input-field"
@@ -138,8 +140,7 @@
 
             <input type="submit" value="Valider"/>
 
-            <div><?php google_api();?></div>
-
+            
         </form>
     </div>
 </div>
