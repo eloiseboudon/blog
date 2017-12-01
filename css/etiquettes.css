@@ -37,18 +37,18 @@
 }
 
 /*.form-authentification .cercle {*/
-    /*border-radius: 50%;*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*background-color: #F4ECDE;*/
-    /*z-index: 100;*/
-    /*border: 5px solid #880015;*/
-    /*margin-top: 8px;*/
-    /*position: relative;*/
-    /*left: 63%;*/
+/*border-radius: 50%;*/
+/*width: 40px;*/
+/*height: 40px;*/
+/*background-color: #F4ECDE;*/
+/*z-index: 100;*/
+/*border: 5px solid #880015;*/
+/*margin-top: 8px;*/
+/*position: relative;*/
+/*left: 63%;*/
 /*}*/
 
-.form-inscription .cercle, .form-authentification .cercle  {
+.form-inscription .cercle, .form-authentification .cercle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -57,7 +57,7 @@
     border: 5px solid #880015;
     margin-top: 8px;
     position: relative;
-    top:-13px;
+    top: -13px;
     left: 93%;
 }
 
@@ -79,7 +79,6 @@
     background-image: url("../img/ficelle_rond_avec_trou_2.png");
 
 }
-
 
 .nos_valeurs .ficelle {
     /*width: 92px;*/
@@ -109,30 +108,30 @@
 }
 
 /*.form-authentification .ficelle {*/
-    /*background-image: url("../img/ficelle_rond_authentification.png");*/
-    /*position: absolute;*/
-    /*width: 92px;*/
-    /*height: 42px;*/
-    /*z-index: 200;*/
-    /*left: 62%;*/
-    /*transform: rotate(-40deg);*/
+/*background-image: url("../img/ficelle_rond_authentification.png");*/
+/*position: absolute;*/
+/*width: 92px;*/
+/*height: 42px;*/
+/*z-index: 200;*/
+/*left: 62%;*/
+/*transform: rotate(-40deg);*/
 /*}*/
 
-.form-inscription .ficelle, .form-authentification .ficelle  {
+.form-inscription .ficelle, .form-authentification .ficelle {
     background-image: url("../img/ficelle_rond_authentification.png");
-    position: absolute;
+    position: relative;
     width: 92px;
     height: 42px;
     z-index: 200;
-    margin-top:-63px;
-    left: 61%;
+    margin-top: -63px;
+    left: 93%;
     transform: rotate(-40deg);
 }
 
 /* ETIQUETTE FORME */
 
 .article_commentaire .voir_commentaires .commentaires {
-    width: 40%;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
@@ -143,7 +142,7 @@
     border: 2px dashed #880015;
 }
 
-.form-authentification {
+.form-authentification, .form-inscription {
     padding: 10px;
     background-color: #fff;
     width: 30%;
@@ -154,16 +153,6 @@
     border: 2px dashed #880015;
 }
 
-.form-inscription {
-    padding: 10px;
-    background-color: #fff;
-    width: 30%;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px dashed #880015;
-}
 
 .mentions_legales_global .mentions_contenu {
     margin-top: 60px;
@@ -176,11 +165,16 @@
     margin: auto;
 }
 
-
 @media screen and (max-width: 1650px) {
     .global_width {
         padding: 0;
-        margin-left:10px;
+    }
+
+    .acceuil_titre_global, .article_titre, .article_details {
+        margin-left: 10px;
+    }
+    .form-inscription {
+        width:50%;
     }
 }
 
@@ -190,58 +184,75 @@
         background-image: url("../img/ficelle_moyenne.png");
     }
 
-    .accueil_articles  .timeline-block-left .ficelle{
+    .accueil_articles .timeline-block-left .ficelle {
         margin-right: -10px;
     }
 
-    .accueil_articles  .timeline-block-right .ficelle{
-        margin-left : -10px;
+    .accueil_articles .timeline-block-right .ficelle {
+        margin-left: -10px;
     }
 }
 
-
 @media screen and (max-width: 1200px) {
-    .accueil_articles .cercle{
+    .accueil_articles .cercle {
         width: 30px;
         height: 30px;
         margin-right: 5px;
         margin-left: 5px;
     }
-    .accueil_articles  .timeline-block-left .ficelle{
+
+    .accueil_articles .timeline-block-left .ficelle {
         margin-right: -20px;
     }
 
-    .accueil_articles  .timeline-block-right .ficelle{
-        margin-left : -20px;
+    .accueil_articles .timeline-block-right .ficelle {
+        margin-left: -20px;
     }
 
-    .accueil_articles .ficelle{
-        margin-top:125px;
+    .accueil_articles .ficelle {
+        margin-top: 125px;
     }
+
     .accueil_articles .ficelle {
         background-image: url("../img/ficelle_moyenne_2.png");
     }
 
 }
 
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .accueil_articles .timeline-block-left .ficelle {
         transform: scaleX(-1);
     }
 
-
-
-    .accueil_articles  .timeline-block-left .ficelle{
+    .accueil_articles .timeline-block-left .ficelle {
         margin-right: 0
     }
 
-    .accueil_articles  .timeline-block-right .ficelle{
-        margin-left : -10px;
+    .accueil_articles .timeline-block-right .ficelle {
+        margin-left: -10px;
+    }
+
+    .article_commentaire .voir_commentaires .commentaires {
+        width: 80%;
+    }
+
+    .form-inscription{
+        width:70%;
     }
 }
+@media screen and (max-width: 425px) {
+    .form-inscription{
+        width:90%;
+    }
 
+    .form-inscription .ficelle, .form-inscription .cercle{
+        display: none;
+    }
+    .form-inscription{
+        padding-right:0;
+    }
+
+}
 
 
 

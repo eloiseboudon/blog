@@ -27,7 +27,7 @@
 
     <div id="petit-ecran" class="menu-right">
         <?php
-        if ($_SESSION['user']['pseudo']){
+        if (isset($_SESSION['user']['pseudo'])){
         ?>
         <div class="menu-item menu-item-right"><a href="sql/deconnexion.php"><i class="fa fa-user-times  "
                                                                              aria-hidden="true"></i></a></div>
