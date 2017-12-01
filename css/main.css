@@ -611,6 +611,7 @@ h2 {
 
     .bottom-bar .icon_social img {
         margin: 5px;
+        width:30px;
     }
 
     .article .sous_article {
@@ -623,12 +624,8 @@ h2 {
 }
 
 @media screen and (max-width: 850px) {
-    #footer .aide, #footer .etiquette, #footer .mentions {
-        display: none;
-    }
-
-    #footer .social {
-        text-align: center;
+    #footer h1 {
+        font-size: 30px;
     }
 
     .article_sociaux {
@@ -686,6 +683,10 @@ h2 {
 
     .article_commentaire .ajouter_commentaire .connexion, .article_commentaire .ajouter_commentaire .form_contenu {
         margin: 0;
+    }
+
+    .bottom-bar .icon_social img {
+        width: 25px;
     }
 }
 

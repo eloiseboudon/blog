@@ -2,8 +2,8 @@
     <div class="bottom-bar">
         <div class="global_width_bottom">
             <div class="row">
-                <div class="col-md-3 aide">
-                    <h1>Besoin d'aide ?</h1>
+                <div class="col-lg-3 col-sm-3 col-6 aide">
+                    <h1>Besoin d'aide</h1>
                     <ul>
                         <li>
                             <a href="#">
@@ -18,7 +18,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 etiquette ">
+                <div class="col-lg-3 col-sm-3 col-6 etiquette ">
                     <h1>L'étiquette</h1>
                     <ul>
                         <li>
@@ -34,7 +34,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 mentions ">
+                <div class="col-lg-3 col-sm-3 col-6 mentions ">
                     <h1>Mentions</h1>
                     <ul>
                         <li>
@@ -51,7 +51,7 @@
                 </div>
 
 
-                <div class="col-md-3 social">
+                <div class="col-lg-3 col-sm-3 col-6 social">
                     <h1>Suivez-nous</h1>
                     <div class="icon_social">
                         <a href="#"><img src="assets/icones/facebook.png"></a>
