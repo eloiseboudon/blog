@@ -20,81 +20,85 @@ $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 $donnees = mysqli_fetch_array($req);
 ?>
-<div class="article">
+    <div class="article">
 
-
-    <h1><?php echo $donnees['titre']; ?></h1>
-
-    <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
-        le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
-
-    <div class="article_contenu">
-        <?php echo $donnees['contenu']; ?>
-    </div>
-    <div class="article_sociaux">
-        <div class="partage_reseaux_sociaux">
-
-            <h2>Partager sur les réseaux sociaux</h2>
-            <script>function fbs_click() {
-                    u = location.href;
-                    t = document.title;
-                    window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
-                    return false;
-
-                }</script>
-
-
-            <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
-               onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
-
-            <?php
-
-            function get_img()
-            {
-                $image = "";
-                return $image;
-            }
-
-
-            function get_url()
-            {
-                return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            }
-
-            ?>
-
-            <a rel="nofollow"
-               href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
-               title="Partagez cet article avec vos followers" target="_blank"><img
-                        src="assets/icones/twitter-carre.png"></a>
-
-            <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
-               title="Partagez cet article avec votre communauté Google" target="_blank"><img
-                        src="assets/icones/google-plus-carre.png"></a>
-
-
-            <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
-               title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
-
-
-            <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
-               title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
-
-
-            <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
-               title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
-
-
+        <div class="article_titre">
+            <h1><?php echo $donnees['titre']; ?></h1>
         </div>
 
-        <div class="prochain_article">
-            <label>
-                <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informer de la sortie
-                du prochain article.
-            </label>
+        <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
+            le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
+
+        <div class="article_contenu">
+            <?php echo $donnees['contenu']; ?>
+        </div>
+        <div class="sous_article">
+            <div class="article_sociaux">
+                <div class="partage_reseaux_sociaux">
+
+                    <h2>Partager sur les réseaux sociaux</h2>
+                </div>
+                <div class="icon_res_soc">
+                    <script>function fbs_click() {
+                            u = location.href;
+                            t = document.title;
+                            window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+                            return false;
+
+                        }</script>
+
+
+                    <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
+                       onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
+
+                    <?php
+
+                    function get_img()
+                    {
+                        $image = "";
+                        return $image;
+                    }
+
+
+                    function get_url()
+                    {
+                        return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    }
+
+                    ?>
+
+                    <a rel="nofollow"
+                       href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
+                       title="Partagez cet article avec vos followers" target="_blank"><img
+                                src="assets/icones/twitter-carre.png"></a>
+
+                    <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
+                       title="Partagez cet article avec votre communauté Google" target="_blank"><img
+                                src="assets/icones/google-plus-carre.png"></a>
+
+
+                    <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
+                       title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+
+
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
+                       title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
+
+
+                    <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
+                       title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
+
+                </div>
+            </div>
+
+            <div class="prochain_article">
+                <label>
+                    <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informer de la sortie
+                    du prochain article.
+                </label>
+            </div>
         </div>
     </div>
-</div>
 
 
 <div class="article_commentaire">
@@ -316,13 +320,13 @@ function afficher_commentaires($id_article)
             </div>
             <div class="modal-footer">
                 <?php if (isset($_SESSION['user']['pseudo'])) {
-                   ?>
+                    ?>
                     <form action="mailing/mail_prochain_article.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>" />
+                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>"/>
                         <input type="submit" value="J'accepte"/>
                     </form>
                     <?php
-                }?>
+                } ?>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 
             </div>

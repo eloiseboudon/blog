@@ -12,8 +12,8 @@ h2 {
     font-family: 'Dosis', sans-serif;
 }
 
-.row{
-    margin:0;
+.row {
+    margin: 0;
 }
 
 .contenu {
@@ -30,7 +30,7 @@ h2 {
     height: 100%;
 }
 
-.menu #petit-ecran{
+.menu #petit-ecran {
     display: none;
 }
 
@@ -60,15 +60,15 @@ h2 {
     width: 40%;
     float: right;
     display: inline-block;
-    padding-top:4px;
+    padding-top: 4px;
 }
 
 .menu .menu-right .menu-item {
     font-size: 2em;
 }
 
-.menu .menu-right .menu-pseudo{
-    margin-right:10px;
+.menu .menu-right .menu-pseudo {
+    margin-right: 10px;
 }
 
 .menu .fa {
@@ -145,7 +145,7 @@ h2 {
     padding: 0 10px;
 }
 
-.pop-up{
+.pop-up {
     text-align: center;
 }
 
@@ -232,24 +232,25 @@ h2 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-.article .partage_reseaux_sociaux h2{
+
+.article .partage_reseaux_sociaux h2 {
     display: inline-block;
-    margin-right:4%;
+    margin-right: 4%;
 }
 
-.article .partage_reseaux_sociaux img{
-    width:55px;
-    border : 2px solid transparent;
+.article .icon_res_soc img {
+    width: 55px;
+    border: 2px solid transparent;
     margin: 5px;
+    margin-top: 0;
 
 }
 
-.article .partage_reseaux_sociaux img:hover{
-    border-radius:50%;
+.article .partage_reseaux_sociaux img:hover {
+    border-radius: 50%;
     background-color: white;
 
 }
-
 
 .nos_valeurs .valeur_contenu {
     font-size: 20px;
@@ -343,25 +344,32 @@ h2 {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-
 .article_sociaux {
     display: flex;
+    width:60%;
 }
 
-
-.article_sociaux .partage_reseaux_sociaux{
-    width: 50%;
+.article_sociaux .partage_reseaux_sociaux {
+    width: 40%;
 }
 
-.article_sociaux .prochain_article{
-    width: 50%;
+.article .prochain_article {
     text-align: center;
 }
 
-.article_sociaux .prochain_article label{
-    margin-top: 15px;
+.article .sous_article{
+    display: flex;
 }
 
+.article_sociaux .icon_res_soc{
+    text-align: center;
+}
+
+
+
+.article.prochain_article label {
+    margin-top: 15px;
+}
 
 .article_commentaire .ajouter_commentaire form {
     margin: 20px;
@@ -406,27 +414,24 @@ h2 {
     margin: auto;
 }
 
-.article_commentaire .voir_commentaires .commentaire_contenu{
+.article_commentaire .voir_commentaires .commentaire_contenu {
     text-align: center;
 }
 
-
-.article_commentaire .voir_commentaires #commentaires-view-all{
+.article_commentaire .voir_commentaires #commentaires-view-all {
     display: none;
 }
 
-.article_commentaire .voir_commentaires .fa{
+.article_commentaire .voir_commentaires .fa {
     color: #880015;;
     font-size: 24px;
 }
 
-.article_commentaire .voir_commentaires .voir_moins,.article_commentaire .voir_commentaires .voir_plus{
+.article_commentaire .voir_commentaires .voir_moins, .article_commentaire .voir_commentaires .voir_plus {
     text-align: center;
 }
 
-
-
-.form-inscription, .form-authentification{
+.form-inscription, .form-authentification {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -440,14 +445,14 @@ h2 {
     padding: 20px 12px 10px 20px;
 }
 
-.form-inscription label, .form-authentification label{
+.form-inscription label, .form-authentification label {
     text-align: left;
     margin: 0px 0px 15px 0px;
-    width:100%;
+    width: 100%;
     display: inline-block;
 }
 
-.form-inscription label > span, .form-authentification label > span{
+.form-inscription label > span, .form-authentification label > span {
     width: 150px;
     font-weight: bold;
     float: left;
@@ -455,19 +460,18 @@ h2 {
     padding-right: 5px;
 }
 
-.form-inscription span.required, .form-authentification span.required{
-    color:#880015;
+.form-inscription span.required, .form-authentification span.required {
+    color: #880015;
 }
 
-
-.form-inscription span.password{
+.form-inscription span.password {
     font-size: 12px;
-    text-align:left;
-    float:left;
+    text-align: left;
+    float: left;
 }
 
-.form-inscription input.input-field, .form-authentification input.input-field{
-    width:60%;
+.form-inscription input.input-field, .form-authentification input.input-field {
+    width: 60%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -482,14 +486,14 @@ h2 {
     outline: none;
 }
 
-.form-inscription .input-field:focus, .form-authentification .input-field:focus{
+.form-inscription .input-field:focus, .form-authentification .input-field:focus {
     border: 1px solid #0C0;
 }
 
 .form-inscription input[type=submit],
 .form-inscription input[type=button],
 .form-authentification input[type=submit],
-.form-authentification input[type=button]{
+.form-authentification input[type=button] {
     border: none;
     padding: 8px 15px 8px 15px;
     background: #880015;
@@ -501,27 +505,25 @@ h2 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
+
 .form-inscription input[type=submit]:hover,
 .form-inscription input[type=button]:hover,
 .form-authentification input[type=submit]:hover,
-.form-authentification input[type=button]:hover
-{
+.form-authentification input[type=button]:hover {
     background: #880015;
     color: #fff;
 }
 
-
-.form-inscription .input-sexe{
-    margin-top:10px;
+.form-inscription .input-sexe {
+    margin-top: 10px;
 }
 
-.form-inscription .champs-obligatoires{
+.form-inscription .champs-obligatoires {
     text-align: left;
     padding-bottom: 10px;
 }
 
-
-.form-inscription #output{
+.form-inscription #output {
     clear: both;
     padding: 5px 15px;
 }
@@ -550,15 +552,17 @@ h2 {
     clear: both;
 }
 
-
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1600px) {
     .nos_valeurs .valeur_image img {
         width: 225px;
         height: 150px;
     }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1450px) {
+
+}
+@media screen and (max-width: 1300px) {
     .nos_valeurs .valeur_image img {
         width: 150px !important;
         height: 100px !important;
@@ -569,69 +573,77 @@ h2 {
 @media screen and (max-width: 1250px) {
     .accueil_articles .article_image img {
         width: 120px !important;
-        height: 150px  !important;
+        height: 150px !important;
     }
 
     .accueil_articles .article_details .description_article {
         font-size: 18px;
     }
-    #footer h1{
+
+    #footer h1 {
         font-size: 40px;
-        padding:0;
+        padding: 0;
     }
 
-    #footer ul, .bottom-bar .icon_social{
-        padding:0;
+    #footer ul, .bottom-bar .icon_social {
+        padding: 0;
     }
 
-    .bottom-bar .icon_social img{
+    .bottom-bar .icon_social img {
         width: 40px;
     }
+
+
+    /*.article_sociaux .icon_res_soc{*/
+        /*display: flex;*/
+    /*}*/
 }
 
-
-
-@media screen and (max-width: 1100px){
-    #footer h1{
+@media screen and (max-width: 1100px) {
+    #footer h1 {
         font-size: 36px;
     }
-    .bottom-bar .icon_social img{
-        margin:5px;
+
+    .bottom-bar .icon_social img {
+        margin: 5px;
     }
 }
 
-@media screen and (max-width: 850px){
-    #footer .aide, #footer .etiquette, #footer .mentions{
-        display:none;
-    }
-
-    #footer .social{
-        text-align: center;
-    }
-}
-
-
-
-
-@media screen and (max-width: 760px){
-    .menu #grand-ecran, .menu #acceuil{
+@media screen and (max-width: 850px) {
+    #footer .aide, #footer .etiquette, #footer .mentions {
         display: none;
     }
 
-    .menu #petit-ecran{
+    #footer .social {
+        text-align: center;
+    }
+    .article_sociaux{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .menu #grand-ecran, .menu #acceuil {
+        display: none;
+    }
+
+    .menu #petit-ecran {
         display: inline-block;
     }
 
-    .menu #petit-ecran{
-        width:30%;
+    .menu #petit-ecran {
+        width: 30%;
     }
-    .menu #petit-ecran .menu-item{
-        width:30%;
+
+    .menu #petit-ecran .menu-item {
+        width: 30%;
         text-align: center;
     }
 
-
-
+    .article .article_contenu {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
 }
 
