@@ -20,17 +20,18 @@ $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 $donnees = mysqli_fetch_array($req);
 ?>
-    <div class="article">
+<div class="article">
 
 
-        <h1><?php echo $donnees['titre']; ?></h1>
+    <h1><?php echo $donnees['titre']; ?></h1>
 
-        <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
-            le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
+    <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
+        le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
 
-        <div class="article_contenu">
-            <?php echo $donnees['contenu']; ?>
-        </div>
+    <div class="article_contenu">
+        <?php echo $donnees['contenu']; ?>
+    </div>
+    <div class="article_sociaux">
         <div class="partage_reseaux_sociaux">
 
             <h2>Partager sur les réseaux sociaux</h2>
@@ -46,42 +47,54 @@ $donnees = mysqli_fetch_array($req);
             <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
                onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
 
-<?php
+            <?php
 
-function get_img(){
-    $image = "";
-    return $image;
-}
+            function get_img()
+            {
+                $image = "";
+                return $image;
+            }
 
 
-function get_url(){
-    return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-}
+            function get_url()
+            {
+                return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            }
 
-?>
+            ?>
 
             <a rel="nofollow"
-            href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: ");?>&url&via=letiquette"
-            title="Partagez cet article avec vos followers"  target="_blank"><img src="assets/icones/twitter-carre.png"></a>
+               href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
+               title="Partagez cet article avec vos followers" target="_blank"><img
+                        src="assets/icones/twitter-carre.png"></a>
 
             <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
-               title="Partagez cet article avec votre communauté Google"  target="_blank"><img src="assets/icones/google-plus-carre.png"></a>
+               title="Partagez cet article avec votre communauté Google" target="_blank"><img
+                        src="assets/icones/google-plus-carre.png"></a>
 
 
             <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
-               title="Partagez sur Pinterest"  target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+               title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+
+
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
+               title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
 
 
             <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
-             title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
-
-
-
+               title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
 
 
         </div>
 
+        <div class="prochain_article">
+            <label>
+                <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informer de la sortie
+                du prochain article.
+            </label>
+        </div>
     </div>
+</div>
 
 
 <div class="article_commentaire">
@@ -198,27 +211,121 @@ function inserer_commentaire($article, $contenu)
 function afficher_commentaires($id_article)
 {
     $bdd = connexion_sql();
-    $sql = 'SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article =' . "$id_article" . ' AND approuve=1 ORDER BY date_commentaire desc';
+
+    $nb_com = $bdd->query("SELECT COUNT(*) AS count FROM commentaires JOIN membres ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1");
+    $count_nb_com = mysqli_fetch_array($nb_com);
+    $count_com = $count_nb_com['count'];
+
+    $sql = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc LIMIT 5";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
-
+    ?>
+    <div id="commentaires-view-5">
+    <?php
     while ($donnees = mysqli_fetch_array($req)) {
 
         ?>
+        <div class="commentaires">
+            <div class="commentaire_informations">
+                <p><strong><?php echo $donnees['pseudo'];
+                        echo $donnees['id_commentaire']; ?></strong>
+                    le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+            </div>
 
-        <div class="commentaire_informations">
-            <p><strong><?php echo $donnees['pseudo']; ?></strong>
-                le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+            <div class="commentaire_contenu">
+                <?php echo $donnees['contenu']; ?>
+            </div>
         </div>
+        <?php
+    }
+    ?>
+    <div class="voir_plus">
+        <a>
+            <i class="fa fa-chevron-circle-down mask" aria-hidden="true"></i> Voir plus
+        </a>
+    </div>
+    </div><?php
+    if ($count_com > 5) {
+        ?>
 
-        <div class="commentaire_contenu">
-            <?php echo $donnees['contenu']; ?>
-        </div>
 
         <?php
+        $sql2 = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc ";
+        $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
+
+        ?>
+        <div id="commentaires-view-all">
+
+        <?php
+        while ($donnees = mysqli_fetch_array($req2)) {
+
+            ?>
+            <div class="commentaires">
+                <div class="commentaire_informations">
+                    <p><strong><?php echo $donnees['pseudo'];
+                            echo $donnees['id_commentaire']; ?></strong>
+                        le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
+                </div>
+
+                <div class="commentaire_contenu">
+                    <?php echo $donnees['contenu']; ?>
+                </div>
+            </div>
+            <?php
+        } ?>
+        <div class="voir_moins">
+            <a>
+                <i class="fa fa-chevron-circle-up demask" aria-hidden="true"></i> Voir moins
+            </a>
+        </div>
+        </div><?php
+
     }
 }
 
 ?>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--                <h4 class="modal-title">Modal Header</h4>-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
 
+            </div>
+            <div class="modal-body">
+                <?php
+                if (isset($_SESSION['user']['pseudo'])) {
+                    ?><p>Vous recevrez un mail à l'adresse suivante <?php echo $_SESSION['user']['email'] ?> lors de la
+                    sortie du prochain article.
+                    </p>
+                    <?php
+                } else {
+                    ?>
+                    <div class="connexion">
+                        <p>Veuillez vous connecter afin de recevoir le mail: </p>
+                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>
+                        </a>
+                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i> Inscription</span> </a>
+                    </div>
+                    <?php
+                } ?>
+
+            </div>
+            <div class="modal-footer">
+                <?php if (isset($_SESSION['user']['pseudo'])) {
+                   ?>
+                    <form action="mailing/mail_prochain_article.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>" />
+                        <input type="submit" value="J'accepte"/>
+                    </form>
+                    <?php
+                }?>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+
+            </div>
+        </div>
+    </div>
+</div>

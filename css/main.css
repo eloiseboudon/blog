@@ -343,6 +343,26 @@ h2 {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
+.article_sociaux {
+    display: flex;
+}
+
+
+.article_sociaux .partage_reseaux_sociaux{
+    width: 50%;
+}
+
+.article_sociaux .prochain_article{
+    width: 50%;
+    text-align: center;
+}
+
+.article_sociaux .prochain_article label{
+    margin-top: 15px;
+}
+
+
 .article_commentaire .ajouter_commentaire form {
     margin: 20px;
 }
@@ -386,9 +406,24 @@ h2 {
     margin: auto;
 }
 
-.article_commentaire .voir_commentaires .commentaire_informations {
-    margin-left: 20%;
+.article_commentaire .voir_commentaires .commentaire_contenu{
+    text-align: center;
 }
+
+
+.article_commentaire .voir_commentaires #commentaires-view-all{
+    display: none;
+}
+
+.article_commentaire .voir_commentaires .fa{
+    color: #880015;;
+    font-size: 24px;
+}
+
+.article_commentaire .voir_commentaires .voir_moins,.article_commentaire .voir_commentaires .voir_plus{
+    text-align: center;
+}
+
 
 
 .form-inscription, .form-authentification{
