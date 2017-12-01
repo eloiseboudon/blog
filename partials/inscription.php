@@ -5,7 +5,7 @@
     ?>
 
 
-    <div class="form-inscription">
+    <div class="form-etiquette">
         <div class="cercle"></div>
         <div class="ficelle"></div>
         <!--        <div>--><?php //google_api();?><!--</div>-->

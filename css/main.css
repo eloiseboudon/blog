@@ -435,7 +435,7 @@ h2 {
     text-align: center;
 }
 
-.form-inscription, .form-authentification {
+.form-etiquette {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -449,14 +449,14 @@ h2 {
     padding: 20px 12px 10px 20px;
 }
 
-.form-inscription label, .form-authentification label {
+.form-etiquette label {
     text-align: left;
     margin: 0px 0px 15px 0px;
     width: 100%;
     display: inline-block;
 }
 
-.form-inscription label > span, .form-authentification label > span {
+.form-etiquette label > span {
     width: 30%;
     font-weight: bold;
     float: left;
@@ -464,17 +464,17 @@ h2 {
     padding-right: 5px;
 }
 
-.form-inscription span.required, .form-authentification span.required {
+.form-etiquette span.required {
     color: #880015;
 }
 
-.form-inscription span.password {
+.form-etiquette span.password {
     font-size: 12px;
     text-align: left;
     float: left;
 }
 
-.form-inscription input.input-field, .form-authentification input.input-field {
+.form-etiquette input.input-field {
     width: 60%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -491,14 +491,12 @@ h2 {
     margin-right: 10px;
 }
 
-.form-inscription .input-field:focus, .form-authentification .input-field:focus {
+.form-etiquette .input-field:focus {
     border: 1px solid #0C0;
 }
 
-.form-inscription input[type=submit],
-.form-inscription input[type=button],
-.form-authentification input[type=submit],
-.form-authentification input[type=button] {
+.form-etiquette input[type=submit],
+.form-etiquette input[type=button]{
     border: none;
     padding: 8px 15px 8px 15px;
     background: #880015;
@@ -511,30 +509,40 @@ h2 {
     -moz-border-radius: 3px;
 }
 
-.form-inscription input[type=submit]:hover,
-.form-inscription input[type=button]:hover,
-.form-authentification input[type=submit]:hover,
-.form-authentification input[type=button]:hover {
+
+.form-etiquette textarea{
+    width: 60%;
+}
+
+.form-etiquette select{
+    width: 60%;
+    height: 40px;
+    padding-left:10px;
+
+}
+
+.form-etiquette input[type=submit]:hover,
+.form-etiquette input[type=button]:hover{
     background: #880015;
     color: #fff;
 }
 
-.form-inscription .input-sexe {
+.form-etiquette .input-sexe {
     margin-top: 10px;
     margin-left:40%;
 }
 
-.form-inscription .champs-obligatoires {
+.form-etiquette .champs-obligatoires {
     text-align: left;
     padding-bottom: 10px;
 }
 
-.form-inscription #output {
+.form-etiquette #output {
     clear: both;
     padding: 5px 15px;
 }
 
-.form-inscription #output a {
+.form-etiquette #output a {
     display: block;
     text-decoration: none;
     color: #880015;
@@ -542,7 +550,7 @@ h2 {
     text-align: left;
 }
 
-.form-inscription #output a:hover {
+.form-etiquette #output a:hover {
     background: #DEB9BF;
 }
 
@@ -695,8 +703,8 @@ h2 {
         width: 25px;
     }
 
-    .form-inscription input.input-field {
-        margin-right: 0;
+    .form-etiquette input.input-field {
+        margin-right: 5px;
     }
 
     .captcha {

@@ -151,7 +151,14 @@ var_dump($_SESSION['auto_log']);
                     include('partials/footer/mentions_legales.php');
                     break;
                 case "lequipe":
-                    include('partials/footer/lequipe.php.php');
+                    include('partials/footer/lequipe.php');
+                    break;
+                case "contact":
+                    include('partials/footer/contactez_nous.php');
+                    break;
+
+                case "devenir_vendeur":
+                    include('partials/footer/devenir_vendeur.php');
                     break;
 
 

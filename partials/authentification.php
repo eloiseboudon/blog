@@ -1,7 +1,7 @@
 <div class="contenu">
 
 
-    <div class="form-inscription">
+    <div class="form-etiquette">
         <div class="cercle"></div>
         <div class="ficelle"></div>
         <?php

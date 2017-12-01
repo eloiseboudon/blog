@@ -27,7 +27,7 @@ $donnees = mysqli_fetch_array($req);
         </div>
 
         <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
-            le<?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
+            le <?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
 
         <div class="article_contenu">
             <?php echo $donnees['contenu']; ?>
@@ -93,7 +93,7 @@ $donnees = mysqli_fetch_array($req);
 
             <div class="prochain_article">
                 <label>
-                    <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informer de la sortie
+                    <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informé de la sortie
                     du prochain article.
                 </label>
             </div>
@@ -136,7 +136,7 @@ $donnees = mysqli_fetch_array($req);
                 ?>
                 <div class="col-12">
                     <div class="form_contenu">
-                        <label for="contenu">Votre commentaire:</label><br/>
+                        <label for="contenu">Votre commentaire : </label><br/>
                         <textarea type="text" name="contenu"></textarea>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ $donnees = mysqli_fetch_array($req);
                 ?>
                 <div class="col-lg-6 col-xs-12">
                     <div class="connexion">
-                        <p>Veuillez vous connecter pour laisser un commentaire: </p>
+                        <p>Veuillez vous connecter pour laisser un commentaire : </p>
 
                             <a href="index.php?page=3"><span><i class="fa fa-user"
                                                                 aria-hidden="true"></i> Connexion</span>
@@ -158,7 +158,7 @@ $donnees = mysqli_fetch_array($req);
 
                 <div class="col-lg-6 col-xs-12">
                     <div class="form_contenu">
-                        <label for="contenu">Votre commentaire:</label><br/>
+                        <label for="contenu">Votre commentaire : </label><br/>
                         <textarea type="text" name="contenu"></textarea>
                     </div>
                 </div>
