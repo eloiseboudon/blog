@@ -103,16 +103,19 @@ $donnees = mysqli_fetch_array($req);
 
 <div class="article_commentaire">
 
-
-    <h2>Ajouter un commentaire</h2>
+    <div class="article_titre">
+        <h2>Ajouter un commentaire</h2>
+    </div>
     <div class="ajouter_commentaire">
 
         <?php
         ajouter_commentaire($id_article);
         ?>
 
+        <div class="article_titre">
+            <h2>Les commentaires</h2>
+        </div>
 
-        <h2>Les commentaires</h2>
         <div class="voir_commentaires">
             <?php afficher_commentaires($id_article); ?>
 
@@ -140,17 +143,20 @@ $donnees = mysqli_fetch_array($req);
                 <?php
             } else {
                 ?>
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12">
                     <div class="connexion">
                         <p>Veuillez vous connecter pour laisser un commentaire: </p>
-                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>
-                        </a>
-                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
-                                                            aria-hidden="true"></i> Inscription</span> </a>
+
+                            <a href="index.php?page=3"><span><i class="fa fa-user"
+                                                                aria-hidden="true"></i> Connexion</span>
+                            </a>
+                            <a href="index.php?page=4"><span><i class="fa fa-pencil"
+                                                                aria-hidden="true"></i> Inscription</span> </a>
+
                     </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12">
                     <div class="form_contenu">
                         <label for="contenu">Votre commentaire:</label><br/>
                         <textarea type="text" name="contenu"></textarea>

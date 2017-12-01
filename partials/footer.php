@@ -1,99 +1,52 @@
 <div id="bottom-page">
     <div class="bottom-bar">
         <div class="global_width_bottom">
-            <!---->
-            <!--                        <div class="row">-->
-            <!--                            <div class="col-md-3">-->
-            <!--                                <h1>Besoin d'aide ?</h1>-->
-            <!--                                <ul>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>FAQ</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Livraisons & retours</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Contactez-nous</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Devenir vendeur</li>-->
-            <!--                                    </a>-->
-            <!--                                </ul>-->
-            <!--                            </div>-->
-            <!--            -->
-            <!--                            <div class="col-md-3">-->
-            <!--                                <h1>L'étiquette</h1>-->
-            <!--                                <ul>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>L'équipe</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Nos valeurs</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Nos marques partenaires</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Ils parlent de nous</li>-->
-            <!--                                    </a>-->
-            <!--                                </ul>-->
-            <!--                            </div>-->
-            <!--            -->
-            <!--                            <div class="col-md-3">-->
-            <!--                                <h1>Mentions</h1>-->
-            <!--                                <ul>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Conditions générales de ventes</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Mentions légales</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Cookies</li>-->
-            <!--                                    </a>-->
-            <!--                                    <a href="#">-->
-            <!--                                        <li>Paiements sécurisés</li>-->
-            <!--                                    </a>-->
-            <!--                                </ul>-->
-            <!--                            </div>-->
-            <!---->
-            <!---->
-
-
             <div class="row">
                 <div class="col-md-3 aide">
                     <h1>Besoin d'aide ?</h1>
                     <ul>
-                        <a href="#">
-                            <li>Contactez-nous</li>
-                        </a>
-                        <a href="#">
-                            <li>Devenir vendeur</li>
-                        </a>
+                        <li>
+                            <a href="#">
+                                Contactez-nous
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Devenir vendeur
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 etiquette ">
                     <h1>L'étiquette</h1>
                     <ul>
-                        <a href="#">
-                            <li>L'équipe</li>
-                        </a>
-                        <a href="index.php?page=nos_valeurs">
-                            <li>Nos valeurs</li>
-                        </a>
+                        <li>
+                            <a href="#">
+                                L'équipe
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?page=nos_valeurs">
+                                Nos valeurs
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 mentions ">
                     <h1>Mentions</h1>
                     <ul>
-                        <a href="index.php?page=mentions_legales">
-                            <li>Mentions légales</li>
-                        </a>
-                        <a href="#">
-                            <li>Cookies</li>
-                        </a>
+                        <li>
+                            <a href="index.php?page=mentions_legales">
+                                Mentions légales
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Cookies
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

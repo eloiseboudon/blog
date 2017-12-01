@@ -182,7 +182,7 @@ var_dump($_SESSION['auto_log']);
 </script>
 
 
-<script src="http://www.letiquette-blog.com//cookiechoices.js"></script>
+<script src="https://www.letiquette-blog.com/cookiechoices.js"></script>
 <script>document.addEventListener('DOMContentLoaded', function (event) {
         cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.letiquette-blog.com/index.php?page=mentions_legales');
     });</script>
