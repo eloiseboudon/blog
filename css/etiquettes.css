@@ -18,8 +18,8 @@
 }
 
 .mentions_legales .cercle {
-    margin-top: 348px;
-    left: 78%;
+    margin-top: 5px;
+    left: 78.5%;
 }
 
 .nos_valeurs .timeline-block-right .cercle {
@@ -87,7 +87,8 @@
     position: absolute;
     width: 75px;
     height: 42px;
-    margin-top: 360px;
+    transform: rotate(-40deg);
+    /*margin-top: 360px;*/
     left: 79%;
     z-index: 200;
     background-image: url("../img/ficelle_courte_mentions-legales.png");
@@ -142,6 +143,7 @@
 .mentions_legales_global .mentions_contenu {
     margin-top: 60px;
     padding: 10px;
+    padding-right:40px;
     background-color: white;
     border-radius: 10px;
     border: 2px dashed #880015;
@@ -209,12 +211,6 @@
     }
 }
 
-@media screen and (max-width: 1150px){
-    .mentions_legales .ficelle{
-        margin-top: 390px;
-    }
-}
-
 
 @media screen and (max-width: 1120px){
     .nos_valeurs .timeline-block .ficelle{
@@ -229,6 +225,16 @@
     }
 
 }
+@media screen and (max-width: 1024px){
+    .mentions_legales .cercle {
+        left: 77.5%;
+    }
+    .mentions_legales .ficelle{
+        left:78%;
+    }
+}
+
+
 
 @media screen and (max-width: 768px) {
     .accueil_articles .timeline-block-left .ficelle {
@@ -261,6 +267,15 @@
     }
 
     .form-etiquette .ficelle, .form-etiquette .cercle{
+        display: none;
+    }
+
+    .mentions_legales .mentions_contenu{
+        width:90%;
+        padding:10px;
+    }
+
+    .mentions_legales .cercle, .mentions_legales .ficelle{
         display: none;
     }
 
