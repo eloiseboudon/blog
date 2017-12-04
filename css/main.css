@@ -574,6 +574,26 @@ h2 {
     display: inline-block;
 }
 
+
+.form-etiquette .btn-update{
+    background-color: #880015;
+    color:white;
+    font-size: 20px;
+    display: block;
+    padding: 5px 10px;
+}
+.form-etiquette #mon_compte{
+    margin-top:20px;
+}
+
+.form-etiquette #mon_compte label{
+    display: flex;
+}
+
+.form-etiquette #mon_compte label>span{
+    width:24%;
+}
+
 @media screen and (max-width: 1600px) {
     .nos_valeurs .valeur_image img {
         width: 225px;

@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
-    if ($_COOKIE['isConnect'] = !3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
+    if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
         if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['email'])) {
             setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
 //            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
@@ -91,11 +91,11 @@ include('sql/connexion.php');
 
 
 <?php
-//if(isset($_SESSION['user']))
-//var_dump($_SESSION['user']);
-//
-//if(isset($_SESSION['auto_log']))
-//var_dump($_SESSION['auto_log']);
+if(isset($_SESSION['user']))
+var_dump($_SESSION['user']);
+
+if(isset($_SESSION['auto_log']))
+var_dump($_SESSION['auto_log']);
 ?>
 
 
