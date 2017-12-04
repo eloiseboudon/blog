@@ -1,5 +1,5 @@
 /* CERCLE */
-.accueil_articles .cercle, .nos_valeurs .cercle, .mentions_legales_global .cercle {
+.accueil_articles .cercle, .nos_valeurs .cercle, .mentions_legales_global .cercle, .lequipe .cercle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -15,12 +15,11 @@
 
 .nos_valeurs .cercle {
     margin-top: 10px;
-    margin-right: 5px;
 }
 
 .mentions_legales .cercle {
-    margin-top: 348px;
-    left: 73.5%;
+    margin-top: 5px;
+    left: 78.5%;
 }
 
 .nos_valeurs .timeline-block-right .cercle {
@@ -28,14 +27,30 @@
     margin-left: 5px;
 }
 
-.accueil_articles .timeline-block-right .cercle, .nos_valeurs .timeline-block-right .cercle {
+.accueil_articles .timeline-block-right .cercle, .lequipe .timeline-block-right .cercle {
     left: 10%;
 }
 
-.accueil_articles .timeline-block-left .cercle, .nos_valeurs .timeline-block-left .cercle {
+.accueil_articles .timeline-block-left .cercle, .lequipe .timeline-block-left .cercle{
     right: 10%;
 }
 
+.nos_valeurs .timeline-block-left .cercle{
+    right: 11%;
+}
+
+.nos_valeurs .timeline-block-right .cercle{
+    left: 11%;
+}
+
+.lequipe .timeline-block-left .cercle{
+    right: 11%;
+    margin-top: 8px;
+}
+.lequipe .timeline-block-right .cercle{
+    left: 11%;
+    margin-top: 8px;
+}
 
 .form-etiquette .cercle {
     border-radius: 50%;
@@ -52,26 +67,36 @@
 
 /* FICELLE */
 
-.accueil_articles .ficelle, .nos_valeurs .ficelle {
+.accueil_articles .ficelle, .nos_valeurs .ficelle, .lequipe .ficelle {
     position: absolute;
     width: 92px;
     height: 42px;
     z-index: 200;
     margin-top: 130px;
 }
+.lequipe .ficelle{
+    margin-top:20px;
+}
+
+.lequipe .timeline-block-left .ficelle{
+    margin-right:1%;
+}
+
+.lequipe .timeline-block-right .ficelle{
+    margin-left:1%;
+}
 
 .nos_valeurs .ficelle {
     background-image: url("../img/ficelle_rond_avec_trou.png");
 }
 
-.accueil_articles .ficelle {
+.accueil_articles .ficelle, .lequipe .ficelle {
     background-image: url("../img/ficelle_rond_avec_trou_2.png");
 
 }
 
 .nos_valeurs .ficelle {
-    /*width: 92px;*/
-    /*height: 42px;*/
+    position: absolute;
     z-index: 200;
     transform: rotate(-40deg);
     margin-top: 2px;
@@ -82,8 +107,8 @@
     position: absolute;
     width: 75px;
     height: 42px;
-    margin-top: 360px;
-    left: 74%;
+    transform: rotate(-40deg);
+    left: 79%;
     z-index: 200;
     background-image: url("../img/ficelle_courte_mentions-legales.png");
 }
@@ -92,7 +117,7 @@
     transform: rotate(40deg) scaleX(-1);
 }
 
-.accueil_articles .timeline-block-right .ficelle {
+.accueil_articles .timeline-block-right .ficelle,  .lequipe .timeline-block-right .ficelle{
     transform: scaleX(-1);
 }
 
@@ -137,10 +162,11 @@
 .mentions_legales_global .mentions_contenu {
     margin-top: 60px;
     padding: 10px;
+    padding-right:40px;
     background-color: white;
     border-radius: 10px;
     border: 2px dashed #880015;
-    width: 50%;
+    width: 60%;
     display: block;
     margin: auto;
 }
@@ -150,7 +176,7 @@
         padding: 0;
     }
 
-    .acceuil_titre_global, .article_titre, .article_details {
+    .acceuil_titre_global, .article_titre, .article_details, .article_description {
         margin-left: 10px;
     }
     .form-etiquette {
@@ -170,6 +196,12 @@
 
     .accueil_articles .timeline-block-right .ficelle {
         margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .nos_valeurs .ficelle{
+        margin-top:-2%;
     }
 }
 
@@ -196,8 +228,32 @@
     .accueil_articles .ficelle {
         background-image: url("../img/ficelle_moyenne_2.png");
     }
+}
+
+
+@media screen and (max-width: 1120px){
+    .nos_valeurs .timeline-block .ficelle{
+        background-image: url("../img/ficelle_rond_avec_trou.png");
+    }
+
+    .nos_valeurs .timeline-block-left .ficelle {
+        transform: scaleX(-1);
+    }
+    .nos_valeurs .timeline-block-right .ficelle {
+        transform: scaleX(-1);
+    }
 
 }
+@media screen and (max-width: 1024px){
+    .mentions_legales .cercle {
+        left: 77.5%;
+    }
+    .mentions_legales .ficelle{
+        left:78%;
+    }
+}
+
+
 
 @media screen and (max-width: 768px) {
     .accueil_articles .timeline-block-left .ficelle {
@@ -219,7 +275,11 @@
     .form-etiquette{
         width:70%;
     }
+    .nos_valeurs .timeline-block .ficelle{
+        background-image: url("../img/ficelle_moyenne_2.png");
+    }
 }
+
 @media screen and (max-width: 425px) {
     .form-etiquette{
         width:90%;
@@ -228,9 +288,16 @@
     .form-etiquette .ficelle, .form-etiquette .cercle{
         display: none;
     }
-    /*.form-etiquette{*/
-        /*padding-right:0;*/
-    /*}*/
+
+    .mentions_legales .mentions_contenu{
+        width:90%;
+        padding:10px;
+    }
+
+    .mentions_legales .cercle, .mentions_legales .ficelle{
+        display: none;
+    }
+
 
 }
 

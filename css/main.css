@@ -157,10 +157,16 @@ h2 {
     width: 200px;
 }
 
-.accueil_articles, .nos_valeurs {
+.accueil_articles, .nos_valeurs, .lequipe {
     margin: auto;
     position: relative;
     overflow: hidden;
+}
+
+
+.article .article_description h2{
+    font-size:1.5rem;
+
 }
 
 .mentions_legales_global {
@@ -211,7 +217,7 @@ h2 {
     padding-left: 16px;
 }
 
-.accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre {
+.accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre, .lequipe .lequipe_titre {
     font-size: 22px;
     color: #880015;
 }
@@ -247,16 +253,14 @@ h2 {
     border: 2px solid transparent;
     margin: 5px;
     margin-top: 0;
-
 }
 
 .article .icon_res_soc img:hover {
     border-radius: 50%;
     background-color: white;
-
 }
 
-.nos_valeurs .valeur_contenu {
+.nos_valeurs .valeur_contenu, .lequipe .lequipe_contenu {
     font-size: 20px;
 }
 
@@ -278,15 +282,15 @@ h2 {
     border-radius: 10px;
 }
 
-.accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre {
+.accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre, .lequipe .timeline-block-left .lequipe_titre {
     margin-right: 10%;
 }
 
-.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre {
+.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre, .lequipe .timeline-block-right .lequipe_titre{
     margin-left: 10%;
 }
 
-.article h1, .nos_valeurs_global h1, .mentions_legales_global h1 {
+.article h1, .nos_valeurs_global h1, .mentions_legales_global h1, .lequipe_global h1 {
     color: #880015;
 }
 
@@ -320,7 +324,6 @@ h2 {
     font-family: 'Roboto', sans-serif;
     color: #880015;
     font-size: 28px;
-    text-align: center;
 }
 
 .article .article_contenu a {
@@ -518,7 +521,6 @@ h2 {
     width: 60%;
     height: 40px;
     padding-left:10px;
-
 }
 
 .form-etiquette input[type=submit]:hover,
@@ -574,6 +576,63 @@ h2 {
     display: inline-block;
 }
 
+.form-etiquette .fa:hover{
+    cursor:pointer;
+}
+
+.form-etiquette .compte_infos{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    width:60%;
+}
+
+.modal input[type=submit],
+.modal input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #880015;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.modal label > span {
+    width: 30%;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.modal input.input-field {
+    width: 60%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.modal label{
+    text-align: left;
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    display: inline-block;
+}
+
+
 @media screen and (max-width: 1600px) {
     .nos_valeurs .valeur_image img {
         width: 225px;
@@ -590,7 +649,6 @@ h2 {
         width: 150px !important;
         height: 100px !important;
     }
-
 }
 
 @media screen and (max-width: 1250px) {
@@ -615,7 +673,6 @@ h2 {
     .bottom-bar .icon_social img {
         width: 40px;
     }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -668,6 +725,9 @@ h2 {
         width: 30%;
         text-align: center;
     }
+    .menu #petit-ecran .menu-item-right{
+        margin-right:7px;
+    }
 
     .article .article_contenu {
         margin-left: 10px;
@@ -683,6 +743,9 @@ h2 {
         width: 90%;
     }
 
+    .article .article_description{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -713,12 +776,6 @@ h2 {
         transform-origin: 0 0;
         -webkit-transform-origin: 0 0;
     }
-
-}
-
-
-
-@media screen and (max-width: 320px) {
 
 }
 
