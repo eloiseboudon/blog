@@ -4,8 +4,8 @@
     <div id="acceuil" class="menu-item"><a href="/">Accueil</a></div>
     <div id="grand-ecran" class="menu-right">
         <?php
-        if (isset($_COOKIE['isConnect']))
-            if ($_COOKIE['isConnect'] == 1) {
+        if (isset($_SESSION['connexion'])){
+//            if ($_COOKIE['isConnect'] == 1 || $_SESSION['connexion'] == "google") {
                 ?>
                 <div class="menu-item menu-item-right menu-pseudo"><a href="index.php?page=mon_compte"><i
                                 class="fa fa-address-book-o"
@@ -30,8 +30,8 @@
 
     <div id="petit-ecran" class="menu-right">
         <?php
-        if (isset($_COOKIE['isConnect']))
-            if ($_COOKIE['isConnect'] == 1) {
+        if (isset($_SESSION['connexion'])){
+//            if ($_COOKIE['isConnect'] == 1 || $_SESSION['connexion'] == "google") {
                 ?>
                 <div class="menu-item menu-item-right"><a href="index.php?page=mon_compte"><i
                                 class="fa fa-address-book-o"

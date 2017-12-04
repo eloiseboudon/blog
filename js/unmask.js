@@ -61,3 +61,9 @@ $("#modal-pro-article").on('click',function () {
     $('#myModal').modal('show');
     document.getElementById("modal-pro-article").checked = false;
 });
+
+$("#modal_update_email").on('click',function () {
+    $('#myModalUpdateMail').modal('show');
+});
+
+

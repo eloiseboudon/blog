@@ -27,9 +27,7 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
             exit();
 
         } else {
-            $_SESSION['flash']['error'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail. <br />
-           Vous n'avez pas recu de mail,<a onclick='envoi_token();' style='text-decoration: inherit;    color: black;
-    cursor: pointer;'> veuillez cliquer ici pour en recevoir un nouveau</a>,s'il vous plait.";
+            $_SESSION['flash']['error'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail.";
             header('location: ../index.php?page=3');
             exit();
         }
@@ -47,11 +45,14 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
 
 
 function envoi_token(){
+
+    echo "<script>alert('test');</script>";
+
     session_start();
     $email = $_SESSION['mail'];
     $token = $_SESSION['token'];
     $user_id = $_SESSION['user_id'];
-    $headers = 'From: letiquette@letiquette-blog.com';
+    $headers = "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>";
 
     mail($email, 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien http://letiquette-blog.com/sql/confirm.php?id=$user_id&token=$token", $headers);
 

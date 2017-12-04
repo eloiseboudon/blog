@@ -2,7 +2,7 @@
 
 require 'connexion.php';
 session_start();
-echo $_SESSION['user']['id'];
+
 
 if (isset($_POST['email']) && isset($_SESSION['user']['id'])) {
 
@@ -14,9 +14,13 @@ if (isset($_POST['email']) && isset($_SESSION['user']['id'])) {
     $bdd = connexion_sql();
 
 
-    $sql = "UPDATE membres SET email = '$email', token = null, confirmation_token = null, confirmed_at = null WHERE id='$user_id'";
+    $sql = "UPDATE membres SET email = '$email', token='$token', confirmation_token = null, confirmed_at = null WHERE id='$user_id'";
     $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
+    echo $email;
+    echo "<br />";
+
+    echo $sql;
 
     if (mail($email, 'Confirmation de modification de votre adresse email', "Afin de valider votre compte merci de cliquer sur ce lien http://letiquette-blog.com/sql/confirm.php?id=$user_id&token=$token", $headers)) {
         $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';

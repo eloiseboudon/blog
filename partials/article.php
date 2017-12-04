@@ -26,8 +26,13 @@ $donnees = mysqli_fetch_array($req);
             <h1><?php echo $donnees['titre']; ?></h1>
         </div>
 
-        <div class="article_details"><strong><?php echo $donnees['auteur']; ?></strong>
-            le <?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?></div>
+        <div class="article_details">
+            <strong><?php echo $donnees['auteur']; ?></strong>
+            le <?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?>
+        </div>
+        <div class="article_description">
+            <h2><i><?php echo $donnees['description']; ?></i></h2>
+        </div>
 
         <div class="article_contenu">
             <?php echo $donnees['contenu']; ?>
@@ -147,11 +152,11 @@ $donnees = mysqli_fetch_array($req);
                     <div class="connexion">
                         <p>Veuillez vous connecter pour laisser un commentaire : </p>
 
-                            <a href="index.php?page=3"><span><i class="fa fa-user"
-                                                                aria-hidden="true"></i> Connexion</span>
-                            </a>
-                            <a href="index.php?page=4"><span><i class="fa fa-pencil"
-                                                                aria-hidden="true"></i> Inscription</span> </a>
+                        <a href="index.php?page=3"><span><i class="fa fa-user"
+                                                            aria-hidden="true"></i> Connexion</span>
+                        </a>
+                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i> Inscription</span> </a>
 
                     </div>
                 </div>
@@ -249,15 +254,15 @@ function afficher_commentaires($id_article)
         <?php
     }
     ?>
-    <div class="voir_plus">
-        <a>
-            <i class="fa fa-chevron-circle-down mask" aria-hidden="true"></i> Voir plus
-        </a>
-    </div>
-    </div><?php
+    <?php
     if ($count_com > 5) {
         ?>
-
+        <div class="voir_plus">
+            <a>
+                <i class="fa fa-chevron-circle-down mask" aria-hidden="true"></i> Voir plus
+            </a>
+        </div>
+        </div>
 
         <?php
         $sql2 = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc ";
@@ -300,7 +305,7 @@ function afficher_commentaires($id_article)
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <!--                <h4 class="modal-title">Modal Header</h4>-->
+                <h3 class="modal-title">Sortie du prochain article</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>

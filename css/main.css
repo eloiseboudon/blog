@@ -163,6 +163,12 @@ h2 {
     overflow: hidden;
 }
 
+
+.article .article_description h2{
+    font-size:1.5rem;
+
+}
+
 .mentions_legales_global {
     margin: auto;
     position: relative;
@@ -320,7 +326,6 @@ h2 {
     font-family: 'Roboto', sans-serif;
     color: #880015;
     font-size: 28px;
-    text-align: center;
 }
 
 .article .article_contenu a {
@@ -574,6 +579,64 @@ h2 {
     display: inline-block;
 }
 
+.form-etiquette .fa:hover{
+    cursor:pointer;
+}
+
+
+.form-etiquette .compte_infos{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    width:60%;
+}
+
+.modal input[type=submit],
+.modal input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #880015;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+
+.modal label > span {
+    width: 30%;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.modal input.input-field {
+    width: 60%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+    margin-right: 10px;
+}
+
+
+.modal label{
+    text-align: left;
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    display: inline-block;
+}
 
 /*.form-etiquette .btn-update{*/
     /*background-color: #880015;*/
@@ -704,6 +767,10 @@ h2 {
 
     .article_commentaire .ajouter_commentaire .form_contenu textarea {
         width: 90%;
+    }
+
+    .article .article_description{
+        display: none;
     }
 
 }

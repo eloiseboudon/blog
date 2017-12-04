@@ -157,7 +157,7 @@
         padding: 0;
     }
 
-    .acceuil_titre_global, .article_titre, .article_details {
+    .acceuil_titre_global, .article_titre, .article_details, .article_description {
         margin-left: 10px;
     }
     .form-etiquette {

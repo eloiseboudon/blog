@@ -1,5 +1,7 @@
 <div class="contenu">
-    <div class="form-authentification">
+
+
+    <div class="form-etiquette">
         <div class="cercle"></div>
         <div class="ficelle"></div>
 

@@ -9,10 +9,8 @@ if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
     if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
-        if (isset($_SESSION['user']['pseudo']) && isset($_SESSION['user']['email'])) {
+        if (isset($_SESSION['user']['pseudo'])) {
             setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
-//            setcookie('password', $_SESSION['user']['password'], time() + 365 * 24 * 3600, "/", null, false, true);
-//            setcookie('email', $_SESSION['user']['email'], time() + 365 * 24 * 3600, "/", null, false, true);
             setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
         } else {
             setcookie('isConnect', 2, time() + 365 * 24 * 3600, "/");
@@ -28,20 +26,8 @@ if (isset($_COOKIE['isConnect'])) {
     }
 }
 
-//if(isset($_COOKIE['nbPages'])){
-//    setcookie('nbPages',$_COOKIE['nbPages']+1);
-//}else{
-//    setcookie('nbPages',0, time() + 365*24*3600, null, null, false, true);
-//}
-//
-//if(!isset($_COOKIE['nbArticles'])){
-//    setcookie('nbArticles',0, time() + 365*24*3600, null, null, false, true);
-//}
-
-
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
-
 
 ?>
 <html lang="fr">
@@ -93,6 +79,8 @@ include('sql/connexion.php');
 <?php
 if(isset($_SESSION['user']))
 var_dump($_SESSION['user']);
+echo $_COOKIE['isConnect'];
+echo $_SESSION['connexion'];
 //
 //if(isset($_SESSION['auto_log']))
 //var_dump($_SESSION['auto_log']);

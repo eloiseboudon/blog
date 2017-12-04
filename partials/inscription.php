@@ -140,7 +140,7 @@
             </div>
 
             <input type="submit" value="Valider"/>
-
+            <div><?php google_api();?></div>
 
         </form>
     </div>
