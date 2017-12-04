@@ -123,12 +123,9 @@ VALUES ('$nom','$prenom','$pseudo','','$email','$sexe','$date_anniversaire','','
 
             <form action="sql/authentification.php" method="post">
 
-                <label for="pseudo"><span>Pseudo <span class="required">*</span></span><input type="text"
+                <label for="login"><span>Pseudo ou email <span class="required">*</span></span><input type="text"
                                                                                               class="input-field"
-                                                                                              name="pseudo"
-                                                                                              value="<?php if (isset($_SESSION['user']['pseudo'])) {
-                                                                                                  echo $_SESSION['user']['pseudo'];
-                                                                                              } ?>"
+                                                                                              name="login"
                                                                                               required="required"/></label>
                 <label for="password"><span>Mot de passe <span class="required">*</span></span><input type="password"
                                                                                                       class="input-field"

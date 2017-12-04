@@ -39,12 +39,8 @@ if (isset($_POST['nom'])) {
         $courrier = 0;
     }
 
-//    $options=['salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)];
-
-
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
     $token = str_random(60);
-
 
     $decode = json_decode(file_get_contents($api_url), true);
 

@@ -77,10 +77,10 @@ include('sql/connexion.php');
 
 
 <?php
-if(isset($_SESSION['user']))
-var_dump($_SESSION['user']);
-echo $_COOKIE['isConnect'];
-echo $_SESSION['connexion'];
+//if(isset($_SESSION['user']))
+//var_dump($_SESSION['user']);
+//echo $_COOKIE['isConnect'];
+//echo $_SESSION['connexion'];
 //
 //if(isset($_SESSION['auto_log']))
 //var_dump($_SESSION['auto_log']);
@@ -147,7 +147,9 @@ echo $_SESSION['connexion'];
                 case "contact":
                     include('partials/footer/contactez_nous.php');
                     break;
-
+                case "cgu":
+                    include('partials/footer/cgu_cookies.php');
+                    break;
                 case "devenir_vendeur":
                     include('partials/footer/devenir_vendeur.php');
                     break;

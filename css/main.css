@@ -157,7 +157,7 @@ h2 {
     width: 200px;
 }
 
-.accueil_articles, .nos_valeurs {
+.accueil_articles, .nos_valeurs, .lequipe {
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -217,7 +217,7 @@ h2 {
     padding-left: 16px;
 }
 
-.accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre {
+.accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre, .lequipe .lequipe_titre {
     font-size: 22px;
     color: #880015;
 }
@@ -253,16 +253,14 @@ h2 {
     border: 2px solid transparent;
     margin: 5px;
     margin-top: 0;
-
 }
 
 .article .icon_res_soc img:hover {
     border-radius: 50%;
     background-color: white;
-
 }
 
-.nos_valeurs .valeur_contenu {
+.nos_valeurs .valeur_contenu, .lequipe .lequipe_contenu {
     font-size: 20px;
 }
 
@@ -284,15 +282,15 @@ h2 {
     border-radius: 10px;
 }
 
-.accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre {
+.accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre, .lequipe .timeline-block-left .lequipe_titre {
     margin-right: 10%;
 }
 
-.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre {
+.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre, .lequipe .timeline-block-right .lequipe_titre{
     margin-left: 10%;
 }
 
-.article h1, .nos_valeurs_global h1, .mentions_legales_global h1 {
+.article h1, .nos_valeurs_global h1, .mentions_legales_global h1, .lequipe_global h1 {
     color: #880015;
 }
 
@@ -523,7 +521,6 @@ h2 {
     width: 60%;
     height: 40px;
     padding-left:10px;
-
 }
 
 .form-etiquette input[type=submit]:hover,
@@ -583,7 +580,6 @@ h2 {
     cursor:pointer;
 }
 
-
 .form-etiquette .compte_infos{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
@@ -603,7 +599,6 @@ h2 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-
 
 .modal label > span {
     width: 30%;
@@ -630,7 +625,6 @@ h2 {
     margin-right: 10px;
 }
 
-
 .modal label{
     text-align: left;
     margin: 0px 0px 15px 0px;
@@ -638,24 +632,6 @@ h2 {
     display: inline-block;
 }
 
-/*.form-etiquette .btn-update{*/
-    /*background-color: #880015;*/
-    /*color:white;*/
-    /*font-size: 20px;*/
-    /*display: block;*/
-    /*padding: 5px 10px;*/
-/*}*/
-/*.form-etiquette #mon_compte{*/
-    /*margin-top:20px;*/
-/*}*/
-
-/*.form-etiquette #mon_compte label{*/
-    /*display: flex;*/
-/*}*/
-
-/*.form-etiquette #mon_compte label>span{*/
-    /*width:24%;*/
-/*}*/
 
 @media screen and (max-width: 1600px) {
     .nos_valeurs .valeur_image img {
@@ -673,7 +649,6 @@ h2 {
         width: 150px !important;
         height: 100px !important;
     }
-
 }
 
 @media screen and (max-width: 1250px) {
@@ -698,7 +673,6 @@ h2 {
     .bottom-bar .icon_social img {
         width: 40px;
     }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -772,7 +746,6 @@ h2 {
     .article .article_description{
         display: none;
     }
-
 }
 
 @media screen and (max-width: 425px) {
@@ -803,12 +776,6 @@ h2 {
         transform-origin: 0 0;
         -webkit-transform-origin: 0 0;
     }
-
-}
-
-
-
-@media screen and (max-width: 320px) {
 
 }
 

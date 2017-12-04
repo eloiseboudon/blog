@@ -43,8 +43,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                Cookies
+                            <a href="index.php?page=cgu_cookies">
+                                CGU
                             </a>
                         </li>
                     </ul>
