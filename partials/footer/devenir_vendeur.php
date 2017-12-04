@@ -3,7 +3,7 @@
         <div class="cercle"></div>
         <div class="ficelle"></div>
         <h1>Devenir vendeur</h1>
-        <p>Vous souhaitez nous proposer des produits? Merci de bien vouloir remplir le formulaire ci-dessous, nous vous
+        <p>Nous somes en train de développer une marketplace de mode éthique. Vous souhaitez nous proposer des produits ? Merci de bien vouloir remplir le formulaire ci-dessous, nous vous
             recontacterons dans les plus brefs délais. </p>
         <p>
             A bientôt ! </p>

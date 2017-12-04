@@ -33,11 +33,11 @@ if (isset($_POST['nom_entreprise']) && isset($_POST['nom']) && isset($_POST['pre
 
     session_start();
     if (mail($to, utf8_decode($subject), utf8_decode($message), $headers)) {
-        $_SESSION['flash']['success'] = "Merci de votre interêt. Votre demande sera étudiée dans les plus bref délais";
+        $_SESSION['flash']['success'] = "Merci pour votre message ! Nous reviendrons vers vous dans les plus brefs délais.";
         header('location: ../index.php');
         exit();
     } else {
-        $_SESSION['flash']['error'] = "Veuillez nous excuser, une erreur a eu lieu. Le formualire ne s'est pas envoyé, veuillez le renvoyer.";
+        $_SESSION['flash']['error'] = "Une erreur est survenue, votre message n'a pas été envoyé, merci de bien vouloir réessayer.";
         header('location: ../index.php?page=devenir_vendeur');
         exit();
     }

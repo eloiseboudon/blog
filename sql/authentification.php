@@ -28,7 +28,8 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
 
         } else {
             $_SESSION['flash']['error'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail. <br />
-           Vous n'avez pas recu de mail,<a onclick=\"envoi_token()\">Veuillez cliquer ici pour en recevoir un nouveau</a>,s'il vous plait.";
+           Vous n'avez pas recu de mail,<a onclick='envoi_token();' style='text-decoration: inherit;    color: black;
+    cursor: pointer;'> veuillez cliquer ici pour en recevoir un nouveau</a>,s'il vous plait.";
             header('location: ../index.php?page=3');
             exit();
         }

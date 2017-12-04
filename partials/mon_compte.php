@@ -12,18 +12,10 @@
                                                                                             echo $_SESSION['user']['email'];
                                                                                         } ?>"
                                                                                         required/>
-                <button class="btn btn-update"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+<!--                <button class="btn btn-update"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
             </label>
 
-            <label for="telephone"><span>Téléphone <span class="required">*</span></span><input type="text"
-                                                                                                class="input-field"
-                                                                                                name="telephone"
-                                                                                                value=" <?php if (isset($_SESSION['user'])) {
-                                                                                                    echo $_SESSION['user']['telephone'];
-                                                                                                } ?>"
-                                                                                                required/>
-                <button class="btn btn-update"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-            </label>
+<!--           mot de passe oublié-->
 
             <input type="submit" value="Valider"/>
 

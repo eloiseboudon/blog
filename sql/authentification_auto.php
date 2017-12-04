@@ -1,13 +1,12 @@
 <?php
 
 require 'connexion.php';
-if (isset($_COOKIE['pseudo']) && isset($_COOKIE['password'])) {
+if (isset($_COOKIE['pseudo'])) {
 
     $pseudo = $_COOKIE['pseudo'];
-    $password = $_COOKIE['password'];
 
     $bdd = connexion_sql();
-    $sql = "SELECT * from membres WHERE pseudo = '$pseudo' AND password = '$password'";
+    $sql = "SELECT * from membres WHERE pseudo = '$pseudo'";
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 

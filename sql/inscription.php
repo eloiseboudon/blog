@@ -21,7 +21,7 @@ if (isset($_POST['nom'])) {
 
     $checkbox = array();
     $checkbox = $_POST['validate'];
-    $headers = 'From: L\'etiquette <ne-pas-repondre@letiquette-blog.com>';
+    $headers = "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>";
 
 //CAPTCHA GOOGLE
     $secret = "6LcdyjoUAAAAAHQI39yEUGcGbvoZXbBJB-08tCEi";
