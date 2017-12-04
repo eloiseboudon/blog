@@ -96,7 +96,7 @@ include('sql/connexion.php');
 //
 //if(isset($_SESSION['auto_log']))
 //var_dump($_SESSION['auto_log']);
-//?>
+?>
 
 
 <div class="contenu">
@@ -143,6 +143,9 @@ include('sql/connexion.php');
                     break;
                 case 5:
                     include('partials/forget_password.php');
+                    break;
+                case "mon_compte":
+                    include('partials/mon_compte.php');
                     break;
                 case "nos_valeurs":
                     include('partials/footer/nos_valeurs.php');

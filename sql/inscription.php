@@ -14,6 +14,7 @@ if (isset($_POST['nom'])) {
     $sexe = $_POST['sexe'];
     $ville = $_POST['ville'];
     $code_postal = $_POST['code_postal'];
+    $ville = $_POST['ville'];
     $date_anniversaire = $_POST['date_anniversaire'];
     $adresse = $_POST['adresse'];
     $telephone = $_POST['telephone'];
@@ -98,8 +99,8 @@ if (isset($_POST['nom'])) {
         } else {
 
 
-            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,telephone,recevoir_mail,date_inscription, token, confirmation_token)
-VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$telephone','$courrier' ,NOW(),'$token', null)";
+            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,ville,telephone,recevoir_mail,date_inscription, token, confirmation_token)
+VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$ville','$telephone','$courrier' ,NOW(),'$token', null)";
             $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
             $user_id = mysqli_insert_id($bdd);

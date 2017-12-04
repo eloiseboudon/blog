@@ -668,6 +668,9 @@ h2 {
         width: 30%;
         text-align: center;
     }
+    .menu #petit-ecran .menu-item-right{
+        margin-right:7px;
+    }
 
     .article .article_contenu {
         margin-left: 10px;

@@ -6,8 +6,9 @@
         <?php
         if ($_COOKIE['isConnect'] == 1) {
             ?>
-            <div class="menu-item menu-item-right menu-pseudo">
-            <?php echo $_SESSION['user']['pseudo'] ?>
+            <div class="menu-item menu-item-right menu-pseudo"><a href="index.php?page=mon_compte"><i class="fa fa-address-book-o"
+                                                                                             aria-hidden="true"></i>
+                    <?php echo $_SESSION['user']['pseudo'] ?></a>
             </div>
             <div class="menu-item menu-item-right"><a href="sql/deconnexion.php"><i class="fa fa-user-times  "
                                                                                     aria-hidden="true"></i>
@@ -29,7 +30,10 @@
         <?php
         if ($_COOKIE['isConnect'] == 1) {
             ?>
-            <div class="menu-item menu-item-right"><a href="sql/deconnexion.php"><i class="fa fa-user-times  "
+            <div class="menu-item menu-item-right"><a href="index.php?page=mon_compte"><i class="fa fa-address-book-o"
+                                                                                    aria-hidden="true"></i></a></div>
+
+            <div class="menu-item menu-item-right"><a href="sql/deconnexion.php"><i class="fa fa-user-times"
                                                                                     aria-hidden="true"></i></a></div>
 
             <?php
