@@ -8,9 +8,7 @@ if (isset($_GET['id'])) {
     afficher_article($_GET['id']);
 }
 
-
-function afficher_article($id_article)
-{
+function afficher_article($id_article){
 $bdd = connexion_sql();
 
 $sql = 'SELECT * FROM articles WHERE id_article =' . "$id_article";
@@ -37,74 +35,99 @@ $donnees = mysqli_fetch_array($req);
         <div class="article_contenu">
             <?php echo $donnees['contenu']; ?>
         </div>
-        <div class="sous_article">
-            <div class="article_sociaux">
-                <div class="partage_reseaux_sociaux">
+        <div class="prochain_article">
+            <?php if (isset($_SESSION['connexion'])) { ?>
+                <p>Souhaitez vous recevoir une notification à la sortie du prochain article ?</p>
+                <form action="mailing/mail_prochain_article.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>"/>
+                    <input type="submit" value="Oui"/>
+                </form>
 
-                    <h2>Partager sur les réseaux sociaux</h2>
-                </div>
-                <div class="icon_res_soc">
-                    <script>function fbs_click() {
-                            u = location.href;
-                            t = document.title;
-                            window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
-                            return false;
+            <?php } else { ?>
+                <p>Pour être informé de la sortie du prochain article :</p>
 
-                        }</script>
+                <form action="mailing/mail_pro_article_sans_compte.php" method="post">
+                    <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
+                                                                                            class="input-field"
+                                                                                            name="nom"
+                                                                                            required/>
+                    </label>
 
+                    <label for="prenom"><span>Prenom <span class="required">*</span></span><input type="text"
+                                                                                                  class="input-field"
+                                                                                                  name="prenom"
+                                                                                                  required/>
+                    </label>
+                    <label for="email"><span>Email <span class="required">*</span></span><input type="email"
+                                                                                                class="input-field"
+                                                                                                name="email"
+                                                                                                required/>
+                    </label>
 
-                    <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
-                       onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
+                    <input type="submit" value="Valider"/>
 
-                    <?php
+                </form>
+                <?php
+            } ?>
+        </div>
+    </div>
+    <div class="sous_article">
+        <div class="article_sociaux">
+            <div class="partage_reseaux_sociaux">
 
-                    function get_img()
-                    {
-                        $image = "";
-                        return $image;
-                    }
-
-
-                    function get_url()
-                    {
-                        return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    }
-
-                    ?>
-
-                    <a rel="nofollow"
-                       href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
-                       title="Partagez cet article avec vos followers" target="_blank"><img
-                                src="assets/icones/twitter-carre.png"></a>
-
-                    <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
-                       title="Partagez cet article avec votre communauté Google" target="_blank"><img
-                                src="assets/icones/google-plus-carre.png"></a>
-
-
-                    <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
-                       title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
-
-
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
-                       title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
-
-
-                    <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
-                       title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
-
-                </div>
+                <h2>Partager sur les réseaux sociaux</h2>
             </div>
+            <div class="icon_res_soc">
+                <script>function fbs_click() {
+                        u = location.href;
+                        t = document.title;
+                        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+                        return false;
 
-            <div class="prochain_article">
-                <label>
-                    <input id="modal-pro-article" type="checkbox"> Cliquez ici afin d'être informé de la sortie
-                    du prochain article.
-                </label>
+                    }</script>
+
+                <a href="http://www.facebook.com/share.php?u=<url>" title="Partagez sur facebook"
+                   onclick="return fbs_click()" target="_blank"><img src="assets/icones/facebook-carre.png"></a>
+
+                <?php
+                function get_img()
+                {
+                    $image = "";
+                    return $image;
+                }
+
+
+                function get_url()
+                {
+                    return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                }
+
+                ?>
+
+                <a rel="nofollow"
+                   href="http://twitter.com/share?text=<?php echo urlencode("Currently reading: "); ?>&url&via=letiquette"
+                   title="Partagez cet article avec vos followers" target="_blank"><img
+                            src="assets/icones/twitter-carre.png"></a>
+
+                <a href="https://plus.google.com/share?url=<?php echo get_url(); ?>"
+                   title="Partagez cet article avec votre communauté Google" target="_blank"><img
+                            src="assets/icones/google-plus-carre.png"></a>
+
+
+                <a href="https://pinterest.com/pin/create/button/?description=<?php echo urlencode("Currently reading"); ?>&url=<?php echo urlencode(get_url()); ?>"
+                   title="Partagez sur Pinterest" target="_blank"><img src="assets/icones/pinterest-carre.png"></a>
+
+
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_url()); ?>&title=<?php echo urlencode("Currently reading"); ?>"
+                   title="Partagez sur LinkedIn" target="_blank"><img src="assets/icones/linkedin-carre.png"></a>
+
+
+                <a href="mailto:?subject=<?php echo urlencode(get_url()); ?>&body=<?php echo urlencode("Currently reading"); ?>"
+                   title="Partagez par mail"><img src="assets/icones/email-carre.png"></a>
+
             </div>
         </div>
     </div>
-
 
 <div class="article_commentaire">
 
@@ -301,46 +324,46 @@ function afficher_commentaires($id_article)
 ?>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Sortie du prochain article</h3>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-            </div>
-            <div class="modal-body">
-                <?php
-                if (isset($_SESSION['user']['pseudo'])) {
-                    ?><p>Vous recevrez un mail à l'adresse suivante <?php echo $_SESSION['user']['email'] ?> lors de la
-                    sortie du prochain article.
-                    </p>
-                    <?php
-                } else {
-                    ?>
-                    <div class="connexion">
-                        <p>Veuillez vous connecter afin de recevoir le mail: </p>
-                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>
-                        </a>
-                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
-                                                            aria-hidden="true"></i> Inscription</span> </a>
-                    </div>
-                    <?php
-                } ?>
-
-            </div>
-            <div class="modal-footer">
-                <?php if (isset($_SESSION['user']['pseudo'])) {
-                    ?>
-                    <form action="mailing/mail_prochain_article.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id'] ?>"/>
-                        <input type="submit" value="J'accepte"/>
-                    </form>
-                    <?php
-                } ?>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal fade" id="myModal_prochain_article" role="dialog">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h3 class="modal-title">Sortie du prochain article</h3>-->
+<!--                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!---->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                --><?php
+//                if (isset($_SESSION['user']['pseudo'])) {
+//                    ?><!--<p>Vous recevrez un mail à l'adresse suivante --><?php //echo $_SESSION['user']['email'] ?><!-- lors de la-->
+<!--                    sortie du prochain article.-->
+<!--                    </p>-->
+<!--                    --><?php
+//                } else {
+//                    ?>
+<!--                    <div class="connexion">-->
+<!--                        <p>Veuillez vous connecter afin de recevoir le mail : </p>-->
+<!--                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>-->
+<!--                        </a>-->
+<!--                        <a href="index.php?page=4"><span><i class="fa fa-pencil"-->
+<!--                                                            aria-hidden="true"></i> Inscription</span> </a>-->
+<!--                    </div>-->
+<!--                    --><?php
+//                } ?>
+<!---->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                --><?php //if (isset($_SESSION['user']['pseudo'])) {
+//                    ?>
+<!--                    <form action="mailing/mail_prochain_article.php" method="post">-->
+<!--                        <input type="hidden" name="id" value="--><?php //echo $_SESSION['user']['id'] ?><!--"/>-->
+<!--                        <input type="submit" value="J'accepte"/>-->
+<!--                    </form>-->
+<!--                    --><?php
+//                } ?>
+<!--                <button type="button" class="btn btn-default btn_modal_close" data-dismiss="modal">Fermer</button>-->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

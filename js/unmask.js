@@ -57,10 +57,10 @@ $('.demask').on('click', function () {
     document.getElementById("commentaires-view-5").style.display = "block";
 });
 
-$("#modal-pro-article").on('click',function () {
-    $('#myModal').modal('show');
-    document.getElementById("modal-pro-article").checked = false;
-});
+// $("#modal-pro-article").on('click',function () {
+//     $('#myModal_prochain_article').modal('show');
+//     document.getElementById("modal-pro-article").checked = false;
+// });
 
 $("#modal_update_email").on('click',function () {
     $('#myModalUpdateMail').modal('show');

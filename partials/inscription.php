@@ -130,9 +130,7 @@
 
             <label for="courrier">
                 <input type="checkbox" value="courrier" name="validate[]"/> J'accepte de recevoir des informations de
-                la
-                part de L'étiquette via courrier
-                électronique<br/>
+                la part de L'étiquette<br/>
             </label>
 
             <div class="champs-obligatoires">

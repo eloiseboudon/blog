@@ -12,15 +12,19 @@ h2 {
     font-family: 'Dosis', sans-serif;
 }
 
+.btn:hover, input[type=submit]:hover {
+    cursor: pointer;
+}
+
 .row {
     margin: 0;
 }
 
 .contenu {
     flex: 1;
-    min-height: -webkit-calc(100vh - 295px);
-    height: -moz-calc(100vh - 295px);
-    min-height: calc(100vh - 295px);
+    min-height: -webkit-calc(100vh - 298px);
+    height: -moz-calc(100vh - 298px);
+    min-height: calc(100vh - 298px);
 }
 
 .global_width {
@@ -39,7 +43,7 @@ h2 {
     margin-bottom: 20px;
     border: 0;
     width: 100%;
-    background-color: #FBFFFE;
+    background-color: black;
     border-bottom: 2px solid #880015;
     position: static;
     top: 60px;
@@ -57,7 +61,7 @@ h2 {
 
 .menu .menu-right {
     text-align: right;
-    width: 40%;
+    width: 35%;
     float: right;
     display: inline-block;
     padding-top: 4px;
@@ -86,13 +90,79 @@ h2 {
 }
 
 .menu a {
-    color: #000000;
+    color: white;
 }
 
 .menu a:hover, .menu a:focus {
-    color: #880015;
+    color: #F4ECDE;
     text-decoration: none;
 }
+
+.menu a:hover .fa {
+    color: #F4ECDE;
+}
+
+.menu .search{
+    display: inline-block;
+    width: 45%;
+    text-align: right
+}
+
+#searchBox{
+    text-align: center;
+}
+#searchBox .searchInput :-moz-placeholder {
+    font-family: 'Dosis', sans-serif;
+    font-size:1.1em;
+    font-weight: 800;
+    color: #880015;
+} /* Firefox <= 18 */
+::-moz-placeholder {
+    font-family: 'Dosis', sans-serif;
+    font-size:1.1em;
+    font-weight: 800;
+    color: #880015;
+} /* Firefox >= 19 */
+::-webkit-input-placeholder {
+    font-family: 'Dosis', sans-serif;
+    font-size:1.1em;
+    font-weight: 800;
+    color: #880015;
+}
+:-ms-input-placeholder{
+    font-family: 'Dosis', sans-serif;
+    font-size:1.1em;
+    font-weight: 800;
+    color: #880015;
+} /* IE */
+
+#searchLabel{
+    position: relative;
+    margin:0;
+    width:400px;
+    padding-top:13px;
+    top: -5px;
+}
+
+#searchLabel .fa-search{
+    color: #880015;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+    font-size:25px;
+    padding-top:13px;
+}
+
+#searchLabel span{
+    cursor: pointer;
+}
+
+#searchInput{
+    padding-left: 5px;
+    width:400px;
+    height: 34px;
+}
+
 
 #bottom-page a {
     text-decoration: none;
@@ -163,9 +233,12 @@ h2 {
     overflow: hidden;
 }
 
+.article .article_description {
+    margin-bottom: 20px;
+}
 
-.article .article_description h2{
-    font-size:1.5rem;
+.article .article_description h2 {
+    font-size: 1.5rem;
 
 }
 
@@ -243,21 +316,40 @@ h2 {
     -webkit-box-orient: vertical;
 }
 
-.article .partage_reseaux_sociaux h2 {
+.sous_article .partage_reseaux_sociaux h2 {
     display: inline-block;
     margin-right: 4%;
 }
 
-.article .icon_res_soc img {
+.sous_article .icon_res_soc img {
     width: 55px;
     border: 2px solid transparent;
     margin: 5px;
     margin-top: 0;
 }
 
-.article .icon_res_soc img:hover {
+.sous_article .icon_res_soc img:hover {
     border-radius: 50%;
     background-color: white;
+}
+
+.article .prochain_article .btn_rond {
+    background-color: #880015;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.article .prochain_article i {
+    margin-left: -3px;
+}
+
+.article .prochain_article .btn_rond:hover {
+    background-color: white;
+    color: #880015;
+    border: 1px solid #880015;
 }
 
 .nos_valeurs .valeur_contenu, .lequipe .lequipe_contenu {
@@ -286,7 +378,7 @@ h2 {
     margin-right: 10%;
 }
 
-.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre, .lequipe .timeline-block-right .lequipe_titre{
+.accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre, .lequipe .timeline-block-right .lequipe_titre {
     margin-left: 10%;
 }
 
@@ -310,7 +402,7 @@ h2 {
     margin-left: 20px;
 }
 
-.article .article_contenu {
+.article {
     margin: 40px;
     margin-left: 100px;
     margin-right: 100px;
@@ -396,16 +488,29 @@ h2 {
     font-size: 22px;
 }
 
-.article_commentaire .ajouter_commentaire .connexion a {
+.article_commentaire .ajouter_commentaire .connexion a, .modal-body .connexion a {
     text-decoration: none;
 }
 
-.article_commentaire .ajouter_commentaire .connexion span {
+.article_commentaire .ajouter_commentaire .connexion span, #myModal_prochain_article .modal-body .connexion span {
     padding: 6px;
     background-color: white;
     color: #880015;
     border-radius: 5px;
     font-size: 22px;
+}
+
+#myModal_prochain_article .modal-body .connexion span {
+    background-color: #F4ECDE;
+}
+
+#myModal_prochain_article .modal-body .connexion span:hover .fa {
+    color: black
+}
+
+#myModal_prochain_article .modal-footer .btn_modal_close {
+    background-color: #880015;
+    color: white;
 }
 
 .article_commentaire .ajouter_commentaire .form_contenu {
@@ -467,7 +572,7 @@ h2 {
     padding-right: 5px;
 }
 
-.form-etiquette span.required {
+.form-etiquette span.required, .prochain_article span.required {
     color: #880015;
 }
 
@@ -477,7 +582,7 @@ h2 {
     float: left;
 }
 
-.form-etiquette input.input-field {
+.form-etiquette input.input-field, .prochain_article input.input-field {
     width: 60%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -499,7 +604,9 @@ h2 {
 }
 
 .form-etiquette input[type=submit],
-.form-etiquette input[type=button]{
+.form-etiquette input[type=button],
+.prochain_article input[type=submit],
+.prochain_article input[type=button] {
     border: none;
     padding: 8px 15px 8px 15px;
     background: #880015;
@@ -512,26 +619,25 @@ h2 {
     -moz-border-radius: 3px;
 }
 
-
-.form-etiquette textarea{
+.form-etiquette textarea {
     width: 60%;
 }
 
-.form-etiquette select{
+.form-etiquette select {
     width: 60%;
     height: 40px;
-    padding-left:10px;
+    padding-left: 10px;
 }
 
 .form-etiquette input[type=submit]:hover,
-.form-etiquette input[type=button]:hover{
+.form-etiquette input[type=button]:hover {
     background: #880015;
     color: #fff;
 }
 
 .form-etiquette .input-sexe {
     margin-top: 10px;
-    margin-left:40%;
+    margin-left: 40%;
 }
 
 .form-etiquette .champs-obligatoires {
@@ -576,18 +682,18 @@ h2 {
     display: inline-block;
 }
 
-.form-etiquette .fa:hover{
-    cursor:pointer;
+.form-etiquette .fa:hover {
+    cursor: pointer;
 }
 
-.form-etiquette .compte_infos{
+.form-etiquette .compte_infos {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
-    width:60%;
+    width: 60%;
 }
 
 .modal input[type=submit],
-.modal input[type=button]{
+.modal input[type=button] {
     border: none;
     padding: 8px 15px 8px 15px;
     background: #880015;
@@ -625,13 +731,12 @@ h2 {
     margin-right: 10px;
 }
 
-.modal label{
+.modal label {
     text-align: left;
     margin: 0px 0px 15px 0px;
     width: 100%;
     display: inline-block;
 }
-
 
 @media screen and (max-width: 1600px) {
     .nos_valeurs .valeur_image img {
@@ -725,8 +830,9 @@ h2 {
         width: 30%;
         text-align: center;
     }
-    .menu #petit-ecran .menu-item-right{
-        margin-right:7px;
+
+    .menu #petit-ecran .menu-item-right {
+        margin-right: 7px;
     }
 
     .article .article_contenu {
@@ -743,7 +849,7 @@ h2 {
         width: 90%;
     }
 
-    .article .article_description{
+    .article .article_description {
         display: none;
     }
 }
