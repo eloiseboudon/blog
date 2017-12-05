@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 if (!isset($_COOKIE['isConnect'])) {
     setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
 } else {
-    if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] =="google")) {
+    if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] == "google")) {
         if (isset($_SESSION['user']['pseudo'])) {
             setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
             setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
@@ -37,7 +37,11 @@ include('sql/connexion.php');
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110425305-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-110425305-1');
@@ -154,9 +158,9 @@ include('sql/connexion.php');
                     include('partials/footer/devenir_vendeur.php');
                     break;
 
-
-
             }
+        } elseif (isset($_GET['search'])) {
+                include('partials/search.php');
         } else {
             include('partials/accueil.php');
         }

@@ -67,3 +67,17 @@ $("#modal_update_email").on('click',function () {
 });
 
 
+
+
+$(".smallSearchBox").on('click',function () {
+    if (document.getElementById("small_form").style.display == 'none'){
+        document.getElementById("small_form").style.display = 'block';
+        document.getElementById("small_form").style.width = '100px';
+        document.getElementsByClassName("smallSearchBox")[0].style.display = 'none';
+    }
+    else{
+        document.getElementById("small_form").style.display = 'none';
+    }
+});
+
+

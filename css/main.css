@@ -14,6 +14,8 @@ h2 {
 
 .container {
     width: auto;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .btn:hover, input[type=submit]:hover {
@@ -26,9 +28,9 @@ h2 {
 
 .contenu {
     flex: 1;
-    min-height: -webkit-calc(100vh - 298px);
-    height: -moz-calc(100vh - 298px);
-    min-height: calc(100vh - 298px);
+    min-height: -webkit-calc(100vh - 308px);
+    height: -moz-calc(100vh - 308px);
+    min-height: calc(100vh - 308px);
 }
 
 .global_width {
@@ -163,7 +165,12 @@ h2 {
     text-align: center;
     vertical-align: middle;
     padding-top: 10px;
+}
 
+
+#top-page .right-top-all #small_form{
+    display: none;
+    width:40px;
 }
 
 #searchBox {
@@ -227,6 +234,11 @@ h2 {
     padding-left: 5px;
     width: 400px;
 }
+
+.smallSearchBox{
+    visibility: hidden;
+}
+
 
 #bottom-page a {
     text-decoration: none;
