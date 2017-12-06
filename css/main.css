@@ -366,6 +366,9 @@ h2 {
     color: #880015;
 }
 
+.lequipe_global p{
+    font-size: 20px;
+}
 
 .lequipe .lequipe_image img{
     width: 200px;
