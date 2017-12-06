@@ -33,6 +33,10 @@ h2 {
     min-height: calc(100vh - 308px);
 }
 
+.lequipe_global p, .lequipe_global h1, .nos_valeurs_global h1, .mentions_legales_global h1{
+    margin:10px;
+}
+
 .global_width {
     max-width: 1760px;
     margin: auto;
@@ -361,6 +365,7 @@ h2 {
     font-size: 22px;
     color: #880015;
 }
+
 
 .lequipe .lequipe_image img{
     width: 200px;

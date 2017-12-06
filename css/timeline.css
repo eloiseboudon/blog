@@ -219,13 +219,24 @@ section {
     }
 
     .lequipe .timeline-block .ficelle{
-        left:1%;
-        top:20px;
+        top: 20px;
     }
 
+    .lequipe .timeline-block-left .ficelle{
+        left:1%;
 
-    .nos_valeurs .timeline-block .cercle, .lequipe .timeline-block .cercle{
+    }
+
+    .lequipe .timeline-block-right .ficelle {
+        left:0;
+    }
+
+    .nos_valeurs .timeline-block .cercle{
         left:7.5%;
+    }
+
+    .lequipe .timeline-block .cercle{
+        left: 9%;
     }
     .nos_valeurs .timeline-block-left .valeur_contenu, .lequipe .timeline-block-left .lequipe_contenu {
         margin-left: 10%;
@@ -237,6 +248,10 @@ section {
 
 
 @media screen and (max-width: 768px) {
+    .lequipe .timeline-block .ficelle{
+        left:-3%;
+
+    }
     .nos_valeurs .timeline-block .cercle{
         left:9%;
     }
@@ -291,10 +306,6 @@ section {
         box-shadow: 12px 8px 8px #aaa;
     }
 
-    .accueil_articles .timeline-block .timeline-content{
-        margin: 0 auto;
-    }
-
     .accueil_articles .timeline-block-left .article_image {
         float: right;
         padding-left: 16px;
@@ -318,15 +329,15 @@ section {
 
 
 @media screen and (max-width: 570px) {
-    .accueil_articles:before, .accueil_articles .timeline-block .ficelle, .accueil_articles .timeline-block .cercle, .accueil_articles .article_image{
+    .accueil_articles:before, .accueil_articles .timeline-block .ficelle, .accueil_articles .timeline-block .cercle,.lequipe:before, .accueil_articles .article_image, .lequipe .ficelle, .lequipe .cercle{
         display:none;
     }
 
-    .accueil_articles .timeline-block{
+    .accueil_articles .timeline-block, .lequipe .timeline-block{
         width: 100%;
     }
 
-    .accueil_articles .timeline-block .article_titre, .accueil_articles .timeline-block .article_details{
+    .accueil_articles .timeline-block .article_titre, .accueil_articles .timeline-block .article_details, .lequipe .timeline-block .lequipe_contenu, .lequipe .timeline-block .lequipe_titre{
         text-align: left;
         margin-left:0;
     }

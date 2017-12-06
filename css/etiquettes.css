@@ -87,11 +87,11 @@
 }
 
 .nos_valeurs .ficelle {
-    background-image: url("../img/ficelle_rond_avec_trou.png");
+    background-image: url("../img/ficelles/ficelle_rond_avec_trou.png");
 }
 
 .accueil_articles .ficelle, .lequipe .ficelle {
-    background-image: url("../img/ficelle_rond_avec_trou_2.png");
+    background-image: url("../img/ficelles/ficelle_rond_avec_trou_2.png");
 
 }
 
@@ -100,7 +100,7 @@
     z-index: 200;
     transform: rotate(-40deg);
     margin-top: 2px;
-    background-image: url("../img/ficelle_valeurs.png");
+    background-image: url("../img/ficelles/ficelle_valeurs.png");
 }
 
 .mentions_legales .ficelle {
@@ -110,7 +110,7 @@
     transform: rotate(-40deg);
     left: 79%;
     z-index: 200;
-    background-image: url("../img/ficelle_courte_mentions-legales.png");
+    background-image: url("../img/ficelles/ficelle_courte_mentions-legales.png");
 }
 
 .nos_valeurs .timeline-block-right .ficelle {
@@ -123,7 +123,7 @@
 
 
 .form-etiquette .ficelle{
-    background-image: url("../img/ficelle_rond_authentification.png");
+    background-image: url("../img/ficelles/ficelle_rond_authentification.png");
     position: relative;
     width: 92px;
     height: 42px;
@@ -187,7 +187,7 @@
 @media screen and (max-width: 1500px) {
 
     .accueil_articles .ficelle, .lequipe .ficelle {
-        background-image: url("../img/ficelle_moyenne.png");
+        background-image: url("../img/ficelles/ficelle_moyenne.png");
     }
 
     .accueil_articles .timeline-block-left .ficelle {
@@ -226,11 +226,11 @@
     }
 
     .accueil_articles .ficelle {
-        background-image: url("../img/ficelle_moyenne_2.png");
+        background-image: url("../img/ficelles/ficelle_moyenne_2.png");
     }
 
     .lequipe .ficelle{
-        background-image: url("../img/ficelle_cercle.png");
+        background-image: url("../img/ficelles/ficelle_cercle_equipe.png");
         margin-top:0;
     }
 }
@@ -238,7 +238,7 @@
 
 @media screen and (max-width: 1120px){
     .nos_valeurs .timeline-block .ficelle, .lequipe .timeline-block .ficelle{
-        background-image: url("../img/ficelle_rond_avec_trou.png");
+        background-image: url("../img/ficelles/ficelle_rond_avec_trou.png");
     }
 
     .nos_valeurs .timeline-block .ficelle, .lequipe .timeline-block .ficelle  {
@@ -277,8 +277,8 @@
     .form-etiquette{
         width:70%;
     }
-    .nos_valeurs .timeline-block .ficelle{
-        background-image: url("../img/ficelle_moyenne_2.png");
+    .nos_valeurs .timeline-block .ficelle, .lequipe .timeline-block .ficelle{
+        background-image: url("../img/ficelles/ficelle_moyenne_2.png");
     }
 }
 
