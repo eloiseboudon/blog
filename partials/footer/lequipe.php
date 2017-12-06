@@ -14,14 +14,14 @@
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">
                     <div class="lequipe_image">
-                        <!--                    <img src="img/img_valeurs/social_solidaire.jpg">-->
+                        <img src="img/img_equipe/ju.png">
                     </div>
 
                     <div class="lequipe_titre">
-                        Justine Abécassis - co-fondatrice
+                        Justine Abécassis
                     </div>
 
-                    <div class="lequipe_contenu">
+                    <div class="lequipe_contenu" style="direction: ltr">
                         Au terme de son école de commerce NEOMA Business School, Justine décide d’exploiter sa
                         formation entrepreneuriale en travaillant sur un projet qui mêle deux de ses passions :
                         l’industrie de la mode et la responsabilité en entreprise.
@@ -36,11 +36,11 @@
                 <div class="ficelle"></div>
                 <div class="scroll timeline-content">
                     <div class="lequipe_image">
-                        <!--                    <img src="img/img_valeurs/social_solidaire.jpg">-->
+                        <img src="img/img_equipe/elo.png">
                     </div>
 
                     <div class="lequipe_titre">
-                        Eloïse Boudon - co-fondatrice
+                        Eloïse Boudon
                     </div>
 
                     <div class="lequipe_contenu">

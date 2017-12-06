@@ -78,11 +78,11 @@
     text-align: right;
 }
 
-.timeline-block-left .article_image, .timeline-block-left .valeur_image {
+.timeline-block-left .article_image, .timeline-block-left .valeur_image, .timeline-block-left .lequipe_image {
     float: left;
 }
 
-.timeline-block-right .article_image, .timeline-block-right .valeur_image {
+.timeline-block-right .article_image, .timeline-block-right .valeur_image, .timeline-block-right .lequipe_image {
     float: right;
 }
 
@@ -167,24 +167,24 @@ section {
 }
 
 @media screen and (max-width: 1120px){
-    .nos_valeurs .timeline-block{
+    .nos_valeurs .timeline-block, .lequipe .timeline-block{
         transform: rotate(0deg);
         float:none;
         direction: ltr;
     }
 
-    .nos_valeurs{
+    .nos_valeurs, .lequipe{
         overflow:visible;
     }
-    .nos_valeurs:before {
+    .nos_valeurs:before, .lequipe:before {
         left: 20px;
         width: 4px;
     }
-    .nos_valeurs .timeline-block-left .timeline-content{
+    .nos_valeurs .timeline-block-left .timeline-content, .lequipe .timeline-block-left .timeline-content{
         box-shadow: 12px 8px 8px #aaa;
     }
 
-    .nos_valeurs .timeline-block{
+    .nos_valeurs .timeline-block, .lequipe .timeline-block{
         width: 90%;
         margin-bottom: 30px;
         margin-left: 0;
@@ -198,30 +198,47 @@ section {
         margin-right: 10px;
     }
 
-    .nos_valeurs .timeline-block-left .marker {
+    .nos_valeurs .timeline-block-left .marker, .lequipe .timeline-block-left .marker{
         margin-right: 0;
         margin-left: 3px;
     }
 
-    .nos_valeurs .timeline-block-left .valeur_titre {
+    .nos_valeurs .timeline-block-left .valeur_titre, .lequipe .timeline-block-left .lequipe_titre {
         text-align: right;
     }
 
-    .nos_valeurs .timeline-block-left .valeur_image {
+    .nos_valeurs .timeline-block-left .valeur_image, .lequipe .timeline-block-left .lequipe_image {
         float: right;
         padding-left: 16px;
         padding-right:0;
     }
+
     .nos_valeurs .timeline-block .ficelle{
         left:1%;
         top:40px;
     }
 
+    .lequipe .timeline-block .ficelle{
+        top: 20px;
+    }
+
+    .lequipe .timeline-block-left .ficelle{
+        left:1%;
+
+    }
+
+    .lequipe .timeline-block-right .ficelle {
+        left:0;
+    }
 
     .nos_valeurs .timeline-block .cercle{
         left:7.5%;
     }
-    .nos_valeurs .timeline-block-left .valeur_contenu {
+
+    .lequipe .timeline-block .cercle{
+        left: 9%;
+    }
+    .nos_valeurs .timeline-block-left .valeur_contenu, .lequipe .timeline-block-left .lequipe_contenu {
         margin-left: 10%;
         text-align: right;
         margin-right:0;
@@ -231,6 +248,10 @@ section {
 
 
 @media screen and (max-width: 768px) {
+    .lequipe .timeline-block .ficelle{
+        left:-3%;
+
+    }
     .nos_valeurs .timeline-block .cercle{
         left:9%;
     }
@@ -285,10 +306,6 @@ section {
         box-shadow: 12px 8px 8px #aaa;
     }
 
-    .accueil_articles .timeline-block .timeline-content{
-        margin: 0 auto;
-    }
-
     .accueil_articles .timeline-block-left .article_image {
         float: right;
         padding-left: 16px;
@@ -312,15 +329,15 @@ section {
 
 
 @media screen and (max-width: 570px) {
-    .accueil_articles:before, .accueil_articles .timeline-block .ficelle, .accueil_articles .timeline-block .cercle, .accueil_articles .article_image{
+    .accueil_articles:before, .accueil_articles .timeline-block .ficelle, .accueil_articles .timeline-block .cercle,.lequipe:before, .accueil_articles .article_image, .lequipe .ficelle, .lequipe .cercle{
         display:none;
     }
 
-    .accueil_articles .timeline-block{
+    .accueil_articles .timeline-block, .lequipe .timeline-block{
         width: 100%;
     }
 
-    .accueil_articles .timeline-block .article_titre, .accueil_articles .timeline-block .article_details{
+    .accueil_articles .timeline-block .article_titre, .accueil_articles .timeline-block .article_details, .lequipe .timeline-block .lequipe_contenu, .lequipe .timeline-block .lequipe_titre{
         text-align: left;
         margin-left:0;
     }
@@ -341,8 +358,11 @@ section {
         text-align: left;
         margin-left:0;
     }
+}
 
-
-
-
+@media screen and (max-width: 400px) {
+    .lequipe .timeline-block .lequipe_image, .lequipe .timeline-block .lequipe_titre{
+        width: 100%;
+        text-align: center;
+    }
 }
