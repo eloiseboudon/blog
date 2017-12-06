@@ -57,10 +57,6 @@ $('.demask').on('click', function () {
     document.getElementById("commentaires-view-5").style.display = "block";
 });
 
-// $("#modal-pro-article").on('click',function () {
-//     $('#myModal_prochain_article').modal('show');
-//     document.getElementById("modal-pro-article").checked = false;
-// });
 
 $("#modal_update_email").on('click',function () {
     $('#myModalUpdateMail').modal('show');
@@ -68,16 +64,15 @@ $("#modal_update_email").on('click',function () {
 
 
 
-
 $(".smallSearchBox").on('click',function () {
-    if (document.getElementById("small_form").style.display == 'none'){
+    // if (document.getElementById("small_form").style.display == 'none'){
         document.getElementById("small_form").style.display = 'block';
-        document.getElementById("small_form").style.width = '100px';
+        // document.getElementById("small_form").style.width = '100px';
         document.getElementsByClassName("smallSearchBox")[0].style.display = 'none';
-    }
-    else{
-        document.getElementById("small_form").style.display = 'none';
-    }
+    // }
+    // else{
+    //     document.getElementById("small_form").style.display = 'none';
+    // }
 });
 
 

@@ -186,7 +186,7 @@
 
 @media screen and (max-width: 1500px) {
 
-    .accueil_articles .ficelle {
+    .accueil_articles .ficelle, .lequipe .ficelle {
         background-image: url("../img/ficelle_moyenne.png");
     }
 
@@ -228,18 +228,20 @@
     .accueil_articles .ficelle {
         background-image: url("../img/ficelle_moyenne_2.png");
     }
+
+    .lequipe .ficelle{
+        background-image: url("../img/ficelle_cercle.png");
+        margin-top:0;
+    }
 }
 
 
 @media screen and (max-width: 1120px){
-    .nos_valeurs .timeline-block .ficelle{
+    .nos_valeurs .timeline-block .ficelle, .lequipe .timeline-block .ficelle{
         background-image: url("../img/ficelle_rond_avec_trou.png");
     }
 
-    .nos_valeurs .timeline-block-left .ficelle {
-        transform: scaleX(-1);
-    }
-    .nos_valeurs .timeline-block-right .ficelle {
+    .nos_valeurs .timeline-block .ficelle, .lequipe .timeline-block .ficelle  {
         transform: scaleX(-1);
     }
 

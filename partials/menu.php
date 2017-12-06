@@ -14,14 +14,6 @@
                 </form>
             </div>
             <div class="col-sm-4 col-xs-4 right-top-all">
-                <form id="small_form" name="formsearch" action="index.php" method="get">
-                    <label id="searchLabel">
-                        <input name="search" type="text" id="searchInput">
-                        <span class="fa fa-search"  onclick="formsearch.submit()"></span>
-                    </label>
-                </form>
-
-                <span class="smallSearchBox" id="right-top"><a href="#"><i class="fa fa-search cercle" aria-hidden="true"></i> Search</a></span>
 
                 <?php
                 if (isset($_SESSION['connexion'])) {
@@ -47,5 +39,16 @@
                                     Connexion</a></span> <?php } ?>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12" id="smallSearch">
+                <form name="formsearch" action="index.php" method="get">
+                    <label id="searchLabel">
+                        <input name="search" type="text" id="searchInput" placeholder="Rechercher">
+                        <span class="fa fa-search"  onclick="formsearch.submit()"></span>
+                    </label>
+                </form>
+            </div>
+        </div>
+
     </div>
 </div>
