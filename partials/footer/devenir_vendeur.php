@@ -1,3 +1,7 @@
+<title>
+    Devenir vendeur - L’étiquette - Blog mode éthique
+    Vous travaillez pour une marque de mode éthique et souhaitez élargir vos canaux de distribution ? Remplissez ce formulaire pour devenir vendeur sur notre marketplace de mode éthique !
+</title>
 <div class="contenu">
     <div class="form-etiquette">
         <div class="cercle"></div>

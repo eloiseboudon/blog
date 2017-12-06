@@ -18,6 +18,11 @@ $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
 $donnees = mysqli_fetch_array($req);
 ?>
+
+    <title>
+        <?php echo $donnees['titre']; ?> - L'étiquette
+        <?php echo $donnees['description']; ?>
+    </title>
     <div class="article">
 
         <div class="article_titre">

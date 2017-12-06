@@ -527,7 +527,7 @@ h2 {
 
 .article_sociaux {
     display: flex;
-    width: 60%;
+    width: 100%;
 }
 
 .article_sociaux .partage_reseaux_sociaux {
@@ -996,7 +996,7 @@ h2 {
         width: 200px;
     }
 
-    .article .article_contenu {
+    .article{
         margin-left: 10px;
         margin-right: 10px;
     }

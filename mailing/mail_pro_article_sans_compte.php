@@ -16,7 +16,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
     $email = $_POST['email'];
 
     $bdd = connexion_sql();
-    $sql = "INSERT INTO mail(id_membre,nom, prenom, email, prochain_article) VALUES (0,'$nom','$prenom','$email',1)";
+    $sql = "INSERT INTO mail(id_membre,date,nom, prenom, email, prochain_article) VALUES (0,NOW(),'$nom','$prenom','$email',1)";
     $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 }
 session_start();

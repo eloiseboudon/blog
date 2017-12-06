@@ -31,7 +31,7 @@ if (isset($_POST['nom'])) {
     $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
         . $secret
         . "&response=" . $response
-        . "&remoteip=" . $remoteip ;
+        . "&remoteip=" . $remoteip;
 
     if (count($checkbox) != 1) {
         $courrier = 1;
@@ -95,18 +95,42 @@ if (isset($_POST['nom'])) {
         } else {
 
 
-            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,ville,telephone,recevoir_mail,date_inscription, token, confirmation_token)
-VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$ville','$telephone','$courrier' ,NOW(),'$token', null)";
+            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,ville,telephone,date_inscription, recevoir_mail)
+VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$ville','$telephone',NOW(),'$courrier')";
             $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
             $user_id = mysqli_insert_id($bdd);
+
+            $sql2 = "INSERT INTO verifications (id_membre, derniere_connexion, token,confirmation_token)
+VALUES('$user_id',NOW(),'$token',null)";
+            $req2 = $bdd->query($sql2) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
+
+
             session_start();
 
             $_SESSION['token'] = $token;
             $_SESSION['mail'] = $email;
             $_SESSION['user_id'] = $user_id;
 
-            if (mail($email, 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien http://letiquette-blog.com/sql/confirm.php?id=$user_id&token=$token", $headers)) {
+
+            $message = "Bonjour $prenom,
+
+Pour valider votre inscription chez L’étiquette, veuillez
+cliquer sur le lien ci-dessous :
+
+http://letiquette-blog.com/sql/confirm.php?id=$user_id&token=$token
+
+Si le lien ne fonctionne pas, copiez-collez le dans la barre de
+navigation de votre navigateur.
+
+Merci et à très bientôt !
+
+L’équipe L’étiquette
+
+Merci de ne pas répondre à ce message. Si vous souhaitez
+nous contacter, utilisez le formulaire en ligne : https://www.letiquette-blog.com/index.php?page=contact";
+
+            if (mail($email, 'Veuillez confirmer votre e-mail', $message, $headers)) {
                 $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
             } else {
                 $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../index.php?page=contact\">contacter</a> s'il vous plait.";
@@ -116,15 +140,12 @@ VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anni
             exit();
 
         }
-    }
-
-    else {
-       echo "erreur captcha";
+    } else {
+        echo "erreur captcha";
     }
 
 
 }
-
 
 
 ?>
