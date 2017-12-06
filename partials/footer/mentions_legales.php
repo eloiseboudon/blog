@@ -1,3 +1,8 @@
+<title>
+    Mentions légales - L’étiquette - Blog mode éthique
+    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Consultez ici nos mentions légales.
+</title>
+
 <div class="mentions_legales_global">
     <h1>Mentions légales</h1>
     <div class="mentions_legales">

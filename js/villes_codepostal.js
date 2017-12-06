@@ -1,4 +1,3 @@
-
 jQuery(function ($) {
     var _code = $('#code'), _city = $('#city'), _out = $('#output');
     var _cache = {};

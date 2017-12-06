@@ -5,11 +5,8 @@ require 'connexion.php';
 
 if (isset($_POST['login']) && isset($_POST['password'])) {
 
-
-
     $login = $_POST['login'];
     $password = $_POST['password'];
-
 
     echo $login;
 
@@ -42,10 +39,19 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
         $user = mysqli_fetch_array($req);
+        $user_id = $user['id'];
+
+        $sql2 = "SELECT * FROM verifications WHERE id_membre = '$user_id'";
+        $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
+        $user_confirm = mysqli_fetch_array($req2);
 
         if (password_verify($password, $user['password'])) {
             session_start();
-            if ($user['confirmation_token'] == 1) {
+            if ($user_confirm['confirmation_token'] == 1) {
+
+                $sql3 = "UPDATE verifications SET derniere_connexion = NOW() WHERE id_membre ='$user_id'";
+                $req3 = $bdd->query($sql3) or die ('Erreur SQL : ' . mysqli_error($bdd));
+
                 $_SESSION['user'] = $user;
                 $_SESSION['connexion'] = "site";
                 $_SESSION['flash']['success'] = "Vous êtes connecté.";
@@ -69,21 +75,6 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 } else {
     header('location: ../index.php?page=3');
     exit();
-}
-
-
-function envoi_token(){
-
-    echo "<script>alert('test');</script>";
-
-    session_start();
-    $email = $_SESSION['mail'];
-    $token = $_SESSION['token'];
-    $user_id = $_SESSION['user_id'];
-    $headers = "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>";
-
-    mail($email, 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien http://letiquette-blog.com/sql/confirm.php?id=$user_id&token=$token", $headers);
-
 }
 
 ?>

@@ -47,8 +47,6 @@ include('sql/connexion.php');
         gtag('config', 'UA-110425305-1');
     </script>
 
-    <title>L'étiquette - Blog</title>
-
     <meta name="author" content="L'étiquette"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
@@ -88,7 +86,12 @@ include('sql/connexion.php');
 //
 //if(isset($_SESSION['auto_log']))
 //var_dump($_SESSION['auto_log']);
-//?>
+
+
+//if(isset($_SESSION['connexion'])){
+//    var_dump($_SESSION['connexion']);
+//}
+?>
 
 
 <div class="contenu">
@@ -160,7 +163,7 @@ include('sql/connexion.php');
 
             }
         } elseif (isset($_GET['search'])) {
-                include('partials/search.php');
+            include('partials/search.php');
         } else {
             include('partials/accueil.php');
         }
@@ -171,8 +174,8 @@ include('sql/connexion.php');
 <div id="footer">
     <?php include('partials/footer.php'); ?>
 </div>
-<script src="js/jquery-3.2.1.min.js"></script>
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
         integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>

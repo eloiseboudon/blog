@@ -1,3 +1,8 @@
+<title>
+    L’étiquette - Blog mode éthique  - Accueil
+    Retrouvez des articles fun et décalés sur le shopping responsable. Chaque semaine, apprenez-en un peu plus sur les alternatives au cuir animal, les matières recyclées, le coton bio, les modes de production, ce qui se cache derrière le made in France, et plein d’autres facettes de la mode éthique.
+</title>
+
 <?php
 //if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 //{
@@ -18,7 +23,6 @@ if (isset($_COOKIE['cookie_pseudo'])){
 
 <?php
 afficher_liste_articles();
-
 
 
 function afficher_liste_articles()
