@@ -1,6 +1,5 @@
 <?php
 include_once 'vendor/autoload.php';
-//include 'sqL/connexion.php';
 
 const CLIENT_ID = '121564257068-dsfqbu2qnc0m38rmg7mc0lbadbnk4ogf.apps.googleusercontent.com';
 const CLIENT_SECRET = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';

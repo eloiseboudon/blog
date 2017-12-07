@@ -47,7 +47,7 @@ if ($user && $user['token'] == $token) {
         <title>Bienvenue chez L\'étiquette</title>
     </head>
     <body>
-        <h1>Merci de nous avoir rejoint ! </h1>
+        <h1>Merci pour votre message! </h1>
         Bonjour '. $prenom .',<br />
 
 Votre inscription est maintenant validée. <br />
@@ -70,30 +70,6 @@ http://www.letiquette-blog.com/index.php?page=contact
     </body>
     </html>';
 
-
-
-
-
-    $message = "Bonjour $prenom,
-       
-Votre inscription est maintenant validée.
-Merci de nous avoir fait l’immense honneur de nous rejoindre ! Nous avons hâte de vous faire découvrir notre univers. Ensemble, nous allons changer le monde $prenom.
-
-Vous êtes $pret_sexe ? Alors cliquez sur le lien ci-dessous !
-http://letiquette-blog.com/index.php
-
-Pour rappel, votre identifiant est :$email et le pseudo que vous avez choisi est : $pseudo. Vous seul connaissez votre mot de passe. 
-Conservez vos identifiants pour accéder à votre compte. Vous pouvez à tout moment modifier vos informations personnelles depuis votre compte. 
-http://www.letiquette-blog.com/index.php?page=mon_compte
-
-A très bientôt ! 
-
-L’équipe L’étiquette 
-
-Si les liens ne fonctionnent pas, copiez-collez les dans la barre de navigation de votre navigateur. 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/index.php?page=contact
-";
 
 
     mail($email, "Bienvenue chez L'étiquette ! ", $message, $headers);
