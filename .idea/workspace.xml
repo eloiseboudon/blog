@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/auth/googlePlus_connexion.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/auth/googlePlus_config.php" afterPath="$PROJECT_DIR$/auth/googlePlus_config.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/partials/authentification.php" afterPath="$PROJECT_DIR$/partials/authentification.php" />
-      <change beforePath="$PROJECT_DIR$/partials/inscription.php" afterPath="$PROJECT_DIR$/partials/inscription.php" />
-      <change beforePath="$PROJECT_DIR$/sql/deconnexion.php" afterPath="$PROJECT_DIR$/sql/deconnexion.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,12 +27,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+              <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googlePlus_connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth/googlePlus_connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <marker date="1512668461115" expanded="true" signature="1322:1381" ph="SELECT COUNT... " />
+                <marker date="1512668461115" expanded="true" signature="1811:2049" ph="INSERT INTO membres... " />
+                <marker date="1512668461115" expanded="true" signature="2227:2309" ph="INSERT INTO verifications... " />
+                <marker date="1512668461115" expanded="true" signature="2504:2548" ph="SELECT * fro... membres" />
+                <marker date="1512668461115" expanded="true" signature="2755:2834" ph="UPDATE verifications... " />
+                <marker date="1512668461115" expanded="true" signature="3458:3467" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googlePlus_config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auth/googlePlus_config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+              <folding>
+                <marker date="1512668493539" expanded="true" signature="1512:1571" ph="SELECT COUNT... " />
+                <marker date="1512668493539" expanded="true" signature="1761:1890" ph="INSERT INTO membres... " />
+                <marker date="1512668493539" expanded="true" signature="2045:2127" ph="INSERT INTO verifications... " />
+                <marker date="1512668493539" expanded="true" signature="2253:2297" ph="SELECT * fro... membres" />
+                <marker date="1512668493539" expanded="true" signature="2476:2555" ph="UPDATE verifications... " />
+                <marker date="1512668493539" expanded="true" signature="2660:2703" ph="SELECT * fro... membres" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,9 +173,9 @@
         <option value="$PROJECT_DIR$/auth/googlePlus_connexion.php" />
         <option value="$PROJECT_DIR$/partials/authentification.php" />
         <option value="$PROJECT_DIR$/sql/deconnexion.php" />
-        <option value="$PROJECT_DIR$/auth/googlePlus_config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/partials/inscription.php" />
+        <option value="$PROJECT_DIR$/auth/googlePlus_config.php" />
       </list>
     </option>
   </component>
@@ -330,17 +358,18 @@
       <workItem from="1512461086880" duration="19756000" />
       <workItem from="1512492904596" duration="1689000" />
       <workItem from="1512542633094" duration="24920000" />
-      <workItem from="1512631208856" duration="22255000" />
+      <workItem from="1512631208856" duration="22333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="497596000" />
+    <option name="totallyTimeSpent" value="497674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -599,11 +628,11 @@
         <state relative-caret-position="765">
           <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
           <folding>
-            <marker date="1512653887054" expanded="true" signature="783:1347" ph="..." />
-            <marker date="1512653887054" expanded="true" signature="794:858" ph="..." />
-            <marker date="1512653887054" expanded="true" signature="810:858" ph="..." />
-            <marker date="1512653887054" expanded="true" signature="864:1021" ph="..." />
-            <marker date="1512653887054" expanded="true" signature="864:1335" ph="..." />
+            <marker date="1512668461178" expanded="true" signature="783:1347" ph="..." />
+            <marker date="1512668461178" expanded="true" signature="794:858" ph="..." />
+            <marker date="1512668461178" expanded="true" signature="810:858" ph="..." />
+            <marker date="1512668461178" expanded="true" signature="864:1021" ph="..." />
+            <marker date="1512668461178" expanded="true" signature="864:1335" ph="..." />
           </folding>
         </state>
       </provider>
@@ -621,18 +650,18 @@
         <state relative-caret-position="413">
           <caret line="129" column="81" lean-forward="false" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="81" />
           <folding>
-            <marker date="1512653993205" expanded="true" signature="1227:1289" ph="SELECT COUNT... " />
-            <marker date="1512653993205" expanded="true" signature="1453:1513" ph="SELECT COUNT... " />
-            <marker date="1512653993205" expanded="true" signature="2906:3213" ph="INSERT INTO membres... " />
-            <marker date="1512653993205" expanded="true" signature="3381:3503" ph="INSERT INTO verifications... " />
-            <marker date="1512653993205" expanded="true" signature="4022:4727" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4023:4727" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4033:4100" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4111:4177" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4111:4342" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4111:4343" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4111:4362" ph="..." />
-            <marker date="1512653993205" expanded="true" signature="4111:4715" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="1227:1289" ph="SELECT COUNT... " />
+            <marker date="1512668461204" expanded="true" signature="1453:1513" ph="SELECT COUNT... " />
+            <marker date="1512668461204" expanded="true" signature="2906:3213" ph="INSERT INTO membres... " />
+            <marker date="1512668461204" expanded="true" signature="3381:3503" ph="INSERT INTO verifications... " />
+            <marker date="1512668461204" expanded="true" signature="4022:4727" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4023:4727" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4033:4100" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4111:4177" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4111:4342" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4111:4343" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4111:4362" ph="..." />
+            <marker date="1512668461204" expanded="true" signature="4111:4715" ph="..." />
           </folding>
         </state>
       </provider>
@@ -663,9 +692,9 @@
         <state relative-caret-position="493">
           <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
-            <marker date="1512654336540" expanded="true" signature="207:338" ph="SELECT * FRO... verifiations" />
-            <marker date="1512654336540" expanded="true" signature="705:797" ph="UPDATE verfication... " />
-            <marker date="1512654336540" expanded="true" signature="927:986" ph="UPDATE membre... " />
+            <marker date="1512668461202" expanded="true" signature="207:338" ph="SELECT * FRO... verifiations" />
+            <marker date="1512668461202" expanded="true" signature="705:797" ph="UPDATE verfication... " />
+            <marker date="1512668461202" expanded="true" signature="927:986" ph="UPDATE membre... " />
           </folding>
         </state>
       </provider>
@@ -675,12 +704,12 @@
         <state relative-caret-position="617">
           <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
           <folding>
-            <marker date="1512654424798" expanded="true" signature="114:220" ph="SELECT * FRO... verifications" />
-            <marker date="1512654424798" expanded="true" signature="404:496" ph="UPDATE verifications... " />
-            <marker date="1512654424798" expanded="true" signature="1325:2521" ph="..." />
-            <marker date="1512654424798" expanded="true" signature="1336:1368" ph="..." />
-            <marker date="1512654424798" expanded="true" signature="1336:1399" ph="..." />
-            <marker date="1512654424798" expanded="true" signature="1410:2509" ph="..." />
+            <marker date="1512668461171" expanded="true" signature="114:220" ph="SELECT * FRO... verifications" />
+            <marker date="1512668461171" expanded="true" signature="404:496" ph="UPDATE verifications... " />
+            <marker date="1512668461171" expanded="true" signature="1325:2521" ph="..." />
+            <marker date="1512668461171" expanded="true" signature="1336:1368" ph="..." />
+            <marker date="1512668461171" expanded="true" signature="1336:1399" ph="..." />
+            <marker date="1512668461171" expanded="true" signature="1410:2509" ph="..." />
           </folding>
         </state>
       </provider>
@@ -698,11 +727,11 @@
         <state relative-caret-position="566">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <marker date="1512653993171" expanded="true" signature="238:280" ph="SELECT * FRO... membres" />
-            <marker date="1512653993171" expanded="true" signature="567:684" ph="UPDATE membres... " />
-            <marker date="1512653993171" expanded="true" signature="1156:1925" ph="..." />
-            <marker date="1512653993171" expanded="true" signature="1167:1234" ph="..." />
-            <marker date="1512653993171" expanded="true" signature="1245:1913" ph="..." />
+            <marker date="1512668461202" expanded="true" signature="238:280" ph="SELECT * FRO... membres" />
+            <marker date="1512668461202" expanded="true" signature="567:684" ph="UPDATE membres... " />
+            <marker date="1512668461202" expanded="true" signature="1156:1925" ph="..." />
+            <marker date="1512668461202" expanded="true" signature="1167:1234" ph="..." />
+            <marker date="1512668461202" expanded="true" signature="1245:1913" ph="..." />
           </folding>
         </state>
       </provider>
@@ -734,41 +763,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/googlePlus_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <marker date="1512655943638" expanded="true" signature="1322:1381" ph="SELECT COUNT... " />
-            <marker date="1512655943638" expanded="true" signature="1811:2049" ph="INSERT INTO membres... " />
-            <marker date="1512655943638" expanded="true" signature="2227:2309" ph="INSERT INTO verifications... " />
-            <marker date="1512655943638" expanded="true" signature="2504:2548" ph="SELECT * fro... membres" />
-            <marker date="1512655943638" expanded="true" signature="2755:2834" ph="UPDATE verifications... " />
-            <marker date="1512655943638" expanded="true" signature="3458:3467" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/googlePlus_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-          <folding>
-            <marker date="1512668274615" expanded="true" signature="1543:1602" ph="SELECT COUNT... " />
-            <marker date="1512668274615" expanded="true" signature="1792:1921" ph="INSERT INTO membres... " />
-            <marker date="1512668274615" expanded="true" signature="2076:2158" ph="INSERT INTO verifications... " />
-            <marker date="1512668274615" expanded="true" signature="2284:2328" ph="SELECT * fro... membres" />
-            <marker date="1512668274615" expanded="true" signature="2507:2586" ph="UPDATE verifications... " />
-            <marker date="1512668274615" expanded="true" signature="2691:2734" ph="SELECT * fro... membres" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,8 +790,38 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+          <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/googlePlus_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <marker date="1512668461115" expanded="true" signature="1322:1381" ph="SELECT COUNT... " />
+            <marker date="1512668461115" expanded="true" signature="1811:2049" ph="INSERT INTO membres... " />
+            <marker date="1512668461115" expanded="true" signature="2227:2309" ph="INSERT INTO verifications... " />
+            <marker date="1512668461115" expanded="true" signature="2504:2548" ph="SELECT * fro... membres" />
+            <marker date="1512668461115" expanded="true" signature="2755:2834" ph="UPDATE verifications... " />
+            <marker date="1512668461115" expanded="true" signature="3458:3467" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/googlePlus_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <marker date="1512668493539" expanded="true" signature="1512:1571" ph="SELECT COUNT... " />
+            <marker date="1512668493539" expanded="true" signature="1761:1890" ph="INSERT INTO membres... " />
+            <marker date="1512668493539" expanded="true" signature="2045:2127" ph="INSERT INTO verifications... " />
+            <marker date="1512668493539" expanded="true" signature="2253:2297" ph="SELECT * fro... membres" />
+            <marker date="1512668493539" expanded="true" signature="2476:2555" ph="UPDATE verifications... " />
+            <marker date="1512668493539" expanded="true" signature="2660:2703" ph="SELECT * fro... membres" />
+          </folding>
         </state>
       </provider>
     </entry>
