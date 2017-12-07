@@ -53,12 +53,11 @@
             <a href="index.php?page=5">Mot de passe oublié</a>
 
 
-            <div>
-                <?php
-                if (!isset($_SESSION['connexion']))
-                    google_api();
-                ?>
-            </div>
+            <?php
+            if (!isset($_SESSION['connexion'])) {
+                google_api();
+            }
+            ?>
         </div>
     </div>
 </div>
@@ -137,7 +136,7 @@ VALUES ('$nom','$prenom','$pseudo','','$email','$sexe','$date_anniversaire','','
             }
 
             $gpUserData['pseudo'] = $pseudo;
-            $_SESSION['connexion'] = "google";
+//            $_SESSION['connexion'] = "google";
             $_SESSION['user'] = $gpUserData;
 
 

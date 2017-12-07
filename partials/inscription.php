@@ -145,13 +145,11 @@
             </div>
 
             <input type="submit" value="Valider"/>
-
-            <div>
-                <?php
-                if (!isset($_SESSION['connexion']))
-                    google_api();
-                ?>
-            </div>
+            <?php
+            if (!isset($_SESSION['connexion'])) {
+                google_api();
+            }
+            ?>
 
         </form>
     </div>

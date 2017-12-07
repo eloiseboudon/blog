@@ -79,8 +79,8 @@ include('sql/connexion.php');
 
 
 <?php
-//if(isset($_SESSION['user']))
-//var_dump($_SESSION['user']);
+if(isset($_SESSION['user']))
+var_dump($_SESSION['user']);
 //echo $_COOKIE['isConnect'];
 //echo $_SESSION['connexion'];
 //
@@ -160,7 +160,9 @@ include('sql/connexion.php');
                 case "devenir_vendeur":
                     include('partials/footer/devenir_vendeur.php');
                     break;
-
+                case "reset":
+                    include('partials/reset.php');
+                    break;
             }
         } elseif (isset($_GET['search'])) {
             include('partials/search.php');
