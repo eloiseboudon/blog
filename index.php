@@ -26,6 +26,7 @@ if (isset($_COOKIE['isConnect'])) {
     }
 }
 
+
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
 
@@ -79,8 +80,8 @@ include('sql/connexion.php');
 
 
 <?php
-if(isset($_SESSION['user']))
-var_dump($_SESSION['user']);
+//if (isset($_SESSION['user']))
+//    var_dump($_SESSION['user']);
 //echo $_COOKIE['isConnect'];
 //echo $_SESSION['connexion'];
 //

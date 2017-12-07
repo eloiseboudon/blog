@@ -6,9 +6,9 @@ if($_SESSION['connexion'] == "site"){
     $_SESSION = array();
 }elseif($_SESSION['connexion'] == "google"){
 
-    $accesstoken = $_SESSION['token-google'];
+    $accesstoken = $_SESSION['access_token'];
 
-    unset($_SESSION['token-google']);
+    unset($_SESSION['access_token']);
     unset($_SESSION['user']);
 
     $client = new Google_Client();
