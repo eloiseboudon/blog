@@ -141,7 +141,9 @@ http://www.letiquette-blog.com/index.php?page=contact
     </html>';
 
 
-            if (mail($email, 'Veuillez confirmer votre e-mail', $message, $headers)) {
+
+
+            if (mail($email, 'Veuillez confirmer votre e-mail', $message_contact, $headers)) {
                 $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
             } else {
                 $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../index.php?page=contact\">contacter</a> s'il vous plait.";

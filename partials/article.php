@@ -241,6 +241,36 @@ function inserer_commentaire($article, $contenu)
     $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$id_auteur','$contenu', NOW() )";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
+    $sql2 = "SELECT * from membres WHERE id='$id_auteur'";
+    $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
+    $user = mysqli_fetch_array($req2);
+
+    $prenom = $user['prenom'];
+
+
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>" . "\r\n";
+
+    $subject = "";
+
+    $message = "
+            <html>
+    <head>
+        <title>Merci pour votre commentaire</title>
+    </head>
+    <body>
+        <h1>Merci de nous avoir commentaire ! </h1>
+        Bonjour $prenom,<br />
+
+Votre commentaire nous a bien été envoyé et sera bientôt visible par les autres utilisateurs. 
+Pour rappel, vous avez écrit : $contenu  <br />
+A très bientôt !<br />
+L’équipe L’étiquette<br />
+Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
+http://www.letiquette-blog.com/index.php?page=contact
+    </body>
+    </html>";
 
     ?>
     <div class="pop-up">
@@ -249,6 +279,8 @@ function inserer_commentaire($article, $contenu)
         echo 'Merci pour votre commentaire, celui-ci sera bientot en ligne.';
         ?></div>
     </div><?php
+
+
 }
 
 function afficher_commentaires($id_article)
