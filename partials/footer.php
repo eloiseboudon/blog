@@ -3,7 +3,7 @@
         <div class="global_width_bottom">
             <div class="row">
                 <div class="col-lg-3 col-sm-3 col-6 aide">
-                    <h1>Besoin d'aide</h1>
+                    <h1>Besoin d'aide ?</h1>
                     <ul>
                         <li>
                             <a href="index.php?page=contact">
