@@ -141,8 +141,6 @@ http://www.letiquette-blog.com/index.php?page=contact
     </html>';
 
 
-
-
             if (mail($email, 'Veuillez confirmer votre e-mail', $message_contact, $headers)) {
                 $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
             } else {
@@ -151,10 +149,12 @@ http://www.letiquette-blog.com/index.php?page=contact
 
             header('location:../index.php');
             exit();
-
         }
     } else {
-        echo "erreur captcha";
+        session_start();
+        $_SESSION['flash']['error'] = "Veuillez cocher le CAPTCHA s'il vous plait.";
+        header('location:../index.php?page=4');
+        exit();
     }
 
 
