@@ -5,7 +5,7 @@ const CLIENT_ID = '121564257068-dsfqbu2qnc0m38rmg7mc0lbadbnk4ogf.apps.googleuser
 const CLIENT_SECRET = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';
 const REDIRECT_URL = 'http://www.letiquette-blog.com/index.php?page=3';
 
-session_start();
+//session_start();
 
 $client = new Google_Client();
 $client->setClientId(CLIENT_ID);
