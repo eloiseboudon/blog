@@ -46,7 +46,7 @@ function afficher_liste_articles()
                         <div class="cercle"></div>
                         <div class="ficelle"></div>
                         <div class="scroll timeline-content">
-                            <a href="index_.php?page=article&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
+                            <a href="index.php?page=article&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
                                 <div class="article_image">
                                     <img src="<?php echo $donnees['img_article']; ?>">
                                 </div>

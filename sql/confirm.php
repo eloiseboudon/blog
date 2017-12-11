@@ -37,7 +37,7 @@ if ($user && $user['token'] == $token) {
 
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
+    $headers .= "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
 
     $message = '
             <html>
@@ -45,16 +45,16 @@ if ($user && $user['token'] == $token) {
         <title>Bienvenue chez L\'étiquette</title>
     </head>
     <body>
-        <h1>Merci pour votre message! </h1>
+        <h1>Merci pour votre inscription ! </h1>
         Bonjour '. $prenom .',<br />
 
 Votre inscription est maintenant validée. <br />
-Merci de nous avoir fait l’immense honneur de nous rejoindre ! Nous avons hâte de vous faire découvrir notre univers. Ensemble, nous allons changer le monde $prenom.<br />
+Merci de nous avoir fait l’immense honneur de nous rejoindre ! Nous avons hâte de vous faire découvrir notre univers. Ensemble, nous allons changer le monde '. $prenom .'.<br />
 
-Vous êtes $pret_sexe ? Alors cliquez sur le lien ci-dessous !<br />
+Vous êtes '. $pret_sexe .' ? Alors cliquez sur le lien ci-dessous !<br />
 http://letiquette-blog.com/index.php <br />
 
-Pour rappel, votre identifiant est :$email et le pseudo que vous avez choisi est : $pseudo. Vous seul connaissez votre mot de passe. 
+Pour rappel, votre identifiant est : '. $email .' et le pseudo que vous avez choisi est : '. $pseudo .'. Vous seul connaissez votre mot de passe. 
 Conservez vos identifiants pour accéder à votre compte. Vous pouvez à tout moment modifier vos informations personnelles depuis votre compte. 
 http://www.letiquette-blog.com/index.php?page=mon_compte <br />
 
