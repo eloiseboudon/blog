@@ -114,20 +114,19 @@ VALUES('$user_id',NOW(),'$token',null)";
 
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
+            $headers .= "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>" . "\r\n";
 
-            $message = '
-            <html>
+            $message = '<html>
     <head>
         <title>Veuillez confirmer votre e-mail</title>
     </head>
     <body>
         <h1>Merci de nous avoir rejoint ! </h1>
-        Bonjour '. $prenom .',<br />
+        Bonjour ' . $prenom . ',<br />
 
 Pour valider votre inscription chez L’étiquette, veuillez cliquer sur le lien ci-dessous :<br />
 
-http://letiquette-blog.com/sql/confirm.php?id='.$user_id.'&token='.$token.'<br />
+http://letiquette-blog.com/sql/confirm.php?id=' . $user_id . '&token=' . $token . '<br />
 
 Si le lien ne fonctionne pas, copiez-collez le dans la barre de navigation de votre navigateur.<br />
 
