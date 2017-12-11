@@ -17,8 +17,8 @@ $headers .= "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>" . "\r\n";
 
 $date = date("d/m/Y");
 
-
-//adresses email non membre
+echo "Non membres: <br />";
+//adresses email non membres
 $sql = "SELECT email, prenom FROM mail WHERE newsletter=1 and id_membre = 0";
 $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 while ($donnees = mysqli_fetch_array($req)) {
@@ -41,11 +41,12 @@ news
 
 
     if (mail($email, $objet, $message, $headers)) {
-        echo "Envoyé";
+        echo $email;
+        echo "<br />";
     }
 }
 
-
+echo "Membres: <br />";
 //adresse email membres
 $sql2 = "SELECT membres.email, membres.prenom FROM mail JOIN membres ON mail.id_membre=membres.id WHERE newsletter=1 AND id_membre <> 0";
 $req2 = $bdd->query($sql2) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
@@ -70,7 +71,8 @@ news
 
 
     if (mail($email, $objet, $message, $headers)) {
-        echo "Envoyé";
+        echo $email;
+        echo "<br />";
     }
 }
 
