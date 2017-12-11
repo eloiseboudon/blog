@@ -7,9 +7,7 @@ if (isset($_COOKIE['pseudo'])) {
 
     $bdd = connexion_sql();
     $sql = "SELECT * from membres WHERE pseudo = '$pseudo'";
-
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
-
     $user = mysqli_fetch_array($req);
 
     if (!$user) {

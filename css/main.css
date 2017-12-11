@@ -10,6 +10,7 @@ h1, h3 {
 
 h2 {
     font-family: 'Dosis', sans-serif;
+    font-size:1.3rem;
 }
 
 .container {
@@ -42,6 +43,20 @@ h2 {
     margin: auto;
     padding: 0 50px;
     height: 100%;
+}
+
+
+.landing_page{
+    margin:10px;
+}
+
+.landing_page h1{
+    color:#880015;
+    text-align: center;
+}
+
+.landing_page h2{
+    padding:20px;
 }
 
 #top-page {

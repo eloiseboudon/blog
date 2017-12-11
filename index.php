@@ -74,8 +74,10 @@ include('sql/connexion.php');
 
 <div class="menu">
     <?php
-    include('partials/menu.php');
-    ?>
+
+    if (isset($_GET['page']) || isset($_GET['search'])) {
+        include('partials/menu.php');
+    } ?>
 </div>
 
 
@@ -168,14 +170,17 @@ include('sql/connexion.php');
         } elseif (isset($_GET['search'])) {
             include('partials/search.php');
         } else {
-            include('partials/accueil.php');
+            include('landingPage.php');
         }
         ?>
     </div>
 </div>
 
 <div id="footer">
-    <?php include('partials/footer.php'); ?>
+
+    <?php if (isset($_GET['page']) || isset($_GET['search'])) {
+        include('partials/footer.php');
+    } ?>
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
