@@ -6,9 +6,7 @@ require 'connexion.php';
 
 $bdd = connexion_sql();
 $sql = "SELECT * FROM verifications JOIN membres ON verifications.id_membre=membres.id WHERE id_membre ='$user_id'";
-
 $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
-
 $user = mysqli_fetch_array($req);
 
 session_start();

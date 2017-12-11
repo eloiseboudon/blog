@@ -10,7 +10,6 @@ if (isset($_POST['id']) && isset($_POST['token'])) {
     $bdd = connexion_sql();
     $sql = "SELECT * FROM verifications WHERE id_membre='$user_id' AND token = '$token' AND confirmed_at > DATE_SUB(NOW(), INTERVAL  30 MINUTE)";
     $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
-
     $user = mysqli_fetch_array($req);
 
     if ($user) {
