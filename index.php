@@ -35,7 +35,8 @@ include('sql/connexion.php');
 <head>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110425305-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110425305-1"></script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111135520-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -45,7 +46,7 @@ include('sql/connexion.php');
 
         gtag('js', new Date());
 
-        gtag('config', 'UA-110425305-1');
+        gtag('config', 'UA-111135520-1');
     </script>
 
     <meta name="author" content="L'étiquette"/>

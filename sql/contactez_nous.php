@@ -22,7 +22,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
     Voici la demande : '$commentaire'";
 
 
-    $subject_contact = $prenom . ', merci pour votre message ! ';
+    $subject_contact = 'L\'etiquette, ' . $demande;
 
     $message_contact = "
             <html>
@@ -33,12 +33,12 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
         <h1>Merci de nous avoir rejoint ! </h1>
         Bonjour $prenom,<br />
 
-Votre message a bien été envoyé. Pour rappel, vous nous avez écrit : <br />$demande <br />
+Votre message a bien été envoyé. Pour rappel, vous nous avez écrit : <br />$commentaire <br />
 Nous reviendrons vers vous dans les plus brefs délais.  <br />
 A très bientôt !<br />
 L’équipe L’étiquette<br />
-Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/index.php?page=contact
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http://www.letiquette-blog.com/index.php?page=contact\">contacter</a>, utilisez le formulaire en ligne.
+
     </body>
     </html>";
 

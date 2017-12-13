@@ -39,8 +39,8 @@ A très bientôt ! <br />
 L’équipe L’étiquette <br />
 
 Si les liens ne fonctionnent pas, copiez-collez les dans la barre de navigation de votre navigateur. <br />
-Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/index.php?page=contact
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne.
+
     </body>
     </html>';
 
@@ -50,7 +50,7 @@ http://www.letiquette-blog.com/index.php?page=contact
 
     $_SESSION['user'] = $user;
 
-    header('Location: ../index.php?page=3');
+    header('Location: ../index.php');
     exit();
 } else {
     $_SESSION['flash']['error'] = "La modification n'a pas fonctionné, veuillez nous contacter";

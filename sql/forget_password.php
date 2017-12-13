@@ -26,7 +26,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
 
         $sql2 = "UPDATE verifications SET token='$reset_token', confirmation_token=null, confirmed_at=NOW() WHERE id_membre='$user_id'";
         $req2 = $bdd->query($sql2) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
-        $_SESSION['flash']['success'] = 'Les instructions de réinitisalisation de mot de passe vous ont été envoyées par emails';
+        $_SESSION['flash']['success'] = 'Les instructions de réinitisalisation de mot de passe vous ont été envoyées par email.';
 
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
@@ -51,8 +51,8 @@ Merci et à très bientôt ! <br />
 
 L’équipe L’étiquette <br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne :
-http://www.letiquette-blog.com/index.php?page=contact
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne.
+
     </body>
     </html>';
 

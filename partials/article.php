@@ -291,7 +291,7 @@ function afficher_commentaires($id_article)
     $count_nb_com = mysqli_fetch_array($nb_com);
     $count_com = $count_nb_com['count'];
 
-    $sql = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc LIMIT 5";
+    $sql = "SELECT * FROM commentaires JOIN membres ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc LIMIT 5";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
     ?>
@@ -302,8 +302,7 @@ function afficher_commentaires($id_article)
         ?>
         <div class="commentaires">
             <div class="commentaire_informations">
-                <p><strong><?php echo $donnees['pseudo'];
-                        echo $donnees['id_commentaire']; ?></strong>
+                <p><strong><?php echo $donnees['pseudo']; ?></strong>
                     le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
             </div>
 
@@ -313,8 +312,7 @@ function afficher_commentaires($id_article)
         </div>
         <?php
     }
-    ?>
-    <?php
+
     if ($count_com > 5) {
         ?>
         <div class="voir_plus">
@@ -325,7 +323,7 @@ function afficher_commentaires($id_article)
         </div>
 
         <?php
-        $sql2 = "SELECT * FROM commentaires JOIN membres  ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc ";
+        $sql2 = "SELECT * FROM commentaires JOIN membres ON membres.id=commentaires.auteur WHERE id_article ='$id_article' AND approuve=1 ORDER BY date_commentaire desc ";
         $req2 = $bdd->query($sql2) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
         ?>
@@ -337,8 +335,7 @@ function afficher_commentaires($id_article)
             ?>
             <div class="commentaires">
                 <div class="commentaire_informations">
-                    <p><strong><?php echo $donnees['pseudo'];
-                            echo $donnees['id_commentaire']; ?></strong>
+                    <p><strong><?php echo $donnees['pseudo'];?></strong>
                         le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
                 </div>
 

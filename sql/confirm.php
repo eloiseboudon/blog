@@ -51,31 +51,28 @@ if ($user && $user['token'] == $token) {
 Votre inscription est maintenant validée. <br />
 Merci de nous avoir fait l’immense honneur de nous rejoindre ! Nous avons hâte de vous faire découvrir notre univers. Ensemble, nous allons changer le monde '. $prenom .'.<br />
 
-Vous êtes '. $pret_sexe .' ? Alors cliquez sur le lien ci-dessous !<br />
-http://letiquette-blog.com/index.php <br />
+Vous êtes '. $pret_sexe .' ? Alors cliquez sur le <a href="http://letiquette-blog.com/index.php">lien</a> ci-dessous !<br />
 
 Pour rappel, votre identifiant est : '. $email .' et le pseudo que vous avez choisi est : '. $pseudo .'. Vous seul connaissez votre mot de passe. 
-Conservez vos identifiants pour accéder à votre compte. Vous pouvez à tout moment modifier vos informations personnelles depuis votre compte. 
-http://www.letiquette-blog.com/index.php?page=mon_compte <br />
+Conservez vos identifiants pour accéder à votre compte.
+ <br />
 
 A très bientôt ! <br />
 
 L’équipe L’étiquette <br />
 
 Si les liens ne fonctionnent pas, copiez-collez les dans la barre de navigation de votre navigateur. <br />
-Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/index.php?page=contact
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne. 
+
     </body>
     </html>';
-
-
 
     mail($email, "Bienvenue chez L'étiquette ! ", $message, $headers);
 
     $_SESSION['connexion'] = "confirm";
     $_SESSION['user'] = $user;
 
-    header('Location: ../index.php?page=3');
+    header('Location: ../index.php');
     exit();
 } else {
     $_SESSION['flash']['error'] = "La validation n'a pas fonctionné, veuillez nous contacter";
