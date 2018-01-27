@@ -2,7 +2,7 @@
 
 
 if (isset($_POST['nom_entreprise']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
-    $to = "boudon.eloise@gmail.com";
+    $to = "contact@letquette-shop.com";
     $subject = "Blog [Devenir vendeur]";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

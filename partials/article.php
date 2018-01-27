@@ -23,6 +23,7 @@ $donnees = mysqli_fetch_array($req);
         <?php echo $donnees['titre']; ?> - L'étiquette
         <?php echo $donnees['description']; ?>
     </title>
+    <meta name="description" content="<?php echo $donnees['description']; ?>" >
     <div class="article">
 
         <div class="article_titre">
@@ -34,7 +35,7 @@ $donnees = mysqli_fetch_array($req);
             le <?php echo date_format(new DateTime($donnees['date_article']), 'j-M-Y'); ?>
         </div>
         <div class="article_description">
-            <h2><i><?php echo $donnees['description']; ?></i></h2>
+            <i><?php echo $donnees['description']; ?></i>
         </div>
 
         <div class="article_contenu">

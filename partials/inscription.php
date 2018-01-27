@@ -65,7 +65,7 @@
                 </div>
             </label>
 
-            <label for="date_anniversaire"><span>Date de naissance<span
+            <label for="date_anniversaire"><span>Date d'anniversaire<span
                             class="required">*</span></span><input type="date" class="input-field"
                                                                    name="date_anniversaire"
                                                                    value="<?php if (isset($_SESSION['user'])) {

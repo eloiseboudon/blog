@@ -53,8 +53,9 @@ include('sql/connexion.php');
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
+    <meta property="og:image" content="http://letiquette-blog.com/assets/Miniature.jpg" />
 
-    <link rel="icon" href="assets/icone-rouge.png">
+    <link rel="icon" href="assets/Miniature.jpg">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -100,7 +101,6 @@ include('sql/connexion.php');
 
 <div class="contenu">
     <div class="global_width">
-
         <div class="pop-up">
             <?php
 

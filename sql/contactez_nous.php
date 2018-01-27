@@ -2,8 +2,8 @@
 
 
 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
-    $to = "boudon.eloise@gmail.com";
-    $subject = "Blog [Contactez-nous]";
+    $to = "contact@letquette-shop.com";
+
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -17,12 +17,12 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
     $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
 
 
-
+    $subject = "Blog [Contactez-nous] - ". $demande ;
     $message = "$nom $prenom à envoyé un mail depuis cette adresse : $email, concernant : '$demande'. 
     Voici la demande : '$commentaire'";
 
 
-    $subject_contact = 'L\'etiquette, ' . $demande;
+    $subject_contact = $prenom . ', merci pour votre message !';
 
     $message_contact = "
             <html>

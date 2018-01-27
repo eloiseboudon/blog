@@ -501,15 +501,17 @@ h2 {
 
 .article {
     margin: 40px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 20px;
+    margin-left: 170px;
+    margin-right: 170px;
+    padding-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 18px;
 }
 
-.article .article_contenu h3 {
+.article .article_contenu h2 {
     font-family: 'Roboto', sans-serif;
     color: #880015;
     font-size: 28px;
