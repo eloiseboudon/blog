@@ -74,48 +74,7 @@
             </label>
 
 
-            <label for="adresse"><span>Adresse <span class="required">*</span></span><input type="text"
-                                                                                            class="input-field"
-                                                                                            name="adresse"
-                                                                                            value="<?php if (isset($_SESSION['user'])) {
-                                                                                                echo $_SESSION['user']['adresse'];
-                                                                                            } ?>" required/>
-            </label>
 
-
-            <label for="code_postal"><span>Code postal <span class="required">*</span></span><input id="code"
-                                                                                                    type="text"
-                                                                                                    class="input-field"
-                                                                                                    name="code_postal"
-                                                                                                    value="<?php if (isset($_SESSION['user'])) {
-                                                                                                        echo $_SESSION['user']['code_postal'];
-                                                                                                    } ?>"
-                                                                                                    required
-                                                                                                    autocomplete="off"
-                                                                                                    autofocus=""/>
-            </label>
-
-            <label for="ville"><span>Ville <span class="required">*</span></span><input id="city" type="text"
-                                                                                        class="input-field"
-                                                                                        name="ville"
-                                                                                        value="<?php if (isset($_SESSION['user'])) {
-                                                                                            echo $_SESSION['user']['ville'];
-                                                                                        } ?>"
-                                                                                        required
-                                                                                        autocomplete="off">
-            </label>
-
-            <section id="output"></section>
-
-
-            <label for="telephone"><span>Téléphone <span class="required">*</span></span><input type="text"
-                                                                                                class="input-field"
-                                                                                                name="telephone"
-                                                                                                value=" <?php if (isset($_SESSION['user'])) {
-                                                                                                    echo $_SESSION['user']['telephone'];
-                                                                                                } ?>"
-                                                                                                required/>
-            </label>
 
             <div class="captcha">
                 <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo"></div>

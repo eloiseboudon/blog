@@ -37,7 +37,7 @@ Votre message a bien été envoyé. Pour rappel, vous nous avez écrit : <br />$
 Nous reviendrons vers vous dans les plus brefs délais.  <br />
 A très bientôt !<br />
 L’équipe L’étiquette<br />
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http://www.letiquette-blog.com/index.php?page=contact\">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http://www.letiquette-blog.com/contact\">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>";
@@ -49,7 +49,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http:/
         exit();
     } else {
         $_SESSION['flash']['error'] = "Une erreur est survenue, votre message n'a pas été envoyé, merci de bien vouloir réessayer.";
-        header('location: ../index.php?page=contact');
+        header('location: ../contact');
         exit();
     }
 

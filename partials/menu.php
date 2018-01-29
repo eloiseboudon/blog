@@ -8,8 +8,8 @@
             <div class="col-sm-4 col-xs-4" id="searchBox">
                 <form name="formsearch" action="index.php" method="get">
                 <label id="searchLabel">
-                    <input name="search" type="text" id="searchInput" placeholder="Rechercher">
-                    <span class="fa fa-search"  onclick="formsearch.submit()"></span>
+                    <input name="search" id="searchInput" placeholder="Rechercher">
+                    <span class="fa fa-search" onclick="formsearch.submit()"></span>
                 </label>
                 </form>
             </div>
@@ -18,7 +18,7 @@
                 <?php
                 if (isset($_SESSION['connexion'])) {
                     ?>
-                    <span id="right-top"><a href="index.php?page=mon_compte"><i
+                    <span id="right-top"><a href="mon_compte"><i
                                     class="fa fa-address-book-o"
                                     aria-hidden="true"></i>
                             <?php echo $_SESSION['user']['pseudo'] ?></a>
@@ -29,12 +29,12 @@
                     <?php
                 } else {
                     ?>
-                    <span id="right-top"><a href="index.php?page=4"><i class="fa fa-pencil cercle"
+                    <span id="right-top"><a href="inscription"><i class="fa fa-pencil cercle"
                                                                        aria-hidden="true"></i>
                                     Inscription</a></span>
 
 
-                    <span id="right-top"><a href="index.php?page=3"><i class="fa fa-user cercle"
+                    <span id="right-top"><a href="authentification"><i class="fa fa-user cercle"
                                                                        aria-hidden="true"></i>
                                     Connexion</a></span> <?php } ?>
             </div>

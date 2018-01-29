@@ -49,11 +49,14 @@ include('sql/connexion.php');
         gtag('config', 'UA-111135520-1');
     </script>
 
+    <base href="/">
+
+
     <meta name="author" content="L'étiquette"/>
     <meta name="keywords" content="L'étiquette, blog, éthique"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
-    <meta property="og:image" content="http://letiquette-blog.com/assets/Miniature.jpg" />
+    <meta property="og:image" content="http://letiquette-blog.com/assets/Miniature.jpg"/>
 
     <link rel="icon" href="assets/Miniature.jpg">
 
@@ -65,11 +68,13 @@ include('sql/connexion.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link href="css/main.css" rel="stylesheet"/>
-    <link href="css/etiquettes.css" rel="stylesheet"/>
-    <link href="css/timeline.css" rel="stylesheet"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/etiquettes.css" type="text/css" rel="stylesheet"/>
+    <link href="css/timeline.css" type="text/css" rel="stylesheet"/>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
 </head>
 
 <body>
@@ -128,19 +133,19 @@ include('sql/connexion.php');
         <?php
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
-                case 1:
+                case "accueil":
                     include('partials/accueil.php');
                     break;
                 case "article":
                     include('partials/article.php');
                     break;
-                case 3:
+                case "authentification":
                     include('partials/authentification.php');
                     break;
-                case 4:
+                case "inscription":
                     include('partials/inscription.php');
                     break;
-                case 5:
+                case "forget_password":
                     include('partials/forget_password.php');
                     break;
                 case "mon_compte":
@@ -178,7 +183,6 @@ include('sql/connexion.php');
 </div>
 
 <div id="footer">
-
     <?php if (isset($_GET['page']) || isset($_GET['search'])) {
         include('partials/footer.php');
     } ?>
@@ -194,7 +198,7 @@ include('sql/connexion.php');
 
 <script src="js/vicopo.api.js"></script>
 <script src="js/villes_codepostal.js"></script>
-<script src="js/unmask.js"></script>
+<script src="js/app.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="popover"]').popover();

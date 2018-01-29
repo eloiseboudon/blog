@@ -27,7 +27,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     if($count_if_email == 0 && $count_if_req_pseudo == 0 ) {
         session_start();
         $_SESSION['flash']['error'] = "Login inéxistant.";
-        header('location: ../index.php?page=3');
+        header('location: ../authentification');
         exit();
     }else{
         if ($count_if_email != 0) {
@@ -61,19 +61,19 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
             } else {
                 $_SESSION['flash']['error'] = "Veuillez confirmer votre inscription en cliquant sur le lien envoyé par mail.";
-                header('location: ../index.php?page=3');
+                header('location: ../authentification');
                 exit();
             }
         } else {
             session_start();
             $_SESSION['flash']['error'] = "Pseudo ou mot de passe erroné.";
-            header('location: ../index.php?page=3');
+            header('location: ../authentification');
             exit();
         }
     }
 
 } else {
-    header('location: ../index.php?page=3');
+    header('location: ../authentification');
     exit();
 }
 

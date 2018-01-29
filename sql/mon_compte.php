@@ -14,6 +14,18 @@ if (isset($_POST['email']) && isset($_SESSION['user']['id'])) {
     $bdd = connexion_sql();
 
 
+    $membre_mail = $bdd->query("SELECT COUNT(*) AS count FROM membres WHERE email = '$email'");
+    $count_membre_mail = mysqli_fetch_array($membre_mail);
+    $count_mail = $count_membre_mail['count'];
+
+    if ($count_mail != 0) {
+        session_start();
+        $_SESSION['flash']['error'] = "Cette adresse email est déjà utilisée.";
+        header('location:../mon_compte');
+        exit();
+    }
+
+
     $sql = "UPDATE membres SET email = '$email' WHERE id='$user_id'";
     $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
@@ -46,7 +58,7 @@ Merci et à très bientôt !<br />
 
 L’équipe L’étiquette<br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';
@@ -55,7 +67,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
     if (mail($email, 'Confirmation de modification de votre adresse email', $message, $headers)) {
         $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
     } else {
-        $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../index.php?page=contact\">contacter</a> s'il vous plait.";
+        $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../contact\">contacter</a> s'il vous plait.";
     }
 
     header('location:../index.php');

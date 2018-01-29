@@ -6,12 +6,12 @@
                     <h1>Besoin d'aide ?</h1>
                     <ul>
                         <li>
-                            <a href="index.php?page=contact">
+                            <a href="contact">
                                 Contactez-nous
                             </a>
                         </li>
                         <li>
-                            <a href="index.php?page=devenir_vendeur">
+                            <a href="devenir_vendeur">
                                 Devenir vendeur
                             </a>
                         </li>
@@ -22,12 +22,12 @@
                     <h1>L'étiquette</h1>
                     <ul>
                         <li>
-                            <a href="index.php?page=lequipe">
+                            <a href="lequipe">
                                 L'équipe
                             </a>
                         </li>
                         <li>
-                            <a href="index.php?page=nos_valeurs">
+                            <a href="nos_valeurs">
                                 Nos valeurs
                             </a>
                         </li>
@@ -38,12 +38,12 @@
                     <h1>Mentions</h1>
                     <ul>
                         <li>
-                            <a href="index.php?page=mentions_legales">
+                            <a href="mentions_legales">
                                 Mentions légales
                             </a>
                         </li>
                         <li>
-                            <a href="index.php?page=cgu_cookies">
+                            <a href="cgu">
                                 CGU
                             </a>
                         </li>

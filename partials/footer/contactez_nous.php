@@ -45,7 +45,7 @@
                 </select>
             </label>
 
-            <label for="commentaire"><span>Votre commentaire <span class="required">*</span></span>
+            <label for="commentaire"><span>Votre message <span class="required">*</span></span>
                 <textarea name="commentaire" required></textarea>
             </label>
 

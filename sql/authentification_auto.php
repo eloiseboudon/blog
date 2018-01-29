@@ -22,7 +22,7 @@ if (isset($_COOKIE['pseudo'])) {
     }
 }
 else{
-    echo'<meta http-equiv="refresh" content="0;../index.php?page=3" />';
+    echo'<meta http-equiv="refresh" content="0;../authentification" />';
 }
 
 ?>

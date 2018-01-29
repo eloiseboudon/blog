@@ -10,14 +10,8 @@ if (isset($_POST['nom'])) {
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-
     $sexe = $_POST['sexe'];
-    $ville = $_POST['ville'];
-    $code_postal = $_POST['code_postal'];
-    $ville = $_POST['ville'];
     $date_anniversaire = $_POST['date_anniversaire'];
-    $adresse = $_POST['adresse'];
-    $telephone = $_POST['telephone'];
 
     $checkbox = array();
     $checkbox = $_POST['validate'];
@@ -62,14 +56,10 @@ if (isset($_POST['nom'])) {
                 'prenom' => $prenom,
                 'pseudo' => $pseudo,
                 'email' => $email,
-                'date' => $date_anniversaire,
-                'adresse' => $adresse,
-                'code_postal' => $code_postal,
-                'ville' => $ville,
-                'telephone' => $telephone,
+                'date' => $date_anniversaire
             ];
 
-            header('location:../index.php?page=4');
+            header('location:../inscription');
             exit();
         } elseif ($count_mail != 0) {
             session_start();
@@ -82,21 +72,17 @@ if (isset($_POST['nom'])) {
                 'prenom' => $prenom,
                 'pseudo' => $pseudo,
                 'email' => $email,
-                'date' => $date_anniversaire,
-                'adresse' => $adresse,
-                'code_postal' => $code_postal,
-                'ville' => $ville,
-                'telephone' => $telephone,
+                'date' => $date_anniversaire
             ];
 
-            header('location:../index.php?page=4');
+            header('location:../inscription');
             exit();
 
         } else {
 
 
-            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire, adresse,code_postal,ville,telephone,date_inscription, recevoir_mail)
-VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire','$adresse','$code_postal','$ville','$telephone',NOW(),'$courrier')";
+            $sql = "INSERT INTO membres (nom, prenom, pseudo, password, email,sexe,date_anniversaire,date_inscription, recevoir_mail)
+VALUES ('$nom','$prenom','$pseudo','$password_hash','$email','$sexe','$date_anniversaire',NOW(),'$courrier')";
             $req = $bdd->query($sql) or die (mysqli_errno($bdd) . ' : ' . mysqli_error($bdd));
 
             $user_id = mysqli_insert_id($bdd);
@@ -134,16 +120,16 @@ Merci et à très bientôt !<br />
 
 L’équipe L’étiquette<br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';
 
 
             if (mail($email, 'Veuillez confirmer votre e-mail', $message, $headers)) {
-                $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre compte.';
+                $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé pour valider votre adresse mail.';
             } else {
-                $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../index.php?page=contact\">contacter</a> s'il vous plait.";
+                $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../contact\">contacter</a> s'il vous plait.";
             }
 
             header('location:../index.php');
@@ -152,7 +138,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
     } else {
         session_start();
         $_SESSION['flash']['error'] = "Veuillez cocher le CAPTCHA s'il vous plait.";
-        header('location:../index.php?page=4');
+        header('location:../inscription');
         exit();
     }
 

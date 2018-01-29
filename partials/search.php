@@ -34,7 +34,7 @@ function afficher_search($search)
                             <div class="cercle"></div>
                             <div class="ficelle"></div>
                             <div class="scroll timeline-content">
-                                <a href="index.php?page=article&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
+                                <a href="article/<?php echo $donnees['id_article']; ?>/<?php echo $donnees['titre']; ?>">
                                     <div class="article_image">
                                         <img src="<?php echo $donnees['img_article']; ?>">
                                     </div>
@@ -69,7 +69,7 @@ function afficher_search($search)
                             <div class="cercle"></div>
                             <div class="ficelle"></div>
                             <div class="scroll timeline-content">
-                                <a href="index.php?page=article&id=<?php echo $donnees['id_article']; ?>&nom=<?php echo $donnees['titre']; ?>">
+                                <a href="article/<?php echo $donnees['id_article']; ?>/<?php echo $donnees['titre']; ?>">
                                     <div class="article_image">
                                         <img src="<?php echo $donnees['img_article']; ?>">
                                     </div>

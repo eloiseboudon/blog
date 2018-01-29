@@ -6,6 +6,8 @@
 
 if (isset($_GET['id'])) {
     afficher_article($_GET['id']);
+} else {
+    echo "probleme";
 }
 
 function afficher_article($id_article){
@@ -23,7 +25,8 @@ $donnees = mysqli_fetch_array($req);
         <?php echo $donnees['titre']; ?> - L'étiquette
         <?php echo $donnees['description']; ?>
     </title>
-    <meta name="description" content="<?php echo $donnees['description']; ?>" >
+<meta name="description"
+      content="<?php echo $donnees['titre']; ?> - L'étiquette - <?php echo $donnees['description']; ?>">
     <div class="article">
 
         <div class="article_titre">
@@ -80,7 +83,6 @@ $donnees = mysqli_fetch_array($req);
     <div class="sous_article">
         <div class="article_sociaux">
             <div class="partage_reseaux_sociaux">
-
                 <h2>Partager sur les réseaux sociaux</h2>
             </div>
             <div class="icon_res_soc">
@@ -161,49 +163,36 @@ $donnees = mysqli_fetch_array($req);
     }
 
     function ajouter_commentaire($id_article){
-    ?>
 
-    <form method="post">
-        <div class="row">
-            <?php
-            if (isset($_SESSION['user'])) {
-                ?>
-                <div class="col-12">
-                    <div class="form_contenu">
-                        <label for="contenu">Votre commentaire : </label><br/>
-                        <textarea type="text" name="contenu"></textarea>
-                    </div>
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="col-lg-6 col-xs-12">
-                    <div class="connexion">
-                        <p>Veuillez vous connecter pour laisser un commentaire : </p>
+    if (isset($_SESSION['user'])) {
+        ?>
+        <form method="post">
+            <div class="form_contenu">
+                <label for="contenu">Votre commentaire : </label><br/>
+                <textarea type="text" name="contenu"></textarea>
+            </div>
 
-                        <a href="index.php?page=3"><span><i class="fa fa-user"
-                                                            aria-hidden="true"></i> Connexion</span>
-                        </a>
-                        <a href="index.php?page=4"><span><i class="fa fa-pencil"
-                                                            aria-hidden="true"></i> Inscription</span> </a>
+            <button type="submit" name="submit" class="btn btn-form">
+                <i class="fa fa-check" aria-hidden="true"></i> Envoyer
+            </button>
+        </form>
+        <?php
+    } else {
+        ?>
+        <div class="connexion">
+            <p>Veuillez vous connecter pour laisser un commentaire : </p>
 
-                    </div>
-                </div>
+            <a href="authentification"><span><i class="fa fa-user"
+                                                aria-hidden="true"></i> Connexion</span>
+            </a>
+            <a href="inscription"><span><i class="fa fa-pencil"
+                                           aria-hidden="true"></i> Inscription</span> </a>
 
-                <div class="col-lg-6 col-xs-12">
-                    <div class="form_contenu">
-                        <label for="contenu">Votre commentaire : </label><br/>
-                        <textarea type="text" name="contenu"></textarea>
-                    </div>
-                </div>
-            <?php } ?>
         </div>
-        <button type="submit" name="submit" class="btn btn-form">
-            <i class="fa fa-check" aria-hidden="true"></i> Envoyer
-        </button>
+
+    <?php } ?>
 
 
-    </form>
 </div>
 
 <?php
@@ -239,6 +228,7 @@ function inserer_commentaire($article, $contenu)
 {
     $bdd = connexion_sql();
     $id_auteur = $_SESSION['user']['id'];
+    $email = $_SESSION['user']['email'];
     $sql = "INSERT INTO commentaires (id_article, auteur, contenu, date_commentaire) VALUES ('$article', '$id_auteur','$contenu', NOW() )";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
@@ -251,35 +241,34 @@ function inserer_commentaire($article, $contenu)
 
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>" . "\r\n";
+    $headers .= "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>" . "\r\n";
 
-    $subject = "";
 
-    $message = "
+    $message = '
             <html>
     <head>
         <title>Merci pour votre commentaire</title>
     </head>
     <body>
         <h1>Merci de nous avoir commentaire ! </h1>
-        Bonjour $prenom,<br />
+        Bonjour ' . $prenom . ',<br />
 
 Votre commentaire nous a bien été envoyé et sera bientôt visible par les autres utilisateurs. 
-Pour rappel, vous avez écrit : $contenu  <br />
+Pour rappel, vous avez écrit : ' . $contenu . '  <br />
 A très bientôt !<br />
 L’équipe L’étiquette<br />
 Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/index.php?page=contact
+http://www.letiquette-blog.com/contact
     </body>
-    </html>";
+    </html>';
 
-    ?>
-    <div class="pop-up">
-    <div class="alert alert-success" role="alert">
-        <?php
-        echo 'Merci pour votre commentaire, celui-ci sera bientot en ligne.';
-        ?></div>
-    </div><?php
+
+
+    if (mail($email, 'Merci pour votre commentaire, celui-ci sera bientot en ligne.', $message, $headers)) {
+        $_SESSION['flash']['success'] = 'Merci pour votre commentaire, celui-ci sera bientot en ligne.';
+    } else {
+        $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../contact\">contacter</a> s'il vous plait.";
+    }
 
 
 }
@@ -310,6 +299,18 @@ function afficher_commentaires($id_article)
             <div class="commentaire_contenu">
                 <?php echo $donnees['contenu']; ?>
             </div>
+            <div class="commentaire_repondre">
+                <span class="repondre_form_show" onclick="repondre_commentaire_show(<?php echo ($donnees['id_commentaire']) ?>)">Répondre</span>
+
+                <div id="commentaire_repondre_form_<?php echo ($donnees['id_commentaire']) ?>" style="display: none;">
+                    <form action="sql/repondre_commentaire.php" method="post">
+                        <label for="reponse">
+                            <input type="text" class="input-field" name="reponse" required/>
+                        </label>
+                        <input type="submit" value="Répondre"/>
+                    </form>
+                </div>
+            </div>
         </div>
         <?php
     }
@@ -318,7 +319,7 @@ function afficher_commentaires($id_article)
         ?>
         <div class="voir_plus">
             <a>
-                <i class="fa fa-chevron-circle-down mask" aria-hidden="true"></i> Voir plus
+                <span class="fa fa-chevron-circle-down mask" aria-hidden="true"><span class="voir"> Voir plus</span></span>
             </a>
         </div>
         </div>
@@ -336,19 +337,30 @@ function afficher_commentaires($id_article)
             ?>
             <div class="commentaires">
                 <div class="commentaire_informations">
-                    <p><strong><?php echo $donnees['pseudo'];?></strong>
+                    <p><strong><?php echo $donnees['pseudo']; ?></strong>
                         le <?php echo date_format(new DateTime($donnees['date_commentaire']), 'j-M-Y à H:i:s'); ?></p>
                 </div>
 
                 <div class="commentaire_contenu">
                     <?php echo $donnees['contenu']; ?>
                 </div>
+                <div class="commentaire_repondre">
+                    <span class="repondre_form_show" onclick="repondre_commentaire_show(<?php echo ($donnees['id_commentaire']) ?>)">Répondre</span>
+                    <div id="commentaire_repondre_form_<?php echo ($donnees['id_commentaire']) ?>" style="display: none;">
+                        <form action="sql/repondre_commentaire.php" method="post">
+                            <label for="reponse">
+                                <input type="text" class="input-field" name="reponse" required/>
+                            </label>
+                            <input type="submit" value="Répondre"/>
+                        </form>
+                    </div>
+                </div>
             </div>
             <?php
         } ?>
         <div class="voir_moins">
             <a>
-                <i class="fa fa-chevron-circle-up demask" aria-hidden="true"></i> Voir moins
+                <span class="fa fa-chevron-circle-up demask" aria-hidden="true"><span class="voir"> Voir moins</span> </span>
             </a>
         </div>
         </div><?php

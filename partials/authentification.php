@@ -47,8 +47,8 @@
 
             </form>
 
-            <a href="index.php?page=4">Pas encore inscrit ?</a><br/>
-            <a href="index.php?page=5">Mot de passe oublié</a>
+            <a href="inscription">Pas encore inscrit ?</a><br/>
+            <a href="forget_password">Mot de passe oublié</a>
 
             <?php
             include 'auth/googlePlus_config.php';

@@ -27,7 +27,7 @@ if (isset($_POST['id']) && isset($_POST['token'])) {
                 $_SESSION['flash']['success'] = 'Votre mot de passe a bien été modifié.';
                 $_SESSION['auth'] = $user;
                 $_SESSION['connexion']="reset";
-                header('Location: ../index.php?page=3');
+                header('Location: ../authentification');
                 exit();
             } else {
                 session_start();
@@ -40,7 +40,7 @@ if (isset($_POST['id']) && isset($_POST['token'])) {
     } else {
         session_start();
         $_SESSION['flash']['error'] = "Une erreur à eu lieu, veuillez recommencer s'il vous plait.";
-        header('Location: ../index.php?page=5');
+        header('Location: ../forget_password');
         exit();
     }
 }

@@ -1,6 +1,7 @@
 
 body {
     background-color: #F4ECDE !important;
+    font-family: 'Quicksand', sans-serif;;
 
 }
 
@@ -9,10 +10,13 @@ h1, h3 {
 }
 
 h2 {
-    font-family: 'Dosis', sans-serif;
-    font-size:1.3rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
 }
 
+input{
+    font-family:'Quicksand', sans-serif;
+}
 .container {
     width: auto;
     padding-right: 5px;
@@ -34,8 +38,8 @@ h2 {
     min-height: calc(100vh - 308px);
 }
 
-.lequipe_global p, .lequipe_global h1, .nos_valeurs_global h1, .mentions_legales_global h1{
-    margin:10px;
+.lequipe_global p, .lequipe_global h1, .nos_valeurs_global h1, .mentions_legales_global h1 {
+    margin: 10px;
 }
 
 .global_width {
@@ -45,23 +49,22 @@ h2 {
     height: 100%;
 }
 
-
-.landing_page{
-    margin:10px;
+.landing_page {
+    margin: 10px;
 }
 
-.landing_page h1{
-    color:#880015;
+.landing_page h1 {
+    color: #880015;
     text-align: center;
 }
 
-.landing_page h2{
-    padding:20px;
+.landing_page h2 {
+    padding: 20px;
 }
 
 #top-page {
     z-index: 1000;
-    height: 60px;
+    height: 54px;
     position: static;
     width: 100%;
     margin-bottom: 30px;
@@ -80,7 +83,7 @@ h2 {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     padding: 0;
-    height: 55px;
+    height: 50px;
 }
 
 #top-page #right-top, #top-page-scroll #right-top {
@@ -97,25 +100,25 @@ h2 {
 #top-page #right-top a {
     color: white;
     text-decoration: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-bottom: 13px;
     padding-right: 10px;
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
 
 }
 
 #top-page #right-top a:hover {
     background-color: #F4ECDE;
     color: #000000;
-    padding-bottom: 13px;
+    /*padding-bottom: 13px;*/
     border-bottom: 1.5px solid #880015;
-    font-family: 'Dosis', sans-serif;
+    /*font-family: 'Quicksand', sans-serif;*/
 }
 
 #top-page #right-top .fa {
     color: #880015;
-    font-size: 25px;
+    font-size: 1.4em;
     padding-right: 3px;
 }
 
@@ -151,7 +154,7 @@ h2 {
 
 #top-page-scroll #right-top .fa {
     color: #880015;
-    font-size: 25px;
+    font-size: 1.5em;
     padding-top: 5px;
     text-align: center;
 
@@ -190,7 +193,7 @@ h2 {
 }
 
 #searchBox .searchInput :-moz-placeholder {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
     color: #880015;
@@ -198,7 +201,7 @@ h2 {
 
 /* Firefox <= 18 */
 ::-moz-placeholder {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
     color: #880015;
@@ -206,14 +209,14 @@ h2 {
 
 /* Firefox >= 19 */
 ::-webkit-input-placeholder {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
     color: #880015;
 }
 
 :-ms-input-placeholder {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
     color: #880015;
@@ -225,7 +228,7 @@ h2 {
     position: relative;
     margin: 0;
     width: 400px;
-    padding-top: 13px;
+    padding-top: 10px;
 }
 
 #searchLabel .fa-search {
@@ -233,11 +236,11 @@ h2 {
     top: 5px;
     right: 10px;
     position: absolute;
-    font-size: 25px;
-    padding-top: 13px;
+    font-size: 1.5em;
+    padding-top: 7px;
 }
 
-#searchLabel input[type=submit] {
+#searchLabel .fa-search:hover {
     cursor: pointer;
 }
 
@@ -344,9 +347,13 @@ h2 {
 
 .accueil_articles h2 {
     margin-bottom: 2px;
-    white-space: nowrap;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 1.7em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .accueil_articles a:hover h2, .accueil_articles a:focus h2 {
@@ -356,6 +363,7 @@ h2 {
 
 .acceuil_titre_global h1 {
     color: #880015;
+    margin-left: 20px;
 }
 
 .accueil_articles .article_image img {
@@ -377,18 +385,17 @@ h2 {
 }
 
 .accueil_articles .article_details .article_auteur, .nos_valeurs .valeur_titre, .lequipe .lequipe_titre {
-    font-size: 22px;
+    font-size: 1.4em;
     color: #880015;
 }
 
-.lequipe_global p{
-    font-size: 20px;
+.lequipe_global p {
+    font-size: 1.2em;
 }
 
-.lequipe .lequipe_image img{
+.lequipe .lequipe_image img {
     width: 200px;
 }
-
 
 .nos_valeurs .timeline-block-left .valeur_titre {
     text-align: left;
@@ -402,18 +409,13 @@ h2 {
 
 .accueil_articles .article_details .description_article {
     margin-top: 5px;
-    font-size: 22px;
+    font-size: 1.2em;
     text-overflow: ellipsis;
     overflow: hidden;
     max-height: 130px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-}
-
-.sous_article .partage_reseaux_sociaux h2 {
-    display: inline-block;
-    margin-right: 4%;
 }
 
 .sous_article .icon_res_soc img {
@@ -432,7 +434,7 @@ h2 {
     background-color: #880015;
     color: white;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.2em;
     width: 50px;
     height: 50px;
 }
@@ -448,17 +450,13 @@ h2 {
 }
 
 .nos_valeurs .valeur_contenu, .lequipe .lequipe_contenu {
-    font-size: 20px;
-}
-
-.accueil_articles .article_details .goto_article span:hover {
-    font-size: 30px;
+    font-size: 1.2em;
 }
 
 .accueil_articles .article_details .goto_article {
-    margin-left: 8px;
+    margin-top: 10px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
+    font-size: 1.3em;
     display: inline-block;
 }
 
@@ -466,20 +464,19 @@ h2 {
     padding: 4px;
     background-color: #880015;
     color: white;
-    border-radius: 10px;
 }
 
 .accueil_articles .timeline-block-left .article_details, .accueil_articles .timeline-block-left .article_titre, .lequipe .timeline-block-left .lequipe_titre {
-    margin-right: 10%;
+    /*margin-right: 10%;*/
     text-align: left;
 }
 
 .accueil_articles .timeline-block-right .article_details, .accueil_articles .timeline-block-right .article_titre, .lequipe .timeline-block-right .lequipe_titre {
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     text-align: right;
 }
 
-.article h1, .nos_valeurs_global h1, .mentions_legales_global h1, .lequipe_global h1 {
+.article h1, .nos_valeurs_global h1, .mentions_legales_global h1, .lequipe_global h1, .cgu_global h1 {
     color: #880015;
 }
 
@@ -490,31 +487,27 @@ h2 {
 .nos_valeurs_global .valeur_init p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 1.2em;
     text-align: justify;
 }
 
 .nos_valeurs_global p {
-    font-size: 22px;
+    font-size: 1.4em;
     margin-left: 20px;
 }
 
 .article {
-    margin: 40px;
-    margin-left: 170px;
-    margin-right: 170px;
-    padding-top: 70px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin: 40px 170px 40px 170px;
+    padding: 70px 100px 10px 100px;
     background-color: #fff;
     /* border-radius: 10px; */
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 .article .article_contenu h2 {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     color: #880015;
-    font-size: 28px;
+    font-size: 1.7em;
 }
 
 .article .article_contenu a {
@@ -533,23 +526,20 @@ h2 {
     font-style: italic;
 }
 
-.article_commentaire {
-    margin-top: 10px;
-}
-
 .article_commentaire h2, .partage_reseaux_sociaux h2 {
     border-bottom: 1px solid #880015;
     font-family: 'Open Sans Condensed', sans-serif;
+    display: inline-block;
+    font-size: 1.6em;
 }
 
-.article_sociaux {
-    display: flex;
-    width: 100%;
+.article_sociaux, .article_commentaire {
+    background-color: #fff;
+    margin: 0 170px 40px 170px;
 }
 
-.article_sociaux .partage_reseaux_sociaux {
-    width: 40%;
-    margin-left: 10px;
+.article_sociaux .partage_reseaux_sociaux, .article_commentaire .article_titre {
+    padding: 0 100px 0 100px;
 }
 
 .article .prochain_article {
@@ -584,7 +574,7 @@ h2 {
 }
 
 .article_commentaire .ajouter_commentaire .connexion p, .article_commentaire .ajouter_commentaire .form_contenu label {
-    font-size: 22px;
+    font-size: 1.3em;
 }
 
 .article_commentaire .ajouter_commentaire .connexion a, .modal-body .connexion a {
@@ -593,10 +583,10 @@ h2 {
 
 .article_commentaire .ajouter_commentaire .connexion span, #myModal_prochain_article .modal-body .connexion span {
     padding: 6px;
-    background-color: white;
-    color: #880015;
-    border-radius: 5px;
-    font-size: 22px;
+    background-color: #880015;
+    color: #fff;
+    /*border-radius: 5px;*/
+    font-size: 1.4em;
 }
 
 #myModal_prochain_article .modal-body .connexion span {
@@ -619,10 +609,11 @@ h2 {
 .article_commentaire .ajouter_commentaire .btn-form {
     background-color: #880015;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.7em;
     display: block;
     margin: auto;
+    border-radius: 0;
 }
 
 .article_commentaire .voir_commentaires .commentaire_contenu {
@@ -635,11 +626,28 @@ h2 {
 
 .article_commentaire .voir_commentaires .fa {
     color: #880015;;
-    font-size: 24px;
+    font-size: 1.5em;
+}
+
+.article_commentaire .voir_plus:hover, .article_commentaire .voir_moins:hover{
+    cursor:pointer;
+}
+
+.article_commentaire .voir{
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size:0.8em;
 }
 
 .article_commentaire .voir_commentaires .voir_moins, .article_commentaire .voir_commentaires .voir_plus {
     text-align: center;
+}
+
+.commentaire_repondre .repondre_form_show:hover,
+.commentaire_repondre .repondre_form_show:focus {
+    cursor: pointer;
+    color: #880015;
+    text-decoration: underline;
 }
 
 .form-etiquette {
@@ -676,7 +684,7 @@ h2 {
 }
 
 .form-etiquette span.password {
-    font-size: 12px;
+    font-size: 0.8em;
     text-align: left;
     float: left;
 }
@@ -696,6 +704,7 @@ h2 {
     padding: 7px;
     outline: none;
     margin-right: 10px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .form-etiquette .input-field:focus {
@@ -713,9 +722,27 @@ h2 {
     box-shadow: 1px 1px 4px #DADADA;
     -moz-box-shadow: 1px 1px 4px #DADADA;
     -webkit-box-shadow: 1px 1px 4px #DADADA;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    /*border-radius: 3px;*/
+    /*-webkit-border-radius: 3px;*/
+    /*-moz-border-radius: 3px;*/
+}
+
+.commentaire_repondre label {
+    width: 70%;
+}
+.commentaire_repondre input[type=text]{
+    width: 100%;
+}
+
+.commentaire_repondre input[type=submit] {
+    margin: 0 8% 0 8%;
+    border: none;
+    padding: 3px 5px 3px 5px;
+    background: #880015;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
 }
 
 .form-etiquette textarea {
@@ -787,8 +814,21 @@ h2 {
 
 .form-etiquette .compte_infos {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 1.3em;
     width: 60%;
+}
+
+.cgu_global {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.cgu_contenu h2 {
+    color: #880015;
 }
 
 .modal input[type=submit],
@@ -866,11 +906,11 @@ h2 {
     }
 
     .accueil_articles .article_details .description_article {
-        font-size: 18px;
+        font-size: 1.1em;
     }
 
     #footer h1 {
-        font-size: 40px;
+        font-size: 2.5em;
         padding: 0;
     }
 
@@ -891,7 +931,7 @@ h2 {
 
     #top-page #right-top .fa {
         color: #880015;
-        font-size: 25px;
+        font-size: 1.5em;
         padding-top: 5px;
         text-align: center;
     }
@@ -937,7 +977,7 @@ h2 {
 
 @media screen and (max-width: 1100px) {
     #footer h1 {
-        font-size: 36px;
+        font-size: 2.2em;
     }
 
     .bottom-bar .icon_social img {
@@ -975,7 +1015,7 @@ h2 {
 
 @media screen and (max-width: 850px) {
     #footer h1 {
-        font-size: 30px;
+        font-size: 1.9em;
     }
 
     .article_sociaux {
@@ -1013,7 +1053,7 @@ h2 {
         width: 200px;
     }
 
-    .article{
+    .article {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -1046,11 +1086,13 @@ h2 {
     #searchLabel, #searchLabel .fa-search {
         padding-top: 2px;
     }
+
     #searchLabel {
         width: 80%;
     }
-    #searchInput{
-        width:100%;
+
+    #searchInput {
+        width: 100%;
     }
 
     #top-page {

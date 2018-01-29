@@ -31,6 +31,6 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
 <?php } else {
     session_start();
     $_SESSION['flash']['error'] = "Une erreur à eu lieu, veuillez recommencer s'il vous plait.";
-    header('Location: ../index.php?page=5');
+    header('Location: ../forget_password');
     exit();
 }

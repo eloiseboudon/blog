@@ -51,7 +51,7 @@ Merci et à très bientôt ! <br />
 
 L’équipe L’étiquette <br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/index.php?page=contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';
@@ -63,7 +63,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
     } else {
         session_start();
         $_SESSION['flash']['error'] = 'Aucun compte ne correspond à cette adresse';
-        header('Location: ../index.php?page=5');
+        header('Location: ../forget_password');
         exit();
     }
 

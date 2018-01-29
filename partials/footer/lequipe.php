@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="lequipe_titre">
-                        Justine Abécassis
+                        Justine
                     </div>
 
                     <div class="lequipe_contenu" style="direction: ltr">
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="lequipe_titre">
-                        Eloïse Boudon
+                        Eloïse
                     </div>
 
                     <div class="lequipe_contenu">
