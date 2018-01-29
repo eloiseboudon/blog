@@ -497,8 +497,8 @@ input{
 }
 
 .article {
-    margin: 40px 170px 40px 170px;
-    padding: 70px 100px 10px 100px;
+    margin: 40px 20% 40px 20%;
+    padding: 70px 8% 10px 8%;
     background-color: #fff;
     /* border-radius: 10px; */
     font-size: 1.1em;
@@ -1056,6 +1056,7 @@ input{
     .article {
         margin-left: 10px;
         margin-right: 10px;
+        padding:10px;
     }
 
     .article .icon_res_soc img {

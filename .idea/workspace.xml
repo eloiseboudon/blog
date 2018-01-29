@@ -4,8 +4,7 @@
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/etiquettes.css" afterPath="$PROJECT_DIR$/css/etiquettes.css" />
-      <change beforePath="$PROJECT_DIR$/partials/article.php" afterPath="$PROJECT_DIR$/partials/article.php" />
-      <change beforePath="$PROJECT_DIR$/sql/repondre_commentaire.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +31,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.72879094">
       <split-first>
         <leaf>
-          <file leaf-file-name="article.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/partials/article.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="587">
@@ -69,8 +68,8 @@
           <file leaf-file-name="reponses_commentaire.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sql/reponses_commentaire.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+                <state relative-caret-position="336">
+                  <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
                   <folding>
                     <marker date="1517249923548" expanded="true" signature="292:432" ph="INSERT INTO reponses_commentaire... " />
                   </folding>
@@ -78,11 +77,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="etiquettes.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="etiquettes.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="150" column="39" lean-forward="false" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
+                <state relative-caret-position="400">
+                  <caret line="133" column="1" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -92,7 +91,7 @@
             <entry file="file://$PROJECT_DIR$/sql/reset.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="672">
-                  <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
+                  <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
                   <folding>
                     <marker date="1517066233705" expanded="true" signature="207:338" ph="SELECT * FRO... verifications" />
                     <marker date="1517066233705" expanded="true" signature="704:796" ph="UPDATE verifications... " />
@@ -106,7 +105,7 @@
             <entry file="file://$PROJECT_DIR$/sql/forget_password.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="256">
-                  <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding>
                     <marker date="1517066233626" expanded="true" signature="238:280" ph="SELECT * FRO... membres" />
                     <marker date="1517066233626" expanded="true" signature="567:684" ph="UPDATE verifications... " />
@@ -114,6 +113,16 @@
                     <marker date="1517066233626" expanded="true" signature="1167:1234" ph="..." />
                     <marker date="1517066233626" expanded="true" signature="1245:1912" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/main.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="647">
+                  <caret line="497" column="0" lean-forward="true" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -148,7 +157,7 @@
             <entry file="file://$PROJECT_DIR$/sql/inscription.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2112">
-                  <caret line="132" column="13" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="132" selection-end-column="13" />
+                  <caret line="132" column="13" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="132" selection-end-column="13" />
                   <folding>
                     <marker date="1517066040828" expanded="true" signature="1052:1114" ph="SELECT COUNT... " />
                     <marker date="1517066040828" expanded="true" signature="1278:1338" ph="SELECT COUNT... " />
@@ -187,7 +196,7 @@
             <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="672">
-                  <caret line="156" column="23" lean-forward="false" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+                  <caret line="157" column="23" lean-forward="false" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -294,12 +303,12 @@
         <option value="$PROJECT_DIR$/partials/footer/cgu_cookies.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/sql/repondre_commentaire.php" />
         <option value="$PROJECT_DIR$/sql/reponses_commentaire" />
         <option value="$PROJECT_DIR$/sql/reponses_commentaire.php" />
-        <option value="$PROJECT_DIR$/css/etiquettes.css" />
         <option value="$PROJECT_DIR$/partials/article.php" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/css/etiquettes.css" />
       </list>
     </option>
   </component>
@@ -496,12 +505,12 @@
       <workItem from="1513351504236" duration="985000" />
       <workItem from="1516707909093" duration="1218000" />
       <workItem from="1517040165328" duration="17799000" />
-      <workItem from="1517217048071" duration="18398000" />
+      <workItem from="1517217048071" duration="19047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562405000" />
+    <option name="totallyTimeSpent" value="563054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
@@ -888,14 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/reset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -930,7 +931,7 @@
     <entry file="file://$PROJECT_DIR$/sql/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2112">
-          <caret line="132" column="13" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="132" selection-end-column="13" />
+          <caret line="132" column="13" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="132" selection-end-column="13" />
           <folding>
             <marker date="1517066040828" expanded="true" signature="1052:1114" ph="SELECT COUNT... " />
             <marker date="1517066040828" expanded="true" signature="1278:1338" ph="SELECT COUNT... " />
@@ -946,7 +947,7 @@
     <entry file="file://$PROJECT_DIR$/sql/reset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
+          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
           <folding>
             <marker date="1517066233705" expanded="true" signature="207:338" ph="SELECT * FRO... verifications" />
             <marker date="1517066233705" expanded="true" signature="704:796" ph="UPDATE verifications... " />
@@ -958,7 +959,7 @@
     <entry file="file://$PROJECT_DIR$/sql/forget_password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <marker date="1517066233626" expanded="true" signature="238:280" ph="SELECT * FRO... membres" />
             <marker date="1517066233626" expanded="true" signature="567:684" ph="UPDATE verifications... " />
@@ -980,24 +981,6 @@
             <marker date="1517066233597" expanded="true" signature="1334:1397" ph="..." />
             <marker date="1517066233597" expanded="true" signature="1408:2396" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/reponses_commentaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <marker date="1517249923548" expanded="true" signature="292:432" ph="INSERT INTO reponses_commentaire... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="150" column="39" lean-forward="false" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,6 +1013,32 @@
             <marker date="1517251006604" expanded="true" signature="15261:15426" ph="SELECT * FRO... reponses_commentaire" />
             <marker date="1517251006604" expanded="true" signature="15598:15634" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/reponses_commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <marker date="1517249923548" expanded="true" signature="292:432" ph="INSERT INTO reponses_commentaire... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="497" column="0" lean-forward="true" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="133" column="1" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
