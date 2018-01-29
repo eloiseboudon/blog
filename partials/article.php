@@ -263,7 +263,6 @@ http://www.letiquette-blog.com/contact
     </html>';
 
 
-
     if (mail($email, 'Merci pour votre commentaire, celui-ci sera bientot en ligne.', $message, $headers)) {
         $_SESSION['flash']['success'] = 'Merci pour votre commentaire, celui-ci sera bientot en ligne.';
     } else {
@@ -299,18 +298,31 @@ function afficher_commentaires($id_article)
             <div class="commentaire_contenu">
                 <?php echo $donnees['contenu']; ?>
             </div>
-            <div class="commentaire_repondre">
-                <span class="repondre_form_show" onclick="repondre_commentaire_show(<?php echo ($donnees['id_commentaire']) ?>)">Répondre</span>
 
-                <div id="commentaire_repondre_form_<?php echo ($donnees['id_commentaire']) ?>" style="display: none;">
-                    <form action="sql/repondre_commentaire.php" method="post">
-                        <label for="reponse">
-                            <input type="text" class="input-field" name="reponse" required/>
-                        </label>
-                        <input type="submit" value="Répondre"/>
-                    </form>
+            <?php if (isset($_SESSION['user'])) { ?>
+                <div class="commentaire_repondre">
+                <span class="repondre_form_show"
+                      onclick="repondre_commentaire_show(<?php echo($donnees['id_commentaire']) ?>)">Répondre</span>
+
+                    <div id="commentaire_repondre_form_<?php echo($donnees['id_commentaire']) ?>"
+                         style="display: none;">
+                        <form method="post" action="sql/reponses_commentaire.php">
+                            <label for="reponse">
+                                <input type="text" class="input-field" name="reponse" required/>
+                            </label>
+                            <input name="id_commentaire" type="hidden"
+                                   value="<?php echo($donnees['id_commentaire']) ?>">
+                            <input name="id_membre" type="hidden" value="<?php echo $_SESSION['user']['id']; ?>">
+                            <input type="submit" value="Répondre"/>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
+
+        </div>
+
+        <div class="commentaire_reponses">
+            <?php afficher_reponse($donnees['id_commentaire']) ?>
         </div>
         <?php
     }
@@ -319,7 +331,8 @@ function afficher_commentaires($id_article)
         ?>
         <div class="voir_plus">
             <a>
-                <span class="fa fa-chevron-circle-down mask" aria-hidden="true"><span class="voir"> Voir plus</span></span>
+                <span class="fa fa-chevron-circle-down mask" aria-hidden="true"><span
+                            class="voir"> Voir plus</span></span>
             </a>
         </div>
         </div>
@@ -344,23 +357,37 @@ function afficher_commentaires($id_article)
                 <div class="commentaire_contenu">
                     <?php echo $donnees['contenu']; ?>
                 </div>
-                <div class="commentaire_repondre">
-                    <span class="repondre_form_show" onclick="repondre_commentaire_show(<?php echo ($donnees['id_commentaire']) ?>)">Répondre</span>
-                    <div id="commentaire_repondre_form_<?php echo ($donnees['id_commentaire']) ?>" style="display: none;">
-                        <form action="sql/repondre_commentaire.php" method="post">
-                            <label for="reponse">
-                                <input type="text" class="input-field" name="reponse" required/>
-                            </label>
-                            <input type="submit" value="Répondre"/>
-                        </form>
+                <?php if (isset($_SESSION['user'])) { ?>
+                    <div class="commentaire_repondre">
+                    <span class="repondre_form_show"
+                          onclick="repondre_commentaire_show(<?php echo($donnees['id_commentaire']) ?>)">Répondre</span>
+                        <div id="commentaire_repondre_form_<?php echo($donnees['id_commentaire']) ?>"
+                             style="display: none;">
+                            <form method="post" action="sql/reponses_commentaire.php">
+                                <label for="reponse">
+                                    <input type="text" class="input-field" name="reponse" required/>
+                                </label>
+                                <input name="id_commentaire" type="hidden"
+                                       value="<?php echo($donnees['id_commentaire']) ?>">
+                                <input name="id_membre" type="hidden" value="<?php echo $_SESSION['user']['id']; ?>">
+                                <input type="submit" value="Répondre"/>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
+
+
+            </div>
+
+            <div class="commentaire_reponses">
+                <?php afficher_reponse($donnees['id_commentaire']) ?>
             </div>
             <?php
         } ?>
         <div class="voir_moins">
             <a>
-                <span class="fa fa-chevron-circle-up demask" aria-hidden="true"><span class="voir"> Voir moins</span> </span>
+                <span class="fa fa-chevron-circle-up demask" aria-hidden="true"><span
+                            class="voir"> Voir moins</span> </span>
             </a>
         </div>
         </div><?php
@@ -368,49 +395,25 @@ function afficher_commentaires($id_article)
     }
 }
 
-?>
 
-<!-- Modal -->
-<!--<div class="modal fade" id="myModal_prochain_article" role="dialog">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <h3 class="modal-title">Sortie du prochain article</h3>-->
-<!--                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!---->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                --><?php
-//                if (isset($_SESSION['user']['pseudo'])) {
-//                    ?><!--<p>Vous recevrez un mail à l'adresse suivante --><?php //echo $_SESSION['user']['email'] ?><!-- lors de la-->
-<!--                    sortie du prochain article.-->
-<!--                    </p>-->
-<!--                    --><?php
-//                } else {
-//                    ?>
-<!--                    <div class="connexion">-->
-<!--                        <p>Veuillez vous connecter afin de recevoir le mail : </p>-->
-<!--                        <a href="index.php?page=3"><span><i class="fa fa-user" aria-hidden="true"></i> Connexion</span>-->
-<!--                        </a>-->
-<!--                        <a href="index.php?page=4"><span><i class="fa fa-pencil"-->
-<!--                                                            aria-hidden="true"></i> Inscription</span> </a>-->
-<!--                    </div>-->
-<!--                    --><?php
-//                } ?>
-<!---->
-<!--            </div>-->
-<!--            <div class="modal-footer">-->
-<!--                --><?php //if (isset($_SESSION['user']['pseudo'])) {
-//                    ?>
-<!--                    <form action="mailing/mail_prochain_article.php" method="post">-->
-<!--                        <input type="hidden" name="id" value="--><?php //echo $_SESSION['user']['id'] ?><!--"/>-->
-<!--                        <input type="submit" value="J'accepte"/>-->
-<!--                    </form>-->
-<!--                    --><?php
-//                } ?>
-<!--                <button type="button" class="btn btn-default btn_modal_close" data-dismiss="modal">Fermer</button>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+function afficher_reponse($id_commentaire)
+{
+    $bdd = connexion_sql();
+
+    $sql = 'SELECT * FROM reponses_commentaire JOIN membres ON membres.id=reponses_commentaire.id_membre WHERE id_commentaire =' . $id_commentaire .'  ORDER BY date_reponse desc';
+
+
+    $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
+
+
+    while ($donnees = mysqli_fetch_array($req)) {
+        ?>
+        <div class="reponse">
+            <b><?php echo $donnees['pseudo']; ?> :</b>
+            <?php echo $donnees['reponse']; ?>
+        </div>
+    <?php }
+
+}
+
+?>

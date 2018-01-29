@@ -147,6 +147,16 @@
     border: 2px dashed #880015;
 }
 
+
+.article_commentaire .voir_commentaires .reponse{
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #880015;
+    padding: 10px;
+    width:40%;
+    margin-bottom:10px;
+}
+
 .form-etiquette {
     padding: 10px;
     background-color: #fff;
