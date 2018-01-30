@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b20fb71-fcf2-4634-9d96-6a045f8638d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/img/ficelles/ficelle_moyenne.png" afterPath="$PROJECT_DIR$/img/ficelles/ficelle_moyenne.png" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/css/main.min.css" afterPath="$PROJECT_DIR$/css/main.min.css" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/partials/footer.php" afterPath="$PROJECT_DIR$/partials/footer.php" />
       <change beforePath="$PROJECT_DIR$/partials/menu.php" afterPath="$PROJECT_DIR$/partials/menu.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,24 +29,24 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.75603217">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+                <state relative-caret-position="339">
+                  <caret line="192" column="6" lean-forward="false" selection-start-line="192" selection-start-column="6" selection-end-line="192" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/partials/menu.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="50" />
+                <state relative-caret-position="189">
+                  <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -57,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/partials/footer.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="416">
-                  <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="51" selection-end-column="0" />
+                  <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -67,7 +66,7 @@
             <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="865">
-                  <caret line="141" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+                  <caret line="141" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -77,7 +76,7 @@
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="244">
-                  <caret line="753" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1198" selection-end-column="0" />
+                  <caret line="753" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1198" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +89,8 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="934" column="32" lean-forward="true" selection-start-line="934" selection-start-column="32" selection-end-line="934" selection-end-column="32" />
+                <state relative-caret-position="436">
+                  <caret line="255" column="16" lean-forward="true" selection-start-line="255" selection-start-column="16" selection-end-line="255" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -112,8 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dosis</find>
-      <find>top-page</find>
       <find>fa-search</find>
       <find>fa</find>
       <find>mentions_legales</find>
@@ -142,10 +139,13 @@
       <find>les comm</find>
       <find>mail</find>
       <find>#right-top</find>
+      <find>#searchLabel</find>
+      <find>searchInput</find>
     </findStrings>
     <replaceStrings>
       <replace>form-etiquette</replace>
       <replace>.right-top</replace>
+      <replace>.searchLabel</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -194,7 +194,6 @@
         <option value="$PROJECT_DIR$/partials/footer/lequipe.php" />
         <option value="$PROJECT_DIR$/partials/footer/contactez_nous.php" />
         <option value="$PROJECT_DIR$/partials/footer/mentions_legales.php" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/etiquettes.css" />
         <option value="$PROJECT_DIR$/partials/article.php" />
         <option value="$PROJECT_DIR$/partials/inscription.php" />
@@ -202,9 +201,10 @@
         <option value="$PROJECT_DIR$/sql/devenir_vendeur.php" />
         <option value="$PROJECT_DIR$/sql/contactez_nous.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/partials/footer.php" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/partials/menu.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -233,7 +233,7 @@
       <path value="$PROJECT_DIR$/vendor/google/apiclient" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -402,15 +402,15 @@
       <workItem from="1516707909093" duration="1218000" />
       <workItem from="1517040165328" duration="17799000" />
       <workItem from="1517217048071" duration="19646000" />
-      <workItem from="1517299962047" duration="20723000" />
+      <workItem from="1517299962047" duration="21975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="584376000" />
+    <option name="totallyTimeSpent" value="585628000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="1911" y="-9" width="1938" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19871107" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -853,18 +853,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="51" selection-end-column="0" />
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -872,23 +864,31 @@
     <entry file="file://$PROJECT_DIR$/css/etiquettes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="865">
-          <caret line="141" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="50" />
+          <caret line="141" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="934" column="32" lean-forward="true" selection-start-line="934" selection-start-column="32" selection-end-line="934" selection-end-column="32" />
+        <state relative-caret-position="244">
+          <caret line="753" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="192" column="6" lean-forward="false" selection-start-line="192" selection-start-column="6" selection-end-line="192" selection-end-column="6" />
           <folding />
         </state>
       </provider>
