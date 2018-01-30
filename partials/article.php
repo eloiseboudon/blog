@@ -56,18 +56,18 @@ $donnees = mysqli_fetch_array($req);
                 <p>Pour être informé de la sortie du prochain article :</p>
 
                 <form action="mailing/mail_pro_article_sans_compte.php" method="post">
-                    <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
+                    <label for="nom"><span class="name">Nom <span class="required">*</span></span><input type="text"
                                                                                             class="input-field"
                                                                                             name="nom"
                                                                                             required/>
                     </label>
 
-                    <label for="prenom"><span>Prenom <span class="required">*</span></span><input type="text"
+                    <label for="prenom"><span class="name">Prenom <span class="required">*</span></span><input type="text"
                                                                                                   class="input-field"
                                                                                                   name="prenom"
                                                                                                   required/>
                     </label>
-                    <label for="email"><span>Email <span class="required">*</span></span><input type="email"
+                    <label for="email"><span class="name">Email <span class="required">*</span></span><input type="email"
                                                                                                 class="input-field"
                                                                                                 name="email"
                                                                                                 required/>
