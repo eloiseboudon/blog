@@ -1,3 +1,8 @@
+function navbarSearch(){
+    document.getElementById("formsearch").submit();
+}
+
+
 $('.unmask').on('click', function () {
 
     if ($(this).prev('input').attr('type') == 'password')
@@ -68,3 +73,4 @@ function repondre_commentaire_show(id_commentaire){
 // $('.voir_reponse').on('click', function () {
 //     document.getElementById("afficher_reponse").style.display = "block";
 // });
+

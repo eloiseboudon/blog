@@ -54,9 +54,9 @@
                 <div class="col-lg-3 col-sm-3 col-6 social">
                     <h1>Suivez-nous</h1>
                     <div class="icon_social">
-                        <a href="#"><img src="assets/icones/facebook.png"></a>
-                        <a href="#"><img src="assets/icones/instagram.png"></a>
-                        <a href="#"><img src="assets/icones/twitter.png"></a>
+                        <a href="#"><img src="assets/icones/facebook.png" alt="L'étiquette facebook"></a>
+                        <a href="#"><img src="assets/icones/instagram.png" alt="L'étiquette instagram"></a>
+                        <a href="#"><img src="assets/icones/twitter.png" alt="L'étiquette twitter"></a>
                     </div>
 
                 </div>

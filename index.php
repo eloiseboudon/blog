@@ -62,7 +62,7 @@ include('sql/connexion.php');
 
     <title>L’étiquette - Blog mode éthique</title>
 
-    <link rel="icon" href="assets/Miniature.jpg">
+    <link rel="icon" href="assets/Miniature.png">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Quicksand" rel="stylesheet">
@@ -72,9 +72,9 @@ include('sql/connexion.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link href="css/main.css" type="text/css" rel="stylesheet"/>
-    <link href="css/etiquettes.css" type="text/css" rel="stylesheet"/>
-    <link href="css/timeline.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/etiquettes.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/timeline.min.css" type="text/css" rel="stylesheet"/>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -86,9 +86,9 @@ include('sql/connexion.php');
 <div class="menu">
     <?php
 
-    if (isset($_GET['page']) || isset($_GET['search'])) {
+//    if (isset($_GET['page']) || isset($_GET['search'])) {
         include('partials/menu.php');
-    } ?>
+//    } ?>
 </div>
 
 
@@ -180,16 +180,16 @@ include('sql/connexion.php');
         } elseif (isset($_GET['search'])) {
             include('partials/search.php');
         } else {
-            include('landingPage.php');
+            include('partials/accueil.php');
         }
         ?>
     </div>
 </div>
 
 <div id="footer">
-    <?php if (isset($_GET['page']) || isset($_GET['search'])) {
+<!--    --><?php //if (isset($_GET['page']) || isset($_GET['search'])) {
         include('partials/footer.php');
-    } ?>
+//    } ?>
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -200,9 +200,9 @@ include('sql/connexion.php');
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
 
-<script src="js/vicopo.api.js"></script>
-<script src="js/villes_codepostal.js"></script>
-<script src="js/app.js"></script>
+<!--<script src="js/vicopo.api.js"></script>-->
+<!--<script src="js/villes_codepostal.js"></script>-->
+<script src="js/app.min.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="popover"]').popover();

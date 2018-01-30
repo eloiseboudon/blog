@@ -3,13 +3,13 @@
         <div class="row">
 
             <div class="col-sm-4 col-xs-4 logo">
-                <a href="/"><img src="assets/logo.png"/></a>
+                <a href="accueil"><img src="assets/letiquette_logo_min.png" alt="L'étiquette logo"/></a>
             </div>
             <div class="col-sm-4 col-xs-4" id="searchBox">
-                <form name="formsearch" action="index.php" method="get">
-                    <label id="searchLabel">
+                <form name="formsearch" action="index.php" method="get" id="formsearch">
+                    <label id="searchLabel" for="searchInput">
                         <input name="search" id="searchInput" placeholder="Rechercher">
-                        <span class="fa fa-search" onclick="formsearch.submit()"></span>
+                        <span class="fa fa-search" onclick="navbarSearch()"></span>
                     </label>
                 </form>
             </div>
