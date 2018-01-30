@@ -53,10 +53,14 @@ include('sql/connexion.php');
 
 
     <meta name="author" content="L'étiquette"/>
-    <meta name="keywords" content="L'étiquette, blog, éthique"/>
-    <meta name="description" content=""/>
+    <meta name="description"
+          content="Retrouvez des articles fun et décalés sur le shopping responsable. Chaque semaine, apprenez-en un peu
+           plus sur les alternatives au cuir animal, les matières recyclées, le coton bio, les modes de production, ce qui
+            se cache derrière le made in France, et plein d’autres facettes de la mode éthique."/>
     <meta name="viewport" content="width=device-width"/>
     <meta property="og:image" content="http://letiquette-blog.com/assets/Miniature.jpg"/>
+
+    <title>L’étiquette - Blog mode éthique</title>
 
     <link rel="icon" href="assets/Miniature.jpg">
 

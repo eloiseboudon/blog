@@ -38,6 +38,21 @@ input{
     min-height: calc(100vh - 308px);
 }
 
+.revenir_accueil{
+    text-align:right;
+    margin-right: 10%;
+}
+
+.revenir_accueil a{
+    color: #000;
+    font-size:1.2em;
+
+}
+
+.revenir_accueil a:hover{
+    color:#880015;
+}
+
 .lequipe_global p, .lequipe_global h1, .nos_valeurs_global h1, .mentions_legales_global h1 {
     margin: 10px;
 }
@@ -79,6 +94,12 @@ input{
     margin-top: 0;
 }
 
+#top-page .logo a:hover{
+    background-color:transparent;
+    border:none;
+    color:transparent;
+}
+
 #top-page img, #top-page-scroll img {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
@@ -97,7 +118,7 @@ input{
     padding-top: 30px;
 }
 
-#top-page #right-top a {
+#top-page a {
     color: white;
     text-decoration: none;
     padding-top: 16px;
@@ -108,12 +129,10 @@ input{
 
 }
 
-#top-page #right-top a:hover {
+#top-page a:hover {
     background-color: #F4ECDE;
     color: #000000;
-    /*padding-bottom: 13px;*/
     border-bottom: 1.5px solid #880015;
-    /*font-family: 'Quicksand', sans-serif;*/
 }
 
 #top-page #right-top .fa {
@@ -752,6 +771,18 @@ input{
     -webkit-box-shadow: 1px 1px 4px #DADADA;
 }
 
+
+.commentaire_reponses .voir_reponse{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.commentaire_reponses .voir_reponse:hover{
+    cursor: pointer;
+    color:#880015;
+}
+
 .form-etiquette textarea {
     width: 60%;
 }
@@ -942,15 +973,24 @@ input{
         padding-top: 5px;
         text-align: center;
     }
-    
-    #top-page #right-top a {
-        font-size: 0;
-        padding: 0;
+
+    /*#top-page a {*/
+        /*font-size: 0;*/
+        /*padding: 0;*/
+    /*}*/
+
+    #top-page .right-top-all .right-name{
+        display: none;
     }
 
-
     #top-page .right-top-all{
-        padding-top: 0;
+        padding-top: 8px;
+    }
+
+    #top-page a:hover{
+        background-color:transparent;
+        color:transparent;
+        border-bottom: none;
     }
 
     #top-page #right-top .cercle {

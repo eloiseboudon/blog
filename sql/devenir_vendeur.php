@@ -2,16 +2,14 @@
 
 
 if (isset($_POST['nom_entreprise']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
-    $to = "contact@letquette-shop.com";
+    $to = "contact@letiquette-shop.com";
     $subject = "Blog [Devenir vendeur]";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: L'étiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
+    $headers .= "From: L'etiquette <ne-pas-repondre@letiquette-blog.com>". "\r\n";
 
 
     $nom_entreprise = $_POST['nom_entreprise'];
-    $siret = $_POST['siret'];
-    $tva = $_POST['tva'];
     $site_internet = $_POST['site_internet'];
 
     $nom = $_POST['nom'];
@@ -20,16 +18,14 @@ if (isset($_POST['nom_entreprise']) && isset($_POST['nom']) && isset($_POST['pre
     $telephone = $_POST['telephone'];
     $contenu= $_POST['message'];
 
-    $message = "$nom $prenom de la marque $nom_entreprise à envoyé un message: $contenu.
-    Entreprise : $nom_entreprise
-    N° Siret : $siret
-    N° TVA : $tva
-    Site internet : $site_internet
+    $message = "$nom $prenom de la marque $nom_entreprise à envoyé un message: $contenu. <br />
+    Entreprise : $nom_entreprise <br />
+    Site internet : $site_internet <br /> <br /> 
     
-    Contact : 
-    Nom : $nom
-    Prenom : $prenom
-    Mail : $email
+    Contact :  <br />
+    Nom : $nom <br />
+    Prenom : $prenom <br />
+    Mail : $email <br />
     Telephone : $telephone";
 
 

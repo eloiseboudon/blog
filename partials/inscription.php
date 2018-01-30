@@ -1,9 +1,9 @@
 <title>
     Inscription - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Inscrivez-vous pour pouvoir
-    laisser des commentaires et interagir avec la communauté !
-</title>
 
+</title>
+<meta name="description" content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Inscrivez-vous pour pouvoir
+    laisser des commentaires et interagir avec la communauté !">
 
 <div class="contenu">
     <div class="form-etiquette">
@@ -82,8 +82,8 @@
 
 
             <label for="cgu">
-                <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les
-                conditions générales d'utilisation <span class="required" style="float:none;">*</span>
+                <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les <a href="cgu_cookies">
+                conditions générales d'utilisation </a> <span class="required" style="float:none;">*</span>
             </label>
 
             <label for="courrier">

@@ -1,7 +1,9 @@
 <title>
-    L’équipe - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Vous voulez voir qui se cache derrière le blog ? Rendez-vous sur la page l’équipe !
-</title>
+    L’équipe - L’étiquette - Blog mode éthique</title>
+
+<meta name="description"
+      content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Vous voulez voir qui se cache derrière le blog ? Rendez-vous sur la page l’équipe !">
+
 <div class="lequipe_global">
     <h1>L'équipe</h1>
     <p>L’Etiquette, c’est un projet né début 2017 dans une chambre étudiante. Aujourd’hui c’est une équipe de deux

@@ -2,7 +2,7 @@
 
 
 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
-    $to = "contact@letquette-shop.com";
+    $to = "contact@letiquette-shop.com";
 
 
     $nom = $_POST['nom'];
@@ -18,7 +18,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email'])) {
 
 
     $subject = "Blog [Contactez-nous] - ". $demande ;
-    $message = "$nom $prenom à envoyé un mail depuis cette adresse : $email, concernant : '$demande'. 
+    $message = "$nom $prenom à envoyé un mail depuis cette adresse : $email, concernant : '$demande'.  <br />
     Voici la demande : '$commentaire'";
 
 

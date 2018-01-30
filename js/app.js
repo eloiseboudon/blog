@@ -57,19 +57,14 @@ $('.demask').on('click', function () {
     document.getElementById("commentaires-view-5").style.display = "block";
 });
 
-
 $("#modal_update_email").on('click',function () {
     $('#myModalUpdateMail').modal('show');
 });
-
-// $('.repondre_form_show').on('click', function () {
-//     document.getElementById("commentaire_repondre_form").style.display = "block";
-// });
-
 
 function repondre_commentaire_show(id_commentaire){
     document.getElementById('commentaire_repondre_form_' + id_commentaire).style.display = "block";
 }
 
-
-
+// $('.voir_reponse').on('click', function () {
+//     document.getElementById("afficher_reponse").style.display = "block";
+// });

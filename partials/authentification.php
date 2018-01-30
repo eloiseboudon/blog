@@ -1,8 +1,8 @@
 <title>
     Connexion - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Connectez-vous pour pouvoir
-    laisser des commentaires et interagir avec la communauté !
 </title>
+<meta name="description" content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Connectez-vous pour pouvoir
+    laisser des commentaires et interagir avec la communauté !">
 
 <div class="contenu">
     <div class="form-etiquette">

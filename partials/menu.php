@@ -16,7 +16,7 @@
             <div class="col-sm-4 col-xs-4 right-top-all">
 
                 <?php
-                if (isset($_SESSION['connexion'])) {
+                if (isset($_SESSION['user'])) {
                     ?>
                     <a href="mon_compte">     <span id="right-top"><i
                                     class="fa fa-address-book-o"
@@ -31,12 +31,12 @@
                     ?>
                     <a href="inscription"><span id="right-top"><i class="fa fa-pencil cercle"
                                                                   aria-hidden="true"></i>
-                                    Inscription</span></a>
+                            <span class="right-name">Inscription</span></span></a>
 
 
                 <a href="authentification"><span id="right-top"><i class="fa fa-user cercle"
                                                                        aria-hidden="true"></i>
-                                    Connexion</span> </a><?php } ?>
+                        <span class="right-name">Connexion</span></span> </a><?php } ?>
             </div>
         </div>
         <div class="row">

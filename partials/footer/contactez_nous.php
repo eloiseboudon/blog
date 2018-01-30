@@ -1,7 +1,9 @@
 <title>
     Contactez-nous - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Un doute, une remarque, une question ? Contactez-nous !
 </title>
+<meta name="description"
+      content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Un doute, une remarque, une question ? Contactez-nous !">
+
 
 <div class="contenu">
     <div class="form-etiquette">

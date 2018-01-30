@@ -1,13 +1,15 @@
+<!--<div class="revenir_accueil">-->
+<!--    <a href="accueil">Revenir à l'accueil</a>-->
+<!--</div>-->
 <?php
 
 //if (isset($_COOKIE['nbArticle'])) {
 //    setcookie('nbArticles', $_COOKIE['nbArticle'] + 1);
 //}
 
+
 if (isset($_GET['id'])) {
     afficher_article($_GET['id']);
-} else {
-    echo "probleme";
 }
 
 function afficher_article($id_article){
@@ -30,7 +32,7 @@ $donnees = mysqli_fetch_array($req);
     <div class="article">
 
         <div class="article_titre">
-            <h1><?php echo $donnees['titre']; ?></h1>
+            <h1 title="<?php echo $donnees['titre']; ?>"><?php echo $donnees['titre']; ?></h1>
         </div>
 
         <div class="article_details">
@@ -57,20 +59,22 @@ $donnees = mysqli_fetch_array($req);
 
                 <form action="mailing/mail_pro_article_sans_compte.php" method="post">
                     <label for="nom"><span class="name">Nom <span class="required">*</span></span><input type="text"
-                                                                                            class="input-field"
-                                                                                            name="nom"
-                                                                                            required/>
+                                                                                                         class="input-field"
+                                                                                                         name="nom"
+                                                                                                         required/>
                     </label>
 
-                    <label for="prenom"><span class="name">Prenom <span class="required">*</span></span><input type="text"
-                                                                                                  class="input-field"
-                                                                                                  name="prenom"
-                                                                                                  required/>
+                    <label for="prenom"><span class="name">Prenom <span class="required">*</span></span><input
+                                type="text"
+                                class="input-field"
+                                name="prenom"
+                                required/>
                     </label>
-                    <label for="email"><span class="name">Email <span class="required">*</span></span><input type="email"
-                                                                                                class="input-field"
-                                                                                                name="email"
-                                                                                                required/>
+                    <label for="email"><span class="name">Email <span class="required">*</span></span><input
+                                type="email"
+                                class="input-field"
+                                name="email"
+                                required/>
                     </label>
 
                     <input type="submit" value="Valider"/>
@@ -150,6 +154,7 @@ $donnees = mysqli_fetch_array($req);
 
         <div class="article_titre">
             <h2>Les commentaires</h2>
+
         </div>
 
         <div class="voir_commentaires">
@@ -400,17 +405,26 @@ function afficher_reponse($id_commentaire)
 {
     $bdd = connexion_sql();
 
-    $sql = 'SELECT * FROM reponses_commentaire JOIN membres ON membres.id=reponses_commentaire.id_membre WHERE id_commentaire =' . $id_commentaire .'  ORDER BY date_reponse desc';
+    $sql = 'SELECT DISTINCT reponses_commentaire.reponse as reponse, reponses_commentaire.date_reponse as date_reponse, membres.pseudo as pseudo, com_mem.pseudo as com_auteur FROM reponses_commentaire
+  JOIN membres  ON membres.id=reponses_commentaire.id_membre
+  JOIN commentaires ON commentaires.id_commentaire=reponses_commentaire.id_commentaire
+  JOIN membres AS com_mem ON com_mem.id=commentaires.auteur
+  WHERE reponses_commentaire.id_commentaire =' . $id_commentaire . '  ORDER BY date_reponse asc';
+
+
+
 
 
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
 
-
     while ($donnees = mysqli_fetch_array($req)) {
         ?>
         <div class="reponse">
-            <b><?php echo $donnees['pseudo']; ?> :</b>
+            <b><?php echo $donnees['pseudo']; ?> </b>,
+            le <?php echo date_format(new DateTime($donnees['date_reponse']), 'j-M-Y à H:i:s'); ?>
+            <b> en réponse à <?php echo $donnees['com_auteur'] ?></b> <br/>
             <?php echo $donnees['reponse']; ?>
+
         </div>
     <?php }
 

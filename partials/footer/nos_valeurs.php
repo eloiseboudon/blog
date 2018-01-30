@@ -1,7 +1,9 @@
 <title>
     Nos valeurs - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Consultez nos valeurs pour en savoir plus sur nos engagements éthiques.
 </title>
+
+<meta name="description"
+      content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Consultez nos valeurs pour en savoir plus sur nos engagements éthiques.">
 
 <div class="nos_valeurs_global">
     <h1>Nos valeurs</h1>

@@ -1,8 +1,10 @@
 <title>
     Conditions générales d’utilisation - L’étiquette - Blog mode éthique
-    Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Consultez nos Conditions Générales
-    d’Utilisation pour en savoir plus sur le fonctionnement du blog.
 </title>
+
+<meta name="description"
+      content="Chaque semaine retrouvez des articles fun et décalés sur le shopping responsable. Consultez nos Conditions Générales
+    d’Utilisation pour en savoir plus sur le fonctionnement du blog.">
 
 <div class="cgu_global">
     <h1>Conditions générales d'utilisation</h1>
