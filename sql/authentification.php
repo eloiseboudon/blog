@@ -56,7 +56,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
                 $_SESSION['connexion'] = "site";
                 $_SESSION['flash']['success'] = "Vous êtes connecté.";
                 setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
-                header('location: ../index.php');
+                header('location: ../accueil');
                 exit();
 
             } else {

@@ -112,7 +112,7 @@ function afficher_search($search)
         }
 
         $_SESSION['flash']['error'] = "0 résultat correspondant.";
-        header('location: index.php');
+        header('location: ../accueil');
         exit();
     }
 

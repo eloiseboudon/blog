@@ -26,7 +26,7 @@
                     </a>
                 <a href="sql/deconnexion.php"> <span class="right-top">
                         <i class="fa fa-user-times cercle" aria-hidden="true"></i>
-                                    Déconnexion</span></a>
+                        <span class="right-name"> Déconnexion</span></span></a>
                     <?php
                 } else {
                     ?>

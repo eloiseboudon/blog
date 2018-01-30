@@ -132,7 +132,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
                 $_SESSION['flash']['error'] = "Une erreur a eu lieu durant l'envoi du mail veuillez nous <a href=\"../contact\">contacter</a> s'il vous plait.";
             }
 
-            header('location:../index.php');
+            header('location:../accueil');
             exit();
         }
     } else {

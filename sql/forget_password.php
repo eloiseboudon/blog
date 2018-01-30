@@ -58,7 +58,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
 
 
         mail($email, 'Nouveau mot de passe', $message, $headers);
-        header('Location: ../index.php');
+        header('Location: ../accueil');
         exit();
     } else {
         session_start();

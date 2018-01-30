@@ -72,7 +72,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://
     $_SESSION['connexion'] = "confirm";
     $_SESSION['user'] = $user;
 
-    header('Location: ../index.php');
+    header('Location: ../accueil');
     exit();
 } else {
     $_SESSION['flash']['error'] = "La validation n'a pas fonctionné, veuillez nous contacter";

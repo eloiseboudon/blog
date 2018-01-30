@@ -82,7 +82,7 @@
 
 
             <label for="cgu">
-                <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les <a href="cgu_cookies">
+                <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les <a href="cgu">
                 conditions générales d'utilisation </a> <span class="required" style="float:none;">*</span>
             </label>
 

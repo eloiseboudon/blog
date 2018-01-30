@@ -32,7 +32,7 @@ if (isset($_POST['id']) && isset($_POST['token'])) {
             } else {
                 session_start();
                 $_SESSION['flash']['error'] = "Ce token n'est pas valide.";
-                header('Location: ../index.php');
+                header('Location: ../accueil');
                 exit();
             }
         }

@@ -17,7 +17,7 @@ if (isset($_COOKIE['pseudo'])) {
         $_SESSION['user'] = $user;
         $_SESSION['auto_log'] = "oui";
         setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
-        header('location:../index.php');
+        header('location:../accueil');
         exit();
     }
 }

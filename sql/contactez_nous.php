@@ -45,7 +45,7 @@ Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http:/
     session_start();
     if (mail($to, $subject, $message, $headers) && mail($email, $subject_contact, $message_contact, $headers)) {
         $_SESSION['flash']['success'] = "Merci pour votre message ! Nous reviendrons vers vous dans les plus brefs délais.";
-        header('location: ../index.php');
+        header('location: ../accueil');
         exit();
     } else {
         $_SESSION['flash']['error'] = "Une erreur est survenue, votre message n'a pas été envoyé, merci de bien vouloir réessayer.";
