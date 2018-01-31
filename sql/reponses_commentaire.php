@@ -6,7 +6,7 @@ if (isset($_POST['reponse']) && isset($_POST['id_commentaire']) && isset($_POST[
 
     $id_commentaire = $_POST['id_commentaire'];
     $id_membre = $_POST['id_membre'];
-    $reponse = $_POST['reponse'];
+    $reponse =  htmlspecialchars($_POST['reponse'],ENT_QUOTES);
 
     $bdd = connexion_sql();
     $sql = "INSERT INTO reponses_commentaire (id_commentaire, id_membre, date_reponse, reponse) VALUES ('$id_commentaire','$id_membre',NOW(),'$reponse')";

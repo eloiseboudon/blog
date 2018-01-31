@@ -3,7 +3,7 @@ include_once 'vendor/autoload.php';
 
 const CLIENT_ID = '121564257068-dsfqbu2qnc0m38rmg7mc0lbadbnk4ogf.apps.googleusercontent.com';
 const CLIENT_SECRET = 'GN8ZlJ4sQJbLYAiIIsaKnUhS';
-const REDIRECT_URL = 'http://www.letiquette-blog.com/index.php?page=3';
+const REDIRECT_URL = 'http://www.letiquette-blog.com/authentification';
 
 //session_start();
 
@@ -28,7 +28,8 @@ if (isset($_GET['code'])) {
     header('Location: ' . filter_var(REDIRECT_URL, FILTER_SANITIZE_URL));
 }
 
-if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+if (isset($_SESSION['access_token'])
+    && $_SESSION['access_token']) {
     $client->setAccessToken($_SESSION['access_token']);
     $me = $plus->people->get('me');
 

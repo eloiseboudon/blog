@@ -102,9 +102,9 @@ include('sql/connexion.php');
 //var_dump($_SESSION['auto_log']);
 
 
-//if(isset($_SESSION['connexion'])){
-//    var_dump($_SESSION['connexion']);
-//}
+if(isset($_SESSION['access_token'])){
+    var_dump($_SESSION['access_token']);
+}
 ?>
 
 
@@ -202,7 +202,7 @@ include('sql/connexion.php');
 
 <!--<script src="js/vicopo.api.js"></script>-->
 <!--<script src="js/villes_codepostal.js"></script>-->
-<script src="js/app.min.js"></script>
+<script src="js/app.js"></script>
 <script>
     $(document).ready(function () {
         $('[data-toggle="popover"]').popover();

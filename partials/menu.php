@@ -42,16 +42,16 @@
                 </a><?php } ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12" id="smallSearch">
-                <form name="formsearch" action="index.php" method="get">
-                    <label class="searchLabel">
-                        <input name="search" type="text" id="searchInput" placeholder="Rechercher">
-                        <span class="fa fa-search" onclick="formsearch.submit()"></span>
-                    </label>
-                </form>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-12" id="smallSearch">-->
+<!--                <form name="formsearch" action="index.php" method="get" id="formsearch">-->
+<!--                    <label class="searchLabel" for="searchInput">-->
+<!--                        <input type="text" name="search" id="searchInput" placeholder="Rechercher">-->
+<!--                        <span class="fa fa-search" onclick="navbarSearch()"></span>-->
+<!--                    </label>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 </div>
