@@ -71,7 +71,7 @@ if (isset($_POST['email']) && isset($_POST['prenom'])) {
     $landingPage = "landingPageMarketPlace";
 
 $bdd = connexion_sql();
-    $sql = "INSERT INTO membres (nom, prenom, pseudo, email,date_inscription) VALUES ('$landingPage','$prenom','$landingPage','$email',NOW())";
+    $sql = "INSERT INTO membres (nom, prenom, email,date_inscription) VALUES ('$landingPage','$prenom','$email',NOW())";
     $req = $bdd->query($sql) or die ('Erreur SQL : ' . mysqli_error($bdd));
     $user_id = mysqli_insert_id($bdd);
 

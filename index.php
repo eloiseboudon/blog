@@ -5,30 +5,34 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if (!isset($_COOKIE['isConnect'])) {
-    setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
-} else {
-    if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] == "google")) {
-        if (isset($_SESSION['user']['pseudo'])) {
-            setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
-            setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
-        } else {
-            setcookie('isConnect', 2, time() + 365 * 24 * 3600, "/");
-        }
-    }
-}
-
-if (isset($_COOKIE['isConnect'])) {
-    if ($_COOKIE['isConnect'] != 1 && $_COOKIE['isConnect'] != 3) {
-        if ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo'])) {
-            include('sql/authentification_auto.php');
-        }
-    }
-}
+//if (!isset($_COOKIE['isConnect'])) {
+//    setcookie('isConnect', 0, time() + 365 * 24 * 3600, "/", null, false, true);
+//} else {
+//    if ($_COOKIE['isConnect'] != 3 || $_COOKIE['isConnect'] == 0 || $_COOKIE['isConnect'] == 1 || (isset($_SESSION['connexion']) && $_SESSION['connexion'] == "google")) {
+//        if (isset($_SESSION['user']['pseudo'])) {
+//            setcookie('pseudo', $_SESSION['user']['pseudo'], time() + 365 * 24 * 3600, "/", null, false, true);
+//            setcookie('isConnect', 1, time() + 365 * 24 * 3600, "/");
+//        } else {
+//            setcookie('isConnect', 2, time() + 365 * 24 * 3600, "/");
+//        }
+//    }
+//}
+//
+//if (isset($_COOKIE['isConnect'])) {
+//    if ($_COOKIE['isConnect'] != 1 && $_COOKIE['isConnect'] != 3) {
+//        if ($_COOKIE['isConnect'] == 2 && isset($_COOKIE['pseudo'])) {
+//            include('sql/authentification_auto.php');
+//        }
+//    }
+//}
 
 
 header('Content-Type: text/html; charset=UTF-8', true);
 include('sql/connexion.php');
+
+
+//require 'auth/googlePlus_config.php';
+
 
 ?>
 <html lang="fr">
@@ -58,7 +62,7 @@ include('sql/connexion.php');
            plus sur les alternatives au cuir animal, les matières recyclées, le coton bio, les modes de production, ce qui
             se cache derrière le made in France, et plein d’autres facettes de la mode éthique."/>
     <meta name="viewport" content="width=device-width"/>
-    <meta property="og:image" content="http://letiquette-blog.com/assets/Miniature.jpg"/>
+    <meta property="og:image" content="http://dev.letiquette-blog.com/assets/Miniature.jpg"/>
 
     <title>L’étiquette - Blog mode éthique</title>
 
@@ -83,14 +87,6 @@ include('sql/connexion.php');
 
 <body>
 
-<div class="menu">
-    <?php
-
-    if (isset($_GET['page']) || isset($_GET['search'])) {
-        include('partials/menu.php');
-    } ?>
-</div>
-
 
 <?php
 //if (isset($_SESSION['user']))
@@ -102,95 +98,29 @@ include('sql/connexion.php');
 //var_dump($_SESSION['auto_log']);
 
 
-if(isset($_SESSION['access_token'])){
-    var_dump($_SESSION['access_token']);
-}
+//session_start();
+//foreach ($_SESSION as $key => $value) {
+//    print $key . " = " . $value . "<br>";
+//}
+
+
+//if(isset($_SESSION['access_token'])){
+//    var_dump($_SESSION['access_token']);
+//}
 ?>
 
 
 <div class="contenu">
     <div class="global_width">
-        <div class="pop-up">
-            <?php
 
-            if (isset($_SESSION['flash']['success'])) {
-                ?>
-                <div class="alert alert-success" role="alert">
-                    <?php
-                    echo $_SESSION['flash']['success'];
-                    ?></div>
-                <?php
-                unset($_SESSION['flash']['success']);
-            }
-            if (isset($_SESSION['flash']['error'])) {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php
-                    echo $_SESSION['flash']['error'];
-                    ?></div>
-                <?php
-                unset($_SESSION['flash']['error']);
-            }
-
-            ?>
-        </div>
         <?php
-        if (isset($_GET['page'])) {
-            switch ($_GET['page']) {
-                case "accueil":
-                    include('partials/accueil.php');
-                    break;
-                case "article":
-                    include('partials/article.php');
-                    break;
-                case "authentification":
-                    include('partials/authentification.php');
-                    break;
-                case "inscription":
-                    include('partials/inscription.php');
-                    break;
-                case "forget_password":
-                    include('partials/forget_password.php');
-                    break;
-                case "mon_compte":
-                    include('partials/mon_compte.php');
-                    break;
-                case "nos_valeurs":
-                    include('partials/footer/nos_valeurs.php');
-                    break;
-                case "mentions_legales":
-                    include('partials/footer/mentions_legales.php');
-                    break;
-                case "lequipe":
-                    include('partials/footer/lequipe.php');
-                    break;
-                case "contact":
-                    include('partials/footer/contactez_nous.php');
-                    break;
-                case "cgu":
-                    include('partials/footer/cgu_cookies.php');
-                    break;
-                case "devenir_vendeur":
-                    include('partials/footer/devenir_vendeur.php');
-                    break;
-                case "reset":
-                    include('partials/reset.php');
-                    break;
-            }
-        } elseif (isset($_GET['search'])) {
-            include('partials/search.php');
-        } else {
-            include('landingPage.php');
-        }
+
+        include('landingPage.php');
+
         ?>
     </div>
 </div>
 
-<div id="footer">
-    <?php if (isset($_GET['page']) || isset($_GET['search'])) {
-        include('partials/footer.php');
-    } ?>
-</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
@@ -210,7 +140,7 @@ if(isset($_SESSION['access_token'])){
 </script>
 
 
-<script src="https://www.letiquette-blog.com/cookiechoices.js"></script>
+<script src="https://www.dev.letiquette-blog.com/cookiechoices.js"></script>
 <script>document.addEventListener('DOMContentLoaded', function (event) {
         cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.letiquette-blog.com/index.php?page=mentions_legales');
     });</script>

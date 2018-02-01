@@ -9,6 +9,16 @@
     <div class="form-etiquette">
         <div class="cercle"></div>
         <div class="ficelle"></div>
+
+        <?php
+//        include 'auth/googlePlus_config.php';
+
+
+        if (isset($authUrl)) {
+            echo '<div class="google-signin"> <a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '"><img src="assets/icones/google-signin/btn_google_signin_light_normal.png" /></a></div>';
+        }
+        ?>
+
         <form action="sql/inscription.php" method="post">
             <label for="nom"><span>Nom <span class="required">*</span></span><input type="text"
                                                                                     class="input-field"
@@ -74,8 +84,6 @@
             </label>
 
 
-
-
             <div class="captcha">
                 <div class="g-recaptcha" data-sitekey="6LcdyjoUAAAAABiFnZBcA3njgi3Ke9aS1C4lKYbo"></div>
             </div>
@@ -83,7 +91,7 @@
 
             <label for="cgu">
                 <input type="checkbox" value="cgu" name="validate[]" required/> J'ai lu et j'accepte les <a href="cgu">
-                conditions générales d'utilisation </a> <span class="required" style="float:none;">*</span>
+                    conditions générales d'utilisation </a> <span class="required" style="float:none;">*</span>
             </label>
 
             <label for="courrier">
@@ -96,9 +104,9 @@
             </div>
 
             <input type="submit" value="Valider"/>
-            <?php
-            include 'auth/googlePlus_config.php';
-            ?>
+
+
+
 
         </form>
     </div>

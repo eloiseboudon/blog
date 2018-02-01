@@ -112,7 +112,7 @@ VALUES('$user_id',NOW(),'$token',null)";
 
 Pour valider votre inscription chez L’étiquette, veuillez cliquer sur le lien ci-dessous :<br />
 
-http://letiquette-blog.com/sql/confirm.php?id=' . $user_id . '&token=' . $token . '<br />
+http://dev.letiquette-blog.com/sql/confirm.php?id=' . $user_id . '&token=' . $token . '<br />
 
 Si le lien ne fonctionne pas, copiez-collez le dans la barre de navigation de votre navigateur.<br />
 
@@ -120,7 +120,7 @@ Merci et à très bientôt !<br />
 
 L’équipe L’étiquette<br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.dev.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';

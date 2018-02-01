@@ -43,7 +43,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
 
 Vous avez demandé une réinitialisation de votre mot de passe. Afin de créer un nouveau mot de passe, cliquez sur le lien suivant: <br />
 
-http://letiquette-blog.com/index.php?page=reset&id='.$user_id.'&token='.$reset_token.'<br />
+http://dev.letiquette-blog.com/index.php?page=reset&id='.$user_id.'&token='.$reset_token.'<br />
 
 Si le lien ne fonctionne pas, copiez-collez le dans la barre de navigation de votre navigateur. <br />
         
@@ -51,7 +51,7 @@ Merci et à très bientôt ! <br />
 
 L’équipe L’étiquette <br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.dev.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';

@@ -8,27 +8,43 @@
     <div class="form-etiquette">
         <div class="cercle"></div>
         <div class="ficelle"></div>
+
+
         <?php
+//        include 'auth/googlePlus_config.php';
 
 
-        if (isset($_SESSION['flash']['success'])) {
-            ?>
-            <div class="alert alert-success" role="alert">
-            <?php
-            echo $_SESSION['flash']['success'];
-            ?></div><?php
-        } elseif (isset($_SESSION['flash']['error'])) {
-            ?>
-            <div class="alert alert-danger" role="alert">
-            <?php
-            echo $_SESSION['flash']['error'];
-            ?></div><?php
-            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
-        } else {
-            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+        if (isset($authUrl)) {
+            echo '<div class="google-signin"> <a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '"><img src="assets/icones/google-signin/btn_google_signin_light_normal.png" /></a></div>';
         }
-
         ?>
+
+
+<!--        --><?php
+
+//
+//        if (isset($_SESSION['flash']['success'])) {
+//            ?>
+<!--            <div class="alert alert-success" role="alert">-->
+<!--            --><?php
+//            echo $_SESSION['flash']['success'];
+//            ?><!--</div>--><?php
+//        } elseif (isset($_SESSION['flash']['error'])) {
+//            ?>
+<!--            <div class="alert alert-danger" role="alert">-->
+<!--            --><?php
+//            echo $_SESSION['flash']['error'];
+//            ?><!--</div>--><?php
+//            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+//        } else {
+//            $_SESSION['page_prec'] = $_SERVER['HTTP_REFERER'];
+//        }
+
+//        ?>
+
+
+
+
         <div class="authentification_form">
 
             <form action="sql/authentification.php" method="post">
@@ -50,9 +66,7 @@
             <a href="inscription">Pas encore inscrit ?</a><br/>
             <a href="forget_password">Mot de passe oublié</a>
 
-            <?php
-            include 'auth/googlePlus_config.php';
-            ?>
+
         </div>
     </div>
 </div>

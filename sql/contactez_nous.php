@@ -37,7 +37,7 @@ Votre message a bien été envoyé. Pour rappel, vous nous avez écrit : <br />$
 Nous reviendrons vers vous dans les plus brefs délais.  <br />
 A très bientôt !<br />
 L’équipe L’étiquette<br />
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http://www.letiquette-blog.com/contact\">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href=\"http://www.dev.letiquette-blog.com/contact\">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>";

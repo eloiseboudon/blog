@@ -11,7 +11,7 @@ if (isset($_COOKIE['pseudo'])) {
     $user = mysqli_fetch_array($req);
 
     if (!$user) {
-        echo'<meta http-equiv="refresh" content="0;../index.php?page=3" />';
+        echo'<meta http-equiv="refresh" content="0;../authentification" />';
     } else {
         session_start();
         $_SESSION['user'] = $user;

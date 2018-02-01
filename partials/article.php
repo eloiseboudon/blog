@@ -263,7 +263,7 @@ Pour rappel, vous avez écrit : ' . $contenu . '  <br />
 A très bientôt !<br />
 L’équipe L’étiquette<br />
 Merci de ne pas répondre à ce message. Si vous souhaitez nous contacter, utilisez le formulaire en ligne : 
-http://www.letiquette-blog.com/contact
+http://www.dev.letiquette-blog.com/contact
     </body>
     </html>';
 

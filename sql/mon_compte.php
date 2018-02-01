@@ -52,13 +52,13 @@ if (isset($_POST['email']) && isset($_SESSION['user']['id'])) {
 
 Pour valider votre modificaton d’adresse email, veuillez cliquer sur le lien ci-dessous :<br />
 
-http://letiquette-blog.com/sql/confirm_mail.php?id=' . $user_id . '&token=' . $token . '<br />
+http://dev.letiquette-blog.com/sql/confirm_mail.php?id=' . $user_id . '&token=' . $token . '<br />
 
 Merci et à très bientôt !<br />
 
 L’équipe L’étiquette<br />
 
-Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
+Merci de ne pas répondre à ce message. Si vous souhaitez nous <a href="http://www.dev.letiquette-blog.com/contact">contacter</a>, utilisez le formulaire en ligne.
 
     </body>
     </html>';
